@@ -70,8 +70,8 @@
     "semantic_hash": ""
   },
   "package.json": {
-    "mtime": 1781637442.800207,
-    "ast_hash": "a886639dd1eea76c1a9f62767d38c14c",
+    "mtime": 1781638147.8774006,
+    "ast_hash": "8090b23027b9b499c592a1641046eb53",
     "semantic_hash": ""
   },
   "skills-lock.json": {
@@ -80,63 +80,63 @@
     "semantic_hash": ""
   },
   "src/cli.js": {
-    "mtime": 1781637399.2561486,
-    "ast_hash": "ee4b66e9392847f9204b765a8a3d2a66",
+    "mtime": 1781638106.5352082,
+    "ast_hash": "76ed1783d5d88bd70fc74e208e0e67dc",
     "semantic_hash": ""
   },
   "src/constants.js": {
-    "mtime": 1781637352.1644685,
-    "ast_hash": "0321626c48d855aae26faa9daf3c5247",
+    "mtime": 1781638043.7795775,
+    "ast_hash": "f1692ef33cef39b43431e3a482664d43",
     "semantic_hash": ""
   },
   "src/plan-helpers.js": {
-    "mtime": 1781637386.5682733,
-    "ast_hash": "055ceb31d1e04c084ba4e2434e9ee7fd",
+    "mtime": 1781638015.3495073,
+    "ast_hash": "ea61dd72917429b9ed40629792b5aebb",
     "semantic_hash": ""
   },
   "src/plan.js": {
-    "mtime": 1781637387.195558,
-    "ast_hash": "7204829aac17324ed4f6f8aeb2dfd6c6",
+    "mtime": 1781638113.745739,
+    "ast_hash": "015607d2c8e12b31dcc1a7fea6e64e13",
     "semantic_hash": ""
   },
   "src/platforms.js": {
-    "mtime": 1781636732.841637,
-    "ast_hash": "d5429d7d775c7ef99a8ba2dd366a9f77",
+    "mtime": 1781638000.758965,
+    "ast_hash": "51c32191ae2c0b3dfe7f34ff331eddcb",
     "semantic_hash": ""
   },
   "src/plugins/caveman.js": {
-    "mtime": 1781637388.1991656,
-    "ast_hash": "3f4fc0c56abf9f0f11ac807373be1ea2",
+    "mtime": 1781638096.3008,
+    "ast_hash": "ad105aa416aeb9e01db5e9c999694316",
     "semantic_hash": ""
   },
   "src/plugins/graphify.js": {
-    "mtime": 1781637388.665465,
-    "ast_hash": "7a1862666438be0ec4be3be2660e748b",
+    "mtime": 1781638090.4989,
+    "ast_hash": "cff217bbf73eaa92d3b3687ebc2e5312",
     "semantic_hash": ""
   },
   "src/plugins/index.js": {
-    "mtime": 1781637391.1024954,
-    "ast_hash": "71cd1c23bb34895828f4444a5872df81",
+    "mtime": 1781638081.5195966,
+    "ast_hash": "db5aea6d8269097bafa546d6f02f1e34",
     "semantic_hash": ""
   },
   "src/plugins/karpathy.js": {
-    "mtime": 1781637388.4302504,
-    "ast_hash": "23919ca27f2a641a044bd7be88830171",
+    "mtime": 1781638095.7890327,
+    "ast_hash": "1bff4fbc088790043c3323aea245740e",
     "semantic_hash": ""
   },
   "src/prereqs.js": {
-    "mtime": 1781636745.9947705,
-    "ast_hash": "543625f80a1af05ec8fb4277dd4d9c88",
+    "mtime": 1781638118.129164,
+    "ast_hash": "65749e8a33efc7d846c189e214c82189",
     "semantic_hash": ""
   },
   "src/prompts.js": {
-    "mtime": 1781637409.4707747,
-    "ast_hash": "6d1a8d14aa18dc76add5557225ac3073",
+    "mtime": 1781638132.100047,
+    "ast_hash": "c6952e5d83eac102ed691fdb9262f43d",
     "semantic_hash": ""
   },
   "src/runner.js": {
-    "mtime": 1781637393.9273903,
-    "ast_hash": "f77524343737d800b7042dc6bb4ba52e",
+    "mtime": 1781638109.795026,
+    "ast_hash": "fa6dcf9f223cd98b2df241e3b3aaa4c5",
     "semantic_hash": ""
   },
   "src/utils/detect.js": {
@@ -155,13 +155,13 @@
     "semantic_hash": ""
   },
   "tests/cli.test.js": {
-    "mtime": 1781637442.734705,
-    "ast_hash": "1806cebb7994a1998556cd3856e6f647",
+    "mtime": 1781638150.3258913,
+    "ast_hash": "2bba64d5d19987b9a33487508f32830e",
     "semantic_hash": ""
   },
   "tests/plugins/dry-run.test.js": {
-    "mtime": 1781637417.916254,
-    "ast_hash": "6d85301328d684d11728647e306fe998",
+    "mtime": 1781638132.7351775,
+    "ast_hash": "747c41127815baa185b89451247d8f06",
     "semantic_hash": ""
   },
   "tests/prereqs.test.js": {
@@ -290,8 +290,8 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1781637419.5461457,
-    "ast_hash": "07463ef4b59be5d6a9b79a3397ed907c",
+    "mtime": 1781638136.031162,
+    "ast_hash": "ea13c7b9f06e977279075de21a85ffd7",
     "semantic_hash": ""
   },
   "CODE_OF_CONDUCT.md": {
@@ -300,18 +300,18 @@
     "semantic_hash": ""
   },
   "CONTRIBUTING.md": {
-    "mtime": 1781636776.1554048,
-    "ast_hash": "a02d1fc5cd7b62ec0b7e02b1a633c5dc",
+    "mtime": 1781638164.2434344,
+    "ast_hash": "927e9827586c9b92a2212b767157f0d9",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1781637419.1097784,
-    "ast_hash": "d53b5a7879de40091c8ef0bb61a4ac77",
+    "mtime": 1781638138.0705395,
+    "ast_hash": "dd1973477dff5b3340ec6897a925af1b",
     "semantic_hash": ""
   },
   "docs/ARCHITECTURE.md": {
-    "mtime": 1781636781.4203107,
-    "ast_hash": "d1186c156c2f61d7efdddd57223b2fab",
+    "mtime": 1781638168.7762444,
+    "ast_hash": "ec347daeed7fd790423009a01afc6275",
     "semantic_hash": ""
   },
   "docs/plugins/caveman.md": {
@@ -327,6 +327,61 @@
   "docs/plugins/karpathy.md": {
     "mtime": 1781636783.1510065,
     "ast_hash": "5cdb931731de509d41f3c5c647ec38c6",
+    "semantic_hash": ""
+  },
+  "src/platform-maps/caveman.js": {
+    "mtime": 1781638001.5183358,
+    "ast_hash": "6e0715021c165cb87f1261f74d619b77",
+    "semantic_hash": ""
+  },
+  "src/platform-maps/cavemem.js": {
+    "mtime": 1781638078.3684142,
+    "ast_hash": "07ae54664f166461aa9591209595875c",
+    "semantic_hash": ""
+  },
+  "src/platform-maps/graphify.js": {
+    "mtime": 1781638003.1558163,
+    "ast_hash": "ea798316751c1c8f9920f19a178f0c86",
+    "semantic_hash": ""
+  },
+  "src/platform-maps/index.js": {
+    "mtime": 1781638008.631815,
+    "ast_hash": "8f6fb8e53a134512a193411d4816358f",
+    "semantic_hash": ""
+  },
+  "src/platform-maps/karpathy.js": {
+    "mtime": 1781638004.671451,
+    "ast_hash": "643cadf7524b1b6aa64e6685577d3ede",
+    "semantic_hash": ""
+  },
+  "src/platform-maps/skills.js": {
+    "mtime": 1781638008.163841,
+    "ast_hash": "da4eb486c35c250a8569028cb4988e95",
+    "semantic_hash": ""
+  },
+  "src/platform-maps/speckit.js": {
+    "mtime": 1781638007.0998802,
+    "ast_hash": "81954dd012143ed55d8344a89444d0e5",
+    "semantic_hash": ""
+  },
+  "src/plugins/cavemem.js": {
+    "mtime": 1781638078.5841143,
+    "ast_hash": "d864ff13ce99409cb2c5f58567cce618",
+    "semantic_hash": ""
+  },
+  "src/plugins/skills-bundle.js": {
+    "mtime": 1781638079.7131448,
+    "ast_hash": "dd23d746992f365a86036855b9ac48b9",
+    "semantic_hash": ""
+  },
+  "src/plugins/speckit.js": {
+    "mtime": 1781638054.8876498,
+    "ast_hash": "840ba834a42ef5de3a812dbf52e44ae1",
+    "semantic_hash": ""
+  },
+  "src/utils/hooks.js": {
+    "mtime": 1781638010.1342688,
+    "ast_hash": "f624ab4215b9116cd3fda68f8fbbff3b",
     "semantic_hash": ""
   }
 }
