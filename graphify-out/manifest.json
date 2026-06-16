@@ -360,8 +360,8 @@
     "semantic_hash": ""
   },
   "src/platform-maps/speckit.js": {
-    "mtime": 1781643805.543562,
-    "ast_hash": "57631aad46175831bcf4ef147820a7d6",
+    "mtime": 1781645195.189498,
+    "ast_hash": "3cf81b468b84ce9a2b9530c12776d9a1",
     "semantic_hash": ""
   },
   "src/plugins/cavemem.js": {
@@ -375,8 +375,8 @@
     "semantic_hash": ""
   },
   "src/plugins/speckit.js": {
-    "mtime": 1781644537.2747626,
-    "ast_hash": "d5c00990b936f32df7f6d5ae9a33af0a",
+    "mtime": 1781645180.5906165,
+    "ast_hash": "b64d83d571781113d9ef5852956b0926",
     "semantic_hash": ""
   },
   "src/utils/hooks.js": {
@@ -390,8 +390,8 @@
     "semantic_hash": ""
   },
   "tests/speckit.test.js": {
-    "mtime": 1781643809.382377,
-    "ast_hash": "275aa78a1421a8dfb26bd3da0846f5f3",
+    "mtime": 1781645182.2596824,
+    "ast_hash": "a4fbf0f293bee1cf428ae6d6e043333c",
     "semantic_hash": ""
   },
   "scripts/run-tests.js": {

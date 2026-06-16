@@ -18,6 +18,27 @@ async function main() {
       return;
     }
 
+    if (needsInteractive(cli) && !process.stdin.isTTY) {
+      console.error(`
+AI-Quickstart interactive mode needs a real terminal (TTY).
+
+This often fails when run as:
+  powershell -Command "irm ... | iex"
+
+Use one of these instead (in an open PowerShell window):
+
+  npx.cmd -y github:aaron-axisa/AI-Quickstart
+
+  Set-ExecutionPolicy -Scope Process Bypass
+  irm https://raw.githubusercontent.com/aaron-axisa/AI-Quickstart/main/install.ps1 | iex
+
+Non-interactive example:
+
+  npx.cmd -y github:aaron-axisa/AI-Quickstart --path C:\\path\\to\\repo --preset full --platforms cursor -y
+`);
+      process.exit(1);
+    }
+
     let config;
     let skipPlanPreview = false;
 

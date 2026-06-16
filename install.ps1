@@ -3,8 +3,10 @@
 # irm https://raw.githubusercontent.com/aaron-axisa/AI-Quickstart/main/install.ps1 | iex
 # irm .../install.ps1 | iex -- --path C:\path\to\repo
 #
-# If execution policy blocks npx.ps1 (common with nvm-windows), use:
-#   powershell -NoProfile -ExecutionPolicy Bypass -Command "irm .../install.ps1 | iex"
+# If execution policy blocks npx.ps1 (common with nvm-windows):
+#   Set-ExecutionPolicy -Scope Process Bypass
+#   irm https://raw.githubusercontent.com/aaron-axisa/AI-Quickstart/main/install.ps1 | iex
+# Do NOT wrap in powershell -Command "..." — that breaks interactive prompts (no TTY).
 # Or: npx.cmd -y github:aaron-axisa/AI-Quickstart
 
 $ErrorActionPreference = "Stop"
@@ -66,4 +68,6 @@ if (-not [string]::IsNullOrWhiteSpace($scriptPath)) {
 
 $npxArgs = @('-y', "github:$Repo")
 if ($args.Count -gt 0) { $npxArgs += $args }
+
+Write-Host "AI-Quickstart: starting installer (npx may take a moment on first run)..." -ForegroundColor Cyan
 exit (Invoke-Npx $npxArgs)
