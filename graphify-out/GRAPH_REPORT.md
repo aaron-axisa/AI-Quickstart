@@ -1,16 +1,16 @@
 # Graph Report - AI-Quickstart  (2026-06-16)
 
 ## Corpus Check
-- 77 files · ~23,701 words
+- 109 files · ~48,892 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 457 nodes · 848 edges · 44 communities (40 shown, 4 thin omitted)
-- Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 45 edges (avg confidence: 0.8)
+- 673 nodes · 1042 edges · 68 communities (62 shown, 6 thin omitted)
+- Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 45 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `4d5c0b04`
+- Built from commit: `bc94e330`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -53,39 +53,59 @@
 - [[_COMMUNITY_Community 35|Community 35]]
 - [[_COMMUNITY_Community 42|Community 42]]
 - [[_COMMUNITY_Community 43|Community 43]]
+- [[_COMMUNITY_Community 44|Community 44]]
+- [[_COMMUNITY_Community 45|Community 45]]
+- [[_COMMUNITY_Community 46|Community 46]]
+- [[_COMMUNITY_Community 47|Community 47]]
+- [[_COMMUNITY_Community 48|Community 48]]
+- [[_COMMUNITY_Community 49|Community 49]]
+- [[_COMMUNITY_Community 50|Community 50]]
+- [[_COMMUNITY_Community 51|Community 51]]
+- [[_COMMUNITY_Community 52|Community 52]]
+- [[_COMMUNITY_Community 53|Community 53]]
+- [[_COMMUNITY_Community 54|Community 54]]
+- [[_COMMUNITY_Community 55|Community 55]]
+- [[_COMMUNITY_Community 56|Community 56]]
+- [[_COMMUNITY_Community 57|Community 57]]
+- [[_COMMUNITY_Community 58|Community 58]]
+- [[_COMMUNITY_Community 59|Community 59]]
+- [[_COMMUNITY_Community 60|Community 60]]
+- [[_COMMUNITY_Community 61|Community 61]]
+- [[_COMMUNITY_Community 62|Community 62]]
+- [[_COMMUNITY_Community 64|Community 64]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `resolvePlatforms()` - 27 edges
 2. `run()` - 16 edges
 3. `validate()` - 14 edges
 4. `repoFileExists()` - 14 edges
-5. `checkPrerequisites()` - 13 edges
-6. `runInteractive()` - 13 edges
-7. `runAction()` - 13 edges
-8. `AI-Quickstart` - 12 edges
-9. `compress_file()` - 12 edges
-10. `runShell()` - 11 edges
+5. `Tasks: [FEATURE NAME]` - 13 edges
+6. `checkPrerequisites()` - 13 edges
+7. `runInteractive()` - 13 edges
+8. `runAction()` - 13 edges
+9. `AI-Quickstart` - 12 edges
+10. `compress_file()` - 12 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Test-NodeVersion()` --calls--> `node`  [INFERRED]
   install.ps1 → package.json
-- `uninstallSpeckit()` --calls--> `deleteDirIfExists()`  [EXTRACTED]
-  src/plugins/speckit.js → src/utils/fs.js
-- `planUninstallGraphify()` --calls--> `repoFileExists()`  [INFERRED]
-  src/plugins/graphify.js → src/plan-helpers.js
 - `installGraphify()` --calls--> `hasUv()`  [INFERRED]
   src/plugins/graphify.js → src/utils/detect.js
 - `uninstallCaveman()` --calls--> `deleteFileIfExists()`  [INFERRED]
   src/plugins/caveman.js → src/utils/fs.js
+- `main()` --calls--> `cliToConfig()`  [EXTRACTED]
+  bin/install.js → src/cli.js
+- `main()` --calls--> `needsInteractive()`  [EXTRACTED]
+  bin/install.js → src/cli.js
 
 ## Import Cycles
 - None detected.
 
-## Communities (44 total, 4 thin omitted)
+## Communities (68 total, 6 thin omitted)
 
 ### Community 0 - "Community 0"
-Cohesion: 0.10
-Nodes (39): main(), cavemanPlugin, cavememPlugin, graphifyPlugin, getOrderedPlugins(), listPlugins(), listPluginsByCategory(), PLUGINS (+31 more)
+Cohesion: 0.08
+Nodes (53): main(), cavemanPlugin, cavememPlugin, graphifyPlugin, getOrderedPlugins(), listPlugins(), listPluginsByCategory(), PLUGINS (+45 more)
 
 ### Community 2 - "Community 2"
 Cohesion: 0.12
@@ -96,20 +116,20 @@ Cohesion: 0.16
 Nodes (22): Path, Path, benchmark_pair(), count_tokens(), main(), print_table(), count_bullets(), extract_code_blocks() (+14 more)
 
 ### Community 4 - "Community 4"
-Cohesion: 0.13
-Nodes (35): CAVEMEM_IDE, cavememCommand(), cavememSupportsPlatform(), getCavememIde(), getGraphifyMap(), GRAPHIFY_MAP, graphifyInstallCommand(), graphifyUninstallCommand() (+27 more)
+Cohesion: 0.07
+Nodes (59): CAVEMAN_ONLY, getCavemanOnly(), CAVEMEM_IDE, cavememCommand(), cavememSupportsPlatform(), getCavememIde(), getGraphifyMap(), GRAPHIFY_MAP (+51 more)
 
 ### Community 5 - "Community 5"
 Cohesion: 0.09
 Nodes (20): Test-NodeVersion(), bin, ai-quickstart, dependencies, @clack/prompts, description, engines, node (+12 more)
 
 ### Community 6 - "Community 6"
-Cohesion: 0.27
-Nodes (15): checkPrerequisites(), getNodeInstallCommands(), getPythonInstallCommands(), getUvInstallCommands(), detectPlatform(), firstWorkingCommand(), getHome(), getNodeVersion() (+7 more)
+Cohesion: 0.07
+Nodes (26): Dependencies & Execution Order, Format: `[ID] [P?] [Story] Description`, Implementation for User Story 1, Implementation for User Story 2, Implementation for User Story 3, Implementation Strategy, Incremental Delivery, MVP First (User Story 1 Only) (+18 more)
 
 ### Community 7 - "Community 7"
-Cohesion: 0.14
-Nodes (27): CAVEMAN_ONLY, getCavemanOnly(), getKarpathyTarget(), KARPATHY_TARGET, cavemanInstallCommand(), installCaveman(), planInstallCaveman(), planUninstallCaveman() (+19 more)
+Cohesion: 0.21
+Nodes (18): getKarpathyTarget(), KARPATHY_TARGET, fetchUpstream(), installKarpathy(), planInstallKarpathy(), planUninstallKarpathy(), uninstallKarpathy(), hasKarpathyMarker() (+10 more)
 
 ### Community 8 - "Community 8"
 Cohesion: 0.12
@@ -216,28 +236,100 @@ Cohesion: 0.50
 Nodes (3): Checklist, Summary, Test plan
 
 ### Community 43 - "Community 43"
-Cohesion: 0.33
-Nodes (12): getSpeckitIntegration(), SPECKIT_INTEGRATION, speckitGitSource(), speckitInitArgs(), speckitInitCommand(), speckitInstallArgs(), speckitInstallCommand(), speckitSupportsPlatform() (+4 more)
+Cohesion: 0.08
+Nodes (25): 1. Initialize Analysis Context, 2. Load Artifacts (Progressive Disclosure), 3. Build Semantic Models, 4. Detection Passes (Token-Efficient Analysis), 5. Severity Assignment, 6. Produce Compact Analysis Report, 7. Provide Next Actions, 8. Offer Remediation (+17 more)
+
+### Community 44 - "Community 44"
+Cohesion: 0.23
+Nodes (9): Find-SpecifyRoot(), Format-SpecKitCommand(), Get-CurrentBranch(), Get-FeaturePathsEnv(), Get-InvokeSeparator(), Get-Python3Command(), Get-RepoRoot(), Resolve-TemplateContent() (+1 more)
+
+### Community 45 - "Community 45"
+Cohesion: 0.15
+Nodes (12): Assumptions, Edge Cases, Feature Specification: [FEATURE NAME], Functional Requirements, Key Entities *(include if feature involves data)*, Measurable Outcomes, Requirements *(mandatory)*, Success Criteria *(mandatory)* (+4 more)
+
+### Community 46 - "Community 46"
+Cohesion: 0.18
+Nodes (10): Core Principles, Governance, [PRINCIPLE_1_NAME], [PRINCIPLE_2_NAME], [PRINCIPLE_3_NAME], [PRINCIPLE_4_NAME], [PRINCIPLE_5_NAME], [PROJECT_NAME] Constitution (+2 more)
+
+### Community 47 - "Community 47"
+Cohesion: 0.18
+Nodes (10): Completion Report, Done When, Key rules, Mandatory Post-Execution Hooks, Outline, Phase 0: Outline & Research, Phase 1: Design & Contracts, Phases (+2 more)
+
+### Community 48 - "Community 48"
+Cohesion: 0.18
+Nodes (10): Completion Report, Done When, For AI Generation, Mandatory Post-Execution Hooks, Outline, Pre-Execution Checks, Quick Guidelines, Section Requirements (+2 more)
+
+### Community 49 - "Community 49"
+Cohesion: 0.18
+Nodes (10): Checklist Format (REQUIRED), Completion Report, Done When, Mandatory Post-Execution Hooks, Outline, Phase Structure, Pre-Execution Checks, Task Generation Rules (+2 more)
+
+### Community 50 - "Community 50"
+Cohesion: 0.18
+Nodes (10): Core Principles, Governance, [PRINCIPLE_1_NAME], [PRINCIPLE_2_NAME], [PRINCIPLE_3_NAME], [PRINCIPLE_4_NAME], [PRINCIPLE_5_NAME], [PROJECT_NAME] Constitution (+2 more)
+
+### Community 51 - "Community 51"
+Cohesion: 0.22
+Nodes (8): Complexity Tracking, Constitution Check, Documentation (this feature), Implementation Plan: [FEATURE], Project Structure, Source Code (repository root), Summary, Technical Context
+
+### Community 52 - "Community 52"
+Cohesion: 0.25
+Nodes (7): Anti-Examples: What NOT To Do, Checklist Purpose: "Unit Tests for English", Example Checklist Types & Sample Items, Execution Steps, Post-Execution Checks, Pre-Execution Checks, User Input
+
+### Community 53 - "Community 53"
+Cohesion: 0.29
+Nodes (6): Coding Agent Context Extension, Commands, Configuration, Disable, Requirements, Why an extension?
+
+### Community 54 - "Community 54"
+Cohesion: 0.29
+Nodes (6): Completion Report, Done When, Mandatory Post-Execution Hooks, Outline, Pre-Execution Checks, User Input
+
+### Community 55 - "Community 55"
+Cohesion: 0.29
+Nodes (6): Completion Report, Done When, Mandatory Post-Execution Hooks, Outline, Pre-Execution Checks, User Input
+
+### Community 56 - "Community 56"
+Cohesion: 0.40
+Nodes (4): Outline, Post-Execution Checks, Pre-Execution Checks, User Input
+
+### Community 57 - "Community 57"
+Cohesion: 0.40
+Nodes (4): Outline, Post-Execution Checks, Pre-Execution Checks, User Input
+
+### Community 58 - "Community 58"
+Cohesion: 0.40
+Nodes (4): [Category 1], [Category 2], [CHECKLIST TYPE] Checklist: [FEATURE NAME], Notes
+
+### Community 59 - "Community 59"
+Cohesion: 0.50
+Nodes (3): Behavior, Execution, Update Coding Agent Context
+
+### Community 60 - "Community 60"
+Cohesion: 0.50
+Nodes (3): Behavior, Execution, Update Coding Agent Context
+
+### Community 61 - "Community 61"
+Cohesion: 0.50
+Nodes (3): Behavior, Execution, Update Coding Agent Context
 
 ## Knowledge Gaps
-- **163 isolated node(s):** `name`, `version`, `description`, `license`, `type` (+158 more)
+- **303 isolated node(s):** `Behavior`, `Execution`, `Behavior`, `Execution`, `User Input` (+298 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **6 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `resolvePlatforms()` connect `Community 4` to `Community 0`, `Community 43`, `Community 7`?**
-  _High betweenness centrality (0.012) - this node is a cross-community bridge._
-- **Why does `validate()` connect `Community 3` to `Community 2`?**
-  _High betweenness centrality (0.005) - this node is a cross-community bridge._
-- **Why does `run()` connect `Community 4` to `Community 43`, `Community 6`, `Community 7`?**
-  _High betweenness centrality (0.005) - this node is a cross-community bridge._
+- **Why does `resolvePlatforms()` connect `Community 4` to `Community 7`?**
+  _High betweenness centrality (0.007) - this node is a cross-community bridge._
+- **Why does `UPSTREAM` connect `Community 4` to `Community 0`, `Community 7`?**
+  _High betweenness centrality (0.004) - this node is a cross-community bridge._
+- **Why does `run()` connect `Community 4` to `Community 0`?**
+  _High betweenness centrality (0.003) - this node is a cross-community bridge._
 - **Are the 10 inferred relationships involving `resolvePlatforms()` (e.g. with `installCaveman()` and `planInstallCaveman()`) actually correct?**
   _`resolvePlatforms()` has 10 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 3 inferred relationships involving `run()` (e.g. with `installCaveman()` and `uninstallCaveman()`) actually correct?**
   _`run()` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 5 inferred relationships involving `repoFileExists()` (e.g. with `planInstallCaveman()` and `planUninstallCaveman()`) actually correct?**
   _`repoFileExists()` has 5 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `name`, `version`, `description` to the rest of the system?**
-  _175 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `Behavior`, `Execution`, `Behavior` to the rest of the system?**
+  _315 weakly-connected nodes found - possible documentation gaps or missing edges._

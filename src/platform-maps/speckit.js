@@ -1,4 +1,5 @@
 import { UPSTREAM } from "../constants.js";
+import { platform as nodePlatform } from "node:os";
 
 /** @param {string} [ref] */
 export function speckitGitSource(ref = UPSTREAM.speckit.ref) {
@@ -47,6 +48,11 @@ export function speckitSupportsPlatform(platformId) {
   return v !== undefined && v !== null;
 }
 
+/** Default Spec Kit script flavor for this OS (avoids interactive prompt when stdin is not a TTY). */
+export function speckitScriptType() {
+  return nodePlatform() === "win32" ? "ps" : "sh";
+}
+
 /**
  * @param {string} platformId
  * @returns {string[]|null}
@@ -61,6 +67,8 @@ export function speckitInitArgs(platformId) {
     integration,
     "--force",
     "--ignore-agent-tools",
+    "--script",
+    speckitScriptType(),
   ];
 }
 

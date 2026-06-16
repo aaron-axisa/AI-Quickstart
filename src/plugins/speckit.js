@@ -115,7 +115,7 @@ export async function installSpeckit(config) {
   const init = await run("specify", initArgs, {
     cwd: config.repoPath,
     dryRun: config.dryRun,
-    verbose: config.verbose,
+    verbose: true,
   });
   if (init.code !== 0 && !config.dryRun) {
     throw new Error(

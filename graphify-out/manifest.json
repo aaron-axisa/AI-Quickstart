@@ -1,36 +1,36 @@
 {
   ".agents/skills/caveman-compress/scripts/__init__.py": {
-    "mtime": 1781641683.1510334,
+    "mtime": 1781642043.6778488,
     "ast_hash": "d6acae7e188357d1bc1258ce02a29811",
     "semantic_hash": ""
   },
   ".agents/skills/caveman-compress/scripts/__main__.py": {
-    "mtime": 1781641683.152038,
+    "mtime": 1781642043.6783729,
     "ast_hash": "5bd0e02db4907bf4e435e5d770256fef",
     "semantic_hash": ""
   },
   ".agents/skills/caveman-compress/scripts/benchmark.py": {
-    "mtime": 1781641683.152038,
+    "mtime": 1781642043.6783729,
     "ast_hash": "07500037c8606fc9ab1832f55a5ff346",
     "semantic_hash": ""
   },
   ".agents/skills/caveman-compress/scripts/cli.py": {
-    "mtime": 1781641683.152038,
+    "mtime": 1781642043.6788971,
     "ast_hash": "9ed03f4b75aae3f25ea0d9c15dbf6894",
     "semantic_hash": ""
   },
   ".agents/skills/caveman-compress/scripts/compress.py": {
-    "mtime": 1781641683.152038,
+    "mtime": 1781642043.6788971,
     "ast_hash": "1ad5157c3585b77dd4e547dd4a98bdf9",
     "semantic_hash": ""
   },
   ".agents/skills/caveman-compress/scripts/detect.py": {
-    "mtime": 1781641683.153038,
+    "mtime": 1781642043.6794164,
     "ast_hash": "951a4593947c23cb9bfe8d99dc245b16",
     "semantic_hash": ""
   },
   ".agents/skills/caveman-compress/scripts/validate.py": {
-    "mtime": 1781641683.153038,
+    "mtime": 1781642043.6799433,
     "ast_hash": "5d3394df7677d1ee08f0b69bb767b38c",
     "semantic_hash": ""
   },
@@ -75,7 +75,7 @@
     "semantic_hash": ""
   },
   "skills-lock.json": {
-    "mtime": 1781641683.4453163,
+    "mtime": 1781642043.9521682,
     "ast_hash": "557df82d7a5f0a473b7da551762a06b9",
     "semantic_hash": ""
   },
@@ -110,8 +110,8 @@
     "semantic_hash": ""
   },
   "src/plugins/graphify.js": {
-    "mtime": 1781640576.4394393,
-    "ast_hash": "db4b85e0231a115b2ccffcab16ead846",
+    "mtime": 1781642190.67716,
+    "ast_hash": "b56e6129ed0e1b89628271faa3fc0a6f",
     "semantic_hash": ""
   },
   "src/plugins/index.js": {
@@ -170,77 +170,77 @@
     "semantic_hash": ""
   },
   ".agents/skills/cavecrew/README.md": {
-    "mtime": 1781641683.1485293,
+    "mtime": 1781642043.6747093,
     "ast_hash": "8b7ca548bd36b6db39006bac6cd54759",
     "semantic_hash": ""
   },
   ".agents/skills/cavecrew/SKILL.md": {
-    "mtime": 1781641683.1485293,
+    "mtime": 1781642043.6752381,
     "ast_hash": "6ea8150438c6392a5ee0afef0a735ad4",
     "semantic_hash": ""
   },
   ".agents/skills/caveman-commit/README.md": {
-    "mtime": 1781641683.1495292,
+    "mtime": 1781642043.67576,
     "ast_hash": "2fe1d98cadbd2709a34ee3c77795a143",
     "semantic_hash": ""
   },
   ".agents/skills/caveman-commit/SKILL.md": {
-    "mtime": 1781641683.1495292,
+    "mtime": 1781642043.6762836,
     "ast_hash": "e00f68129a6f77783860a980074f97f7",
     "semantic_hash": ""
   },
   ".agents/skills/caveman-compress/README.md": {
-    "mtime": 1781641683.1505294,
+    "mtime": 1781642043.6768036,
     "ast_hash": "78d3757502badfab9db0e38724d336b3",
     "semantic_hash": ""
   },
   ".agents/skills/caveman-compress/SECURITY.md": {
-    "mtime": 1781641683.1505294,
+    "mtime": 1781642043.6768036,
     "ast_hash": "b2caed82d9d4a58c0530f7e741851224",
     "semantic_hash": ""
   },
   ".agents/skills/caveman-compress/SKILL.md": {
-    "mtime": 1781641683.1510334,
+    "mtime": 1781642043.6773276,
     "ast_hash": "5cfd6ee9993c9e72da6404a9841d82fd",
     "semantic_hash": ""
   },
   ".agents/skills/caveman-help/README.md": {
-    "mtime": 1781641683.1540387,
+    "mtime": 1781642043.680467,
     "ast_hash": "f49266e99b58d33c1d40b7bf0a644ec3",
     "semantic_hash": ""
   },
   ".agents/skills/caveman-help/SKILL.md": {
-    "mtime": 1781641683.1540387,
+    "mtime": 1781642043.680467,
     "ast_hash": "0f7aa6d0d0ae831d099d13894d833d14",
     "semantic_hash": ""
   },
   ".agents/skills/caveman-review/README.md": {
-    "mtime": 1781641683.1540387,
+    "mtime": 1781642043.68108,
     "ast_hash": "9777a26704850f1e091ab072f02fa10f",
     "semantic_hash": ""
   },
   ".agents/skills/caveman-review/SKILL.md": {
-    "mtime": 1781641683.1540387,
+    "mtime": 1781642043.6816027,
     "ast_hash": "0e038c50a6bfdc9b8a307e6316c07236",
     "semantic_hash": ""
   },
   ".agents/skills/caveman-stats/README.md": {
-    "mtime": 1781641683.1555426,
+    "mtime": 1781642043.682127,
     "ast_hash": "866dc96f332b4e2bc1f80fec878fea52",
     "semantic_hash": ""
   },
   ".agents/skills/caveman-stats/SKILL.md": {
-    "mtime": 1781641683.1555426,
+    "mtime": 1781642043.6826477,
     "ast_hash": "e9966f688641209792719474f241a6ef",
     "semantic_hash": ""
   },
   ".agents/skills/caveman/README.md": {
-    "mtime": 1781641683.156548,
+    "mtime": 1781642043.683166,
     "ast_hash": "3358f5119f61b24f5fa65a25de7b866b",
     "semantic_hash": ""
   },
   ".agents/skills/caveman/SKILL.md": {
-    "mtime": 1781641683.156548,
+    "mtime": 1781642043.683166,
     "ast_hash": "0a65cf5c142df7f3c99a2e6bfdfb8e48",
     "semantic_hash": ""
   },
@@ -397,6 +397,186 @@
   "scripts/run-tests.js": {
     "mtime": 1781641781.88099,
     "ast_hash": "82445689aff741726d535d7eb2538980",
+    "semantic_hash": ""
+  },
+  ".specify/extensions/agent-context/scripts/bash/update-agent-context.sh": {
+    "mtime": 1781641479.6979892,
+    "ast_hash": "b1168bb9cffc02061aa72530000b76ef",
+    "semantic_hash": ""
+  },
+  ".specify/extensions/agent-context/scripts/powershell/update-agent-context.ps1": {
+    "mtime": 1781641479.6814725,
+    "ast_hash": "490a5c678c46baf04f36b571861a1045",
+    "semantic_hash": ""
+  },
+  ".specify/init-options.json": {
+    "mtime": 1781642064.3642647,
+    "ast_hash": "d241ad4fddd151574950b972d4545845",
+    "semantic_hash": ""
+  },
+  ".specify/integration.json": {
+    "mtime": 1781642064.194029,
+    "ast_hash": "7af2e1cbca9370df67a0564a84e06e69",
+    "semantic_hash": ""
+  },
+  ".specify/integrations/cursor-agent.manifest.json": {
+    "mtime": 1781642064.1920285,
+    "ast_hash": "989767cb7fdb2f675b3a9c653bca9760",
+    "semantic_hash": ""
+  },
+  ".specify/integrations/speckit.manifest.json": {
+    "mtime": 1781642064.3206048,
+    "ast_hash": "b31c6fe2f15df48c3e22571a15d606b6",
+    "semantic_hash": ""
+  },
+  ".specify/scripts/powershell/check-prerequisites.ps1": {
+    "mtime": 1781642064.218541,
+    "ast_hash": "1927bcad0f214826634af7edad2f126c",
+    "semantic_hash": ""
+  },
+  ".specify/scripts/powershell/common.ps1": {
+    "mtime": 1781642064.2335477,
+    "ast_hash": "fc679079486305e7287a7449f04bd927",
+    "semantic_hash": ""
+  },
+  ".specify/scripts/powershell/create-new-feature.ps1": {
+    "mtime": 1781642064.2500577,
+    "ast_hash": "daf103b15370d4db120657d0c6bb039d",
+    "semantic_hash": ""
+  },
+  ".specify/scripts/powershell/setup-plan.ps1": {
+    "mtime": 1781642064.2650936,
+    "ast_hash": "b640ae1bd5b44d9a49a9481931cb4ab9",
+    "semantic_hash": ""
+  },
+  ".specify/scripts/powershell/setup-tasks.ps1": {
+    "mtime": 1781642064.2700913,
+    "ast_hash": "1f5a59359bc55ba2501150435f4d6fbd",
+    "semantic_hash": ""
+  },
+  ".specify/workflows/workflow-registry.json": {
+    "mtime": 1781642064.3622642,
+    "ast_hash": "cb8366a12b148a882240d193ec6454a8",
+    "semantic_hash": ""
+  },
+  "tests/graphify.test.js": {
+    "mtime": 1781642192.865685,
+    "ast_hash": "16606918b1487e7f7ba4148e2f772a95",
+    "semantic_hash": ""
+  },
+  ".agents/skills/speckit-agent-context-update/SKILL.md": {
+    "mtime": 1781642064.4806423,
+    "ast_hash": "280c946ded3a1043f2c0b150f3d74a64",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/speckit-agent-context-update/SKILL.md": {
+    "mtime": 1781642064.483642,
+    "ast_hash": "280c946ded3a1043f2c0b150f3d74a64",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/speckit-analyze/SKILL.md": {
+    "mtime": 1781642064.0839436,
+    "ast_hash": "1efebb94375e4ff993ebb8c60238c1bb",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/speckit-checklist/SKILL.md": {
+    "mtime": 1781642064.1469777,
+    "ast_hash": "8a6ccd0e43eca0ae94fd4964ef2ff391",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/speckit-clarify/SKILL.md": {
+    "mtime": 1781642064.1004584,
+    "ast_hash": "4cce1b648c27b717f01cef946b9524ad",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/speckit-constitution/SKILL.md": {
+    "mtime": 1781642064.1129715,
+    "ast_hash": "eca6c1b1f77da3388ffe6ffdb2d2ed47",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/speckit-implement/SKILL.md": {
+    "mtime": 1781642064.124971,
+    "ast_hash": "67158b2626bee61746f54b414b18be3c",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/speckit-plan/SKILL.md": {
+    "mtime": 1781642064.1359768,
+    "ast_hash": "cd0c551f7e15d26c5bc8bdaa78365650",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/speckit-specify/SKILL.md": {
+    "mtime": 1781642064.1595123,
+    "ast_hash": "a64a4e128bb06a8aef3d3ea9ddbc3616",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/speckit-tasks/SKILL.md": {
+    "mtime": 1781642064.1705127,
+    "ast_hash": "0b743f154fb6e70dafb144384df9af63",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/speckit-taskstoissues/SKILL.md": {
+    "mtime": 1781642064.1805186,
+    "ast_hash": "7566d06aa586f2677b1291bea06441c1",
+    "semantic_hash": ""
+  },
+  ".specify/extensions.yml": {
+    "mtime": 1781642064.4953327,
+    "ast_hash": "6fc655d042586d15ec3356b836bfd8ab",
+    "semantic_hash": ""
+  },
+  ".specify/extensions/agent-context/README.md": {
+    "mtime": 1781641479.6979892,
+    "ast_hash": "1aa8a439be548ec0da2e3387a4925e4f",
+    "semantic_hash": ""
+  },
+  ".specify/extensions/agent-context/agent-context-config.yml": {
+    "mtime": 1781642064.4983323,
+    "ast_hash": "8e82646a424a2aa6a3ceca5b4986c6ef",
+    "semantic_hash": ""
+  },
+  ".specify/extensions/agent-context/commands/speckit.agent-context.update.md": {
+    "mtime": 1781641479.689471,
+    "ast_hash": "7eecbfbef236c6af3e4003b32c6ffd2a",
+    "semantic_hash": ""
+  },
+  ".specify/extensions/agent-context/extension.yml": {
+    "mtime": 1781641479.6864724,
+    "ast_hash": "c09cdcdf8b86381d5955182b5eac0caf",
+    "semantic_hash": ""
+  },
+  ".specify/memory/constitution.md": {
+    "mtime": 1781642064.2936065,
+    "ast_hash": "dcefb6b60e7cb3db2e966977b6f02f18",
+    "semantic_hash": ""
+  },
+  ".specify/templates/checklist-template.md": {
+    "mtime": 1781642064.283097,
+    "ast_hash": "af4274efb13cbb2263029402deb14f6b",
+    "semantic_hash": ""
+  },
+  ".specify/templates/constitution-template.md": {
+    "mtime": 1781642064.2936065,
+    "ast_hash": "dcefb6b60e7cb3db2e966977b6f02f18",
+    "semantic_hash": ""
+  },
+  ".specify/templates/plan-template.md": {
+    "mtime": 1781642064.297607,
+    "ast_hash": "fea2e21a1d9cf3470186abc1dfb6e9fb",
+    "semantic_hash": ""
+  },
+  ".specify/templates/spec-template.md": {
+    "mtime": 1781642064.307604,
+    "ast_hash": "45ac8538bc1220324c9f0d610145b53f",
+    "semantic_hash": ""
+  },
+  ".specify/templates/tasks-template.md": {
+    "mtime": 1781642064.3106072,
+    "ast_hash": "f8b4f62d384defa0a559bdbbaacb0540",
+    "semantic_hash": ""
+  },
+  ".specify/workflows/speckit/workflow.yml": {
+    "mtime": 1781641479.7089899,
+    "ast_hash": "eba6943b2a2f6407162ae12e0218bdac",
     "semantic_hash": ""
   }
 }

@@ -4,6 +4,7 @@ import {
   speckitGitSource,
   speckitInitCommand,
   speckitInstallCommand,
+  speckitScriptType,
 } from "../src/platform-maps/speckit.js";
 
 describe("speckit platform map", () => {
@@ -24,6 +25,7 @@ describe("speckit platform map", () => {
   it("maps cursor platform to cursor-agent integration", () => {
     const cmd = speckitInitCommand("cursor", "/tmp/repo");
     assert.match(cmd, /specify init --here --integration cursor-agent --force/);
+    assert.match(cmd, new RegExp(`--script ${speckitScriptType()}`));
     assert.doesNotMatch(cmd, /--no-input/);
   });
 });
