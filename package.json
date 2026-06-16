@@ -1,0 +1,37 @@
+{
+  "name": "ai-quickstart",
+  "version": "0.3.0",
+  "description": "One-line installer for AI coding assistant tools (caveman, karpathy, graphify, cavemem, spec-kit, skills)",
+  "license": "Apache-2.0",
+  "type": "module",
+  "bin": {
+    "ai-quickstart": "bin/install.js"
+  },
+  "main": "bin/install.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node bin/install.js",
+    "test": "node --test tests/**/*.test.js"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.10.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aaron-axisa/AI-Quickstart.git"
+  },
+  "keywords": [
+    "ai",
+    "cursor",
+    "claude",
+    "caveman",
+    "graphify",
+    "karpathy",
+    "cavemem",
+    "speckit",
+    "spec-kit",
+    "installer"
+  ]
+}

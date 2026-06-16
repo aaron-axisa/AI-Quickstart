@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "hooks": {
+    "sessionStart": [
+      {
+        "command": "node .cursor/hooks/session-start.js"
+      }
+    ],
+    "beforeSubmitPrompt": [
+      {
+        "command": "node .cursor/hooks/caveman-prompt-tracker.js",
+        "matcher": "UserPromptSubmit"
+      }
+    ],
+    "preToolUse": [
+      {
+        "command": "node .cursor/hooks/graphify-pre-tool-use.js",
+        "matcher": "Read|Grep|Glob|Shell"
+      }
+    ]
+  }
+}

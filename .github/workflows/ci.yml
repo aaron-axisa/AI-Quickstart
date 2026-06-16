@@ -1,0 +1,52 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
+
+      - name: Dry-run install smoke test
+        shell: bash
+        run: |
+          TMP=$(mktemp -d)
+          node bin/install.js \
+            --path "$TMP" \
+            --tools caveman,karpathy,graphify \
+            --platforms cursor \
+            --dry-run \
+            --non-interactive
+
+      - name: Dry-run uninstall smoke test
+        shell: bash
+        run: |
+          TMP=$(mktemp -d)
+          node bin/install.js \
+            --path "$TMP" \
+            --uninstall \
+            --tools karpathy,graphify \
+            --platforms cursor \
+            --graphify-purge \
+            --dry-run \
+            --non-interactive

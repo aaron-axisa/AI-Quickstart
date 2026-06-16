@@ -1,0 +1,32 @@
+name: Feature request
+description: Suggest an improvement or new tool support
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or use case
+      description: What problem does this solve?
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+    validations:
+      required: true
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Scope
+      options:
+        - New upstream tool/plugin
+        - New platform support
+        - CLI / UX improvement
+        - Documentation
+        - Other
+    validations:
+      required: true

@@ -1,0 +1,184 @@
+# AI-Quickstart
+
+One-line installer for popular AI coding assistant tools. Point it at any repository, pick your tools and platforms, and go.
+
+## Supported tools
+
+| Tool | What it does | Upstream |
+|------|--------------|----------|
+| **Caveman** | Cuts ~75% of output tokens via terse caveman-speak | [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) |
+| **Karpathy Guidelines** | Reduces LLM coding mistakes (think first, simplify, surgical edits) | [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) |
+| **Graphify** | Queryable knowledge graph for your codebase | [safishamsi/graphify](https://github.com/safishamsi/graphify) |
+| **Cavemem** | Cross-agent persistent memory (local SQLite + MCP) | [JuliusBrussee/cavemem](https://github.com/JuliusBrussee/cavemem) |
+| **Spec Kit** | Spec-driven development (`/speckit.*` commands) | [github/spec-kit](https://github.com/github/spec-kit) |
+| **Skills bundle** | Planning & review skills (grill-me, loop-factory, …) | [JuliusBrussee/skills](https://github.com/JuliusBrussee/skills) |
+
+## Quick start
+
+**Interactive** (prompts for path, tools, platforms):
+
+```bash
+# macOS / Linux / WSL / Git Bash
+curl -fsSL https://raw.githubusercontent.com/aaron-axisa/AI-Quickstart/main/install.sh | bash
+
+# Windows (PowerShell 5.1+)
+irm https://raw.githubusercontent.com/aaron-axisa/AI-Quickstart/main/install.ps1 | iex
+```
+
+**Preset bundle** (non-interactive):
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/aaron-axisa/AI-Quickstart/main/install.sh | bash -s -- \
+  --path "$HOME/projects/my-app" \
+  --preset full \
+  --platforms cursor \
+  --non-interactive -y
+```
+
+Presets: `minimal` | `context` | `efficiency` | `full` | `spec-heavy`
+
+**Non-interactive** (automation / CI):
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/aaron-axisa/AI-Quickstart/main/install.sh | bash -s -- \
+  --path "$HOME/projects/my-app" \
+  --tools caveman,karpathy,graphify \
+  --platforms cursor,claude \
+  --caveman-with-init \
+  --graphify-project \
+  --install-prerequisites \
+  --non-interactive
+```
+
+> **Security note:** Piping a script into your shell runs it sight-unseen. Review [`install.sh`](install.sh) first if you prefer: download it, read it, then run `bash install.sh`.
+
+## Requirements
+
+| Dependency | Required for | Minimum |
+|------------|--------------|---------|
+| Node.js | CLI + Caveman + Cavemem | 18+ (20+ for Cavemem) |
+| Python | Graphify + Spec Kit | 3.10+ (3.11+ for Spec Kit) |
+| uv | Graphify + Spec Kit | any (required for Spec Kit) |
+| git | recommended | any |
+
+Use `--install-prerequisites` to attempt automatic installation of missing deps (with confirmation in interactive mode).
+
+## Uninstall
+
+Remove project-scoped tool files from a repo:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/aaron-axisa/AI-Quickstart/main/install.sh | bash -s -- \
+  --path "$HOME/projects/my-app" \
+  --uninstall \
+  --tools caveman,karpathy,graphify \
+  --platforms cursor \
+  --graphify-purge \
+  --non-interactive
+```
+
+| Flag | Effect |
+|------|--------|
+| `--uninstall` | Remove instead of install |
+| `--graphify-purge` | Delete `graphify-out/` from repo |
+| `--caveman-global-uninstall` | Also remove user-level caveman hooks/plugins |
+
+## Review before proceeding
+
+Before install or uninstall runs, a **preview** lists every file and command that will change. You must confirm in interactive mode.
+
+Skip the confirmation step with flags:
+
+| Flag | Behavior |
+|------|----------|
+| `--non-interactive` | Show preview once, proceed without prompt (for CI/scripts) |
+| `-y` / `--yes` | Auto-confirm in interactive mode |
+
+If you pass all required flags interactively but omit both `--yes` and `--non-interactive`, the CLI prints the preview and exits — re-run with `-y` to confirm.
+
+## CLI reference
+
+### Required (non-interactive)
+
+| Flag | Description |
+|------|-------------|
+| `--path <dir>` | Target repository. **Never defaults to current directory.** |
+
+### Tool selection
+
+| Flag | Description |
+|------|-------------|
+| `--tools <csv>` | `caveman,karpathy,graphify` |
+| `--platforms <csv>` | `cursor,claude,codex,opencode,windsurf,cline,copilot,gemini,aider` |
+
+### Modes
+
+| Flag | Description |
+|------|-------------|
+| `--non-interactive` | Fail instead of prompting |
+| `-y, --yes` | Auto-confirm summary |
+| `--dry-run` | Print commands only |
+| `--install-prerequisites` | Install missing Node/Python/uv |
+| `--verbose` | Show upstream output |
+| `--force` | Overwrite existing files where supported |
+
+See `ai-quickstart --help` for plugin-specific flags.
+
+## What changes in my repo?
+
+Example after installing all three for Cursor:
+
+```
+your-repo/
+├── .cursor/
+│   ├── rules/
+│   │   ├── caveman.mdc
+│   │   ├── graphify.mdc
+│   │   └── karpathy-guidelines.mdc
+│   └── hooks.json              # if caveman/graphify install hooks
+├── .agents/skills/             # caveman skills (Cursor)
+├── AGENTS.md                   # optional karpathy merge
+└── graphify-out/               # only if --graphify-build
+```
+
+Re-running is safe. Upstream installers are idempotent where possible.
+
+## Platform matrix
+
+| Platform | Caveman | Graphify | Karpathy |
+|----------|---------|----------|----------|
+| Cursor | skills + rules | `graphify cursor install --project` | `.cursor/rules/karpathy-guidelines.mdc` |
+| Claude Code | plugin | `graphify claude install --project` | merge `CLAUDE.md` |
+| Codex | skills | `graphify codex install --project` | merge `AGENTS.md` |
+| Others | `--only <id>` | platform-specific | merge where applicable |
+
+## Troubleshooting
+
+**PowerShell execution policy blocks install**
+
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+irm .../install.ps1 | iex
+```
+
+**`graphify: command not found` after install**
+
+Use `uv tool install graphifyy` instead of plain `pip`. Ensure `~/.local/bin` (Linux) or uv's bin dir is on PATH.
+
+**Hook conflicts in `.cursor/hooks.json`**
+
+Back up existing hooks before install. Caveman and Graphify upstream installers merge hook entries.
+
+**Path required error**
+
+Always pass `--path`. Interactive mode prompts if omitted.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md). Bug reports and PRs welcome on [GitHub Issues](https://github.com/aaron-axisa/AI-Quickstart/issues).
+
+## License
+
+Apache-2.0 — see [LICENSE](LICENSE).
+
+Upstream tools have their own licenses (all MIT).
