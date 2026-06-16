@@ -375,8 +375,8 @@
     "semantic_hash": ""
   },
   "src/plugins/speckit.js": {
-    "mtime": 1781643808.1455095,
-    "ast_hash": "c9a8b4976bbea1b78a266137de6c242e",
+    "mtime": 1781644063.6143692,
+    "ast_hash": "0f6a57ff37c932d8d04b1a3621268c2b",
     "semantic_hash": ""
   },
   "src/utils/hooks.js": {

@@ -23,7 +23,7 @@ export function planInstallSpeckit(config) {
     {
       tool: "speckit",
       description:
-        "Install specify-cli globally (uv; skipped if already on PATH unless --force)",
+        "Install specify-cli globally (uv; skipped if already available unless --force)",
       command: speckitInstallCommand(),
     },
   ];
@@ -79,28 +79,64 @@ export function planUninstallSpeckit(config) {
 
 /**
  * @param {import("../runner.js").RunConfig} config
+ */
+async function isSpecifyCliAvailable(config) {
+  if (config.dryRun) return true;
+  if (await commandExists("specify", ["--version"])) return true;
+  const viaUv = await run(
+    "uv",
+    ["tool", "run", "--from", "specify-cli", "specify", "--", "--version"],
+    { verbose: false },
+  );
+  return viaUv.code === 0;
+}
+
+/**
+ * @param {import("../runner.js").RunConfig} config
+ * @param {string[]} args
+ */
+async function runSpecify(config, args) {
+  if (config.dryRun) {
+    return run("specify", args, {
+      cwd: config.repoPath,
+      dryRun: true,
+      verbose: true,
+    });
+  }
+  if (await commandExists("specify", ["--version"])) {
+    return run("specify", args, {
+      cwd: config.repoPath,
+      verbose: true,
+    });
+  }
+  return run(
+    "uv",
+    ["tool", "run", "--from", "specify-cli", "specify", "--", ...args],
+    { cwd: config.repoPath, verbose: true },
+  );
+}
+
+/**
+ * @param {import("../runner.js").RunConfig} config
  * @returns {Promise<string>}
  */
 async function ensureSpecifyCli(config) {
-  const hasSpecify =
-    config.dryRun || (await commandExists("specify", ["--version"]));
-
-  if (hasSpecify && !config.force) {
-    console.log("[speckit] specify-cli already on PATH — skipping uv tool install");
-    return "specify-cli already installed";
+  if ((await isSpecifyCliAvailable(config)) && !config.force) {
+    console.log("[speckit] specify-cli already available — skipping uv tool install");
+    return "specify-cli already available";
   }
 
   console.log("\n[speckit] Installing specify-cli...");
-  const install = await run("uv", speckitInstallArgs({ force: true }), {
+  const install = await run("uv", speckitInstallArgs({ force: config.force }), {
     dryRun: config.dryRun,
     verbose: config.verbose,
   });
   if (install.code === 0 || config.dryRun) {
-    return speckitInstallCommand({ force: true });
+    return speckitInstallCommand({ force: config.force });
   }
 
   const errText = `${install.stderr}\n${install.stdout}`;
-  if ((await commandExists("specify", ["--version"])) && isSpecifyInstallLockError(errText)) {
+  if (isSpecifyInstallLockError(errText) && (await isSpecifyCliAvailable(config))) {
     console.warn(
       "[speckit] uv could not replace specify-cli (files in use) — continuing with existing install.\n" +
         "  Close other terminals/processes using specify, then re-run with --force to upgrade.",
@@ -138,11 +174,7 @@ export async function installSpeckit(config) {
   }
 
   console.log(`[speckit] specify ${initArgs.join(" ")} (cwd: ${config.repoPath})`);
-  const init = await run("specify", initArgs, {
-    cwd: config.repoPath,
-    dryRun: config.dryRun,
-    verbose: true,
-  });
+  const init = await runSpecify(config, initArgs);
   if (init.code !== 0 && !config.dryRun) {
     throw new Error(
       `specify init failed for ${primary.id}:\n${init.stderr || init.stdout}`,

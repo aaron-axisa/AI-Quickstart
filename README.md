@@ -22,13 +22,19 @@ One-line installer for popular AI coding assistant tools. Point it at any reposi
 curl -fsSL https://raw.githubusercontent.com/aaron-axisa/AI-Quickstart/main/install.sh | bash
 
 # Windows (PowerShell 5.1+)
-irm https://raw.githubusercontent.com/aaron-axisa/AI-Quickstart/main/install.ps1 | iex
+powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://raw.githubusercontent.com/aaron-axisa/AI-Quickstart/main/install.ps1 | iex"
 ```
 
-> **Windows + flags:** `irm | iex` cannot pass `--path` etc. Use `npx` for non-interactive:
+> **nvm-windows / execution policy:** PowerShell may block unsigned `npx.ps1`. The one-liner above uses `Bypass` for the session. Or run directly:
 >
 > ```powershell
-> npx -y github:aaron-axisa/AI-Quickstart --path C:\path\to\repo --preset full --platforms cursor -y
+> npx.cmd -y github:aaron-axisa/AI-Quickstart
+> ```
+
+> **Windows + flags:** `irm | iex` cannot pass `--path` etc. Use `npx.cmd` for non-interactive:
+>
+> ```powershell
+> npx.cmd -y github:aaron-axisa/AI-Quickstart --path C:\path\to\repo --preset full --platforms cursor -y
 > ```
 
 **Preset bundle** (non-interactive):
@@ -160,11 +166,17 @@ Re-running is safe. Upstream installers are idempotent where possible.
 
 ## Troubleshooting
 
-**PowerShell execution policy blocks install**
+**PowerShell execution policy / unsigned `npx.ps1` (nvm-windows)**
 
 ```powershell
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 irm .../install.ps1 | iex
+```
+
+Or skip the pipe entirely:
+
+```powershell
+npx.cmd -y github:aaron-axisa/AI-Quickstart
 ```
 
 **`Invoke-Expression` / null Path error with `irm | iex`**
