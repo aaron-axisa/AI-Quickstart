@@ -60,8 +60,8 @@
     "semantic_hash": ""
   },
   "install.ps1": {
-    "mtime": 1781636718.4913552,
-    "ast_hash": "1d2bf8fccd213eafaeff7eb6e6d87ad6",
+    "mtime": 1781640358.4432676,
+    "ast_hash": "67006b74df7e4e9cb0e1ae8d04cdad55",
     "semantic_hash": ""
   },
   "install.sh": {
@@ -305,8 +305,8 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1781638138.0705395,
-    "ast_hash": "dd1973477dff5b3340ec6897a925af1b",
+    "mtime": 1781640364.1084986,
+    "ast_hash": "ead6e033b76c0d73152bb4c0a2f9aea4",
     "semantic_hash": ""
   },
   "docs/ARCHITECTURE.md": {

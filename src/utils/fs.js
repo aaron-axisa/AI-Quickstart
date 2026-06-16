@@ -90,6 +90,58 @@ export function removeMarkerBlock(existing, blockName) {
 }
 
 /**
+ * @param {string} content
+ * @param {string} pattern
+ */
+function gitignoreHasPattern(content, pattern) {
+  const trimmed = pattern.trim().replace(/\/$/, "");
+  return content.split("\n").some((line) => {
+    const t = line.trim();
+    if (!t || t.startsWith("#")) return false;
+    const normalized = t.replace(/\/$/, "");
+    return normalized === trimmed;
+  });
+}
+
+/**
+ * Idempotently append a marked block to .gitignore.
+ * @param {string} repoPath
+ * @param {string} blockName
+ * @param {string} innerContent
+ * @param {{ dryRun?: boolean }} opts
+ * @returns {{ status: 'added'|'updated'|'skip', path: string }}
+ */
+export function ensureGitignoreBlock(repoPath, blockName, innerContent, opts = {}) {
+  const gitignorePath = path.join(repoPath, ".gitignore");
+  const existing = readFileIfExists(gitignorePath) ?? "";
+  const begin = `<!-- ai-quickstart:${blockName}-begin -->`;
+
+  for (const line of innerContent.split("\n")) {
+    const t = line.trim();
+    if (t && !t.startsWith("#") && gitignoreHasPattern(existing, t)) {
+      return { status: "skip", path: gitignorePath };
+    }
+  }
+
+  const merged = mergeMarkerBlock(existing, blockName, innerContent);
+  if (merged === existing) {
+    return { status: "skip", path: gitignorePath };
+  }
+
+  if (opts.dryRun) {
+    console.log(`[dry-run] update ${gitignorePath} (${blockName} block)`);
+    return { status: existing ? "updated" : "added", path: gitignorePath };
+  }
+
+  if (!existing) {
+    fs.writeFileSync(gitignorePath, `${merged}`, "utf8");
+  } else {
+    fs.writeFileSync(gitignorePath, merged, "utf8");
+  }
+  return { status: existing.includes(begin) ? "updated" : "added", path: gitignorePath };
+}
+
+/**
  * @param {string} filePath
  * @param {{ dryRun?: boolean }} opts
  */

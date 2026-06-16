@@ -1,7 +1,7 @@
 # Graph Report - AI-Quickstart  (2026-06-16)
 
 ## Corpus Check
-- 74 files · ~22,892 words
+- 74 files · ~22,982 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `621afccc`
+- Built from commit: `7b88c930`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -61,8 +61,8 @@
 5. `checkPrerequisites()` - 13 edges
 6. `runInteractive()` - 13 edges
 7. `runAction()` - 13 edges
-8. `compress_file()` - 12 edges
-9. `AI-Quickstart` - 12 edges
+8. `AI-Quickstart` - 12 edges
+9. `compress_file()` - 12 edges
 10. `runShell()` - 11 edges
 
 ## Surprising Connections (you probably didn't know these)
@@ -219,7 +219,7 @@ Cohesion: 0.50
 Nodes (3): Checklist, Summary, Test plan
 
 ## Knowledge Gaps
-- **161 isolated node(s):** `What it does`, `How to invoke`, `Example chaining`, `See also`, `When to use cavecrew vs alternatives` (+156 more)
+- **161 isolated node(s):** `Supported tools`, `Quick start`, `Requirements`, `Uninstall`, `Review before proceeding` (+156 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -238,5 +238,5 @@ _Questions this graph is uniquely positioned to answer:_
   _`run()` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 5 inferred relationships involving `repoFileExists()` (e.g. with `planInstallCaveman()` and `planUninstallCaveman()`) actually correct?**
   _`repoFileExists()` has 5 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `What it does`, `How to invoke`, `Example chaining` to the rest of the system?**
+- **What connects `Supported tools`, `Quick start`, `Requirements` to the rest of the system?**
   _173 weakly-connected nodes found - possible documentation gaps or missing edges._

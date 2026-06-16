@@ -7,6 +7,7 @@ Installs [graphifyy](https://pypi.org/project/graphifyy/) and registers project-
 1. `uv tool install graphifyy` (or `pipx install graphifyy` fallback)
 2. Per platform: `graphify <platform> install --project` in target repo
 3. Optional: `graphify update <path> --no-cluster` (AST-only, no API key)
+4. Append `graphify-out/` to `.gitignore` (idempotent; skips if already ignored)
 
 ## Flags
 

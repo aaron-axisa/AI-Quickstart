@@ -7,7 +7,7 @@ import {
   graphifyUninstallCommand,
 } from "../platform-maps/graphify.js";
 import { run, runShell } from "../utils/exec.js";
-import { deleteDirIfExists } from "../utils/fs.js";
+import { deleteDirIfExists, ensureGitignoreBlock } from "../utils/fs.js";
 import { hasUv } from "../utils/detect.js";
 
 /**
@@ -37,6 +37,26 @@ function graphifyPackageSpec(extras) {
   const pkg = UPSTREAM.graphify.package;
   if (!extras.length) return pkg;
   return `${pkg}[${extras.join(",")}]`;
+}
+
+/** @type {string} */
+export const GRAPHIFY_GITIGNORE_BLOCK =
+  "# Graphify generated knowledge graph\ngraphify-out/";
+
+/**
+ * @param {import("../runner.js").RunConfig} config
+ */
+function applyGraphifyGitignore(config) {
+  const result = ensureGitignoreBlock(
+    config.repoPath,
+    "graphify",
+    GRAPHIFY_GITIGNORE_BLOCK,
+    { dryRun: config.dryRun },
+  );
+  if (result.status !== "skip") {
+    console.log(`[graphify] ${result.status} ${result.path} (graphify-out/)`);
+  }
+  return result;
 }
 
 /**
@@ -89,6 +109,12 @@ export function planInstallGraphify(config) {
       path: config.repoPath,
     });
   }
+
+  items.push({
+    tool: "graphify",
+    description: "Add graphify-out/ to .gitignore",
+    path: path.join(config.repoPath, ".gitignore"),
+  });
 
   return items;
 }
@@ -229,6 +255,11 @@ export async function installGraphify(config) {
     } else {
       actions.push("graphify hook install");
     }
+  }
+
+  const gitignore = applyGraphifyGitignore(config);
+  if (gitignore.status !== "skip") {
+    actions.push(`${gitignore.status} .gitignore (graphify-out/)`);
   }
 
   return {

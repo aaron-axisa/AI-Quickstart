@@ -144,7 +144,7 @@ your-repo/
 │   └── hooks.json              # if caveman/graphify install hooks
 ├── .agents/skills/             # caveman skills (Cursor)
 ├── AGENTS.md                   # optional karpathy merge
-└── graphify-out/               # only if --graphify-build
+└── graphify-out/               # generated; added to .gitignore on install
 ```
 
 Re-running is safe. Upstream installers are idempotent where possible.
