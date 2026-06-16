@@ -164,14 +164,304 @@
       "norm_label": "license"
     },
     {
+      "label": "graphify.md",
+      "file_type": "document",
+      "source_file": "docs/plugins/graphify.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_plugins_graphify_md_plugins_graphify",
+      "community": 29,
+      "norm_label": "graphify.md"
+    },
+    {
+      "label": "Graphify plugin",
+      "file_type": "document",
+      "source_file": "docs/plugins/graphify.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "plugins_graphify_graphify_plugin",
+      "community": 29,
+      "norm_label": "graphify plugin"
+    },
+    {
+      "label": "Steps",
+      "file_type": "document",
+      "source_file": "docs/plugins/graphify.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "plugins_graphify_steps",
+      "community": 29,
+      "norm_label": "steps"
+    },
+    {
+      "label": "Flags",
+      "file_type": "document",
+      "source_file": "docs/plugins/graphify.md",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "plugins_graphify_flags",
+      "community": 29,
+      "norm_label": "flags"
+    },
+    {
+      "label": "Prerequisites",
+      "file_type": "document",
+      "source_file": "docs/plugins/graphify.md",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "plugins_graphify_prerequisites",
+      "community": 29,
+      "norm_label": "prerequisites"
+    },
+    {
+      "label": "Uninstall",
+      "file_type": "document",
+      "source_file": "docs/plugins/graphify.md",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "plugins_graphify_uninstall",
+      "community": 29,
+      "norm_label": "uninstall"
+    },
+    {
+      "label": "graphify.js",
+      "file_type": "code",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_plugins_graphify_js_plugins_graphify",
+      "community": 4,
+      "norm_label": "graphify.js"
+    },
+    {
+      "label": "resolveGraphifyExtras()",
+      "file_type": "code",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "plugins_graphify_resolvegraphifyextras",
+      "community": 4,
+      "norm_label": "resolvegraphifyextras()"
+    },
+    {
+      "label": "graphifyPackageSpecForConfig()",
+      "file_type": "code",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "plugins_graphify_graphifypackagespecforconfig",
+      "community": 4,
+      "norm_label": "graphifypackagespecforconfig()"
+    },
+    {
+      "label": "graphifyPackageSpec()",
+      "file_type": "code",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "plugins_graphify_graphifypackagespec",
+      "community": 4,
+      "norm_label": "graphifypackagespec()"
+    },
+    {
+      "label": "applyGraphifyGitignore()",
+      "file_type": "code",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L49",
+      "_origin": "ast",
+      "id": "plugins_graphify_applygraphifygitignore",
+      "community": 4,
+      "norm_label": "applygraphifygitignore()"
+    },
+    {
+      "label": "planInstallGraphify()",
+      "file_type": "code",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L66",
+      "_origin": "ast",
+      "id": "plugins_graphify_planinstallgraphify",
+      "community": 4,
+      "norm_label": "planinstallgraphify()"
+    },
+    {
+      "label": "planUninstallGraphify()",
+      "file_type": "code",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L126",
+      "_origin": "ast",
+      "id": "plugins_graphify_planuninstallgraphify",
+      "community": 4,
+      "norm_label": "planuninstallgraphify()"
+    },
+    {
+      "label": "installGraphify()",
+      "file_type": "code",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L174",
+      "_origin": "ast",
+      "id": "plugins_graphify_installgraphify",
+      "community": 4,
+      "norm_label": "installgraphify()"
+    },
+    {
+      "label": "uninstallGraphify()",
+      "file_type": "code",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L275",
+      "_origin": "ast",
+      "id": "plugins_graphify_uninstallgraphify",
+      "community": 4,
+      "norm_label": "uninstallgraphify()"
+    },
+    {
+      "label": "graphifyPlugin",
+      "file_type": "code",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L322",
+      "_origin": "ast",
+      "id": "plugins_graphify_graphifyplugin",
+      "community": 0,
+      "norm_label": "graphifyplugin"
+    },
+    {
+      "label": "fs.js",
+      "file_type": "code",
+      "source_file": "src/utils/fs.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "utils_fs",
+      "community": 7,
+      "norm_label": "fs.js"
+    },
+    {
+      "label": "validateRepoPath()",
+      "file_type": "code",
+      "source_file": "src/utils/fs.js",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "utils_fs_validaterepopath",
+      "community": 0,
+      "norm_label": "validaterepopath()"
+    },
+    {
+      "label": "isGitRepo()",
+      "file_type": "code",
+      "source_file": "src/utils/fs.js",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "utils_fs_isgitrepo",
+      "community": 0,
+      "norm_label": "isgitrepo()"
+    },
+    {
+      "label": "writeFileEnsuringDir()",
+      "file_type": "code",
+      "source_file": "src/utils/fs.js",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "utils_fs_writefileensuringdir",
+      "community": 7,
+      "norm_label": "writefileensuringdir()"
+    },
+    {
+      "label": "mergeMarkerBlock()",
+      "file_type": "code",
+      "source_file": "src/utils/fs.js",
+      "source_location": "L48",
+      "_origin": "ast",
+      "id": "utils_fs_mergemarkerblock",
+      "community": 7,
+      "norm_label": "mergemarkerblock()"
+    },
+    {
+      "label": "escapeRegExp()",
+      "file_type": "code",
+      "source_file": "src/utils/fs.js",
+      "source_location": "L66",
+      "_origin": "ast",
+      "id": "utils_fs_escaperegexp",
+      "community": 7,
+      "norm_label": "escaperegexp()"
+    },
+    {
+      "label": "readFileIfExists()",
+      "file_type": "code",
+      "source_file": "src/utils/fs.js",
+      "source_location": "L71",
+      "_origin": "ast",
+      "id": "utils_fs_readfileifexists",
+      "community": 7,
+      "norm_label": "readfileifexists()"
+    },
+    {
+      "label": "removeMarkerBlock()",
+      "file_type": "code",
+      "source_file": "src/utils/fs.js",
+      "source_location": "L81",
+      "_origin": "ast",
+      "id": "utils_fs_removemarkerblock",
+      "community": 7,
+      "norm_label": "removemarkerblock()"
+    },
+    {
+      "label": "gitignoreHasPattern()",
+      "file_type": "code",
+      "source_file": "src/utils/fs.js",
+      "source_location": "L96",
+      "_origin": "ast",
+      "id": "utils_fs_gitignorehaspattern",
+      "community": 7,
+      "norm_label": "gitignorehaspattern()"
+    },
+    {
+      "label": "ensureGitignoreBlock()",
+      "file_type": "code",
+      "source_file": "src/utils/fs.js",
+      "source_location": "L114",
+      "_origin": "ast",
+      "id": "utils_fs_ensuregitignoreblock",
+      "community": 7,
+      "norm_label": "ensuregitignoreblock()"
+    },
+    {
+      "label": "deleteFileIfExists()",
+      "file_type": "code",
+      "source_file": "src/utils/fs.js",
+      "source_location": "L148",
+      "_origin": "ast",
+      "id": "utils_fs_deletefileifexists",
+      "community": 7,
+      "norm_label": "deletefileifexists()"
+    },
+    {
+      "label": "deleteDirIfExists()",
+      "file_type": "code",
+      "source_file": "src/utils/fs.js",
+      "source_location": "L162",
+      "_origin": "ast",
+      "id": "utils_fs_deletedirifexists",
+      "community": 7,
+      "norm_label": "deletedirifexists()"
+    },
+    {
+      "label": "gitignore.test.js",
+      "file_type": "code",
+      "source_file": "tests/gitignore.test.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "tests_gitignore_test",
+      "community": 7,
+      "norm_label": "gitignore.test.js"
+    },
+    {
       "label": "install.ps1",
       "file_type": "code",
       "source_file": "install.ps1",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "install",
       "community": 5,
-      "norm_label": "install.ps1"
+      "norm_label": "install.ps1",
+      "id": "install"
     },
     {
       "label": "Test-NodeVersion()",
@@ -179,9 +469,9 @@
       "source_file": "install.ps1",
       "source_location": "L9",
       "_origin": "ast",
-      "id": "install_test_nodeversion",
       "community": 5,
-      "norm_label": "test-nodeversion()"
+      "norm_label": "test-nodeversion()",
+      "id": "install_test_nodeversion"
     },
     {
       "label": "README.md",
@@ -2564,66 +2854,6 @@
       "id": "plugins_caveman_uninstall"
     },
     {
-      "label": "graphify.md",
-      "file_type": "document",
-      "source_file": "docs/plugins/graphify.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 29,
-      "norm_label": "graphify.md",
-      "id": "docs_plugins_graphify_md_plugins_graphify"
-    },
-    {
-      "label": "Graphify plugin",
-      "file_type": "document",
-      "source_file": "docs/plugins/graphify.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 29,
-      "norm_label": "graphify plugin",
-      "id": "plugins_graphify_graphify_plugin"
-    },
-    {
-      "label": "Steps",
-      "file_type": "document",
-      "source_file": "docs/plugins/graphify.md",
-      "source_location": "L5",
-      "_origin": "ast",
-      "community": 29,
-      "norm_label": "steps",
-      "id": "plugins_graphify_steps"
-    },
-    {
-      "label": "Flags",
-      "file_type": "document",
-      "source_file": "docs/plugins/graphify.md",
-      "source_location": "L11",
-      "_origin": "ast",
-      "community": 29,
-      "norm_label": "flags",
-      "id": "plugins_graphify_flags"
-    },
-    {
-      "label": "Prerequisites",
-      "file_type": "document",
-      "source_file": "docs/plugins/graphify.md",
-      "source_location": "L19",
-      "_origin": "ast",
-      "community": 29,
-      "norm_label": "prerequisites",
-      "id": "plugins_graphify_prerequisites"
-    },
-    {
-      "label": "Uninstall",
-      "file_type": "document",
-      "source_file": "docs/plugins/graphify.md",
-      "source_location": "L24",
-      "_origin": "ast",
-      "community": 29,
-      "norm_label": "uninstall",
-      "id": "plugins_graphify_uninstall"
-    },
-    {
       "label": "karpathy.md",
       "file_type": "document",
       "source_file": "docs/plugins/karpathy.md",
@@ -3077,7 +3307,7 @@
       "source_file": "src/plan-helpers.js",
       "source_location": "L7",
       "_origin": "ast",
-      "community": 1,
+      "community": 7,
       "norm_label": "caveman_repo_rule_files",
       "id": "src_plan_helpers_caveman_repo_rule_files"
     },
@@ -3087,7 +3317,7 @@
       "source_file": "src/plan-helpers.js",
       "source_location": "L15",
       "_origin": "ast",
-      "community": 1,
+      "community": 7,
       "norm_label": "caveman_skill_dirs",
       "id": "src_plan_helpers_caveman_skill_dirs"
     },
@@ -3107,7 +3337,7 @@
       "source_file": "src/plan-helpers.js",
       "source_location": "L37",
       "_origin": "ast",
-      "community": 1,
+      "community": 7,
       "norm_label": "repofileexists()",
       "id": "src_plan_helpers_repofileexists"
     },
@@ -3187,7 +3417,7 @@
       "source_file": "src/platform-maps/caveman.js",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 7,
       "norm_label": "caveman.js",
       "id": "platform_maps_caveman"
     },
@@ -3197,7 +3427,7 @@
       "source_file": "src/platform-maps/caveman.js",
       "source_location": "L2",
       "_origin": "ast",
-      "community": 1,
+      "community": 7,
       "norm_label": "caveman_only",
       "id": "platform_maps_caveman_caveman_only"
     },
@@ -3207,7 +3437,7 @@
       "source_file": "src/platform-maps/caveman.js",
       "source_location": "L15",
       "_origin": "ast",
-      "community": 1,
+      "community": 7,
       "norm_label": "getcavemanonly()",
       "id": "platform_maps_caveman_getcavemanonly"
     },
@@ -3317,7 +3547,7 @@
       "source_file": "src/platform-maps/index.js",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 4,
       "norm_label": "index.js",
       "id": "platform_maps_index"
     },
@@ -3397,7 +3627,7 @@
       "source_file": "src/platform-maps/speckit.js",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 4,
       "norm_label": "speckit.js",
       "id": "platform_maps_speckit"
     },
@@ -3407,7 +3637,7 @@
       "source_file": "src/platform-maps/speckit.js",
       "source_location": "L2",
       "_origin": "ast",
-      "community": 1,
+      "community": 4,
       "norm_label": "speckit_integration",
       "id": "platform_maps_speckit_speckit_integration"
     },
@@ -3417,7 +3647,7 @@
       "source_file": "src/platform-maps/speckit.js",
       "source_location": "L15",
       "_origin": "ast",
-      "community": 1,
+      "community": 4,
       "norm_label": "getspeckitintegration()",
       "id": "platform_maps_speckit_getspeckitintegration"
     },
@@ -3427,7 +3657,7 @@
       "source_file": "src/platform-maps/speckit.js",
       "source_location": "L21",
       "_origin": "ast",
-      "community": 1,
+      "community": 4,
       "norm_label": "speckitsupportsplatform()",
       "id": "platform_maps_speckit_speckitsupportsplatform"
     },
@@ -3437,7 +3667,7 @@
       "source_file": "src/platform-maps/speckit.js",
       "source_location": "L30",
       "_origin": "ast",
-      "community": 1,
+      "community": 4,
       "norm_label": "speckitinitcommand()",
       "id": "platform_maps_speckit_speckitinitcommand"
     },
@@ -3497,7 +3727,7 @@
       "source_file": "src/plugins/caveman.js",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 7,
       "norm_label": "caveman.js",
       "id": "src_plugins_caveman_js_plugins_caveman"
     },
@@ -3507,7 +3737,7 @@
       "source_file": "src/plugins/caveman.js",
       "source_location": "L19",
       "_origin": "ast",
-      "community": 1,
+      "community": 7,
       "norm_label": "cavemaninstallcommand()",
       "id": "plugins_caveman_cavemaninstallcommand"
     },
@@ -3517,7 +3747,7 @@
       "source_file": "src/plugins/caveman.js",
       "source_location": "L41",
       "_origin": "ast",
-      "community": 1,
+      "community": 7,
       "norm_label": "planinstallcaveman()",
       "id": "plugins_caveman_planinstallcaveman"
     },
@@ -3527,7 +3757,7 @@
       "source_file": "src/plugins/caveman.js",
       "source_location": "L80",
       "_origin": "ast",
-      "community": 1,
+      "community": 7,
       "norm_label": "planuninstallcaveman()",
       "id": "plugins_caveman_planuninstallcaveman"
     },
@@ -3537,7 +3767,7 @@
       "source_file": "src/plugins/caveman.js",
       "source_location": "L118",
       "_origin": "ast",
-      "community": 1,
+      "community": 7,
       "norm_label": "installcaveman()",
       "id": "plugins_caveman_installcaveman"
     },
@@ -3547,7 +3777,7 @@
       "source_file": "src/plugins/caveman.js",
       "source_location": "L159",
       "_origin": "ast",
-      "community": 1,
+      "community": 7,
       "norm_label": "uninstallcaveman()",
       "id": "plugins_caveman_uninstallcaveman"
     },
@@ -3620,96 +3850,6 @@
       "community": 0,
       "norm_label": "cavememplugin",
       "id": "plugins_cavemem_cavememplugin"
-    },
-    {
-      "label": "graphify.js",
-      "file_type": "code",
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "graphify.js",
-      "id": "src_plugins_graphify_js_plugins_graphify"
-    },
-    {
-      "label": "resolveGraphifyExtras()",
-      "file_type": "code",
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L17",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "resolvegraphifyextras()",
-      "id": "plugins_graphify_resolvegraphifyextras"
-    },
-    {
-      "label": "graphifyPackageSpecForConfig()",
-      "file_type": "code",
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L29",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "graphifypackagespecforconfig()",
-      "id": "plugins_graphify_graphifypackagespecforconfig"
-    },
-    {
-      "label": "graphifyPackageSpec()",
-      "file_type": "code",
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L36",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "graphifypackagespec()",
-      "id": "plugins_graphify_graphifypackagespec"
-    },
-    {
-      "label": "planInstallGraphify()",
-      "file_type": "code",
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L46",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "planinstallgraphify()",
-      "id": "plugins_graphify_planinstallgraphify"
-    },
-    {
-      "label": "planUninstallGraphify()",
-      "file_type": "code",
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L100",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "planuninstallgraphify()",
-      "id": "plugins_graphify_planuninstallgraphify"
-    },
-    {
-      "label": "installGraphify()",
-      "file_type": "code",
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L148",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "installgraphify()",
-      "id": "plugins_graphify_installgraphify"
-    },
-    {
-      "label": "uninstallGraphify()",
-      "file_type": "code",
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L244",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "uninstallgraphify()",
-      "id": "plugins_graphify_uninstallgraphify"
-    },
-    {
-      "label": "graphifyPlugin",
-      "file_type": "code",
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L291",
-      "_origin": "ast",
-      "community": 0,
-      "norm_label": "graphifyplugin",
-      "id": "plugins_graphify_graphifyplugin"
     },
     {
       "label": "index.js",
@@ -3927,7 +4067,7 @@
       "source_file": "src/plugins/speckit.js",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 4,
       "norm_label": "speckit.js",
       "id": "plugins_speckit"
     },
@@ -3937,7 +4077,7 @@
       "source_file": "src/plugins/speckit.js",
       "source_location": "L17",
       "_origin": "ast",
-      "community": 1,
+      "community": 4,
       "norm_label": "planinstallspeckit()",
       "id": "plugins_speckit_planinstallspeckit"
     },
@@ -3947,7 +4087,7 @@
       "source_file": "src/plugins/speckit.js",
       "source_location": "L54",
       "_origin": "ast",
-      "community": 1,
+      "community": 4,
       "norm_label": "planuninstallspeckit()",
       "id": "plugins_speckit_planuninstallspeckit"
     },
@@ -3967,7 +4107,7 @@
       "source_file": "src/plugins/speckit.js",
       "source_location": "L130",
       "_origin": "ast",
-      "community": 1,
+      "community": 4,
       "norm_label": "uninstallspeckit()",
       "id": "plugins_speckit_uninstallspeckit"
     },
@@ -4282,106 +4422,6 @@
       "id": "utils_exec_commandexists"
     },
     {
-      "label": "fs.js",
-      "file_type": "code",
-      "source_file": "src/utils/fs.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 7,
-      "norm_label": "fs.js",
-      "id": "utils_fs"
-    },
-    {
-      "label": "validateRepoPath()",
-      "file_type": "code",
-      "source_file": "src/utils/fs.js",
-      "source_location": "L8",
-      "_origin": "ast",
-      "community": 0,
-      "norm_label": "validaterepopath()",
-      "id": "utils_fs_validaterepopath"
-    },
-    {
-      "label": "isGitRepo()",
-      "file_type": "code",
-      "source_file": "src/utils/fs.js",
-      "source_location": "L24",
-      "_origin": "ast",
-      "community": 0,
-      "norm_label": "isgitrepo()",
-      "id": "utils_fs_isgitrepo"
-    },
-    {
-      "label": "writeFileEnsuringDir()",
-      "file_type": "code",
-      "source_file": "src/utils/fs.js",
-      "source_location": "L33",
-      "_origin": "ast",
-      "community": 7,
-      "norm_label": "writefileensuringdir()",
-      "id": "utils_fs_writefileensuringdir"
-    },
-    {
-      "label": "mergeMarkerBlock()",
-      "file_type": "code",
-      "source_file": "src/utils/fs.js",
-      "source_location": "L48",
-      "_origin": "ast",
-      "community": 7,
-      "norm_label": "mergemarkerblock()",
-      "id": "utils_fs_mergemarkerblock"
-    },
-    {
-      "label": "escapeRegExp()",
-      "file_type": "code",
-      "source_file": "src/utils/fs.js",
-      "source_location": "L66",
-      "_origin": "ast",
-      "community": 7,
-      "norm_label": "escaperegexp()",
-      "id": "utils_fs_escaperegexp"
-    },
-    {
-      "label": "readFileIfExists()",
-      "file_type": "code",
-      "source_file": "src/utils/fs.js",
-      "source_location": "L71",
-      "_origin": "ast",
-      "community": 7,
-      "norm_label": "readfileifexists()",
-      "id": "utils_fs_readfileifexists"
-    },
-    {
-      "label": "removeMarkerBlock()",
-      "file_type": "code",
-      "source_file": "src/utils/fs.js",
-      "source_location": "L81",
-      "_origin": "ast",
-      "community": 7,
-      "norm_label": "removemarkerblock()",
-      "id": "utils_fs_removemarkerblock"
-    },
-    {
-      "label": "deleteFileIfExists()",
-      "file_type": "code",
-      "source_file": "src/utils/fs.js",
-      "source_location": "L96",
-      "_origin": "ast",
-      "community": 7,
-      "norm_label": "deletefileifexists()",
-      "id": "utils_fs_deletefileifexists"
-    },
-    {
-      "label": "deleteDirIfExists()",
-      "file_type": "code",
-      "source_file": "src/utils/fs.js",
-      "source_location": "L110",
-      "_origin": "ast",
-      "community": 1,
-      "norm_label": "deletedirifexists()",
-      "id": "utils_fs_deletedirifexists"
-    },
-    {
       "label": "hooks.js",
       "file_type": "code",
       "source_file": "src/utils/hooks.js",
@@ -4606,12 +4646,1241 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "docs/plugins/graphify.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_plugins_graphify_md_plugins_graphify",
+      "target": "plugins_graphify_graphify_plugin"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/plugins/graphify.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_graphify_graphify_plugin",
+      "target": "plugins_graphify_flags"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/plugins/graphify.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_graphify_graphify_plugin",
+      "target": "plugins_graphify_prerequisites"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/plugins/graphify.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_graphify_graphify_plugin",
+      "target": "plugins_graphify_steps"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/plugins/graphify.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_graphify_graphify_plugin",
+      "target": "plugins_graphify_uninstall"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plugins_graphify_js_plugins_graphify",
+      "target": "platform_maps_graphify"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plugins_graphify_js_plugins_graphify",
+      "target": "platform_maps_graphify_graphifyinstallcommand"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plugins_graphify_js_plugins_graphify",
+      "target": "platform_maps_graphify_graphifyuninstallcommand"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "src_plugins_graphify_js_plugins_graphify",
+      "target": "plugins_graphify_applygraphifygitignore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plugins_graphify_js_plugins_graphify",
+      "target": "plugins_graphify_graphifypackagespec"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L29",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plugins_graphify_js_plugins_graphify",
+      "target": "plugins_graphify_graphifypackagespecforconfig"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L229",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plugins_graphify_js_plugins_graphify",
+      "target": "plugins_graphify_graphifyplugin"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L112",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plugins_graphify_js_plugins_graphify",
+      "target": "plugins_graphify_installgraphify"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plugins_graphify_js_plugins_graphify",
+      "target": "plugins_graphify_planinstallgraphify"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L71",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plugins_graphify_js_plugins_graphify",
+      "target": "plugins_graphify_planuninstallgraphify"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plugins_graphify_js_plugins_graphify",
+      "target": "plugins_graphify_resolvegraphifyextras"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L192",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plugins_graphify_js_plugins_graphify",
+      "target": "plugins_graphify_uninstallgraphify"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plugins_graphify_js_plugins_graphify",
+      "target": "src_constants"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plugins_graphify_js_plugins_graphify",
+      "target": "src_constants_upstream"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plugins_graphify_js_plugins_graphify",
+      "target": "src_plan_helpers"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plugins_graphify_js_plugins_graphify",
+      "target": "src_plan_helpers_repofileexists"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plugins_graphify_js_plugins_graphify",
+      "target": "src_platforms"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plugins_graphify_js_plugins_graphify",
+      "target": "src_platforms_resolveplatforms"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plugins_graphify_js_plugins_graphify",
+      "target": "utils_detect"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plugins_graphify_js_plugins_graphify",
+      "target": "utils_detect_hasuv"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plugins_graphify_js_plugins_graphify",
+      "target": "utils_exec"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plugins_graphify_js_plugins_graphify",
+      "target": "utils_exec_run"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plugins_graphify_js_plugins_graphify",
+      "target": "utils_exec_runshell"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plugins_graphify_js_plugins_graphify",
+      "target": "utils_fs"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plugins_graphify_js_plugins_graphify",
+      "target": "utils_fs_deletedirifexists"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "src_plugins_graphify_js_plugins_graphify",
+      "target": "utils_fs_ensuregitignoreblock",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L30",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_graphify_graphifypackagespecforconfig",
+      "target": "plugins_graphify_resolvegraphifyextras"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L30",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_graphify_graphifypackagespecforconfig",
+      "target": "plugins_graphify_graphifypackagespec"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L150",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_graphify_installgraphify",
+      "target": "plugins_graphify_graphifypackagespecforconfig"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L48",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_graphify_planinstallgraphify",
+      "target": "plugins_graphify_graphifypackagespecforconfig"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L114",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_graphify_installgraphify",
+      "target": "plugins_graphify_graphifypackagespec"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L28",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_graphify_planinstallgraphify",
+      "target": "plugins_graphify_graphifypackagespec"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "plugins_graphify_applygraphifygitignore",
+      "target": "utils_fs_ensuregitignoreblock",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L260",
+      "weight": 1.0,
+      "source": "plugins_graphify_installgraphify",
+      "target": "plugins_graphify_applygraphifygitignore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "plugins_graphify_planinstallgraphify",
+      "target": "platform_maps_graphify_graphifyinstallcommand"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "plugins_graphify_planinstallgraphify",
+      "target": "src_platforms_resolveplatforms"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L105",
+      "weight": 1.0,
+      "source": "plugins_graphify_planuninstallgraphify",
+      "target": "platform_maps_graphify_graphifyuninstallcommand"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L97",
+      "weight": 1.0,
+      "source": "plugins_graphify_planuninstallgraphify",
+      "target": "src_plan_helpers_repofileexists"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L72",
+      "weight": 1.0,
+      "source": "plugins_graphify_planuninstallgraphify",
+      "target": "src_platforms_resolveplatforms"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L181",
+      "weight": 1.0,
+      "source": "plugins_graphify_installgraphify",
+      "target": "platform_maps_graphify_graphifyinstallcommand"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L113",
+      "weight": 1.0,
+      "source": "plugins_graphify_installgraphify",
+      "target": "src_platforms_resolveplatforms"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L117",
+      "weight": 1.0,
+      "source": "plugins_graphify_installgraphify",
+      "target": "utils_detect_hasuv"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L132",
+      "weight": 1.0,
+      "source": "plugins_graphify_installgraphify",
+      "target": "utils_exec_run"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L122",
+      "weight": 1.0,
+      "source": "plugins_graphify_installgraphify",
+      "target": "utils_exec_runshell"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L249",
+      "weight": 1.0,
+      "source": "plugins_graphify_uninstallgraphify",
+      "target": "platform_maps_graphify_graphifyuninstallcommand"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L193",
+      "weight": 1.0,
+      "source": "plugins_graphify_uninstallgraphify",
+      "target": "src_platforms_resolveplatforms"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L201",
+      "weight": 1.0,
+      "source": "plugins_graphify_uninstallgraphify",
+      "target": "utils_exec_runshell"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L216",
+      "weight": 1.0,
+      "source": "plugins_graphify_uninstallgraphify",
+      "target": "utils_fs_deletedirifexists"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/index.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_index",
+      "target": "plugins_graphify_graphifyplugin"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/plugins/dry-run.test.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_dry_run_test",
+      "target": "utils_fs"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/skills-bundle.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_skills_bundle",
+      "target": "utils_fs"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_speckit",
+      "target": "utils_fs"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plan-helpers.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plan_helpers",
+      "target": "utils_fs"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/caveman.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plugins_caveman_js_plugins_caveman",
+      "target": "utils_fs"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/karpathy.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plugins_karpathy_js_plugins_karpathy",
+      "target": "utils_fs"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/prompts.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_prompts",
+      "target": "utils_fs"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/runner.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_runner",
+      "target": "utils_fs"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/gitignore.test.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "tests_gitignore_test",
+      "target": "utils_fs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/fs.js",
+      "source_location": "L110",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "utils_fs",
+      "target": "utils_fs_deletedirifexists"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/fs.js",
+      "source_location": "L96",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "utils_fs",
+      "target": "utils_fs_deletefileifexists"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/fs.js",
+      "source_location": "L114",
+      "weight": 1.0,
+      "source": "utils_fs",
+      "target": "utils_fs_ensuregitignoreblock",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/fs.js",
+      "source_location": "L66",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "utils_fs",
+      "target": "utils_fs_escaperegexp"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/fs.js",
+      "source_location": "L96",
+      "weight": 1.0,
+      "source": "utils_fs",
+      "target": "utils_fs_gitignorehaspattern",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/fs.js",
+      "source_location": "L24",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "utils_fs",
+      "target": "utils_fs_isgitrepo"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/fs.js",
+      "source_location": "L48",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "utils_fs",
+      "target": "utils_fs_mergemarkerblock"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/fs.js",
+      "source_location": "L71",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "utils_fs",
+      "target": "utils_fs_readfileifexists"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/fs.js",
+      "source_location": "L81",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "utils_fs",
+      "target": "utils_fs_removemarkerblock"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/fs.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "utils_fs",
+      "target": "utils_fs_validaterepopath"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/fs.js",
+      "source_location": "L33",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "utils_fs",
+      "target": "utils_fs_writefileensuringdir"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/plugins/dry-run.test.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_dry_run_test",
+      "target": "utils_fs_validaterepopath"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/prompts.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_prompts",
+      "target": "utils_fs_validaterepopath"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/prompts.js",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "src_prompts_runinteractive",
+      "target": "utils_fs_validaterepopath"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/runner.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_runner",
+      "target": "utils_fs_validaterepopath"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/runner.js",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "src_runner_runaction",
+      "target": "utils_fs_validaterepopath"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/prompts.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_prompts",
+      "target": "utils_fs_isgitrepo"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/prompts.js",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "src_prompts_runinteractive",
+      "target": "utils_fs_isgitrepo"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/runner.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_runner",
+      "target": "utils_fs_isgitrepo"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/runner.js",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "src_runner_runaction",
+      "target": "utils_fs_isgitrepo"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/plugins/karpathy.js",
+      "source_location": "L147",
+      "weight": 1.0,
+      "source": "plugins_karpathy_installkarpathy",
+      "target": "utils_fs_writefileensuringdir"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/plugins/karpathy.js",
+      "source_location": "L225",
+      "weight": 1.0,
+      "source": "plugins_karpathy_uninstallkarpathy",
+      "target": "utils_fs_writefileensuringdir"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/karpathy.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plugins_karpathy_js_plugins_karpathy",
+      "target": "utils_fs_writefileensuringdir"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/plugins/dry-run.test.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_dry_run_test",
+      "target": "utils_fs_mergemarkerblock"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/plugins/karpathy.js",
+      "source_location": "L173",
+      "weight": 1.0,
+      "source": "plugins_karpathy_installkarpathy",
+      "target": "utils_fs_mergemarkerblock"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/karpathy.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plugins_karpathy_js_plugins_karpathy",
+      "target": "utils_fs_mergemarkerblock"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/fs.js",
+      "source_location": "L126",
+      "weight": 1.0,
+      "source": "utils_fs_ensuregitignoreblock",
+      "target": "utils_fs_mergemarkerblock",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/fs.js",
+      "source_location": "L54",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "utils_fs_mergemarkerblock",
+      "target": "utils_fs_escaperegexp"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/fs.js",
+      "source_location": "L85",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "utils_fs_removemarkerblock",
+      "target": "utils_fs_escaperegexp"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/plugins/karpathy.js",
+      "source_location": "L135",
+      "weight": 1.0,
+      "source": "plugins_karpathy_installkarpathy",
+      "target": "utils_fs_readfileifexists"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/plugins/karpathy.js",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "plugins_karpathy_planinstallkarpathy",
+      "target": "utils_fs_readfileifexists"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/plugins/karpathy.js",
+      "source_location": "L212",
+      "weight": 1.0,
+      "source": "plugins_karpathy_uninstallkarpathy",
+      "target": "utils_fs_readfileifexists"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plan-helpers.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plan_helpers",
+      "target": "utils_fs_readfileifexists"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/plan-helpers.js",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "src_plan_helpers_haskarpathymarker",
+      "target": "utils_fs_readfileifexists"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/karpathy.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plugins_karpathy_js_plugins_karpathy",
+      "target": "utils_fs_readfileifexists"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/fs.js",
+      "source_location": "L116",
+      "weight": 1.0,
+      "source": "utils_fs_ensuregitignoreblock",
+      "target": "utils_fs_readfileifexists",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/plugins/dry-run.test.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_dry_run_test",
+      "target": "utils_fs_removemarkerblock"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/plugins/karpathy.js",
+      "source_location": "L223",
+      "weight": 1.0,
+      "source": "plugins_karpathy_uninstallkarpathy",
+      "target": "utils_fs_removemarkerblock"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/karpathy.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plugins_karpathy_js_plugins_karpathy",
+      "target": "utils_fs_removemarkerblock"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/fs.js",
+      "source_location": "L121",
+      "weight": 1.0,
+      "source": "utils_fs_ensuregitignoreblock",
+      "target": "utils_fs_gitignorehaspattern",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/gitignore.test.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "tests_gitignore_test",
+      "target": "utils_fs_ensuregitignoreblock",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/plugins/caveman.js",
+      "source_location": "L158",
+      "weight": 1.0,
+      "source": "plugins_caveman_uninstallcaveman",
+      "target": "utils_fs_deletefileifexists"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/plugins/karpathy.js",
+      "source_location": "L201",
+      "weight": 1.0,
+      "source": "plugins_karpathy_uninstallkarpathy",
+      "target": "utils_fs_deletefileifexists"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/caveman.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plugins_caveman_js_plugins_caveman",
+      "target": "utils_fs_deletefileifexists"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/karpathy.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plugins_karpathy_js_plugins_karpathy",
+      "target": "utils_fs_deletefileifexists"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/plugins/caveman.js",
+      "source_location": "L165",
+      "weight": 1.0,
+      "source": "plugins_caveman_uninstallcaveman",
+      "target": "utils_fs_deletedirifexists"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/skills-bundle.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_skills_bundle",
+      "target": "utils_fs_deletedirifexists"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/plugins/skills-bundle.js",
+      "source_location": "L138",
+      "weight": 1.0,
+      "source": "plugins_skills_bundle_uninstallskillsbundle",
+      "target": "utils_fs_deletedirifexists"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_speckit",
+      "target": "utils_fs_deletedirifexists"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L134",
+      "weight": 1.0,
+      "source": "plugins_speckit_uninstallspeckit",
+      "target": "utils_fs_deletedirifexists"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/caveman.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plugins_caveman_js_plugins_caveman",
+      "target": "utils_fs_deletedirifexists"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "install.ps1",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "install",
-      "target": "install_test_nodeversion",
-      "confidence_score": 1.0
+      "target": "install_test_nodeversion"
     },
     {
       "relation": "calls",
@@ -7553,56 +8822,6 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "docs/plugins/graphify.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_plugins_graphify_md_plugins_graphify",
-      "target": "plugins_graphify_graphify_plugin"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/plugins/graphify.md",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_graphify_graphify_plugin",
-      "target": "plugins_graphify_flags"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/plugins/graphify.md",
-      "source_location": "L19",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_graphify_graphify_plugin",
-      "target": "plugins_graphify_prerequisites"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/plugins/graphify.md",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_graphify_graphify_plugin",
-      "target": "plugins_graphify_steps"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/plugins/graphify.md",
-      "source_location": "L24",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_graphify_graphify_plugin",
-      "target": "plugins_graphify_uninstall"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "docs/plugins/karpathy.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -8259,17 +9478,6 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plugins_graphify_js_plugins_graphify",
-      "target": "src_constants"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
       "source_file": "src/plugins/karpathy.js",
       "source_location": "L2",
       "weight": 1.0,
@@ -8341,17 +9549,6 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_plugins_caveman_js_plugins_caveman",
-      "target": "src_constants_upstream"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plugins_graphify_js_plugins_graphify",
       "target": "src_constants_upstream"
     },
     {
@@ -8539,44 +9736,11 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "src/plan-helpers.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plan_helpers",
-      "target": "utils_fs"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plan-helpers.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plan_helpers",
-      "target": "utils_fs_readfileifexists"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
       "source_file": "src/plugins/caveman.js",
       "source_location": "L4",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_plugins_caveman_js_plugins_caveman",
-      "target": "src_plan_helpers"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plugins_graphify_js_plugins_graphify",
       "target": "src_plan_helpers"
     },
     {
@@ -8672,17 +9836,6 @@
       "context": "call",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L97",
-      "weight": 1.0,
-      "source": "plugins_graphify_planuninstallgraphify",
-      "target": "src_plan_helpers_repofileexists"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
       "source_file": "src/plugins/karpathy.js",
       "source_location": "L43",
       "weight": 1.0,
@@ -8764,17 +9917,6 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_plugins_caveman_js_plugins_caveman",
-      "target": "src_plan_helpers_repofileexists"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plugins_graphify_js_plugins_graphify",
       "target": "src_plan_helpers_repofileexists"
     },
     {
@@ -8864,17 +10006,6 @@
       "weight": 1.0,
       "source": "plugins_karpathy_planuninstallkarpathy",
       "target": "src_plan_helpers_haskarpathymarker"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/plan-helpers.js",
-      "source_location": "L50",
-      "weight": 1.0,
-      "source": "src_plan_helpers_haskarpathymarker",
-      "target": "utils_fs_readfileifexists"
     },
     {
       "relation": "imports",
@@ -9468,17 +10599,6 @@
       "target": "platform_maps_graphify"
     },
     {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plugins_graphify_js_plugins_graphify",
-      "target": "platform_maps_graphify"
-    },
-    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -9523,39 +10643,6 @@
       "target": "platform_maps_graphify_graphifyinstallcommand"
     },
     {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L181",
-      "weight": 1.0,
-      "source": "plugins_graphify_installgraphify",
-      "target": "platform_maps_graphify_graphifyinstallcommand"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L58",
-      "weight": 1.0,
-      "source": "plugins_graphify_planinstallgraphify",
-      "target": "platform_maps_graphify_graphifyinstallcommand"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plugins_graphify_js_plugins_graphify",
-      "target": "platform_maps_graphify_graphifyinstallcommand"
-    },
-    {
       "relation": "re_exports",
       "context": "re-export",
       "confidence": "EXTRACTED",
@@ -9564,39 +10651,6 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "platform_maps_index",
-      "target": "platform_maps_graphify_graphifyuninstallcommand"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L105",
-      "weight": 1.0,
-      "source": "plugins_graphify_planuninstallgraphify",
-      "target": "platform_maps_graphify_graphifyuninstallcommand"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L249",
-      "weight": 1.0,
-      "source": "plugins_graphify_uninstallgraphify",
-      "target": "platform_maps_graphify_graphifyuninstallcommand"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plugins_graphify_js_plugins_graphify",
       "target": "platform_maps_graphify_graphifyuninstallcommand"
     },
     {
@@ -10085,17 +11139,6 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plugins_graphify_js_plugins_graphify",
-      "target": "src_platforms"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
       "source_file": "src/plugins/karpathy.js",
       "source_location": "L3",
       "weight": 1.0,
@@ -10229,50 +11272,6 @@
       "context": "call",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L113",
-      "weight": 1.0,
-      "source": "plugins_graphify_installgraphify",
-      "target": "src_platforms_resolveplatforms"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L27",
-      "weight": 1.0,
-      "source": "plugins_graphify_planinstallgraphify",
-      "target": "src_platforms_resolveplatforms"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L72",
-      "weight": 1.0,
-      "source": "plugins_graphify_planuninstallgraphify",
-      "target": "src_platforms_resolveplatforms"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L193",
-      "weight": 1.0,
-      "source": "plugins_graphify_uninstallgraphify",
-      "target": "src_platforms_resolveplatforms"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
       "source_file": "src/plugins/karpathy.js",
       "source_location": "L124",
       "weight": 1.0,
@@ -10393,17 +11392,6 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plugins_graphify_js_plugins_graphify",
-      "target": "src_platforms_resolveplatforms"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
       "source_file": "src/plugins/karpathy.js",
       "source_location": "L3",
       "weight": 1.0,
@@ -10494,39 +11482,6 @@
       "target": "utils_exec_run"
     },
     {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/caveman.js",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plugins_caveman_js_plugins_caveman",
-      "target": "utils_fs"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/caveman.js",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plugins_caveman_js_plugins_caveman",
-      "target": "utils_fs_deletedirifexists"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/caveman.js",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plugins_caveman_js_plugins_caveman",
-      "target": "utils_fs_deletefileifexists"
-    },
-    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -10558,28 +11513,6 @@
       "weight": 1.0,
       "source": "plugins_caveman_uninstallcaveman",
       "target": "utils_exec_run"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "src/plugins/caveman.js",
-      "source_location": "L165",
-      "weight": 1.0,
-      "source": "plugins_caveman_uninstallcaveman",
-      "target": "utils_fs_deletedirifexists"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "src/plugins/caveman.js",
-      "source_location": "L158",
-      "weight": 1.0,
-      "source": "plugins_caveman_uninstallcaveman",
-      "target": "utils_fs_deletefileifexists"
     },
     {
       "relation": "imports",
@@ -10729,295 +11662,6 @@
       "confidence_score": 1.0,
       "source": "plugins_index",
       "target": "plugins_cavemem_cavememplugin"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L16",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plugins_graphify_js_plugins_graphify",
-      "target": "plugins_graphify_graphifypackagespec"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L29",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plugins_graphify_js_plugins_graphify",
-      "target": "plugins_graphify_graphifypackagespecforconfig"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L229",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plugins_graphify_js_plugins_graphify",
-      "target": "plugins_graphify_graphifyplugin"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L112",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plugins_graphify_js_plugins_graphify",
-      "target": "plugins_graphify_installgraphify"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L26",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plugins_graphify_js_plugins_graphify",
-      "target": "plugins_graphify_planinstallgraphify"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L71",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plugins_graphify_js_plugins_graphify",
-      "target": "plugins_graphify_planuninstallgraphify"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L17",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plugins_graphify_js_plugins_graphify",
-      "target": "plugins_graphify_resolvegraphifyextras"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L192",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plugins_graphify_js_plugins_graphify",
-      "target": "plugins_graphify_uninstallgraphify"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plugins_graphify_js_plugins_graphify",
-      "target": "utils_detect"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plugins_graphify_js_plugins_graphify",
-      "target": "utils_detect_hasuv"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plugins_graphify_js_plugins_graphify",
-      "target": "utils_exec"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plugins_graphify_js_plugins_graphify",
-      "target": "utils_exec_run"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plugins_graphify_js_plugins_graphify",
-      "target": "utils_exec_runshell"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plugins_graphify_js_plugins_graphify",
-      "target": "utils_fs"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plugins_graphify_js_plugins_graphify",
-      "target": "utils_fs_deletedirifexists"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L30",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_graphify_graphifypackagespecforconfig",
-      "target": "plugins_graphify_resolvegraphifyextras"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L30",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_graphify_graphifypackagespecforconfig",
-      "target": "plugins_graphify_graphifypackagespec"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L150",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_graphify_installgraphify",
-      "target": "plugins_graphify_graphifypackagespecforconfig"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L48",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_graphify_planinstallgraphify",
-      "target": "plugins_graphify_graphifypackagespecforconfig"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L114",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_graphify_installgraphify",
-      "target": "plugins_graphify_graphifypackagespec"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L28",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_graphify_planinstallgraphify",
-      "target": "plugins_graphify_graphifypackagespec"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L117",
-      "weight": 1.0,
-      "source": "plugins_graphify_installgraphify",
-      "target": "utils_detect_hasuv"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L132",
-      "weight": 1.0,
-      "source": "plugins_graphify_installgraphify",
-      "target": "utils_exec_run"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L122",
-      "weight": 1.0,
-      "source": "plugins_graphify_installgraphify",
-      "target": "utils_exec_runshell"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L201",
-      "weight": 1.0,
-      "source": "plugins_graphify_uninstallgraphify",
-      "target": "utils_exec_runshell"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L216",
-      "weight": 1.0,
-      "source": "plugins_graphify_uninstallgraphify",
-      "target": "utils_fs_deletedirifexists"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/index.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_index",
-      "target": "plugins_graphify_graphifyplugin"
     },
     {
       "relation": "contains",
@@ -11284,72 +11928,6 @@
       "target": "plugins_karpathy_uninstallkarpathy"
     },
     {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/karpathy.js",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plugins_karpathy_js_plugins_karpathy",
-      "target": "utils_fs"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/karpathy.js",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plugins_karpathy_js_plugins_karpathy",
-      "target": "utils_fs_deletefileifexists"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/karpathy.js",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plugins_karpathy_js_plugins_karpathy",
-      "target": "utils_fs_mergemarkerblock"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/karpathy.js",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plugins_karpathy_js_plugins_karpathy",
-      "target": "utils_fs_readfileifexists"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/karpathy.js",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plugins_karpathy_js_plugins_karpathy",
-      "target": "utils_fs_removemarkerblock"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/karpathy.js",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plugins_karpathy_js_plugins_karpathy",
-      "target": "utils_fs_writefileensuringdir"
-    },
-    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -11359,94 +11937,6 @@
       "confidence_score": 1.0,
       "source": "plugins_karpathy_installkarpathy",
       "target": "plugins_karpathy_fetchupstream"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "src/plugins/karpathy.js",
-      "source_location": "L71",
-      "weight": 1.0,
-      "source": "plugins_karpathy_planinstallkarpathy",
-      "target": "utils_fs_readfileifexists"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "src/plugins/karpathy.js",
-      "source_location": "L173",
-      "weight": 1.0,
-      "source": "plugins_karpathy_installkarpathy",
-      "target": "utils_fs_mergemarkerblock"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "src/plugins/karpathy.js",
-      "source_location": "L135",
-      "weight": 1.0,
-      "source": "plugins_karpathy_installkarpathy",
-      "target": "utils_fs_readfileifexists"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "src/plugins/karpathy.js",
-      "source_location": "L147",
-      "weight": 1.0,
-      "source": "plugins_karpathy_installkarpathy",
-      "target": "utils_fs_writefileensuringdir"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "src/plugins/karpathy.js",
-      "source_location": "L201",
-      "weight": 1.0,
-      "source": "plugins_karpathy_uninstallkarpathy",
-      "target": "utils_fs_deletefileifexists"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "src/plugins/karpathy.js",
-      "source_location": "L212",
-      "weight": 1.0,
-      "source": "plugins_karpathy_uninstallkarpathy",
-      "target": "utils_fs_readfileifexists"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "src/plugins/karpathy.js",
-      "source_location": "L223",
-      "weight": 1.0,
-      "source": "plugins_karpathy_uninstallkarpathy",
-      "target": "utils_fs_removemarkerblock"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "src/plugins/karpathy.js",
-      "source_location": "L225",
-      "weight": 1.0,
-      "source": "plugins_karpathy_uninstallkarpathy",
-      "target": "utils_fs_writefileensuringdir"
     },
     {
       "relation": "contains",
@@ -11541,28 +12031,6 @@
       "target": "utils_exec_run"
     },
     {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/skills-bundle.js",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_skills_bundle",
-      "target": "utils_fs"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/skills-bundle.js",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_skills_bundle",
-      "target": "utils_fs_deletedirifexists"
-    },
-    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -11649,17 +12117,6 @@
       "weight": 1.0,
       "source": "plugins_skills_bundle_uninstallskillsbundle",
       "target": "utils_exec_run"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/plugins/skills-bundle.js",
-      "source_location": "L138",
-      "weight": 1.0,
-      "source": "plugins_skills_bundle_uninstallskillsbundle",
-      "target": "utils_fs_deletedirifexists"
     },
     {
       "relation": "contains",
@@ -11756,28 +12213,6 @@
       "target": "utils_exec_runshell"
     },
     {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_speckit",
-      "target": "utils_fs"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_speckit",
-      "target": "utils_fs_deletedirifexists"
-    },
-    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -11798,17 +12233,6 @@
       "weight": 1.0,
       "source": "plugins_speckit_installspeckit",
       "target": "utils_exec_runshell"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L134",
-      "weight": 1.0,
-      "source": "plugins_speckit_uninstallspeckit",
-      "target": "utils_fs_deletedirifexists"
     },
     {
       "relation": "contains",
@@ -12364,39 +12788,6 @@
       "target": "utils_detect_detectplatform"
     },
     {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/prompts.js",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_prompts",
-      "target": "utils_fs"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/prompts.js",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_prompts",
-      "target": "utils_fs_isgitrepo"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/prompts.js",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_prompts",
-      "target": "utils_fs_validaterepopath"
-    },
-    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -12406,28 +12797,6 @@
       "weight": 1.0,
       "source": "src_prompts_runinteractive",
       "target": "src_runner_buildpreview"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/prompts.js",
-      "source_location": "L59",
-      "weight": 1.0,
-      "source": "src_prompts_runinteractive",
-      "target": "utils_fs_isgitrepo"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/prompts.js",
-      "source_location": "L54",
-      "weight": 1.0,
-      "source": "src_prompts_runinteractive",
-      "target": "utils_fs_validaterepopath"
     },
     {
       "relation": "imports_from",
@@ -12471,39 +12840,6 @@
       "target": "src_runner_summarizeinstall"
     },
     {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/runner.js",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_runner",
-      "target": "utils_fs"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/runner.js",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_runner",
-      "target": "utils_fs_isgitrepo"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/runner.js",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_runner",
-      "target": "utils_fs_validaterepopath"
-    },
-    {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -12513,28 +12849,6 @@
       "confidence_score": 1.0,
       "source": "plugins_dry_run_test",
       "target": "src_runner_runaction"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/runner.js",
-      "source_location": "L42",
-      "weight": 1.0,
-      "source": "src_runner_runaction",
-      "target": "utils_fs_isgitrepo"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/runner.js",
-      "source_location": "L36",
-      "weight": 1.0,
-      "source": "src_runner_runaction",
-      "target": "utils_fs_validaterepopath"
     },
     {
       "relation": "calls",
@@ -12842,162 +13156,6 @@
       "target": "utils_exec_run"
     },
     {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/plugins/dry-run.test.js",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_dry_run_test",
-      "target": "utils_fs"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/utils/fs.js",
-      "source_location": "L110",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "utils_fs",
-      "target": "utils_fs_deletedirifexists"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/utils/fs.js",
-      "source_location": "L96",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "utils_fs",
-      "target": "utils_fs_deletefileifexists"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/utils/fs.js",
-      "source_location": "L66",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "utils_fs",
-      "target": "utils_fs_escaperegexp"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/utils/fs.js",
-      "source_location": "L24",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "utils_fs",
-      "target": "utils_fs_isgitrepo"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/utils/fs.js",
-      "source_location": "L48",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "utils_fs",
-      "target": "utils_fs_mergemarkerblock"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/utils/fs.js",
-      "source_location": "L71",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "utils_fs",
-      "target": "utils_fs_readfileifexists"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/utils/fs.js",
-      "source_location": "L81",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "utils_fs",
-      "target": "utils_fs_removemarkerblock"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/utils/fs.js",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "utils_fs",
-      "target": "utils_fs_validaterepopath"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/utils/fs.js",
-      "source_location": "L33",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "utils_fs",
-      "target": "utils_fs_writefileensuringdir"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/plugins/dry-run.test.js",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_dry_run_test",
-      "target": "utils_fs_validaterepopath"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/plugins/dry-run.test.js",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_dry_run_test",
-      "target": "utils_fs_mergemarkerblock"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "src/utils/fs.js",
-      "source_location": "L54",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "utils_fs_mergemarkerblock",
-      "target": "utils_fs_escaperegexp"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "src/utils/fs.js",
-      "source_location": "L85",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "utils_fs_removemarkerblock",
-      "target": "utils_fs_escaperegexp"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/plugins/dry-run.test.js",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_dry_run_test",
-      "target": "utils_fs_removemarkerblock"
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/utils/hooks.js",
@@ -13019,5 +13177,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "7b88c930aad24d2678bd7f7a27f4159fc4b5a3a0"
+  "built_at_commit": "1daaa9fc8bb9d9a8502c1949f65445dcd6bbe21d"
 }

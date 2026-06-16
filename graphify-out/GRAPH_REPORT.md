@@ -1,16 +1,16 @@
 # Graph Report - AI-Quickstart  (2026-06-16)
 
 ## Corpus Check
-- 74 files · ~22,982 words
+- 75 files · ~23,434 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 444 nodes · 812 edges · 43 communities (40 shown, 3 thin omitted)
-- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 45 edges (avg confidence: 0.8)
+- 448 nodes · 823 edges · 43 communities (40 shown, 3 thin omitted)
+- Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 45 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `7b88c930`
+- Built from commit: `1daaa9fc`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -68,14 +68,14 @@
 ## Surprising Connections (you probably didn't know these)
 - `Test-NodeVersion()` --calls--> `node`  [INFERRED]
   install.ps1 → package.json
-- `main()` --calls--> `cliToConfig()`  [EXTRACTED]
-  bin/install.js → src/cli.js
-- `main()` --calls--> `needsInteractive()`  [EXTRACTED]
-  bin/install.js → src/cli.js
-- `main()` --calls--> `parseCli()`  [EXTRACTED]
-  bin/install.js → src/cli.js
-- `main()` --calls--> `printHelp()`  [EXTRACTED]
-  bin/install.js → src/cli.js
+- `planUninstallGraphify()` --calls--> `repoFileExists()`  [INFERRED]
+  src/plugins/graphify.js → src/plan-helpers.js
+- `installGraphify()` --calls--> `hasUv()`  [INFERRED]
+  src/plugins/graphify.js → src/utils/detect.js
+- `installGraphify()` --calls--> `run()`  [INFERRED]
+  src/plugins/graphify.js → src/utils/exec.js
+- `uninstallGraphify()` --calls--> `deleteDirIfExists()`  [INFERRED]
+  src/plugins/graphify.js → src/utils/fs.js
 
 ## Import Cycles
 - None detected.
@@ -87,8 +87,8 @@ Cohesion: 0.09
 Nodes (40): main(), cavemanPlugin, cavememPlugin, graphifyPlugin, getOrderedPlugins(), listPlugins(), listPluginsByCategory(), PLUGINS (+32 more)
 
 ### Community 1 - "Community 1"
-Cohesion: 0.12
-Nodes (28): CAVEMAN_ONLY, getCavemanOnly(), getSkillsAgent(), SKILLS_AGENT, skillsSupportsPlatform(), getSpeckitIntegration(), SPECKIT_INTEGRATION, speckitInitCommand() (+20 more)
+Cohesion: 0.35
+Nodes (10): getSkillsAgent(), SKILLS_AGENT, skillsSupportsPlatform(), installSkillsBundle(), planInstallSkillsBundle(), planUninstallSkillsBundle(), selectedSkills(), skillsAddArgs() (+2 more)
 
 ### Community 2 - "Community 2"
 Cohesion: 0.12
@@ -99,8 +99,8 @@ Cohesion: 0.16
 Nodes (22): Path, Path, benchmark_pair(), count_tokens(), main(), print_table(), count_bullets(), extract_code_blocks() (+14 more)
 
 ### Community 4 - "Community 4"
-Cohesion: 0.20
-Nodes (22): CAVEMEM_IDE, cavememCommand(), cavememSupportsPlatform(), getCavememIde(), getGraphifyMap(), GRAPHIFY_MAP, graphifyInstallCommand(), graphifyUninstallCommand() (+14 more)
+Cohesion: 0.14
+Nodes (30): CAVEMEM_IDE, cavememCommand(), cavememSupportsPlatform(), getCavememIde(), getGraphifyMap(), GRAPHIFY_MAP, graphifyInstallCommand(), graphifyUninstallCommand() (+22 more)
 
 ### Community 5 - "Community 5"
 Cohesion: 0.09
@@ -111,8 +111,8 @@ Cohesion: 0.25
 Nodes (16): checkPrerequisites(), getNodeInstallCommands(), getPythonInstallCommands(), getUvInstallCommands(), detectPlatform(), firstWorkingCommand(), getHome(), getNodeVersion() (+8 more)
 
 ### Community 7 - "Community 7"
-Cohesion: 0.29
-Nodes (15): getKarpathyTarget(), KARPATHY_TARGET, fetchUpstream(), installKarpathy(), planInstallKarpathy(), planUninstallKarpathy(), uninstallKarpathy(), hasKarpathyMarker() (+7 more)
+Cohesion: 0.15
+Nodes (28): CAVEMAN_ONLY, getCavemanOnly(), getKarpathyTarget(), KARPATHY_TARGET, cavemanInstallCommand(), installCaveman(), planInstallCaveman(), planUninstallCaveman() (+20 more)
 
 ### Community 8 - "Community 8"
 Cohesion: 0.12
@@ -230,7 +230,7 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.012) - this node is a cross-community bridge._
 - **Why does `validate()` connect `Community 3` to `Community 2`?**
   _High betweenness centrality (0.005) - this node is a cross-community bridge._
-- **Why does `run()` connect `Community 6` to `Community 1`, `Community 4`?**
+- **Why does `run()` connect `Community 6` to `Community 1`, `Community 4`, `Community 7`?**
   _High betweenness centrality (0.004) - this node is a cross-community bridge._
 - **Are the 10 inferred relationships involving `resolvePlatforms()` (e.g. with `installCaveman()` and `planInstallCaveman()`) actually correct?**
   _`resolvePlatforms()` has 10 INFERRED edges - model-reasoned connections that need verification._

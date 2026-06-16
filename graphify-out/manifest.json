@@ -110,8 +110,8 @@
     "semantic_hash": ""
   },
   "src/plugins/graphify.js": {
-    "mtime": 1781638090.4989,
-    "ast_hash": "cff217bbf73eaa92d3b3687ebc2e5312",
+    "mtime": 1781640576.4394393,
+    "ast_hash": "db4b85e0231a115b2ccffcab16ead846",
     "semantic_hash": ""
   },
   "src/plugins/index.js": {
@@ -150,8 +150,8 @@
     "semantic_hash": ""
   },
   "src/utils/fs.js": {
-    "mtime": 1781637353.649836,
-    "ast_hash": "db24328e063d2b6cd129df8e55ec86f6",
+    "mtime": 1781640569.1038148,
+    "ast_hash": "ef0078f4de59166dca44cc273fc313da",
     "semantic_hash": ""
   },
   "tests/cli.test.js": {
@@ -305,8 +305,8 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1781640364.1084986,
-    "ast_hash": "ead6e033b76c0d73152bb4c0a2f9aea4",
+    "mtime": 1781640581.9796555,
+    "ast_hash": "cf0aa51c573bf9100c958dd990c50725",
     "semantic_hash": ""
   },
   "docs/ARCHITECTURE.md": {
@@ -320,8 +320,8 @@
     "semantic_hash": ""
   },
   "docs/plugins/graphify.md": {
-    "mtime": 1781636784.1243386,
-    "ast_hash": "53ec0da73c1d1580ca3c3000b5b9dcf8",
+    "mtime": 1781640582.4360013,
+    "ast_hash": "06bc3f2ee04e1861cf9f0fe440dcbbce",
     "semantic_hash": ""
   },
   "docs/plugins/karpathy.md": {
@@ -382,6 +382,11 @@
   "src/utils/hooks.js": {
     "mtime": 1781638010.1342688,
     "ast_hash": "f624ab4215b9116cd3fda68f8fbbff3b",
+    "semantic_hash": ""
+  },
+  "tests/gitignore.test.js": {
+    "mtime": 1781640581.9211106,
+    "ast_hash": "e5a44f2503bb9d8fb0180aa0b6a7be0a",
     "semantic_hash": ""
   }
 }

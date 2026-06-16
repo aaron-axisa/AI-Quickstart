@@ -18,6 +18,7 @@ export const UPSTREAM = {
   },
   speckit: {
     gitUrl: "git+https://github.com/github/spec-kit.git",
+    ref: "v0.10.3",
     cliPackage: "specify-cli",
   },
   skillsBundle: {

@@ -1,3 +1,27 @@
+import { UPSTREAM } from "../constants.js";
+
+/** @param {string} [ref] */
+export function speckitGitSource(ref = UPSTREAM.speckit.ref) {
+  return `${UPSTREAM.speckit.gitUrl}@${ref}`;
+}
+
+/** @returns {string[]} */
+export function speckitInstallArgs() {
+  return [
+    "tool",
+    "install",
+    UPSTREAM.speckit.cliPackage,
+    "--from",
+    speckitGitSource(),
+  ];
+}
+
+/** @returns {string} */
+export function speckitInstallCommand() {
+  const args = speckitInstallArgs();
+  return `uv ${args.join(" ")}`;
+}
+
 /** @type {Record<string, string|null>} platform id -> specify init --integration */
 export const SPECKIT_INTEGRATION = {
   cursor: "cursor",
@@ -25,10 +49,27 @@ export function speckitSupportsPlatform(platformId) {
 
 /**
  * @param {string} platformId
- * @param {string} repoPath
+ * @returns {string[]|null}
  */
-export function speckitInitCommand(platformId, repoPath) {
+export function speckitInitArgs(platformId) {
   const integration = getSpeckitIntegration(platformId);
   if (!integration) return null;
-  return `specify init . --integration ${integration} --no-input`;
+  return [
+    "init",
+    "--here",
+    "--integration",
+    integration,
+    "--force",
+    "--ignore-agent-tools",
+  ];
+}
+
+/**
+ * @param {string} platformId
+ * @param {string} _repoPath
+ */
+export function speckitInitCommand(platformId, _repoPath) {
+  const args = speckitInitArgs(platformId);
+  if (!args) return null;
+  return `specify ${args.join(" ")}`;
 }

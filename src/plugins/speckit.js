@@ -1,12 +1,14 @@
 import path from "node:path";
-import { UPSTREAM } from "../constants.js";
 import { resolvePlatforms } from "../platforms.js";
 import {
+  speckitInitArgs,
   speckitInitCommand,
+  speckitInstallArgs,
+  speckitInstallCommand,
   speckitSupportsPlatform,
 } from "../platform-maps/speckit.js";
 import { repoFileExists } from "../plan-helpers.js";
-import { runShell } from "../utils/exec.js";
+import { run } from "../utils/exec.js";
 import { deleteDirIfExists } from "../utils/fs.js";
 import { hasUv } from "../utils/detect.js";
 
@@ -20,7 +22,7 @@ export function planInstallSpeckit(config) {
     {
       tool: "speckit",
       description: "Install specify-cli globally (uv)",
-      command: `uv tool install ${UPSTREAM.speckit.cliPackage} --from "${UPSTREAM.speckit.gitUrl}"`,
+      command: speckitInstallCommand(),
     },
   ];
 
@@ -91,21 +93,26 @@ export async function installSpeckit(config) {
     throw new Error("uv required for Spec Kit. Install: winget install astral-sh.uv");
   }
 
-  const installCmd = `uv tool install ${UPSTREAM.speckit.cliPackage} --from "${UPSTREAM.speckit.gitUrl}"`;
   console.log("\n[speckit] Installing specify-cli...");
-  const r = await runShell(installCmd, {
+  const install = await run("uv", speckitInstallArgs(), {
     dryRun: config.dryRun,
     verbose: config.verbose,
   });
-  if (r.code !== 0 && !config.dryRun) {
-    throw new Error(`specify-cli install failed:\n${r.stderr || r.stdout}`);
+  if (install.code !== 0 && !config.dryRun) {
+    throw new Error(
+      `specify-cli install failed:\n${install.stderr || install.stdout}`,
+    );
   }
-  actions.push(installCmd);
+  actions.push(speckitInstallCommand());
 
   const primary = supported[0];
-  const initCmd = speckitInitCommand(primary.id, config.repoPath);
-  console.log(`[speckit] ${initCmd} (cwd: ${config.repoPath})`);
-  const init = await runShell(initCmd, {
+  const initArgs = speckitInitArgs(primary.id);
+  if (!initArgs) {
+    throw new Error(`No Spec Kit integration for platform: ${primary.id}`);
+  }
+
+  console.log(`[speckit] specify ${initArgs.join(" ")} (cwd: ${config.repoPath})`);
+  const init = await run("specify", initArgs, {
     cwd: config.repoPath,
     dryRun: config.dryRun,
     verbose: config.verbose,
@@ -115,7 +122,7 @@ export async function installSpeckit(config) {
       `specify init failed for ${primary.id}:\n${init.stderr || init.stdout}`,
     );
   }
-  actions.push(initCmd);
+  actions.push(`specify ${initArgs.join(" ")}`);
 
   return {
     tool: "speckit",
