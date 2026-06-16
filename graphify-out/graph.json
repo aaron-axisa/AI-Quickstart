@@ -4,14 +4,254 @@
   "graph": {},
   "nodes": [
     {
+      "label": "constants.js",
+      "file_type": "code",
+      "source_file": "src/constants.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_constants",
+      "community": 0,
+      "norm_label": "constants.js"
+    },
+    {
+      "label": "UPSTREAM",
+      "file_type": "code",
+      "source_file": "src/constants.js",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "src_constants_upstream",
+      "community": 43,
+      "norm_label": "upstream"
+    },
+    {
+      "label": "TOOL_IDS",
+      "file_type": "code",
+      "source_file": "src/constants.js",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "src_constants_tool_ids",
+      "community": 0,
+      "norm_label": "tool_ids"
+    },
+    {
+      "label": "PLUGIN_ORDER",
+      "file_type": "code",
+      "source_file": "src/constants.js",
+      "source_location": "L38",
+      "_origin": "ast",
+      "id": "src_constants_plugin_order",
+      "community": 0,
+      "norm_label": "plugin_order"
+    },
+    {
+      "label": "UNINSTALL_ORDER",
+      "file_type": "code",
+      "source_file": "src/constants.js",
+      "source_location": "L47",
+      "_origin": "ast",
+      "id": "src_constants_uninstall_order",
+      "community": 0,
+      "norm_label": "uninstall_order"
+    },
+    {
+      "label": "PRESETS",
+      "file_type": "code",
+      "source_file": "src/constants.js",
+      "source_location": "L66",
+      "_origin": "ast",
+      "id": "src_constants_presets",
+      "community": 0,
+      "norm_label": "presets"
+    },
+    {
+      "label": "getPreset()",
+      "file_type": "code",
+      "source_file": "src/constants.js",
+      "source_location": "L101",
+      "_origin": "ast",
+      "id": "src_constants_getpreset",
+      "community": 0,
+      "norm_label": "getpreset()"
+    },
+    {
+      "label": "listPresetIds()",
+      "file_type": "code",
+      "source_file": "src/constants.js",
+      "source_location": "L105",
+      "_origin": "ast",
+      "id": "src_constants_listpresetids",
+      "community": 0,
+      "norm_label": "listpresetids()"
+    },
+    {
+      "label": "speckit.js",
+      "file_type": "code",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "platform_maps_speckit",
+      "community": 43,
+      "norm_label": "speckit.js"
+    },
+    {
+      "label": "speckitGitSource()",
+      "file_type": "code",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "platform_maps_speckit_speckitgitsource",
+      "community": 43,
+      "norm_label": "speckitgitsource()"
+    },
+    {
+      "label": "speckitInstallArgs()",
+      "file_type": "code",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "platform_maps_speckit_speckitinstallargs",
+      "community": 43,
+      "norm_label": "speckitinstallargs()"
+    },
+    {
+      "label": "speckitInstallCommand()",
+      "file_type": "code",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "platform_maps_speckit_speckitinstallcommand",
+      "community": 43,
+      "norm_label": "speckitinstallcommand()"
+    },
+    {
+      "label": "SPECKIT_INTEGRATION",
+      "file_type": "code",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "platform_maps_speckit_speckit_integration",
+      "community": 43,
+      "norm_label": "speckit_integration"
+    },
+    {
+      "label": "getSpeckitIntegration()",
+      "file_type": "code",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "platform_maps_speckit_getspeckitintegration",
+      "community": 43,
+      "norm_label": "getspeckitintegration()"
+    },
+    {
+      "label": "speckitSupportsPlatform()",
+      "file_type": "code",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L45",
+      "_origin": "ast",
+      "id": "platform_maps_speckit_speckitsupportsplatform",
+      "community": 43,
+      "norm_label": "speckitsupportsplatform()"
+    },
+    {
+      "label": "speckitInitArgs()",
+      "file_type": "code",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L54",
+      "_origin": "ast",
+      "id": "platform_maps_speckit_speckitinitargs",
+      "community": 43,
+      "norm_label": "speckitinitargs()"
+    },
+    {
+      "label": "speckitInitCommand()",
+      "file_type": "code",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L71",
+      "_origin": "ast",
+      "id": "platform_maps_speckit_speckitinitcommand",
+      "community": 43,
+      "norm_label": "speckitinitcommand()"
+    },
+    {
+      "label": "speckit.js",
+      "file_type": "code",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "plugins_speckit",
+      "community": 43,
+      "norm_label": "speckit.js"
+    },
+    {
+      "label": "planInstallSpeckit()",
+      "file_type": "code",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "plugins_speckit_planinstallspeckit",
+      "community": 43,
+      "norm_label": "planinstallspeckit()"
+    },
+    {
+      "label": "planUninstallSpeckit()",
+      "file_type": "code",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L56",
+      "_origin": "ast",
+      "id": "plugins_speckit_planuninstallspeckit",
+      "community": 43,
+      "norm_label": "planuninstallspeckit()"
+    },
+    {
+      "label": "installSpeckit()",
+      "file_type": "code",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L81",
+      "_origin": "ast",
+      "id": "plugins_speckit_installspeckit",
+      "community": 43,
+      "norm_label": "installspeckit()"
+    },
+    {
+      "label": "uninstallSpeckit()",
+      "file_type": "code",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L137",
+      "_origin": "ast",
+      "id": "plugins_speckit_uninstallspeckit",
+      "community": 1,
+      "norm_label": "uninstallspeckit()"
+    },
+    {
+      "label": "speckitPlugin",
+      "file_type": "code",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L153",
+      "_origin": "ast",
+      "id": "plugins_speckit_speckitplugin",
+      "community": 0,
+      "norm_label": "speckitplugin"
+    },
+    {
+      "label": "speckit.test.js",
+      "file_type": "code",
+      "source_file": "tests/speckit.test.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "tests_speckit_test",
+      "community": 43,
+      "norm_label": "speckit.test.js"
+    },
+    {
       "label": "README.md",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "readme",
       "community": 8,
-      "norm_label": "readme.md"
+      "norm_label": "readme.md",
+      "id": "readme"
     },
     {
       "label": "AI-Quickstart",
@@ -19,9 +259,9 @@
       "source_file": "README.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "readme_ai_quickstart",
       "community": 8,
-      "norm_label": "ai-quickstart"
+      "norm_label": "ai-quickstart",
+      "id": "readme_ai_quickstart"
     },
     {
       "label": "Supported tools",
@@ -29,9 +269,9 @@
       "source_file": "README.md",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "readme_supported_tools",
       "community": 8,
-      "norm_label": "supported tools"
+      "norm_label": "supported tools",
+      "id": "readme_supported_tools"
     },
     {
       "label": "Quick start",
@@ -39,9 +279,9 @@
       "source_file": "README.md",
       "source_location": "L16",
       "_origin": "ast",
-      "id": "readme_quick_start",
       "community": 8,
-      "norm_label": "quick start"
+      "norm_label": "quick start",
+      "id": "readme_quick_start"
     },
     {
       "label": "Requirements",
@@ -49,9 +289,9 @@
       "source_file": "README.md",
       "source_location": "L61",
       "_origin": "ast",
-      "id": "readme_requirements",
       "community": 8,
-      "norm_label": "requirements"
+      "norm_label": "requirements",
+      "id": "readme_requirements"
     },
     {
       "label": "Uninstall",
@@ -59,9 +299,9 @@
       "source_file": "README.md",
       "source_location": "L72",
       "_origin": "ast",
-      "id": "readme_uninstall",
       "community": 8,
-      "norm_label": "uninstall"
+      "norm_label": "uninstall",
+      "id": "readme_uninstall"
     },
     {
       "label": "Review before proceeding",
@@ -69,9 +309,9 @@
       "source_file": "README.md",
       "source_location": "L92",
       "_origin": "ast",
-      "id": "readme_review_before_proceeding",
       "community": 8,
-      "norm_label": "review before proceeding"
+      "norm_label": "review before proceeding",
+      "id": "readme_review_before_proceeding"
     },
     {
       "label": "CLI reference",
@@ -79,9 +319,9 @@
       "source_file": "README.md",
       "source_location": "L105",
       "_origin": "ast",
-      "id": "readme_cli_reference",
       "community": 8,
-      "norm_label": "cli reference"
+      "norm_label": "cli reference",
+      "id": "readme_cli_reference"
     },
     {
       "label": "Required (non-interactive)",
@@ -89,9 +329,9 @@
       "source_file": "README.md",
       "source_location": "L107",
       "_origin": "ast",
-      "id": "readme_required_non_interactive",
       "community": 8,
-      "norm_label": "required (non-interactive)"
+      "norm_label": "required (non-interactive)",
+      "id": "readme_required_non_interactive"
     },
     {
       "label": "Tool selection",
@@ -99,9 +339,9 @@
       "source_file": "README.md",
       "source_location": "L113",
       "_origin": "ast",
-      "id": "readme_tool_selection",
       "community": 8,
-      "norm_label": "tool selection"
+      "norm_label": "tool selection",
+      "id": "readme_tool_selection"
     },
     {
       "label": "Modes",
@@ -109,9 +349,9 @@
       "source_file": "README.md",
       "source_location": "L120",
       "_origin": "ast",
-      "id": "readme_modes",
       "community": 8,
-      "norm_label": "modes"
+      "norm_label": "modes",
+      "id": "readme_modes"
     },
     {
       "label": "What changes in my repo?",
@@ -119,9 +359,9 @@
       "source_file": "README.md",
       "source_location": "L133",
       "_origin": "ast",
-      "id": "readme_what_changes_in_my_repo",
       "community": 8,
-      "norm_label": "what changes in my repo?"
+      "norm_label": "what changes in my repo?",
+      "id": "readme_what_changes_in_my_repo"
     },
     {
       "label": "Platform matrix",
@@ -129,9 +369,9 @@
       "source_file": "README.md",
       "source_location": "L152",
       "_origin": "ast",
-      "id": "readme_platform_matrix",
       "community": 8,
-      "norm_label": "platform matrix"
+      "norm_label": "platform matrix",
+      "id": "readme_platform_matrix"
     },
     {
       "label": "Troubleshooting",
@@ -139,9 +379,9 @@
       "source_file": "README.md",
       "source_location": "L161",
       "_origin": "ast",
-      "id": "readme_troubleshooting",
       "community": 8,
-      "norm_label": "troubleshooting"
+      "norm_label": "troubleshooting",
+      "id": "readme_troubleshooting"
     },
     {
       "label": "Contributing",
@@ -149,9 +389,9 @@
       "source_file": "README.md",
       "source_location": "L186",
       "_origin": "ast",
-      "id": "readme_contributing",
       "community": 8,
-      "norm_label": "contributing"
+      "norm_label": "contributing",
+      "id": "readme_contributing"
     },
     {
       "label": "License",
@@ -159,9 +399,9 @@
       "source_file": "README.md",
       "source_location": "L190",
       "_origin": "ast",
-      "id": "readme_license",
       "community": 8,
-      "norm_label": "license"
+      "norm_label": "license",
+      "id": "readme_license"
     },
     {
       "label": "graphify.md",
@@ -169,9 +409,9 @@
       "source_file": "docs/plugins/graphify.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_plugins_graphify_md_plugins_graphify",
       "community": 29,
-      "norm_label": "graphify.md"
+      "norm_label": "graphify.md",
+      "id": "docs_plugins_graphify_md_plugins_graphify"
     },
     {
       "label": "Graphify plugin",
@@ -179,9 +419,9 @@
       "source_file": "docs/plugins/graphify.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "plugins_graphify_graphify_plugin",
       "community": 29,
-      "norm_label": "graphify plugin"
+      "norm_label": "graphify plugin",
+      "id": "plugins_graphify_graphify_plugin"
     },
     {
       "label": "Steps",
@@ -189,9 +429,9 @@
       "source_file": "docs/plugins/graphify.md",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "plugins_graphify_steps",
       "community": 29,
-      "norm_label": "steps"
+      "norm_label": "steps",
+      "id": "plugins_graphify_steps"
     },
     {
       "label": "Flags",
@@ -199,9 +439,9 @@
       "source_file": "docs/plugins/graphify.md",
       "source_location": "L12",
       "_origin": "ast",
-      "id": "plugins_graphify_flags",
       "community": 29,
-      "norm_label": "flags"
+      "norm_label": "flags",
+      "id": "plugins_graphify_flags"
     },
     {
       "label": "Prerequisites",
@@ -209,9 +449,9 @@
       "source_file": "docs/plugins/graphify.md",
       "source_location": "L20",
       "_origin": "ast",
-      "id": "plugins_graphify_prerequisites",
       "community": 29,
-      "norm_label": "prerequisites"
+      "norm_label": "prerequisites",
+      "id": "plugins_graphify_prerequisites"
     },
     {
       "label": "Uninstall",
@@ -219,9 +459,9 @@
       "source_file": "docs/plugins/graphify.md",
       "source_location": "L25",
       "_origin": "ast",
-      "id": "plugins_graphify_uninstall",
       "community": 29,
-      "norm_label": "uninstall"
+      "norm_label": "uninstall",
+      "id": "plugins_graphify_uninstall"
     },
     {
       "label": "graphify.js",
@@ -229,9 +469,9 @@
       "source_file": "src/plugins/graphify.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_plugins_graphify_js_plugins_graphify",
       "community": 4,
-      "norm_label": "graphify.js"
+      "norm_label": "graphify.js",
+      "id": "src_plugins_graphify_js_plugins_graphify"
     },
     {
       "label": "resolveGraphifyExtras()",
@@ -239,9 +479,9 @@
       "source_file": "src/plugins/graphify.js",
       "source_location": "L17",
       "_origin": "ast",
-      "id": "plugins_graphify_resolvegraphifyextras",
       "community": 4,
-      "norm_label": "resolvegraphifyextras()"
+      "norm_label": "resolvegraphifyextras()",
+      "id": "plugins_graphify_resolvegraphifyextras"
     },
     {
       "label": "graphifyPackageSpecForConfig()",
@@ -249,9 +489,9 @@
       "source_file": "src/plugins/graphify.js",
       "source_location": "L29",
       "_origin": "ast",
-      "id": "plugins_graphify_graphifypackagespecforconfig",
       "community": 4,
-      "norm_label": "graphifypackagespecforconfig()"
+      "norm_label": "graphifypackagespecforconfig()",
+      "id": "plugins_graphify_graphifypackagespecforconfig"
     },
     {
       "label": "graphifyPackageSpec()",
@@ -259,9 +499,9 @@
       "source_file": "src/plugins/graphify.js",
       "source_location": "L36",
       "_origin": "ast",
-      "id": "plugins_graphify_graphifypackagespec",
       "community": 4,
-      "norm_label": "graphifypackagespec()"
+      "norm_label": "graphifypackagespec()",
+      "id": "plugins_graphify_graphifypackagespec"
     },
     {
       "label": "applyGraphifyGitignore()",
@@ -269,9 +509,9 @@
       "source_file": "src/plugins/graphify.js",
       "source_location": "L49",
       "_origin": "ast",
-      "id": "plugins_graphify_applygraphifygitignore",
       "community": 4,
-      "norm_label": "applygraphifygitignore()"
+      "norm_label": "applygraphifygitignore()",
+      "id": "plugins_graphify_applygraphifygitignore"
     },
     {
       "label": "planInstallGraphify()",
@@ -279,9 +519,9 @@
       "source_file": "src/plugins/graphify.js",
       "source_location": "L66",
       "_origin": "ast",
-      "id": "plugins_graphify_planinstallgraphify",
       "community": 4,
-      "norm_label": "planinstallgraphify()"
+      "norm_label": "planinstallgraphify()",
+      "id": "plugins_graphify_planinstallgraphify"
     },
     {
       "label": "planUninstallGraphify()",
@@ -289,9 +529,9 @@
       "source_file": "src/plugins/graphify.js",
       "source_location": "L126",
       "_origin": "ast",
-      "id": "plugins_graphify_planuninstallgraphify",
       "community": 4,
-      "norm_label": "planuninstallgraphify()"
+      "norm_label": "planuninstallgraphify()",
+      "id": "plugins_graphify_planuninstallgraphify"
     },
     {
       "label": "installGraphify()",
@@ -299,9 +539,9 @@
       "source_file": "src/plugins/graphify.js",
       "source_location": "L174",
       "_origin": "ast",
-      "id": "plugins_graphify_installgraphify",
       "community": 4,
-      "norm_label": "installgraphify()"
+      "norm_label": "installgraphify()",
+      "id": "plugins_graphify_installgraphify"
     },
     {
       "label": "uninstallGraphify()",
@@ -309,9 +549,9 @@
       "source_file": "src/plugins/graphify.js",
       "source_location": "L275",
       "_origin": "ast",
-      "id": "plugins_graphify_uninstallgraphify",
       "community": 4,
-      "norm_label": "uninstallgraphify()"
+      "norm_label": "uninstallgraphify()",
+      "id": "plugins_graphify_uninstallgraphify"
     },
     {
       "label": "graphifyPlugin",
@@ -319,9 +559,9 @@
       "source_file": "src/plugins/graphify.js",
       "source_location": "L322",
       "_origin": "ast",
-      "id": "plugins_graphify_graphifyplugin",
       "community": 0,
-      "norm_label": "graphifyplugin"
+      "norm_label": "graphifyplugin",
+      "id": "plugins_graphify_graphifyplugin"
     },
     {
       "label": "fs.js",
@@ -329,9 +569,9 @@
       "source_file": "src/utils/fs.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "utils_fs",
       "community": 7,
-      "norm_label": "fs.js"
+      "norm_label": "fs.js",
+      "id": "utils_fs"
     },
     {
       "label": "validateRepoPath()",
@@ -339,9 +579,9 @@
       "source_file": "src/utils/fs.js",
       "source_location": "L8",
       "_origin": "ast",
-      "id": "utils_fs_validaterepopath",
       "community": 0,
-      "norm_label": "validaterepopath()"
+      "norm_label": "validaterepopath()",
+      "id": "utils_fs_validaterepopath"
     },
     {
       "label": "isGitRepo()",
@@ -349,9 +589,9 @@
       "source_file": "src/utils/fs.js",
       "source_location": "L24",
       "_origin": "ast",
-      "id": "utils_fs_isgitrepo",
       "community": 0,
-      "norm_label": "isgitrepo()"
+      "norm_label": "isgitrepo()",
+      "id": "utils_fs_isgitrepo"
     },
     {
       "label": "writeFileEnsuringDir()",
@@ -359,9 +599,9 @@
       "source_file": "src/utils/fs.js",
       "source_location": "L33",
       "_origin": "ast",
-      "id": "utils_fs_writefileensuringdir",
       "community": 7,
-      "norm_label": "writefileensuringdir()"
+      "norm_label": "writefileensuringdir()",
+      "id": "utils_fs_writefileensuringdir"
     },
     {
       "label": "mergeMarkerBlock()",
@@ -369,9 +609,9 @@
       "source_file": "src/utils/fs.js",
       "source_location": "L48",
       "_origin": "ast",
-      "id": "utils_fs_mergemarkerblock",
       "community": 7,
-      "norm_label": "mergemarkerblock()"
+      "norm_label": "mergemarkerblock()",
+      "id": "utils_fs_mergemarkerblock"
     },
     {
       "label": "escapeRegExp()",
@@ -379,9 +619,9 @@
       "source_file": "src/utils/fs.js",
       "source_location": "L66",
       "_origin": "ast",
-      "id": "utils_fs_escaperegexp",
       "community": 7,
-      "norm_label": "escaperegexp()"
+      "norm_label": "escaperegexp()",
+      "id": "utils_fs_escaperegexp"
     },
     {
       "label": "readFileIfExists()",
@@ -389,9 +629,9 @@
       "source_file": "src/utils/fs.js",
       "source_location": "L71",
       "_origin": "ast",
-      "id": "utils_fs_readfileifexists",
       "community": 7,
-      "norm_label": "readfileifexists()"
+      "norm_label": "readfileifexists()",
+      "id": "utils_fs_readfileifexists"
     },
     {
       "label": "removeMarkerBlock()",
@@ -399,9 +639,9 @@
       "source_file": "src/utils/fs.js",
       "source_location": "L81",
       "_origin": "ast",
-      "id": "utils_fs_removemarkerblock",
       "community": 7,
-      "norm_label": "removemarkerblock()"
+      "norm_label": "removemarkerblock()",
+      "id": "utils_fs_removemarkerblock"
     },
     {
       "label": "gitignoreHasPattern()",
@@ -409,9 +649,9 @@
       "source_file": "src/utils/fs.js",
       "source_location": "L96",
       "_origin": "ast",
-      "id": "utils_fs_gitignorehaspattern",
       "community": 7,
-      "norm_label": "gitignorehaspattern()"
+      "norm_label": "gitignorehaspattern()",
+      "id": "utils_fs_gitignorehaspattern"
     },
     {
       "label": "ensureGitignoreBlock()",
@@ -419,9 +659,9 @@
       "source_file": "src/utils/fs.js",
       "source_location": "L114",
       "_origin": "ast",
-      "id": "utils_fs_ensuregitignoreblock",
       "community": 7,
-      "norm_label": "ensuregitignoreblock()"
+      "norm_label": "ensuregitignoreblock()",
+      "id": "utils_fs_ensuregitignoreblock"
     },
     {
       "label": "deleteFileIfExists()",
@@ -429,9 +669,9 @@
       "source_file": "src/utils/fs.js",
       "source_location": "L148",
       "_origin": "ast",
-      "id": "utils_fs_deletefileifexists",
       "community": 7,
-      "norm_label": "deletefileifexists()"
+      "norm_label": "deletefileifexists()",
+      "id": "utils_fs_deletefileifexists"
     },
     {
       "label": "deleteDirIfExists()",
@@ -439,9 +679,9 @@
       "source_file": "src/utils/fs.js",
       "source_location": "L162",
       "_origin": "ast",
-      "id": "utils_fs_deletedirifexists",
-      "community": 7,
-      "norm_label": "deletedirifexists()"
+      "community": 1,
+      "norm_label": "deletedirifexists()",
+      "id": "utils_fs_deletedirifexists"
     },
     {
       "label": "gitignore.test.js",
@@ -449,9 +689,9 @@
       "source_file": "tests/gitignore.test.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "tests_gitignore_test",
       "community": 7,
-      "norm_label": "gitignore.test.js"
+      "norm_label": "gitignore.test.js",
+      "id": "tests_gitignore_test"
     },
     {
       "label": "install.ps1",
@@ -3212,86 +3452,6 @@
       "id": "src_cli_shouldskipreview"
     },
     {
-      "label": "constants.js",
-      "file_type": "code",
-      "source_file": "src/constants.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 0,
-      "norm_label": "constants.js",
-      "id": "src_constants"
-    },
-    {
-      "label": "UPSTREAM",
-      "file_type": "code",
-      "source_file": "src/constants.js",
-      "source_location": "L2",
-      "_origin": "ast",
-      "community": 0,
-      "norm_label": "upstream",
-      "id": "src_constants_upstream"
-    },
-    {
-      "label": "TOOL_IDS",
-      "file_type": "code",
-      "source_file": "src/constants.js",
-      "source_location": "L28",
-      "_origin": "ast",
-      "community": 0,
-      "norm_label": "tool_ids",
-      "id": "src_constants_tool_ids"
-    },
-    {
-      "label": "PLUGIN_ORDER",
-      "file_type": "code",
-      "source_file": "src/constants.js",
-      "source_location": "L37",
-      "_origin": "ast",
-      "community": 0,
-      "norm_label": "plugin_order",
-      "id": "src_constants_plugin_order"
-    },
-    {
-      "label": "UNINSTALL_ORDER",
-      "file_type": "code",
-      "source_file": "src/constants.js",
-      "source_location": "L46",
-      "_origin": "ast",
-      "community": 0,
-      "norm_label": "uninstall_order",
-      "id": "src_constants_uninstall_order"
-    },
-    {
-      "label": "PRESETS",
-      "file_type": "code",
-      "source_file": "src/constants.js",
-      "source_location": "L65",
-      "_origin": "ast",
-      "community": 0,
-      "norm_label": "presets",
-      "id": "src_constants_presets"
-    },
-    {
-      "label": "getPreset()",
-      "file_type": "code",
-      "source_file": "src/constants.js",
-      "source_location": "L100",
-      "_origin": "ast",
-      "community": 0,
-      "norm_label": "getpreset()",
-      "id": "src_constants_getpreset"
-    },
-    {
-      "label": "listPresetIds()",
-      "file_type": "code",
-      "source_file": "src/constants.js",
-      "source_location": "L104",
-      "_origin": "ast",
-      "community": 0,
-      "norm_label": "listpresetids()",
-      "id": "src_constants_listpresetids"
-    },
-    {
       "label": "plan-helpers.js",
       "file_type": "code",
       "source_file": "src/plan-helpers.js",
@@ -3327,7 +3487,7 @@
       "source_file": "src/plan-helpers.js",
       "source_location": "L26",
       "_origin": "ast",
-      "community": 1,
+      "community": 0,
       "norm_label": "skills_bundle_default",
       "id": "src_plan_helpers_skills_bundle_default"
     },
@@ -3622,56 +3782,6 @@
       "id": "platform_maps_skills_skillssupportsplatform"
     },
     {
-      "label": "speckit.js",
-      "file_type": "code",
-      "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "speckit.js",
-      "id": "platform_maps_speckit"
-    },
-    {
-      "label": "SPECKIT_INTEGRATION",
-      "file_type": "code",
-      "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L2",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "speckit_integration",
-      "id": "platform_maps_speckit_speckit_integration"
-    },
-    {
-      "label": "getSpeckitIntegration()",
-      "file_type": "code",
-      "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L15",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "getspeckitintegration()",
-      "id": "platform_maps_speckit_getspeckitintegration"
-    },
-    {
-      "label": "speckitSupportsPlatform()",
-      "file_type": "code",
-      "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L21",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "speckitsupportsplatform()",
-      "id": "platform_maps_speckit_speckitsupportsplatform"
-    },
-    {
-      "label": "speckitInitCommand()",
-      "file_type": "code",
-      "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L30",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "speckitinitcommand()",
-      "id": "platform_maps_speckit_speckitinitcommand"
-    },
-    {
       "label": "platforms.js",
       "file_type": "code",
       "source_file": "src/platforms.js",
@@ -3787,7 +3897,7 @@
       "source_file": "src/plugins/caveman.js",
       "source_location": "L199",
       "_origin": "ast",
-      "community": 0,
+      "community": 7,
       "norm_label": "cavemanplugin",
       "id": "plugins_caveman_cavemanplugin"
     },
@@ -4060,66 +4170,6 @@
       "community": 0,
       "norm_label": "skillsbundleplugin",
       "id": "plugins_skills_bundle_skillsbundleplugin"
-    },
-    {
-      "label": "speckit.js",
-      "file_type": "code",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "speckit.js",
-      "id": "plugins_speckit"
-    },
-    {
-      "label": "planInstallSpeckit()",
-      "file_type": "code",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L17",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "planinstallspeckit()",
-      "id": "plugins_speckit_planinstallspeckit"
-    },
-    {
-      "label": "planUninstallSpeckit()",
-      "file_type": "code",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L54",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "planuninstallspeckit()",
-      "id": "plugins_speckit_planuninstallspeckit"
-    },
-    {
-      "label": "installSpeckit()",
-      "file_type": "code",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L79",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "installspeckit()",
-      "id": "plugins_speckit_installspeckit"
-    },
-    {
-      "label": "uninstallSpeckit()",
-      "file_type": "code",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L130",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "uninstallspeckit()",
-      "id": "plugins_speckit_uninstallspeckit"
-    },
-    {
-      "label": "speckitPlugin",
-      "file_type": "code",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L146",
-      "_origin": "ast",
-      "community": 0,
-      "norm_label": "speckitplugin",
-      "id": "plugins_speckit_speckitplugin"
     },
     {
       "label": "prereqs.js",
@@ -4477,7 +4527,7 @@
       "source_file": "tests/prereqs.test.js",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 0,
+      "community": 6,
       "norm_label": "prereqs.test.js",
       "id": "tests_prereqs_test"
     },
@@ -4493,6 +4543,1042 @@
     }
   ],
   "links": [
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "platform_maps_speckit",
+      "target": "src_constants",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/cavemem.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_cavemem",
+      "target": "src_constants"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/index.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_index",
+      "target": "src_constants"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/skills-bundle.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_skills_bundle",
+      "target": "src_constants"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_speckit",
+      "target": "src_constants"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_cli",
+      "target": "src_constants"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/constants.js",
+      "source_location": "L100",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_constants",
+      "target": "src_constants_getpreset"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/constants.js",
+      "source_location": "L104",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_constants",
+      "target": "src_constants_listpresetids"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/constants.js",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_constants",
+      "target": "src_constants_plugin_order"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/constants.js",
+      "source_location": "L65",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_constants",
+      "target": "src_constants_presets"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/constants.js",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_constants",
+      "target": "src_constants_tool_ids"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/constants.js",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_constants",
+      "target": "src_constants_uninstall_order"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/constants.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_constants",
+      "target": "src_constants_upstream"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plan.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plan",
+      "target": "src_constants"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/caveman.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plugins_caveman_js_plugins_caveman",
+      "target": "src_constants"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plugins_graphify_js_plugins_graphify",
+      "target": "src_constants"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/karpathy.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plugins_karpathy_js_plugins_karpathy",
+      "target": "src_constants"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/prereqs.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_prereqs",
+      "target": "src_constants"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/prompts.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_prompts",
+      "target": "src_constants"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "platform_maps_speckit",
+      "target": "src_constants_upstream",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/cavemem.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_cavemem",
+      "target": "src_constants_upstream"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/skills-bundle.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_skills_bundle",
+      "target": "src_constants_upstream"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_speckit",
+      "target": "src_constants_upstream"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/caveman.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plugins_caveman_js_plugins_caveman",
+      "target": "src_constants_upstream"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/graphify.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plugins_graphify_js_plugins_graphify",
+      "target": "src_constants_upstream"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/karpathy.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plugins_karpathy_js_plugins_karpathy",
+      "target": "src_constants_upstream"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/prereqs.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_prereqs",
+      "target": "src_constants_upstream"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_cli",
+      "target": "src_constants_tool_ids"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/index.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_index",
+      "target": "src_constants_plugin_order"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plan.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plan",
+      "target": "src_constants_plugin_order"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/index.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_index",
+      "target": "src_constants_uninstall_order"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plan.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_plan",
+      "target": "src_constants_uninstall_order"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/prompts.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_prompts",
+      "target": "src_constants_presets"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_cli",
+      "target": "src_constants_getpreset"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/cli.js",
+      "source_location": "L81",
+      "weight": 1.0,
+      "source": "src_cli_parsecli",
+      "target": "src_constants_getpreset"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_cli",
+      "target": "src_constants_listpresetids"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/cli.js",
+      "source_location": "L84",
+      "weight": 1.0,
+      "source": "src_cli_parsecli",
+      "target": "src_constants_listpresetids"
+    },
+    {
+      "relation": "re_exports",
+      "context": "export",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-maps/index.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "platform_maps_index",
+      "target": "platform_maps_speckit"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "platform_maps_speckit",
+      "target": "platform_maps_speckit_getspeckitintegration"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "platform_maps_speckit",
+      "target": "platform_maps_speckit_speckit_integration"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "platform_maps_speckit",
+      "target": "platform_maps_speckit_speckitgitsource",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "platform_maps_speckit",
+      "target": "platform_maps_speckit_speckitinitargs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L30",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "platform_maps_speckit",
+      "target": "platform_maps_speckit_speckitinitcommand"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "platform_maps_speckit",
+      "target": "platform_maps_speckit_speckitinstallargs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "platform_maps_speckit",
+      "target": "platform_maps_speckit_speckitinstallcommand",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "platform_maps_speckit",
+      "target": "platform_maps_speckit_speckitsupportsplatform"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_speckit",
+      "target": "platform_maps_speckit"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/speckit.test.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "tests_speckit_test",
+      "target": "platform_maps_speckit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "platform_maps_speckit_speckitinstallargs",
+      "target": "platform_maps_speckit_speckitgitsource",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/speckit.test.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "tests_speckit_test",
+      "target": "platform_maps_speckit_speckitgitsource",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "platform_maps_speckit_speckitinstallcommand",
+      "target": "platform_maps_speckit_speckitinstallargs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "plugins_speckit",
+      "target": "platform_maps_speckit_speckitinstallargs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L97",
+      "weight": 1.0,
+      "source": "plugins_speckit_installspeckit",
+      "target": "platform_maps_speckit_speckitinstallargs"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "plugins_speckit",
+      "target": "platform_maps_speckit_speckitinstallcommand",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L106",
+      "weight": 1.0,
+      "source": "plugins_speckit_installspeckit",
+      "target": "platform_maps_speckit_speckitinstallcommand"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "plugins_speckit_planinstallspeckit",
+      "target": "platform_maps_speckit_speckitinstallcommand"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/speckit.test.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "tests_speckit_test",
+      "target": "platform_maps_speckit_speckitinstallcommand",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "re_exports",
+      "context": "re-export",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-maps/index.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "platform_maps_index",
+      "target": "platform_maps_speckit_getspeckitintegration"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "platform_maps_speckit_speckitinitargs",
+      "target": "platform_maps_speckit_getspeckitintegration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L31",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "platform_maps_speckit_speckitinitcommand",
+      "target": "platform_maps_speckit_getspeckitintegration"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "platform_maps_speckit_speckitsupportsplatform",
+      "target": "platform_maps_speckit_getspeckitintegration"
+    },
+    {
+      "relation": "re_exports",
+      "context": "re-export",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-maps/index.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "platform_maps_index",
+      "target": "platform_maps_speckit_speckitsupportsplatform"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_speckit",
+      "target": "platform_maps_speckit_speckitsupportsplatform"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L72",
+      "weight": 1.0,
+      "source": "platform_maps_speckit_speckitinitcommand",
+      "target": "platform_maps_speckit_speckitinitargs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "plugins_speckit",
+      "target": "platform_maps_speckit_speckitinitargs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L109",
+      "weight": 1.0,
+      "source": "plugins_speckit_installspeckit",
+      "target": "platform_maps_speckit_speckitinitargs"
+    },
+    {
+      "relation": "re_exports",
+      "context": "re-export",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-maps/index.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "platform_maps_index",
+      "target": "platform_maps_speckit_speckitinitcommand"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_speckit",
+      "target": "platform_maps_speckit_speckitinitcommand"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L106",
+      "weight": 1.0,
+      "source": "plugins_speckit_installspeckit",
+      "target": "platform_maps_speckit_speckitinitcommand"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "plugins_speckit_planinstallspeckit",
+      "target": "platform_maps_speckit_speckitinitcommand"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/speckit.test.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "tests_speckit_test",
+      "target": "platform_maps_speckit_speckitinitcommand",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/index.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_index",
+      "target": "plugins_speckit"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L79",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_speckit",
+      "target": "plugins_speckit_installspeckit"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_speckit",
+      "target": "plugins_speckit_planinstallspeckit"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L54",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_speckit",
+      "target": "plugins_speckit_planuninstallspeckit"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L146",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_speckit",
+      "target": "plugins_speckit_speckitplugin"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L130",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_speckit",
+      "target": "plugins_speckit_uninstallspeckit"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_speckit",
+      "target": "src_plan_helpers"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_speckit",
+      "target": "src_plan_helpers_repofileexists"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_speckit",
+      "target": "src_platforms"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_speckit",
+      "target": "src_platforms_resolveplatforms"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_speckit",
+      "target": "utils_detect"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_speckit",
+      "target": "utils_detect_hasuv"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_speckit",
+      "target": "utils_exec"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "plugins_speckit",
+      "target": "utils_exec_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_speckit",
+      "target": "utils_exec_runshell"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_speckit",
+      "target": "utils_fs"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_speckit",
+      "target": "utils_fs_deletedirifexists"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "plugins_speckit_planinstallspeckit",
+      "target": "src_plan_helpers_repofileexists"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "plugins_speckit_planinstallspeckit",
+      "target": "src_platforms_resolveplatforms"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "plugins_speckit_planuninstallspeckit",
+      "target": "src_plan_helpers_repofileexists"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L80",
+      "weight": 1.0,
+      "source": "plugins_speckit_installspeckit",
+      "target": "src_platforms_resolveplatforms"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L89",
+      "weight": 1.0,
+      "source": "plugins_speckit_installspeckit",
+      "target": "utils_detect_hasuv"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L96",
+      "weight": 1.0,
+      "source": "plugins_speckit_installspeckit",
+      "target": "utils_exec_runshell"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L134",
+      "weight": 1.0,
+      "source": "plugins_speckit_uninstallspeckit",
+      "target": "utils_fs_deletedirifexists"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/index.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_index",
+      "target": "plugins_speckit_speckitplugin"
+    },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
@@ -4732,9 +5818,9 @@
       "source_file": "src/plugins/graphify.js",
       "source_location": "L49",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_plugins_graphify_js_plugins_graphify",
-      "target": "plugins_graphify_applygraphifygitignore",
-      "confidence_score": 1.0
+      "target": "plugins_graphify_applygraphifygitignore"
     },
     {
       "relation": "contains",
@@ -4815,28 +5901,6 @@
       "confidence_score": 1.0,
       "source": "src_plugins_graphify_js_plugins_graphify",
       "target": "plugins_graphify_uninstallgraphify"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plugins_graphify_js_plugins_graphify",
-      "target": "src_constants"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/graphify.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plugins_graphify_js_plugins_graphify",
-      "target": "src_constants_upstream"
     },
     {
       "relation": "imports_from",
@@ -4966,9 +6030,9 @@
       "source_file": "src/plugins/graphify.js",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_plugins_graphify_js_plugins_graphify",
-      "target": "utils_fs_ensuregitignoreblock",
-      "confidence_score": 1.0
+      "target": "utils_fs_ensuregitignoreblock"
     },
     {
       "relation": "calls",
@@ -5043,9 +6107,9 @@
       "source_file": "src/plugins/graphify.js",
       "source_location": "L50",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "plugins_graphify_applygraphifygitignore",
-      "target": "utils_fs_ensuregitignoreblock",
-      "confidence_score": 1.0
+      "target": "utils_fs_ensuregitignoreblock"
     },
     {
       "relation": "calls",
@@ -5054,9 +6118,9 @@
       "source_file": "src/plugins/graphify.js",
       "source_location": "L260",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "plugins_graphify_installgraphify",
-      "target": "plugins_graphify_applygraphifygitignore",
-      "confidence_score": 1.0
+      "target": "plugins_graphify_applygraphifygitignore"
     },
     {
       "relation": "calls",
@@ -5249,17 +6313,6 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_speckit",
-      "target": "utils_fs"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
       "source_file": "src/plan-helpers.js",
       "source_location": "L3",
       "weight": 1.0,
@@ -5318,9 +6371,9 @@
       "source_file": "tests/gitignore.test.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_gitignore_test",
-      "target": "utils_fs",
-      "confidence_score": 1.0
+      "target": "utils_fs"
     },
     {
       "relation": "contains",
@@ -5348,9 +6401,9 @@
       "source_file": "src/utils/fs.js",
       "source_location": "L114",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "utils_fs",
-      "target": "utils_fs_ensuregitignoreblock",
-      "confidence_score": 1.0
+      "target": "utils_fs_ensuregitignoreblock"
     },
     {
       "relation": "contains",
@@ -5368,9 +6421,9 @@
       "source_file": "src/utils/fs.js",
       "source_location": "L96",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "utils_fs",
-      "target": "utils_fs_gitignorehaspattern",
-      "confidence_score": 1.0
+      "target": "utils_fs_gitignorehaspattern"
     },
     {
       "relation": "contains",
@@ -5604,9 +6657,9 @@
       "source_file": "src/utils/fs.js",
       "source_location": "L126",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "utils_fs_ensuregitignoreblock",
-      "target": "utils_fs_mergemarkerblock",
-      "confidence_score": 1.0
+      "target": "utils_fs_mergemarkerblock"
     },
     {
       "relation": "calls",
@@ -5703,9 +6756,9 @@
       "source_file": "src/utils/fs.js",
       "source_location": "L116",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "utils_fs_ensuregitignoreblock",
-      "target": "utils_fs_readfileifexists",
-      "confidence_score": 1.0
+      "target": "utils_fs_readfileifexists"
     },
     {
       "relation": "imports",
@@ -5747,9 +6800,9 @@
       "source_file": "src/utils/fs.js",
       "source_location": "L121",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "utils_fs_ensuregitignoreblock",
-      "target": "utils_fs_gitignorehaspattern",
-      "confidence_score": 1.0
+      "target": "utils_fs_gitignorehaspattern"
     },
     {
       "relation": "imports",
@@ -5758,9 +6811,9 @@
       "source_file": "tests/gitignore.test.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_gitignore_test",
-      "target": "utils_fs_ensuregitignoreblock",
-      "confidence_score": 1.0
+      "target": "utils_fs_ensuregitignoreblock"
     },
     {
       "relation": "calls",
@@ -5837,28 +6890,6 @@
       "source_location": "L138",
       "weight": 1.0,
       "source": "plugins_skills_bundle_uninstallskillsbundle",
-      "target": "utils_fs_deletedirifexists"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_speckit",
-      "target": "utils_fs_deletedirifexists"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L134",
-      "weight": 1.0,
-      "source": "plugins_speckit_uninstallspeckit",
       "target": "utils_fs_deletedirifexists"
     },
     {
@@ -9134,50 +10165,6 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/cli.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_cli",
-      "target": "src_constants"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/cli.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_cli",
-      "target": "src_constants_getpreset"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/cli.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_cli",
-      "target": "src_constants_listpresetids"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/cli.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_cli",
-      "target": "src_constants_tool_ids"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/cli.js",
       "source_location": "L3",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -9227,28 +10214,6 @@
       "confidence_score": 1.0,
       "source": "src_cli_parsecli",
       "target": "src_cli_parsecsv"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/cli.js",
-      "source_location": "L81",
-      "weight": 1.0,
-      "source": "src_cli_parsecli",
-      "target": "src_constants_getpreset"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/cli.js",
-      "source_location": "L84",
-      "weight": 1.0,
-      "source": "src_cli_parsecli",
-      "target": "src_constants_listpresetids"
     },
     {
       "relation": "calls",
@@ -9342,312 +10307,11 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "src/plugins/cavemem.js",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_cavemem",
-      "target": "src_constants"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/index.js",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_index",
-      "target": "src_constants"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/skills-bundle.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_skills_bundle",
-      "target": "src_constants"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_speckit",
-      "target": "src_constants"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/constants.js",
-      "source_location": "L100",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_constants",
-      "target": "src_constants_getpreset"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/constants.js",
-      "source_location": "L104",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_constants",
-      "target": "src_constants_listpresetids"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/constants.js",
-      "source_location": "L19",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_constants",
-      "target": "src_constants_plugin_order"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/constants.js",
-      "source_location": "L65",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_constants",
-      "target": "src_constants_presets"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/constants.js",
-      "source_location": "L17",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_constants",
-      "target": "src_constants_tool_ids"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/constants.js",
-      "source_location": "L21",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_constants",
-      "target": "src_constants_uninstall_order"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/constants.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_constants",
-      "target": "src_constants_upstream"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plan.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plan",
-      "target": "src_constants"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/caveman.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plugins_caveman_js_plugins_caveman",
-      "target": "src_constants"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/karpathy.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plugins_karpathy_js_plugins_karpathy",
-      "target": "src_constants"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/prereqs.js",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_prereqs",
-      "target": "src_constants"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/prompts.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_prompts",
-      "target": "src_constants"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/cavemem.js",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_cavemem",
-      "target": "src_constants_upstream"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/skills-bundle.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_skills_bundle",
-      "target": "src_constants_upstream"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_speckit",
-      "target": "src_constants_upstream"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/caveman.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plugins_caveman_js_plugins_caveman",
-      "target": "src_constants_upstream"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/karpathy.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plugins_karpathy_js_plugins_karpathy",
-      "target": "src_constants_upstream"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/prereqs.js",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_prereqs",
-      "target": "src_constants_upstream"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/index.js",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_index",
-      "target": "src_constants_plugin_order"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plan.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plan",
-      "target": "src_constants_plugin_order"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/index.js",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_index",
-      "target": "src_constants_uninstall_order"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plan.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_plan",
-      "target": "src_constants_uninstall_order"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/prompts.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_prompts",
-      "target": "src_constants_presets"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
       "source_file": "src/plugins/skills-bundle.js",
       "source_location": "L5",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "plugins_skills_bundle",
-      "target": "src_plan_helpers"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_speckit",
       "target": "src_plan_helpers"
     },
     {
@@ -9873,39 +10537,6 @@
       "source_location": "L73",
       "weight": 1.0,
       "source": "plugins_skills_bundle_planuninstallskillsbundle",
-      "target": "src_plan_helpers_repofileexists"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_speckit",
-      "target": "src_plan_helpers_repofileexists"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L43",
-      "weight": 1.0,
-      "source": "plugins_speckit_planinstallspeckit",
-      "target": "src_plan_helpers_repofileexists"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L56",
-      "weight": 1.0,
-      "source": "plugins_speckit_planuninstallspeckit",
       "target": "src_plan_helpers_repofileexists"
     },
     {
@@ -10709,50 +11340,6 @@
       "target": "platform_maps_skills_skillssupportsplatform"
     },
     {
-      "relation": "re_exports",
-      "context": "export",
-      "confidence": "EXTRACTED",
-      "source_file": "src/platform-maps/index.js",
-      "source_location": "L13",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "platform_maps_index",
-      "target": "platform_maps_speckit"
-    },
-    {
-      "relation": "re_exports",
-      "context": "re-export",
-      "confidence": "EXTRACTED",
-      "source_file": "src/platform-maps/index.js",
-      "source_location": "L13",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "platform_maps_index",
-      "target": "platform_maps_speckit_getspeckitintegration"
-    },
-    {
-      "relation": "re_exports",
-      "context": "re-export",
-      "confidence": "EXTRACTED",
-      "source_file": "src/platform-maps/index.js",
-      "source_location": "L13",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "platform_maps_index",
-      "target": "platform_maps_speckit_speckitinitcommand"
-    },
-    {
-      "relation": "re_exports",
-      "context": "re-export",
-      "confidence": "EXTRACTED",
-      "source_file": "src/platform-maps/index.js",
-      "source_location": "L13",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "platform_maps_index",
-      "target": "platform_maps_speckit_speckitsupportsplatform"
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/platform-maps/karpathy.js",
@@ -10924,123 +11511,6 @@
       "target": "platform_maps_skills_skillssupportsplatform"
     },
     {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "platform_maps_speckit",
-      "target": "platform_maps_speckit_getspeckitintegration"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "platform_maps_speckit",
-      "target": "platform_maps_speckit_speckit_integration"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L30",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "platform_maps_speckit",
-      "target": "platform_maps_speckit_speckitinitcommand"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L21",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "platform_maps_speckit",
-      "target": "platform_maps_speckit_speckitsupportsplatform"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_speckit",
-      "target": "platform_maps_speckit"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L31",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "platform_maps_speckit_speckitinitcommand",
-      "target": "platform_maps_speckit_getspeckitintegration"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L22",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "platform_maps_speckit_speckitsupportsplatform",
-      "target": "platform_maps_speckit_getspeckitintegration"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_speckit",
-      "target": "platform_maps_speckit_speckitsupportsplatform"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_speckit",
-      "target": "platform_maps_speckit_speckitinitcommand"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L106",
-      "weight": 1.0,
-      "source": "plugins_speckit_installspeckit",
-      "target": "platform_maps_speckit_speckitinitcommand"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L37",
-      "weight": 1.0,
-      "source": "plugins_speckit_planinstallspeckit",
-      "target": "platform_maps_speckit_speckitinitcommand"
-    },
-    {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -11071,17 +11541,6 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "plugins_skills_bundle",
-      "target": "src_platforms"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_speckit",
       "target": "src_platforms"
     },
     {
@@ -11342,39 +11801,6 @@
       "source_location": "L39",
       "weight": 1.0,
       "source": "plugins_skills_bundle_planinstallskillsbundle",
-      "target": "src_platforms_resolveplatforms"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_speckit",
-      "target": "src_platforms_resolveplatforms"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L80",
-      "weight": 1.0,
-      "source": "plugins_speckit_installspeckit",
-      "target": "src_platforms_resolveplatforms"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L18",
-      "weight": 1.0,
-      "source": "plugins_speckit_planinstallspeckit",
       "target": "src_platforms_resolveplatforms"
     },
     {
@@ -11750,28 +12176,6 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "src/plugins/index.js",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_index",
-      "target": "plugins_speckit"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/index.js",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_index",
-      "target": "plugins_speckit_speckitplugin"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
       "source_file": "src/prompts.js",
       "source_location": "L3",
       "weight": 1.0,
@@ -12117,122 +12521,6 @@
       "weight": 1.0,
       "source": "plugins_skills_bundle_uninstallskillsbundle",
       "target": "utils_exec_run"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L79",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_speckit",
-      "target": "plugins_speckit_installspeckit"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L17",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_speckit",
-      "target": "plugins_speckit_planinstallspeckit"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L54",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_speckit",
-      "target": "plugins_speckit_planuninstallspeckit"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L146",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_speckit",
-      "target": "plugins_speckit_speckitplugin"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L130",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_speckit",
-      "target": "plugins_speckit_uninstallspeckit"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_speckit",
-      "target": "utils_detect"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_speckit",
-      "target": "utils_detect_hasuv"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_speckit",
-      "target": "utils_exec"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_speckit",
-      "target": "utils_exec_runshell"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L89",
-      "weight": 1.0,
-      "source": "plugins_speckit_installspeckit",
-      "target": "utils_detect_hasuv"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L96",
-      "weight": 1.0,
-      "source": "plugins_speckit_installspeckit",
-      "target": "utils_exec_runshell"
     },
     {
       "relation": "contains",
@@ -13177,5 +13465,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "1daaa9fc8bb9d9a8502c1949f65445dcd6bbe21d"
+  "built_at_commit": "0a6328b9e98950f2e626748069f22b0eb200d404"
 }

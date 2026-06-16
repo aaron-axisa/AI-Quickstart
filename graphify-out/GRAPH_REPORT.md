@@ -1,16 +1,16 @@
 # Graph Report - AI-Quickstart  (2026-06-16)
 
 ## Corpus Check
-- 75 files · ~23,434 words
+- 76 files · ~23,605 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 448 nodes · 823 edges · 43 communities (40 shown, 3 thin omitted)
+- 453 nodes · 845 edges · 44 communities (41 shown, 3 thin omitted)
 - Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 45 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `1daaa9fc`
+- Built from commit: `0a6328b9`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -52,10 +52,11 @@
 - [[_COMMUNITY_Community 34|Community 34]]
 - [[_COMMUNITY_Community 35|Community 35]]
 - [[_COMMUNITY_Community 42|Community 42]]
+- [[_COMMUNITY_Community 43|Community 43]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `resolvePlatforms()` - 27 edges
-2. `run()` - 15 edges
+2. `run()` - 16 edges
 3. `validate()` - 14 edges
 4. `repoFileExists()` - 14 edges
 5. `checkPrerequisites()` - 13 edges
@@ -68,27 +69,27 @@
 ## Surprising Connections (you probably didn't know these)
 - `Test-NodeVersion()` --calls--> `node`  [INFERRED]
   install.ps1 → package.json
+- `planUninstallSpeckit()` --calls--> `repoFileExists()`  [EXTRACTED]
+  src/plugins/speckit.js → src/plan-helpers.js
 - `planUninstallGraphify()` --calls--> `repoFileExists()`  [INFERRED]
   src/plugins/graphify.js → src/plan-helpers.js
 - `installGraphify()` --calls--> `hasUv()`  [INFERRED]
   src/plugins/graphify.js → src/utils/detect.js
 - `installGraphify()` --calls--> `run()`  [INFERRED]
   src/plugins/graphify.js → src/utils/exec.js
-- `uninstallGraphify()` --calls--> `deleteDirIfExists()`  [INFERRED]
-  src/plugins/graphify.js → src/utils/fs.js
 
 ## Import Cycles
 - None detected.
 
-## Communities (43 total, 3 thin omitted)
+## Communities (44 total, 3 thin omitted)
 
 ### Community 0 - "Community 0"
-Cohesion: 0.09
-Nodes (40): main(), cavemanPlugin, cavememPlugin, graphifyPlugin, getOrderedPlugins(), listPlugins(), listPluginsByCategory(), PLUGINS (+32 more)
+Cohesion: 0.10
+Nodes (39): main(), cavememPlugin, graphifyPlugin, getOrderedPlugins(), listPlugins(), listPluginsByCategory(), PLUGINS, karpathyPlugin (+31 more)
 
 ### Community 1 - "Community 1"
-Cohesion: 0.35
-Nodes (10): getSkillsAgent(), SKILLS_AGENT, skillsSupportsPlatform(), installSkillsBundle(), planInstallSkillsBundle(), planUninstallSkillsBundle(), selectedSkills(), skillsAddArgs() (+2 more)
+Cohesion: 0.32
+Nodes (11): getSkillsAgent(), SKILLS_AGENT, skillsSupportsPlatform(), installSkillsBundle(), planInstallSkillsBundle(), planUninstallSkillsBundle(), selectedSkills(), skillsAddArgs() (+3 more)
 
 ### Community 2 - "Community 2"
 Cohesion: 0.12
@@ -99,20 +100,20 @@ Cohesion: 0.16
 Nodes (22): Path, Path, benchmark_pair(), count_tokens(), main(), print_table(), count_bullets(), extract_code_blocks() (+14 more)
 
 ### Community 4 - "Community 4"
-Cohesion: 0.14
-Nodes (30): CAVEMEM_IDE, cavememCommand(), cavememSupportsPlatform(), getCavememIde(), getGraphifyMap(), GRAPHIFY_MAP, graphifyInstallCommand(), graphifyUninstallCommand() (+22 more)
+Cohesion: 0.21
+Nodes (22): CAVEMEM_IDE, cavememCommand(), cavememSupportsPlatform(), getCavememIde(), getGraphifyMap(), GRAPHIFY_MAP, graphifyInstallCommand(), graphifyUninstallCommand() (+14 more)
 
 ### Community 5 - "Community 5"
 Cohesion: 0.09
 Nodes (20): Test-NodeVersion(), bin, ai-quickstart, dependencies, @clack/prompts, description, engines, node (+12 more)
 
 ### Community 6 - "Community 6"
-Cohesion: 0.25
+Cohesion: 0.24
 Nodes (16): checkPrerequisites(), getNodeInstallCommands(), getPythonInstallCommands(), getUvInstallCommands(), detectPlatform(), firstWorkingCommand(), getHome(), getNodeVersion() (+8 more)
 
 ### Community 7 - "Community 7"
-Cohesion: 0.15
-Nodes (28): CAVEMAN_ONLY, getCavemanOnly(), getKarpathyTarget(), KARPATHY_TARGET, cavemanInstallCommand(), installCaveman(), planInstallCaveman(), planUninstallCaveman() (+20 more)
+Cohesion: 0.14
+Nodes (28): CAVEMAN_ONLY, getCavemanOnly(), getKarpathyTarget(), KARPATHY_TARGET, cavemanInstallCommand(), cavemanPlugin, installCaveman(), planInstallCaveman() (+20 more)
 
 ### Community 8 - "Community 8"
 Cohesion: 0.12
@@ -218,25 +219,29 @@ Nodes (4): Auto-Clarity, Boundaries, Examples, Rules
 Cohesion: 0.50
 Nodes (3): Checklist, Summary, Test plan
 
+### Community 43 - "Community 43"
+Cohesion: 0.33
+Nodes (12): getSpeckitIntegration(), SPECKIT_INTEGRATION, speckitGitSource(), speckitInitArgs(), speckitInitCommand(), speckitInstallArgs(), speckitInstallCommand(), speckitSupportsPlatform() (+4 more)
+
 ## Knowledge Gaps
-- **161 isolated node(s):** `Supported tools`, `Quick start`, `Requirements`, `Uninstall`, `Review before proceeding` (+156 more)
+- **161 isolated node(s):** `SPECKIT_INTEGRATION`, `Supported tools`, `Quick start`, `Requirements`, `Uninstall` (+156 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `resolvePlatforms()` connect `Community 4` to `Community 0`, `Community 1`, `Community 7`?**
+- **Why does `resolvePlatforms()` connect `Community 4` to `Community 0`, `Community 1`, `Community 43`, `Community 7`?**
   _High betweenness centrality (0.012) - this node is a cross-community bridge._
 - **Why does `validate()` connect `Community 3` to `Community 2`?**
   _High betweenness centrality (0.005) - this node is a cross-community bridge._
-- **Why does `run()` connect `Community 6` to `Community 1`, `Community 4`, `Community 7`?**
-  _High betweenness centrality (0.004) - this node is a cross-community bridge._
+- **Why does `run()` connect `Community 6` to `Community 1`, `Community 43`, `Community 4`, `Community 7`?**
+  _High betweenness centrality (0.005) - this node is a cross-community bridge._
 - **Are the 10 inferred relationships involving `resolvePlatforms()` (e.g. with `installCaveman()` and `planInstallCaveman()`) actually correct?**
   _`resolvePlatforms()` has 10 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 3 inferred relationships involving `run()` (e.g. with `installCaveman()` and `uninstallCaveman()`) actually correct?**
   _`run()` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 5 inferred relationships involving `repoFileExists()` (e.g. with `planInstallCaveman()` and `planUninstallCaveman()`) actually correct?**
   _`repoFileExists()` has 5 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `Supported tools`, `Quick start`, `Requirements` to the rest of the system?**
+- **What connects `SPECKIT_INTEGRATION`, `Supported tools`, `Quick start` to the rest of the system?**
   _173 weakly-connected nodes found - possible documentation gaps or missing edges._

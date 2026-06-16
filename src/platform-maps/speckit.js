@@ -22,16 +22,16 @@ export function speckitInstallCommand() {
   return `uv ${args.join(" ")}`;
 }
 
-/** @type {Record<string, string|null>} platform id -> specify init --integration */
+/** @type {Record<string, string|null>} AI-Quickstart platform id -> specify --integration slug */
 export const SPECKIT_INTEGRATION = {
-  cursor: "cursor",
+  cursor: "cursor-agent",
   claude: "claude",
   codex: "codex",
   opencode: "opencode",
   copilot: "copilot",
   gemini: "gemini",
-  windsurf: null,
-  cline: null,
+  windsurf: "windsurf",
+  cline: "cline",
   aider: null,
 };
 

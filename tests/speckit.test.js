@@ -21,9 +21,9 @@ describe("speckit platform map", () => {
     );
   });
 
-  it("uses --here --force for non-interactive init", () => {
+  it("maps cursor platform to cursor-agent integration", () => {
     const cmd = speckitInitCommand("cursor", "/tmp/repo");
-    assert.match(cmd, /specify init --here --integration cursor --force/);
+    assert.match(cmd, /specify init --here --integration cursor-agent --force/);
     assert.doesNotMatch(cmd, /--no-input/);
   });
 });
