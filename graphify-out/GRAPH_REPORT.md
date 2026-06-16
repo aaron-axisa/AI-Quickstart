@@ -1,7 +1,7 @@
 # Graph Report - AI-Quickstart  (2026-06-16)
 
 ## Corpus Check
-- 109 files · ~49,559 words
+- 109 files · ~49,708 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `c1b33cd5`
+- Built from commit: `fb409d27`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -84,20 +84,20 @@
 6. `checkPrerequisites()` - 13 edges
 7. `runInteractive()` - 13 edges
 8. `runAction()` - 13 edges
-9. `installSpeckit()` - 12 edges
-10. `AI-Quickstart` - 12 edges
+9. `AI-Quickstart` - 12 edges
+10. `installSpeckit()` - 12 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Test-NodeVersion()` --calls--> `node`  [INFERRED]
   install.ps1 → package.json
-- `uninstallSpeckit()` --calls--> `deleteDirIfExists()`  [EXTRACTED]
-  src/plugins/speckit.js → src/utils/fs.js
-- `planUninstallGraphify()` --calls--> `repoFileExists()`  [INFERRED]
-  src/plugins/graphify.js → src/plan-helpers.js
-- `installGraphify()` --calls--> `hasUv()`  [INFERRED]
-  src/plugins/graphify.js → src/utils/detect.js
-- `uninstallCaveman()` --calls--> `deleteFileIfExists()`  [INFERRED]
-  src/plugins/caveman.js → src/utils/fs.js
+- `main()` --calls--> `cliToConfig()`  [EXTRACTED]
+  bin/install.js → src/cli.js
+- `main()` --calls--> `needsInteractive()`  [EXTRACTED]
+  bin/install.js → src/cli.js
+- `main()` --calls--> `parseCli()`  [EXTRACTED]
+  bin/install.js → src/cli.js
+- `main()` --calls--> `printHelp()`  [EXTRACTED]
+  bin/install.js → src/cli.js
 
 ## Import Cycles
 - None detected.
@@ -317,7 +317,7 @@ Cohesion: 0.21
 Nodes (19): getSpeckitIntegration(), isSpecifyInstallLockError(), specifyUvToolDir(), specifyUvToolDirExists(), SPECKIT_INTEGRATION, speckitGitSource(), speckitInitArgs(), speckitInitCommand() (+11 more)
 
 ## Knowledge Gaps
-- **303 isolated node(s):** `SPECKIT_INTEGRATION`, `Supported tools`, `Quick start`, `Requirements`, `Uninstall` (+298 more)
+- **303 isolated node(s):** `Supported tools`, `Quick start`, `Requirements`, `Uninstall`, `Review before proceeding` (+298 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **6 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -336,5 +336,5 @@ _Questions this graph is uniquely positioned to answer:_
   _`run()` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 5 inferred relationships involving `repoFileExists()` (e.g. with `planInstallCaveman()` and `planUninstallCaveman()`) actually correct?**
   _`repoFileExists()` has 5 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `SPECKIT_INTEGRATION`, `Supported tools`, `Quick start` to the rest of the system?**
+- **What connects `Supported tools`, `Quick start`, `Requirements` to the rest of the system?**
   _315 weakly-connected nodes found - possible documentation gaps or missing edges._

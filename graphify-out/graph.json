@@ -4,244 +4,14 @@
   "graph": {},
   "nodes": [
     {
-      "label": "speckit.js",
-      "file_type": "code",
-      "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "platform_maps_speckit",
-      "community": 69,
-      "norm_label": "speckit.js"
-    },
-    {
-      "label": "speckitGitSource()",
-      "file_type": "code",
-      "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L7",
-      "_origin": "ast",
-      "id": "platform_maps_speckit_speckitgitsource",
-      "community": 69,
-      "norm_label": "speckitgitsource()"
-    },
-    {
-      "label": "speckitInstallArgs()",
-      "file_type": "code",
-      "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L12",
-      "_origin": "ast",
-      "id": "platform_maps_speckit_speckitinstallargs",
-      "community": 69,
-      "norm_label": "speckitinstallargs()"
-    },
-    {
-      "label": "speckitInstallCommand()",
-      "file_type": "code",
-      "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L25",
-      "_origin": "ast",
-      "id": "platform_maps_speckit_speckitinstallcommand",
-      "community": 69,
-      "norm_label": "speckitinstallcommand()"
-    },
-    {
-      "label": "isSpecifyInstallLockError()",
-      "file_type": "code",
-      "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L34",
-      "_origin": "ast",
-      "id": "platform_maps_speckit_isspecifyinstalllockerror",
-      "community": 69,
-      "norm_label": "isspecifyinstalllockerror()"
-    },
-    {
-      "label": "specifyUvToolDir()",
-      "file_type": "code",
-      "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L39",
-      "_origin": "ast",
-      "id": "platform_maps_speckit_specifyuvtooldir",
-      "community": 69,
-      "norm_label": "specifyuvtooldir()"
-    },
-    {
-      "label": "specifyUvToolDirExists()",
-      "file_type": "code",
-      "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L48",
-      "_origin": "ast",
-      "id": "platform_maps_speckit_specifyuvtooldirexists",
-      "community": 69,
-      "norm_label": "specifyuvtooldirexists()"
-    },
-    {
-      "label": "SPECKIT_INTEGRATION",
-      "file_type": "code",
-      "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L53",
-      "_origin": "ast",
-      "id": "platform_maps_speckit_speckit_integration",
-      "community": 69,
-      "norm_label": "speckit_integration"
-    },
-    {
-      "label": "getSpeckitIntegration()",
-      "file_type": "code",
-      "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L66",
-      "_origin": "ast",
-      "id": "platform_maps_speckit_getspeckitintegration",
-      "community": 69,
-      "norm_label": "getspeckitintegration()"
-    },
-    {
-      "label": "speckitSupportsPlatform()",
-      "file_type": "code",
-      "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L72",
-      "_origin": "ast",
-      "id": "platform_maps_speckit_speckitsupportsplatform",
-      "community": 69,
-      "norm_label": "speckitsupportsplatform()"
-    },
-    {
-      "label": "speckitScriptType()",
-      "file_type": "code",
-      "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L78",
-      "_origin": "ast",
-      "id": "platform_maps_speckit_speckitscripttype",
-      "community": 69,
-      "norm_label": "speckitscripttype()"
-    },
-    {
-      "label": "speckitInitArgs()",
-      "file_type": "code",
-      "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L86",
-      "_origin": "ast",
-      "id": "platform_maps_speckit_speckitinitargs",
-      "community": 69,
-      "norm_label": "speckitinitargs()"
-    },
-    {
-      "label": "speckitInitCommand()",
-      "file_type": "code",
-      "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L105",
-      "_origin": "ast",
-      "id": "platform_maps_speckit_speckitinitcommand",
-      "community": 69,
-      "norm_label": "speckitinitcommand()"
-    },
-    {
-      "label": "speckit.js",
-      "file_type": "code",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "plugins_speckit",
-      "community": 69,
-      "norm_label": "speckit.js"
-    },
-    {
-      "label": "planInstallSpeckit()",
-      "file_type": "code",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L21",
-      "_origin": "ast",
-      "id": "plugins_speckit_planinstallspeckit",
-      "community": 69,
-      "norm_label": "planinstallspeckit()"
-    },
-    {
-      "label": "planUninstallSpeckit()",
-      "file_type": "code",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L59",
-      "_origin": "ast",
-      "id": "plugins_speckit_planuninstallspeckit",
-      "community": 7,
-      "norm_label": "planuninstallspeckit()"
-    },
-    {
-      "label": "isSpecifyCliAvailable()",
-      "file_type": "code",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L84",
-      "_origin": "ast",
-      "id": "plugins_speckit_isspecifycliavailable",
-      "community": 69,
-      "norm_label": "isspecifycliavailable()"
-    },
-    {
-      "label": "runSpecify()",
-      "file_type": "code",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L99",
-      "_origin": "ast",
-      "id": "plugins_speckit_runspecify",
-      "community": 69,
-      "norm_label": "runspecify()"
-    },
-    {
-      "label": "ensureSpecifyCli()",
-      "file_type": "code",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L126",
-      "_origin": "ast",
-      "id": "plugins_speckit_ensurespecifycli",
-      "community": 69,
-      "norm_label": "ensurespecifycli()"
-    },
-    {
-      "label": "installSpeckit()",
-      "file_type": "code",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L168",
-      "_origin": "ast",
-      "id": "plugins_speckit_installspeckit",
-      "community": 69,
-      "norm_label": "installspeckit()"
-    },
-    {
-      "label": "uninstallSpeckit()",
-      "file_type": "code",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L214",
-      "_origin": "ast",
-      "id": "plugins_speckit_uninstallspeckit",
-      "community": 69,
-      "norm_label": "uninstallspeckit()"
-    },
-    {
-      "label": "speckitPlugin",
-      "file_type": "code",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L230",
-      "_origin": "ast",
-      "id": "plugins_speckit_speckitplugin",
-      "community": 0,
-      "norm_label": "speckitplugin"
-    },
-    {
-      "label": "speckit.test.js",
-      "file_type": "code",
-      "source_file": "tests/speckit.test.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "tests_speckit_test",
-      "community": 69,
-      "norm_label": "speckit.test.js"
-    },
-    {
       "label": "README.md",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "readme",
       "community": 8,
-      "norm_label": "readme.md",
-      "id": "readme"
+      "norm_label": "readme.md"
     },
     {
       "label": "AI-Quickstart",
@@ -249,9 +19,9 @@
       "source_file": "README.md",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "readme_ai_quickstart",
       "community": 8,
-      "norm_label": "ai-quickstart",
-      "id": "readme_ai_quickstart"
+      "norm_label": "ai-quickstart"
     },
     {
       "label": "Supported tools",
@@ -259,9 +29,9 @@
       "source_file": "README.md",
       "source_location": "L5",
       "_origin": "ast",
+      "id": "readme_supported_tools",
       "community": 8,
-      "norm_label": "supported tools",
-      "id": "readme_supported_tools"
+      "norm_label": "supported tools"
     },
     {
       "label": "Quick start",
@@ -269,9 +39,9 @@
       "source_file": "README.md",
       "source_location": "L16",
       "_origin": "ast",
+      "id": "readme_quick_start",
       "community": 8,
-      "norm_label": "quick start",
-      "id": "readme_quick_start"
+      "norm_label": "quick start"
     },
     {
       "label": "Requirements",
@@ -279,9 +49,9 @@
       "source_file": "README.md",
       "source_location": "L67",
       "_origin": "ast",
+      "id": "readme_requirements",
       "community": 8,
-      "norm_label": "requirements",
-      "id": "readme_requirements"
+      "norm_label": "requirements"
     },
     {
       "label": "Uninstall",
@@ -289,9 +59,9 @@
       "source_file": "README.md",
       "source_location": "L78",
       "_origin": "ast",
+      "id": "readme_uninstall",
       "community": 8,
-      "norm_label": "uninstall",
-      "id": "readme_uninstall"
+      "norm_label": "uninstall"
     },
     {
       "label": "Review before proceeding",
@@ -299,9 +69,9 @@
       "source_file": "README.md",
       "source_location": "L98",
       "_origin": "ast",
+      "id": "readme_review_before_proceeding",
       "community": 8,
-      "norm_label": "review before proceeding",
-      "id": "readme_review_before_proceeding"
+      "norm_label": "review before proceeding"
     },
     {
       "label": "CLI reference",
@@ -309,9 +79,9 @@
       "source_file": "README.md",
       "source_location": "L111",
       "_origin": "ast",
+      "id": "readme_cli_reference",
       "community": 8,
-      "norm_label": "cli reference",
-      "id": "readme_cli_reference"
+      "norm_label": "cli reference"
     },
     {
       "label": "Required (non-interactive)",
@@ -319,9 +89,9 @@
       "source_file": "README.md",
       "source_location": "L113",
       "_origin": "ast",
+      "id": "readme_required_non_interactive",
       "community": 8,
-      "norm_label": "required (non-interactive)",
-      "id": "readme_required_non_interactive"
+      "norm_label": "required (non-interactive)"
     },
     {
       "label": "Tool selection",
@@ -329,9 +99,9 @@
       "source_file": "README.md",
       "source_location": "L119",
       "_origin": "ast",
+      "id": "readme_tool_selection",
       "community": 8,
-      "norm_label": "tool selection",
-      "id": "readme_tool_selection"
+      "norm_label": "tool selection"
     },
     {
       "label": "Modes",
@@ -339,9 +109,9 @@
       "source_file": "README.md",
       "source_location": "L126",
       "_origin": "ast",
+      "id": "readme_modes",
       "community": 8,
-      "norm_label": "modes",
-      "id": "readme_modes"
+      "norm_label": "modes"
     },
     {
       "label": "What changes in my repo?",
@@ -349,9 +119,9 @@
       "source_file": "README.md",
       "source_location": "L139",
       "_origin": "ast",
+      "id": "readme_what_changes_in_my_repo",
       "community": 8,
-      "norm_label": "what changes in my repo?",
-      "id": "readme_what_changes_in_my_repo"
+      "norm_label": "what changes in my repo?"
     },
     {
       "label": "Platform matrix",
@@ -359,9 +129,9 @@
       "source_file": "README.md",
       "source_location": "L158",
       "_origin": "ast",
+      "id": "readme_platform_matrix",
       "community": 8,
-      "norm_label": "platform matrix",
-      "id": "readme_platform_matrix"
+      "norm_label": "platform matrix"
     },
     {
       "label": "Troubleshooting",
@@ -369,9 +139,9 @@
       "source_file": "README.md",
       "source_location": "L167",
       "_origin": "ast",
+      "id": "readme_troubleshooting",
       "community": 8,
-      "norm_label": "troubleshooting",
-      "id": "readme_troubleshooting"
+      "norm_label": "troubleshooting"
     },
     {
       "label": "Contributing",
@@ -379,9 +149,9 @@
       "source_file": "README.md",
       "source_location": "L198",
       "_origin": "ast",
+      "id": "readme_contributing",
       "community": 8,
-      "norm_label": "contributing",
-      "id": "readme_contributing"
+      "norm_label": "contributing"
     },
     {
       "label": "License",
@@ -389,9 +159,29 @@
       "source_file": "README.md",
       "source_location": "L202",
       "_origin": "ast",
+      "id": "readme_license",
       "community": 8,
-      "norm_label": "license",
-      "id": "readme_license"
+      "norm_label": "license"
+    },
+    {
+      "label": "install.js",
+      "file_type": "code",
+      "source_file": "bin/install.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "bin_install",
+      "community": 0,
+      "norm_label": "install.js"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "bin/install.js",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "bin_install_main",
+      "community": 0,
+      "norm_label": "main()"
     },
     {
       "label": "install.ps1",
@@ -399,39 +189,269 @@
       "source_file": "install.ps1",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "install",
       "community": 5,
-      "norm_label": "install.ps1",
-      "id": "install"
+      "norm_label": "install.ps1"
     },
     {
       "label": "Test-NodeVersion()",
       "file_type": "code",
       "source_file": "install.ps1",
-      "source_location": "L13",
+      "source_location": "L15",
       "_origin": "ast",
+      "id": "install_test_nodeversion",
       "community": 5,
-      "norm_label": "test-nodeversion()",
-      "id": "install_test_nodeversion"
+      "norm_label": "test-nodeversion()"
     },
     {
       "label": "Get-NpxCmdPath()",
       "file_type": "code",
       "source_file": "install.ps1",
-      "source_location": "L26",
+      "source_location": "L28",
       "_origin": "ast",
+      "id": "install_get_npxcmdpath",
       "community": 5,
-      "norm_label": "get-npxcmdpath()",
-      "id": "install_get_npxcmdpath"
+      "norm_label": "get-npxcmdpath()"
     },
     {
       "label": "Invoke-Npx()",
       "file_type": "code",
       "source_file": "install.ps1",
-      "source_location": "L37",
+      "source_location": "L39",
       "_origin": "ast",
+      "id": "install_invoke_npx",
       "community": 5,
-      "norm_label": "invoke-npx()",
-      "id": "install_invoke_npx"
+      "norm_label": "invoke-npx()"
+    },
+    {
+      "label": "speckit.js",
+      "file_type": "code",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 69,
+      "norm_label": "speckit.js",
+      "id": "platform_maps_speckit"
+    },
+    {
+      "label": "speckitGitSource()",
+      "file_type": "code",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L7",
+      "_origin": "ast",
+      "community": 69,
+      "norm_label": "speckitgitsource()",
+      "id": "platform_maps_speckit_speckitgitsource"
+    },
+    {
+      "label": "speckitInstallArgs()",
+      "file_type": "code",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L12",
+      "_origin": "ast",
+      "community": 69,
+      "norm_label": "speckitinstallargs()",
+      "id": "platform_maps_speckit_speckitinstallargs"
+    },
+    {
+      "label": "speckitInstallCommand()",
+      "file_type": "code",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L25",
+      "_origin": "ast",
+      "community": 69,
+      "norm_label": "speckitinstallcommand()",
+      "id": "platform_maps_speckit_speckitinstallcommand"
+    },
+    {
+      "label": "isSpecifyInstallLockError()",
+      "file_type": "code",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L34",
+      "_origin": "ast",
+      "community": 69,
+      "norm_label": "isspecifyinstalllockerror()",
+      "id": "platform_maps_speckit_isspecifyinstalllockerror"
+    },
+    {
+      "label": "specifyUvToolDir()",
+      "file_type": "code",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L39",
+      "_origin": "ast",
+      "community": 69,
+      "norm_label": "specifyuvtooldir()",
+      "id": "platform_maps_speckit_specifyuvtooldir"
+    },
+    {
+      "label": "specifyUvToolDirExists()",
+      "file_type": "code",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L48",
+      "_origin": "ast",
+      "community": 69,
+      "norm_label": "specifyuvtooldirexists()",
+      "id": "platform_maps_speckit_specifyuvtooldirexists"
+    },
+    {
+      "label": "SPECKIT_INTEGRATION",
+      "file_type": "code",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L53",
+      "_origin": "ast",
+      "community": 69,
+      "norm_label": "speckit_integration",
+      "id": "platform_maps_speckit_speckit_integration"
+    },
+    {
+      "label": "getSpeckitIntegration()",
+      "file_type": "code",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L66",
+      "_origin": "ast",
+      "community": 69,
+      "norm_label": "getspeckitintegration()",
+      "id": "platform_maps_speckit_getspeckitintegration"
+    },
+    {
+      "label": "speckitSupportsPlatform()",
+      "file_type": "code",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L72",
+      "_origin": "ast",
+      "community": 69,
+      "norm_label": "speckitsupportsplatform()",
+      "id": "platform_maps_speckit_speckitsupportsplatform"
+    },
+    {
+      "label": "speckitScriptType()",
+      "file_type": "code",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L78",
+      "_origin": "ast",
+      "community": 69,
+      "norm_label": "speckitscripttype()",
+      "id": "platform_maps_speckit_speckitscripttype"
+    },
+    {
+      "label": "speckitInitArgs()",
+      "file_type": "code",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L86",
+      "_origin": "ast",
+      "community": 69,
+      "norm_label": "speckitinitargs()",
+      "id": "platform_maps_speckit_speckitinitargs"
+    },
+    {
+      "label": "speckitInitCommand()",
+      "file_type": "code",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L105",
+      "_origin": "ast",
+      "community": 69,
+      "norm_label": "speckitinitcommand()",
+      "id": "platform_maps_speckit_speckitinitcommand"
+    },
+    {
+      "label": "speckit.js",
+      "file_type": "code",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 69,
+      "norm_label": "speckit.js",
+      "id": "plugins_speckit"
+    },
+    {
+      "label": "planInstallSpeckit()",
+      "file_type": "code",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L21",
+      "_origin": "ast",
+      "community": 69,
+      "norm_label": "planinstallspeckit()",
+      "id": "plugins_speckit_planinstallspeckit"
+    },
+    {
+      "label": "planUninstallSpeckit()",
+      "file_type": "code",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L59",
+      "_origin": "ast",
+      "community": 7,
+      "norm_label": "planuninstallspeckit()",
+      "id": "plugins_speckit_planuninstallspeckit"
+    },
+    {
+      "label": "isSpecifyCliAvailable()",
+      "file_type": "code",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L84",
+      "_origin": "ast",
+      "community": 69,
+      "norm_label": "isspecifycliavailable()",
+      "id": "plugins_speckit_isspecifycliavailable"
+    },
+    {
+      "label": "runSpecify()",
+      "file_type": "code",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L99",
+      "_origin": "ast",
+      "community": 69,
+      "norm_label": "runspecify()",
+      "id": "plugins_speckit_runspecify"
+    },
+    {
+      "label": "ensureSpecifyCli()",
+      "file_type": "code",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L126",
+      "_origin": "ast",
+      "community": 69,
+      "norm_label": "ensurespecifycli()",
+      "id": "plugins_speckit_ensurespecifycli"
+    },
+    {
+      "label": "installSpeckit()",
+      "file_type": "code",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L168",
+      "_origin": "ast",
+      "community": 69,
+      "norm_label": "installspeckit()",
+      "id": "plugins_speckit_installspeckit"
+    },
+    {
+      "label": "uninstallSpeckit()",
+      "file_type": "code",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L214",
+      "_origin": "ast",
+      "community": 69,
+      "norm_label": "uninstallspeckit()",
+      "id": "plugins_speckit_uninstallspeckit"
+    },
+    {
+      "label": "speckitPlugin",
+      "file_type": "code",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L230",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "speckitplugin",
+      "id": "plugins_speckit_speckitplugin"
+    },
+    {
+      "label": "speckit.test.js",
+      "file_type": "code",
+      "source_file": "tests/speckit.test.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 69,
+      "norm_label": "speckit.test.js",
+      "id": "tests_speckit_test"
     },
     {
       "label": "SKILL.md",
@@ -5412,26 +5432,6 @@
       "id": "contributing_questions"
     },
     {
-      "label": "install.js",
-      "file_type": "code",
-      "source_file": "bin/install.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 0,
-      "norm_label": "install.js",
-      "id": "bin_install"
-    },
-    {
-      "label": "main()",
-      "file_type": "code",
-      "source_file": "bin/install.js",
-      "source_location": "L12",
-      "_origin": "ast",
-      "community": 0,
-      "norm_label": "main()",
-      "id": "bin_install_main"
-    },
-    {
       "label": "ARCHITECTURE.md",
       "file_type": "document",
       "source_file": "docs/ARCHITECTURE.md",
@@ -6842,6 +6842,426 @@
   ],
   "links": [
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme",
+      "target": "readme_ai_quickstart"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L84",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_ai_quickstart",
+      "target": "readme_cli_reference"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L161",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_ai_quickstart",
+      "target": "readme_contributing"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L165",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_ai_quickstart",
+      "target": "readme_license"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L131",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_ai_quickstart",
+      "target": "readme_platform_matrix"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_ai_quickstart",
+      "target": "readme_quick_start"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_ai_quickstart",
+      "target": "readme_requirements"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L71",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_ai_quickstart",
+      "target": "readme_review_before_proceeding"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_ai_quickstart",
+      "target": "readme_supported_tools"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L140",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_ai_quickstart",
+      "target": "readme_troubleshooting"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L51",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_ai_quickstart",
+      "target": "readme_uninstall"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L112",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_ai_quickstart",
+      "target": "readme_what_changes_in_my_repo"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L99",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_cli_reference",
+      "target": "readme_modes"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L86",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_cli_reference",
+      "target": "readme_required_non_interactive"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L92",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_cli_reference",
+      "target": "readme_tool_selection"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bin/install.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bin_install",
+      "target": "bin_install_main"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bin/install.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bin_install",
+      "target": "src_cli"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bin/install.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bin_install",
+      "target": "src_cli_clitoconfig"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bin/install.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bin_install",
+      "target": "src_cli_needsinteractive"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bin/install.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bin_install",
+      "target": "src_cli_parsecli"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bin/install.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bin_install",
+      "target": "src_cli_printhelp"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bin/install.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bin_install",
+      "target": "src_cli_shouldskipreview"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bin/install.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bin_install",
+      "target": "src_prompts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bin/install.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bin_install",
+      "target": "src_prompts_runinteractive"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bin/install.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bin_install",
+      "target": "src_runner"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bin/install.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bin_install",
+      "target": "src_runner_buildpreview"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bin/install.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bin_install",
+      "target": "src_runner_runaction"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bin/install.js",
+      "source_location": "L37",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bin_install_main",
+      "target": "src_cli_clitoconfig"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bin/install.js",
+      "source_location": "L24",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bin_install_main",
+      "target": "src_cli_needsinteractive"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bin/install.js",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bin_install_main",
+      "target": "src_cli_parsecli"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bin/install.js",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bin_install_main",
+      "target": "src_cli_printhelp"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bin/install.js",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bin_install_main",
+      "target": "src_cli_shouldskipreview"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bin/install.js",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bin_install_main",
+      "target": "src_prompts_runinteractive"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bin/install.js",
+      "source_location": "L41",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bin_install_main",
+      "target": "src_runner_buildpreview"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bin/install.js",
+      "source_location": "L48",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bin_install_main",
+      "target": "src_runner_runaction"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "install",
+      "target": "install_get_npxcmdpath"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L37",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "install",
+      "target": "install_invoke_npx"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "install",
+      "target": "install_test_nodeversion"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "install.ps1",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "install_test_nodeversion",
+      "target": "package_engines_node"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L39",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "install_invoke_npx",
+      "target": "install_get_npxcmdpath"
+    },
+    {
       "relation": "re_exports",
       "context": "export",
       "confidence": "EXTRACTED",
@@ -6878,9 +7298,9 @@
       "source_file": "src/platform-maps/speckit.js",
       "source_location": "L39",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "platform_maps_speckit",
-      "target": "platform_maps_speckit_specifyuvtooldir",
-      "confidence_score": 1.0
+      "target": "platform_maps_speckit_specifyuvtooldir"
     },
     {
       "relation": "contains",
@@ -6888,9 +7308,9 @@
       "source_file": "src/platform-maps/speckit.js",
       "source_location": "L48",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "platform_maps_speckit",
-      "target": "platform_maps_speckit_specifyuvtooldirexists",
-      "confidence_score": 1.0
+      "target": "platform_maps_speckit_specifyuvtooldirexists"
     },
     {
       "relation": "contains",
@@ -7188,9 +7608,9 @@
       "source_file": "src/platform-maps/speckit.js",
       "source_location": "L49",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "platform_maps_speckit_specifyuvtooldirexists",
-      "target": "platform_maps_speckit_specifyuvtooldir",
-      "confidence_score": 1.0
+      "target": "platform_maps_speckit_specifyuvtooldir"
     },
     {
       "relation": "imports",
@@ -7199,9 +7619,9 @@
       "source_file": "tests/speckit.test.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_speckit_test",
-      "target": "platform_maps_speckit_specifyuvtooldir",
-      "confidence_score": 1.0
+      "target": "platform_maps_speckit_specifyuvtooldir"
     },
     {
       "relation": "imports",
@@ -7210,9 +7630,9 @@
       "source_file": "src/plugins/speckit.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "plugins_speckit",
-      "target": "platform_maps_speckit_specifyuvtooldirexists",
-      "confidence_score": 1.0
+      "target": "platform_maps_speckit_specifyuvtooldirexists"
     },
     {
       "relation": "calls",
@@ -7221,9 +7641,9 @@
       "source_file": "src/plugins/speckit.js",
       "source_location": "L132",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "plugins_speckit_ensurespecifycli",
-      "target": "platform_maps_speckit_specifyuvtooldirexists",
-      "confidence_score": 1.0
+      "target": "platform_maps_speckit_specifyuvtooldirexists"
     },
     {
       "relation": "calls",
@@ -7243,9 +7663,9 @@
       "source_file": "tests/speckit.test.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_speckit_test",
-      "target": "platform_maps_speckit_specifyuvtooldirexists",
-      "confidence_score": 1.0
+      "target": "platform_maps_speckit_specifyuvtooldirexists"
     },
     {
       "relation": "re_exports",
@@ -7788,207 +8208,6 @@
       "confidence_score": 1.0,
       "source": "plugins_index",
       "target": "plugins_speckit_speckitplugin"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme",
-      "target": "readme_ai_quickstart"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L84",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_ai_quickstart",
-      "target": "readme_cli_reference"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L161",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_ai_quickstart",
-      "target": "readme_contributing"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L165",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_ai_quickstart",
-      "target": "readme_license"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L131",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_ai_quickstart",
-      "target": "readme_platform_matrix"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L13",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_ai_quickstart",
-      "target": "readme_quick_start"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L40",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_ai_quickstart",
-      "target": "readme_requirements"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L71",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_ai_quickstart",
-      "target": "readme_review_before_proceeding"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_ai_quickstart",
-      "target": "readme_supported_tools"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L140",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_ai_quickstart",
-      "target": "readme_troubleshooting"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L51",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_ai_quickstart",
-      "target": "readme_uninstall"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L112",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_ai_quickstart",
-      "target": "readme_what_changes_in_my_repo"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L99",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_cli_reference",
-      "target": "readme_modes"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L86",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_cli_reference",
-      "target": "readme_required_non_interactive"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L92",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_cli_reference",
-      "target": "readme_tool_selection"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "install.ps1",
-      "source_location": "L26",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "install",
-      "target": "install_get_npxcmdpath"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "install.ps1",
-      "source_location": "L37",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "install",
-      "target": "install_invoke_npx"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "install.ps1",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "install",
-      "target": "install_test_nodeversion"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "install.ps1",
-      "source_location": "L16",
-      "weight": 1.0,
-      "source": "install_test_nodeversion",
-      "target": "package_engines_node"
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "install.ps1",
-      "source_location": "L39",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "install_invoke_npx",
-      "target": "install_get_npxcmdpath"
     },
     {
       "relation": "contains",
@@ -14248,225 +14467,6 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "bin/install.js",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bin_install",
-      "target": "bin_install_main"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bin/install.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bin_install",
-      "target": "src_cli"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bin/install.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bin_install",
-      "target": "src_cli_clitoconfig"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bin/install.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bin_install",
-      "target": "src_cli_needsinteractive"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bin/install.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bin_install",
-      "target": "src_cli_parsecli"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bin/install.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bin_install",
-      "target": "src_cli_printhelp"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bin/install.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bin_install",
-      "target": "src_cli_shouldskipreview"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bin/install.js",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bin_install",
-      "target": "src_prompts"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bin/install.js",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bin_install",
-      "target": "src_prompts_runinteractive"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bin/install.js",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bin_install",
-      "target": "src_runner"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bin/install.js",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bin_install",
-      "target": "src_runner_buildpreview"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bin/install.js",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bin_install",
-      "target": "src_runner_runaction"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bin/install.js",
-      "source_location": "L37",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bin_install_main",
-      "target": "src_cli_clitoconfig"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bin/install.js",
-      "source_location": "L24",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bin_install_main",
-      "target": "src_cli_needsinteractive"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bin/install.js",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bin_install_main",
-      "target": "src_cli_parsecli"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bin/install.js",
-      "source_location": "L17",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bin_install_main",
-      "target": "src_cli_printhelp"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bin/install.js",
-      "source_location": "L40",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bin_install_main",
-      "target": "src_cli_shouldskipreview"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bin/install.js",
-      "source_location": "L25",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bin_install_main",
-      "target": "src_prompts_runinteractive"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bin/install.js",
-      "source_location": "L41",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bin_install_main",
-      "target": "src_runner_buildpreview"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bin/install.js",
-      "source_location": "L48",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bin_install_main",
-      "target": "src_runner_runaction"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "docs/ARCHITECTURE.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -18029,5 +18029,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "c1b33cd5ec717775b51fab8a21b64dfeb1f0da51"
+  "built_at_commit": "fb409d27d53c2c37f312af8aa595b28df8a9b86c"
 }
