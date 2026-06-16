@@ -6,21 +6,31 @@ export function speckitGitSource(ref = UPSTREAM.speckit.ref) {
   return `${UPSTREAM.speckit.gitUrl}@${ref}`;
 }
 
-/** @returns {string[]} */
-export function speckitInstallArgs() {
-  return [
+/** @param {{ force?: boolean }} [opts] */
+export function speckitInstallArgs(opts = {}) {
+  const args = [
     "tool",
     "install",
     UPSTREAM.speckit.cliPackage,
     "--from",
     speckitGitSource(),
   ];
+  if (opts.force) args.push("--force");
+  return args;
 }
 
-/** @returns {string} */
-export function speckitInstallCommand() {
-  const args = speckitInstallArgs();
+/** @param {{ force?: boolean }} [opts] */
+export function speckitInstallCommand(opts = {}) {
+  const args = speckitInstallArgs(opts);
   return `uv ${args.join(" ")}`;
+}
+
+/**
+ * uv on Windows fails when specify-cli Scripts are locked by a running process.
+ * @param {string} text
+ */
+export function isSpecifyInstallLockError(text) {
+  return /access is denied|os error 5|failed to remove directory/i.test(text);
 }
 
 /** @type {Record<string, string|null>} AI-Quickstart platform id -> specify --integration slug */

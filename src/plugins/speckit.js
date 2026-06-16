@@ -1,14 +1,14 @@
 import path from "node:path";
 import { resolvePlatforms } from "../platforms.js";
+import { run, commandExists } from "../utils/exec.js";
 import {
   speckitInitArgs,
   speckitInitCommand,
   speckitInstallArgs,
   speckitInstallCommand,
   speckitSupportsPlatform,
+  isSpecifyInstallLockError,
 } from "../platform-maps/speckit.js";
-import { repoFileExists } from "../plan-helpers.js";
-import { run } from "../utils/exec.js";
 import { deleteDirIfExists } from "../utils/fs.js";
 import { hasUv } from "../utils/detect.js";
 
@@ -21,7 +21,8 @@ export function planInstallSpeckit(config) {
   const items = [
     {
       tool: "speckit",
-      description: "Install specify-cli globally (uv)",
+      description:
+        "Install specify-cli globally (uv; skipped if already on PATH unless --force)",
       command: speckitInstallCommand(),
     },
   ];
@@ -77,6 +78,40 @@ export function planUninstallSpeckit(config) {
 
 /**
  * @param {import("../runner.js").RunConfig} config
+ * @returns {Promise<string>}
+ */
+async function ensureSpecifyCli(config) {
+  const hasSpecify =
+    config.dryRun || (await commandExists("specify", ["--version"]));
+
+  if (hasSpecify && !config.force) {
+    console.log("[speckit] specify-cli already on PATH — skipping uv tool install");
+    return "specify-cli already installed";
+  }
+
+  console.log("\n[speckit] Installing specify-cli...");
+  const install = await run("uv", speckitInstallArgs({ force: true }), {
+    dryRun: config.dryRun,
+    verbose: config.verbose,
+  });
+  if (install.code === 0 || config.dryRun) {
+    return speckitInstallCommand({ force: true });
+  }
+
+  const errText = `${install.stderr}\n${install.stdout}`;
+  if ((await commandExists("specify", ["--version"])) && isSpecifyInstallLockError(errText)) {
+    console.warn(
+      "[speckit] uv could not replace specify-cli (files in use) — continuing with existing install.\n" +
+        "  Close other terminals/processes using specify, then re-run with --force to upgrade.",
+    );
+    return "specify-cli (existing; upgrade skipped — files in use)";
+  }
+
+  throw new Error(`specify-cli install failed:\n${errText}`);
+}
+
+/**
+ * @param {import("../runner.js").RunConfig} config
  */
 export async function installSpeckit(config) {
   const platforms = resolvePlatforms(config.platforms);
@@ -93,17 +128,7 @@ export async function installSpeckit(config) {
     throw new Error("uv required for Spec Kit. Install: winget install astral-sh.uv");
   }
 
-  console.log("\n[speckit] Installing specify-cli...");
-  const install = await run("uv", speckitInstallArgs(), {
-    dryRun: config.dryRun,
-    verbose: config.verbose,
-  });
-  if (install.code !== 0 && !config.dryRun) {
-    throw new Error(
-      `specify-cli install failed:\n${install.stderr || install.stdout}`,
-    );
-  }
-  actions.push(speckitInstallCommand());
+  actions.push(await ensureSpecifyCli(config));
 
   const primary = supported[0];
   const initArgs = speckitInitArgs(primary.id);

@@ -5,6 +5,7 @@ import {
   speckitInitCommand,
   speckitInstallCommand,
   speckitScriptType,
+  isSpecifyInstallLockError,
 } from "../src/platform-maps/speckit.js";
 
 describe("speckit platform map", () => {
@@ -27,5 +28,15 @@ describe("speckit platform map", () => {
     assert.match(cmd, /specify init --here --integration cursor-agent --force/);
     assert.match(cmd, new RegExp(`--script ${speckitScriptType()}`));
     assert.doesNotMatch(cmd, /--no-input/);
+  });
+
+  it("detects Windows uv lock errors", () => {
+    assert.equal(
+      isSpecifyInstallLockError(
+        "error: failed to remove directory `...\\Scripts`: Access is denied. (os error 5)",
+      ),
+      true,
+    );
+    assert.equal(isSpecifyInstallLockError("network timeout"), false);
   });
 });
