@@ -39,6 +39,16 @@ function graphifyPackageSpec(extras) {
   return `${pkg}[${extras.join(",")}]`;
 }
 
+/** @param {string} spec */
+function graphifyUvInstallArgs(spec) {
+  return ["tool", "install", spec];
+}
+
+/** @param {string} spec */
+function graphifyUvInstallCommand(spec) {
+  return `uv ${graphifyUvInstallArgs(spec).join(" ")}`;
+}
+
 /** @type {string} */
 export const GRAPHIFY_GITIGNORE_BLOCK =
   "# Graphify generated knowledge graph\ngraphify-out/";
@@ -70,7 +80,7 @@ export function planInstallGraphify(config) {
     {
       tool: "graphify",
       description: "Install graphifyy CLI globally (uv or pipx)",
-      command: `uv tool install "${spec}"`,
+      command: graphifyUvInstallCommand(spec),
     },
   ];
 
@@ -179,16 +189,15 @@ export async function installGraphify(config) {
   const uvAvailable = config.dryRun || (await hasUv());
 
   if (uvAvailable) {
-    const installCmd = `uv tool install "${spec}"`;
     console.log("\n[graphify] Installing graphifyy via uv...");
-    const r = await runShell(installCmd, {
+    const r = await run("uv", graphifyUvInstallArgs(spec), {
       dryRun: config.dryRun,
       verbose: config.verbose,
     });
     if (r.code !== 0 && !config.dryRun) {
       throw new Error(`uv tool install failed: ${r.stderr || r.stdout}`);
     }
-    actions.push(`uv tool install ${spec}`);
+    actions.push(graphifyUvInstallCommand(spec));
   } else {
     console.log("\n[graphify] uv not found — trying pipx...");
     const r = await run("pipx", ["install", spec], {

@@ -4,84 +4,244 @@
   "graph": {},
   "nodes": [
     {
-      "label": "constants.js",
+      "label": "package.json",
       "file_type": "code",
-      "source_file": "src/constants.js",
+      "source_file": "package.json",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_constants",
-      "community": 0,
-      "norm_label": "constants.js"
+      "id": "package",
+      "community": 5,
+      "norm_label": "package.json"
     },
     {
-      "label": "UPSTREAM",
+      "label": "name",
       "file_type": "code",
-      "source_file": "src/constants.js",
+      "source_file": "package.json",
       "source_location": "L2",
       "_origin": "ast",
-      "id": "src_constants_upstream",
-      "community": 43,
-      "norm_label": "upstream"
+      "id": "package_name",
+      "community": 5,
+      "norm_label": "name"
     },
     {
-      "label": "TOOL_IDS",
+      "label": "version",
       "file_type": "code",
-      "source_file": "src/constants.js",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "package_version",
+      "community": 5,
+      "norm_label": "version"
+    },
+    {
+      "label": "description",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "package_description",
+      "community": 5,
+      "norm_label": "description"
+    },
+    {
+      "label": "license",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "package_license",
+      "community": 5,
+      "norm_label": "license"
+    },
+    {
+      "label": "type",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "package_type",
+      "community": 5,
+      "norm_label": "type"
+    },
+    {
+      "label": "bin",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "package_bin",
+      "community": 5,
+      "norm_label": "bin"
+    },
+    {
+      "label": "ai-quickstart",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "package_bin_ai_quickstart",
+      "community": 5,
+      "norm_label": "ai-quickstart"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "package_main",
+      "community": 5,
+      "norm_label": "main"
+    },
+    {
+      "label": "engines",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "package_engines",
+      "community": 5,
+      "norm_label": "engines"
+    },
+    {
+      "label": "node",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "package_engines_node",
+      "community": 5,
+      "norm_label": "node"
+    },
+    {
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "package_scripts",
+      "community": 5,
+      "norm_label": "scripts"
+    },
+    {
+      "label": "start",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "package_scripts_start",
+      "community": 5,
+      "norm_label": "start"
+    },
+    {
+      "label": "test",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "package_scripts_test",
+      "community": 5,
+      "norm_label": "test"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "package_dependencies",
+      "community": 5,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "@clack/prompts",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "package_dependencies_clack_prompts",
+      "community": 5,
+      "norm_label": "@clack/prompts"
+    },
+    {
+      "label": "repository",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "package_repository",
+      "community": 5,
+      "norm_label": "repository"
+    },
+    {
+      "label": "type",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "package_repository_type",
+      "community": 5,
+      "norm_label": "type"
+    },
+    {
+      "label": "url",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "package_repository_url",
+      "community": 5,
+      "norm_label": "url"
+    },
+    {
+      "label": "keywords",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "package_keywords",
+      "community": 5,
+      "norm_label": "keywords"
+    },
+    {
+      "label": "run-tests.js",
+      "file_type": "code",
+      "source_file": "scripts/run-tests.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "scripts_run_tests",
+      "community": 1,
+      "norm_label": "run-tests.js"
+    },
+    {
+      "label": "collectTestFiles()",
+      "file_type": "code",
+      "source_file": "scripts/run-tests.js",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "scripts_run_tests_collecttestfiles",
+      "community": 1,
+      "norm_label": "collecttestfiles()"
+    },
+    {
+      "label": "files",
+      "file_type": "code",
+      "source_file": "scripts/run-tests.js",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "scripts_run_tests_files",
+      "community": 1,
+      "norm_label": "files"
+    },
+    {
+      "label": "result",
+      "file_type": "code",
+      "source_file": "scripts/run-tests.js",
       "source_location": "L29",
       "_origin": "ast",
-      "id": "src_constants_tool_ids",
-      "community": 0,
-      "norm_label": "tool_ids"
-    },
-    {
-      "label": "PLUGIN_ORDER",
-      "file_type": "code",
-      "source_file": "src/constants.js",
-      "source_location": "L38",
-      "_origin": "ast",
-      "id": "src_constants_plugin_order",
-      "community": 0,
-      "norm_label": "plugin_order"
-    },
-    {
-      "label": "UNINSTALL_ORDER",
-      "file_type": "code",
-      "source_file": "src/constants.js",
-      "source_location": "L47",
-      "_origin": "ast",
-      "id": "src_constants_uninstall_order",
-      "community": 0,
-      "norm_label": "uninstall_order"
-    },
-    {
-      "label": "PRESETS",
-      "file_type": "code",
-      "source_file": "src/constants.js",
-      "source_location": "L66",
-      "_origin": "ast",
-      "id": "src_constants_presets",
-      "community": 0,
-      "norm_label": "presets"
-    },
-    {
-      "label": "getPreset()",
-      "file_type": "code",
-      "source_file": "src/constants.js",
-      "source_location": "L101",
-      "_origin": "ast",
-      "id": "src_constants_getpreset",
-      "community": 0,
-      "norm_label": "getpreset()"
-    },
-    {
-      "label": "listPresetIds()",
-      "file_type": "code",
-      "source_file": "src/constants.js",
-      "source_location": "L105",
-      "_origin": "ast",
-      "id": "src_constants_listpresetids",
-      "community": 0,
-      "norm_label": "listpresetids()"
+      "id": "scripts_run_tests_result",
+      "community": 1,
+      "norm_label": "result"
     },
     {
       "label": "speckit.js",
@@ -174,66 +334,6 @@
       "norm_label": "speckitinitcommand()"
     },
     {
-      "label": "speckit.js",
-      "file_type": "code",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "plugins_speckit",
-      "community": 43,
-      "norm_label": "speckit.js"
-    },
-    {
-      "label": "planInstallSpeckit()",
-      "file_type": "code",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L19",
-      "_origin": "ast",
-      "id": "plugins_speckit_planinstallspeckit",
-      "community": 43,
-      "norm_label": "planinstallspeckit()"
-    },
-    {
-      "label": "planUninstallSpeckit()",
-      "file_type": "code",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L56",
-      "_origin": "ast",
-      "id": "plugins_speckit_planuninstallspeckit",
-      "community": 43,
-      "norm_label": "planuninstallspeckit()"
-    },
-    {
-      "label": "installSpeckit()",
-      "file_type": "code",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L81",
-      "_origin": "ast",
-      "id": "plugins_speckit_installspeckit",
-      "community": 43,
-      "norm_label": "installspeckit()"
-    },
-    {
-      "label": "uninstallSpeckit()",
-      "file_type": "code",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L137",
-      "_origin": "ast",
-      "id": "plugins_speckit_uninstallspeckit",
-      "community": 1,
-      "norm_label": "uninstallspeckit()"
-    },
-    {
-      "label": "speckitPlugin",
-      "file_type": "code",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L153",
-      "_origin": "ast",
-      "id": "plugins_speckit_speckitplugin",
-      "community": 0,
-      "norm_label": "speckitplugin"
-    },
-    {
       "label": "speckit.test.js",
       "file_type": "code",
       "source_file": "tests/speckit.test.js",
@@ -242,6 +342,146 @@
       "id": "tests_speckit_test",
       "community": 43,
       "norm_label": "speckit.test.js"
+    },
+    {
+      "label": "constants.js",
+      "file_type": "code",
+      "source_file": "src/constants.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "constants.js",
+      "id": "src_constants"
+    },
+    {
+      "label": "UPSTREAM",
+      "file_type": "code",
+      "source_file": "src/constants.js",
+      "source_location": "L2",
+      "_origin": "ast",
+      "community": 43,
+      "norm_label": "upstream",
+      "id": "src_constants_upstream"
+    },
+    {
+      "label": "TOOL_IDS",
+      "file_type": "code",
+      "source_file": "src/constants.js",
+      "source_location": "L29",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "tool_ids",
+      "id": "src_constants_tool_ids"
+    },
+    {
+      "label": "PLUGIN_ORDER",
+      "file_type": "code",
+      "source_file": "src/constants.js",
+      "source_location": "L38",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "plugin_order",
+      "id": "src_constants_plugin_order"
+    },
+    {
+      "label": "UNINSTALL_ORDER",
+      "file_type": "code",
+      "source_file": "src/constants.js",
+      "source_location": "L47",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "uninstall_order",
+      "id": "src_constants_uninstall_order"
+    },
+    {
+      "label": "PRESETS",
+      "file_type": "code",
+      "source_file": "src/constants.js",
+      "source_location": "L66",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "presets",
+      "id": "src_constants_presets"
+    },
+    {
+      "label": "getPreset()",
+      "file_type": "code",
+      "source_file": "src/constants.js",
+      "source_location": "L101",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "getpreset()",
+      "id": "src_constants_getpreset"
+    },
+    {
+      "label": "listPresetIds()",
+      "file_type": "code",
+      "source_file": "src/constants.js",
+      "source_location": "L105",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "listpresetids()",
+      "id": "src_constants_listpresetids"
+    },
+    {
+      "label": "speckit.js",
+      "file_type": "code",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 43,
+      "norm_label": "speckit.js",
+      "id": "plugins_speckit"
+    },
+    {
+      "label": "planInstallSpeckit()",
+      "file_type": "code",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L19",
+      "_origin": "ast",
+      "community": 43,
+      "norm_label": "planinstallspeckit()",
+      "id": "plugins_speckit_planinstallspeckit"
+    },
+    {
+      "label": "planUninstallSpeckit()",
+      "file_type": "code",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L56",
+      "_origin": "ast",
+      "community": 7,
+      "norm_label": "planuninstallspeckit()",
+      "id": "plugins_speckit_planuninstallspeckit"
+    },
+    {
+      "label": "installSpeckit()",
+      "file_type": "code",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L81",
+      "_origin": "ast",
+      "community": 43,
+      "norm_label": "installspeckit()",
+      "id": "plugins_speckit_installspeckit"
+    },
+    {
+      "label": "uninstallSpeckit()",
+      "file_type": "code",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L137",
+      "_origin": "ast",
+      "community": 43,
+      "norm_label": "uninstallspeckit()",
+      "id": "plugins_speckit_uninstallspeckit"
+    },
+    {
+      "label": "speckitPlugin",
+      "file_type": "code",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L153",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "speckitplugin",
+      "id": "plugins_speckit_speckitplugin"
     },
     {
       "label": "README.md",
@@ -679,7 +919,7 @@
       "source_file": "src/utils/fs.js",
       "source_location": "L162",
       "_origin": "ast",
-      "community": 1,
+      "community": 4,
       "norm_label": "deletedirifexists()",
       "id": "utils_fs_deletedirifexists"
     },
@@ -3182,206 +3422,6 @@
       "id": "c_users_aaron_documents_development_ai_quickstart_install_sh__entry"
     },
     {
-      "label": "package.json",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 5,
-      "norm_label": "package.json",
-      "id": "package"
-    },
-    {
-      "label": "name",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L2",
-      "_origin": "ast",
-      "community": 5,
-      "norm_label": "name",
-      "id": "package_name"
-    },
-    {
-      "label": "version",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L3",
-      "_origin": "ast",
-      "community": 5,
-      "norm_label": "version",
-      "id": "package_version"
-    },
-    {
-      "label": "description",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L4",
-      "_origin": "ast",
-      "community": 5,
-      "norm_label": "description",
-      "id": "package_description"
-    },
-    {
-      "label": "license",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L5",
-      "_origin": "ast",
-      "community": 5,
-      "norm_label": "license",
-      "id": "package_license"
-    },
-    {
-      "label": "type",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L6",
-      "_origin": "ast",
-      "community": 5,
-      "norm_label": "type",
-      "id": "package_type"
-    },
-    {
-      "label": "bin",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L7",
-      "_origin": "ast",
-      "community": 5,
-      "norm_label": "bin",
-      "id": "package_bin"
-    },
-    {
-      "label": "ai-quickstart",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L8",
-      "_origin": "ast",
-      "community": 5,
-      "norm_label": "ai-quickstart",
-      "id": "package_bin_ai_quickstart"
-    },
-    {
-      "label": "main",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L10",
-      "_origin": "ast",
-      "community": 5,
-      "norm_label": "main",
-      "id": "package_main"
-    },
-    {
-      "label": "engines",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L11",
-      "_origin": "ast",
-      "community": 5,
-      "norm_label": "engines",
-      "id": "package_engines"
-    },
-    {
-      "label": "node",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L12",
-      "_origin": "ast",
-      "community": 5,
-      "norm_label": "node",
-      "id": "package_engines_node"
-    },
-    {
-      "label": "scripts",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L14",
-      "_origin": "ast",
-      "community": 5,
-      "norm_label": "scripts",
-      "id": "package_scripts"
-    },
-    {
-      "label": "start",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L15",
-      "_origin": "ast",
-      "community": 5,
-      "norm_label": "start",
-      "id": "package_scripts_start"
-    },
-    {
-      "label": "test",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L16",
-      "_origin": "ast",
-      "community": 5,
-      "norm_label": "test",
-      "id": "package_scripts_test"
-    },
-    {
-      "label": "dependencies",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L18",
-      "_origin": "ast",
-      "community": 5,
-      "norm_label": "dependencies",
-      "id": "package_dependencies"
-    },
-    {
-      "label": "@clack/prompts",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L19",
-      "_origin": "ast",
-      "community": 5,
-      "norm_label": "@clack/prompts",
-      "id": "package_dependencies_clack_prompts"
-    },
-    {
-      "label": "repository",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L21",
-      "_origin": "ast",
-      "community": 5,
-      "norm_label": "repository",
-      "id": "package_repository"
-    },
-    {
-      "label": "type",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L22",
-      "_origin": "ast",
-      "community": 5,
-      "norm_label": "type",
-      "id": "package_repository_type"
-    },
-    {
-      "label": "url",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L23",
-      "_origin": "ast",
-      "community": 5,
-      "norm_label": "url",
-      "id": "package_repository_url"
-    },
-    {
-      "label": "keywords",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L25",
-      "_origin": "ast",
-      "community": 5,
-      "norm_label": "keywords",
-      "id": "package_keywords"
-    },
-    {
       "label": "cli.js",
       "file_type": "code",
       "source_file": "src/cli.js",
@@ -3487,7 +3527,7 @@
       "source_file": "src/plan-helpers.js",
       "source_location": "L26",
       "_origin": "ast",
-      "community": 0,
+      "community": 4,
       "norm_label": "skills_bundle_default",
       "id": "src_plan_helpers_skills_bundle_default"
     },
@@ -3747,7 +3787,7 @@
       "source_file": "src/platform-maps/skills.js",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 4,
       "norm_label": "skills.js",
       "id": "platform_maps_skills"
     },
@@ -3757,7 +3797,7 @@
       "source_file": "src/platform-maps/skills.js",
       "source_location": "L3",
       "_origin": "ast",
-      "community": 1,
+      "community": 4,
       "norm_label": "skills_agent",
       "id": "platform_maps_skills_skills_agent"
     },
@@ -3767,7 +3807,7 @@
       "source_file": "src/platform-maps/skills.js",
       "source_location": "L16",
       "_origin": "ast",
-      "community": 1,
+      "community": 4,
       "norm_label": "getskillsagent()",
       "id": "platform_maps_skills_getskillsagent"
     },
@@ -3777,7 +3817,7 @@
       "source_file": "src/platform-maps/skills.js",
       "source_location": "L22",
       "_origin": "ast",
-      "community": 1,
+      "community": 4,
       "norm_label": "skillssupportsplatform()",
       "id": "platform_maps_skills_skillssupportsplatform"
     },
@@ -3887,7 +3927,7 @@
       "source_file": "src/plugins/caveman.js",
       "source_location": "L159",
       "_origin": "ast",
-      "community": 7,
+      "community": 4,
       "norm_label": "uninstallcaveman()",
       "id": "plugins_caveman_uninstallcaveman"
     },
@@ -3897,7 +3937,7 @@
       "source_file": "src/plugins/caveman.js",
       "source_location": "L199",
       "_origin": "ast",
-      "community": 7,
+      "community": 0,
       "norm_label": "cavemanplugin",
       "id": "plugins_caveman_cavemanplugin"
     },
@@ -4097,7 +4137,7 @@
       "source_file": "src/plugins/skills-bundle.js",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 4,
       "norm_label": "skills-bundle.js",
       "id": "plugins_skills_bundle"
     },
@@ -4107,7 +4147,7 @@
       "source_file": "src/plugins/skills-bundle.js",
       "source_location": "L13",
       "_origin": "ast",
-      "community": 1,
+      "community": 4,
       "norm_label": "selectedskills()",
       "id": "plugins_skills_bundle_selectedskills"
     },
@@ -4117,7 +4157,7 @@
       "source_file": "src/plugins/skills-bundle.js",
       "source_location": "L24",
       "_origin": "ast",
-      "community": 1,
+      "community": 4,
       "norm_label": "skillsaddargs()",
       "id": "plugins_skills_bundle_skillsaddargs"
     },
@@ -4127,7 +4167,7 @@
       "source_file": "src/plugins/skills-bundle.js",
       "source_location": "L38",
       "_origin": "ast",
-      "community": 1,
+      "community": 4,
       "norm_label": "planinstallskillsbundle()",
       "id": "plugins_skills_bundle_planinstallskillsbundle"
     },
@@ -4137,7 +4177,7 @@
       "source_file": "src/plugins/skills-bundle.js",
       "source_location": "L67",
       "_origin": "ast",
-      "community": 1,
+      "community": 4,
       "norm_label": "planuninstallskillsbundle()",
       "id": "plugins_skills_bundle_planuninstallskillsbundle"
     },
@@ -4147,7 +4187,7 @@
       "source_file": "src/plugins/skills-bundle.js",
       "source_location": "L97",
       "_origin": "ast",
-      "community": 1,
+      "community": 4,
       "norm_label": "installskillsbundle()",
       "id": "plugins_skills_bundle_installskillsbundle"
     },
@@ -4157,7 +4197,7 @@
       "source_file": "src/plugins/skills-bundle.js",
       "source_location": "L132",
       "_origin": "ast",
-      "community": 1,
+      "community": 4,
       "norm_label": "uninstallskillsbundle()",
       "id": "plugins_skills_bundle_uninstallskillsbundle"
     },
@@ -4427,7 +4467,7 @@
       "source_file": "src/utils/exec.js",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 6,
+      "community": 4,
       "norm_label": "exec.js",
       "id": "utils_exec"
     },
@@ -4437,7 +4477,7 @@
       "source_file": "src/utils/exec.js",
       "source_location": "L8",
       "_origin": "ast",
-      "community": 6,
+      "community": 4,
       "norm_label": "run()",
       "id": "utils_exec_run"
     },
@@ -4447,7 +4487,7 @@
       "source_file": "src/utils/exec.js",
       "source_location": "L45",
       "_origin": "ast",
-      "community": 6,
+      "community": 4,
       "norm_label": "shellquote()",
       "id": "utils_exec_shellquote"
     },
@@ -4507,7 +4547,7 @@
       "source_file": "tests/plugins/dry-run.test.js",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 0,
+      "community": 7,
       "norm_label": "dry-run.test.js",
       "id": "plugins_dry_run_test"
     },
@@ -4517,7 +4557,7 @@
       "source_file": "tests/plugins/dry-run.test.js",
       "source_location": "L62",
       "_origin": "ast",
-      "community": 0,
+      "community": 7,
       "norm_label": "baseconfig()",
       "id": "plugins_dry_run_test_baseconfig"
     },
@@ -4544,15 +4584,623 @@
   ],
   "links": [
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_bin"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L18",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_dependencies"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_description"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_engines"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_keywords"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_license"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_main"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_name"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_repository"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_scripts"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_type"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_version"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_bin",
+      "target": "package_bin_ai_quickstart"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_engines",
+      "target": "package_engines_node"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "install.ps1",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "install_test_nodeversion",
+      "target": "package_engines_node"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_start"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_test"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_clack_prompts"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_repository",
+      "target": "package_repository_type"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L23",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_repository",
+      "target": "package_repository_url"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/run-tests.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "scripts_run_tests",
+      "target": "scripts_run_tests_collecttestfiles",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/run-tests.js",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "scripts_run_tests",
+      "target": "scripts_run_tests_files",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/run-tests.js",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "scripts_run_tests",
+      "target": "scripts_run_tests_result",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "re_exports",
+      "context": "export",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-maps/index.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "platform_maps_index",
+      "target": "platform_maps_speckit"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "platform_maps_speckit",
+      "target": "platform_maps_speckit_getspeckitintegration"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "platform_maps_speckit",
+      "target": "platform_maps_speckit_speckit_integration"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "platform_maps_speckit",
+      "target": "platform_maps_speckit_speckitgitsource"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L54",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "platform_maps_speckit",
+      "target": "platform_maps_speckit_speckitinitargs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L30",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "platform_maps_speckit",
+      "target": "platform_maps_speckit_speckitinitcommand"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "platform_maps_speckit",
+      "target": "platform_maps_speckit_speckitinstallargs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "platform_maps_speckit",
+      "target": "platform_maps_speckit_speckitinstallcommand"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "platform_maps_speckit",
+      "target": "platform_maps_speckit_speckitsupportsplatform"
+    },
+    {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/platform-maps/speckit.js",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "platform_maps_speckit",
-      "target": "src_constants",
-      "confidence_score": 1.0
+      "target": "src_constants"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "platform_maps_speckit",
+      "target": "src_constants_upstream"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_speckit",
+      "target": "platform_maps_speckit"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/speckit.test.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_speckit_test",
+      "target": "platform_maps_speckit"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "platform_maps_speckit_speckitinstallargs",
+      "target": "platform_maps_speckit_speckitgitsource"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/speckit.test.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_speckit_test",
+      "target": "platform_maps_speckit_speckitgitsource"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "platform_maps_speckit_speckitinstallcommand",
+      "target": "platform_maps_speckit_speckitinstallargs"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_speckit",
+      "target": "platform_maps_speckit_speckitinstallargs"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L97",
+      "weight": 1.0,
+      "source": "plugins_speckit_installspeckit",
+      "target": "platform_maps_speckit_speckitinstallargs"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_speckit",
+      "target": "platform_maps_speckit_speckitinstallcommand"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L106",
+      "weight": 1.0,
+      "source": "plugins_speckit_installspeckit",
+      "target": "platform_maps_speckit_speckitinstallcommand"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "plugins_speckit_planinstallspeckit",
+      "target": "platform_maps_speckit_speckitinstallcommand"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/speckit.test.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_speckit_test",
+      "target": "platform_maps_speckit_speckitinstallcommand"
+    },
+    {
+      "relation": "re_exports",
+      "context": "re-export",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-maps/index.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "platform_maps_index",
+      "target": "platform_maps_speckit_getspeckitintegration"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L55",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "platform_maps_speckit_speckitinitargs",
+      "target": "platform_maps_speckit_getspeckitintegration"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L31",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "platform_maps_speckit_speckitinitcommand",
+      "target": "platform_maps_speckit_getspeckitintegration"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "platform_maps_speckit_speckitsupportsplatform",
+      "target": "platform_maps_speckit_getspeckitintegration"
+    },
+    {
+      "relation": "re_exports",
+      "context": "re-export",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-maps/index.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "platform_maps_index",
+      "target": "platform_maps_speckit_speckitsupportsplatform"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_speckit",
+      "target": "platform_maps_speckit_speckitsupportsplatform"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L72",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "platform_maps_speckit_speckitinitcommand",
+      "target": "platform_maps_speckit_speckitinitargs"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_speckit",
+      "target": "platform_maps_speckit_speckitinitargs"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L109",
+      "weight": 1.0,
+      "source": "plugins_speckit_installspeckit",
+      "target": "platform_maps_speckit_speckitinitargs"
+    },
+    {
+      "relation": "re_exports",
+      "context": "re-export",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-maps/index.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "platform_maps_index",
+      "target": "platform_maps_speckit_speckitinitcommand"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_speckit",
+      "target": "platform_maps_speckit_speckitinitcommand"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L106",
+      "weight": 1.0,
+      "source": "plugins_speckit_installspeckit",
+      "target": "platform_maps_speckit_speckitinitcommand"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "plugins_speckit_planinstallspeckit",
+      "target": "platform_maps_speckit_speckitinitcommand"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/speckit.test.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_speckit_test",
+      "target": "platform_maps_speckit_speckitinitcommand"
     },
     {
       "relation": "imports_from",
@@ -4749,17 +5397,6 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L1",
-      "weight": 1.0,
-      "source": "platform_maps_speckit",
-      "target": "src_constants_upstream",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
       "source_file": "src/plugins/cavemem.js",
       "source_location": "L1",
       "weight": 1.0,
@@ -4944,372 +5581,6 @@
       "target": "src_constants_listpresetids"
     },
     {
-      "relation": "re_exports",
-      "context": "export",
-      "confidence": "EXTRACTED",
-      "source_file": "src/platform-maps/index.js",
-      "source_location": "L13",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "platform_maps_index",
-      "target": "platform_maps_speckit"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "platform_maps_speckit",
-      "target": "platform_maps_speckit_getspeckitintegration"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "platform_maps_speckit",
-      "target": "platform_maps_speckit_speckit_integration"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L4",
-      "weight": 1.0,
-      "source": "platform_maps_speckit",
-      "target": "platform_maps_speckit_speckitgitsource",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L54",
-      "weight": 1.0,
-      "source": "platform_maps_speckit",
-      "target": "platform_maps_speckit_speckitinitargs",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L30",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "platform_maps_speckit",
-      "target": "platform_maps_speckit_speckitinitcommand"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L9",
-      "weight": 1.0,
-      "source": "platform_maps_speckit",
-      "target": "platform_maps_speckit_speckitinstallargs",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L20",
-      "weight": 1.0,
-      "source": "platform_maps_speckit",
-      "target": "platform_maps_speckit_speckitinstallcommand",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L21",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "platform_maps_speckit",
-      "target": "platform_maps_speckit_speckitsupportsplatform"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_speckit",
-      "target": "platform_maps_speckit"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/speckit.test.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "source": "tests_speckit_test",
-      "target": "platform_maps_speckit",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L15",
-      "weight": 1.0,
-      "source": "platform_maps_speckit_speckitinstallargs",
-      "target": "platform_maps_speckit_speckitgitsource",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/speckit.test.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "source": "tests_speckit_test",
-      "target": "platform_maps_speckit_speckitgitsource",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L21",
-      "weight": 1.0,
-      "source": "platform_maps_speckit_speckitinstallcommand",
-      "target": "platform_maps_speckit_speckitinstallargs",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "source": "plugins_speckit",
-      "target": "platform_maps_speckit_speckitinstallargs",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L97",
-      "weight": 1.0,
-      "source": "plugins_speckit_installspeckit",
-      "target": "platform_maps_speckit_speckitinstallargs"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "source": "plugins_speckit",
-      "target": "platform_maps_speckit_speckitinstallcommand",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L106",
-      "weight": 1.0,
-      "source": "plugins_speckit_installspeckit",
-      "target": "platform_maps_speckit_speckitinstallcommand"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L25",
-      "weight": 1.0,
-      "source": "plugins_speckit_planinstallspeckit",
-      "target": "platform_maps_speckit_speckitinstallcommand"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/speckit.test.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "source": "tests_speckit_test",
-      "target": "platform_maps_speckit_speckitinstallcommand",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "re_exports",
-      "context": "re-export",
-      "confidence": "EXTRACTED",
-      "source_file": "src/platform-maps/index.js",
-      "source_location": "L13",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "platform_maps_index",
-      "target": "platform_maps_speckit_getspeckitintegration"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L55",
-      "weight": 1.0,
-      "source": "platform_maps_speckit_speckitinitargs",
-      "target": "platform_maps_speckit_getspeckitintegration",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L31",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "platform_maps_speckit_speckitinitcommand",
-      "target": "platform_maps_speckit_getspeckitintegration"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L22",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "platform_maps_speckit_speckitsupportsplatform",
-      "target": "platform_maps_speckit_getspeckitintegration"
-    },
-    {
-      "relation": "re_exports",
-      "context": "re-export",
-      "confidence": "EXTRACTED",
-      "source_file": "src/platform-maps/index.js",
-      "source_location": "L13",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "platform_maps_index",
-      "target": "platform_maps_speckit_speckitsupportsplatform"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_speckit",
-      "target": "platform_maps_speckit_speckitsupportsplatform"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L72",
-      "weight": 1.0,
-      "source": "platform_maps_speckit_speckitinitcommand",
-      "target": "platform_maps_speckit_speckitinitargs",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "source": "plugins_speckit",
-      "target": "platform_maps_speckit_speckitinitargs",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L109",
-      "weight": 1.0,
-      "source": "plugins_speckit_installspeckit",
-      "target": "platform_maps_speckit_speckitinitargs"
-    },
-    {
-      "relation": "re_exports",
-      "context": "re-export",
-      "confidence": "EXTRACTED",
-      "source_file": "src/platform-maps/index.js",
-      "source_location": "L13",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "platform_maps_index",
-      "target": "platform_maps_speckit_speckitinitcommand"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_speckit",
-      "target": "platform_maps_speckit_speckitinitcommand"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L106",
-      "weight": 1.0,
-      "source": "plugins_speckit_installspeckit",
-      "target": "platform_maps_speckit_speckitinitcommand"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/plugins/speckit.js",
-      "source_location": "L37",
-      "weight": 1.0,
-      "source": "plugins_speckit_planinstallspeckit",
-      "target": "platform_maps_speckit_speckitinitcommand"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/speckit.test.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "source": "tests_speckit_test",
-      "target": "platform_maps_speckit_speckitinitcommand",
-      "confidence_score": 1.0
-    },
-    {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -5454,9 +5725,9 @@
       "source_file": "src/plugins/speckit.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "plugins_speckit",
-      "target": "utils_exec_run",
-      "confidence_score": 1.0
+      "target": "utils_exec_run"
     },
     {
       "relation": "imports",
@@ -6912,17 +7183,6 @@
       "confidence_score": 1.0,
       "source": "install",
       "target": "install_test_nodeversion"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "install.ps1",
-      "source_location": "L16",
-      "weight": 1.0,
-      "source": "install_test_nodeversion",
-      "target": "package_engines_node"
     },
     {
       "relation": "contains",
@@ -9909,196 +10169,6 @@
       "confidence_score": 1.0,
       "source": "install_sh_install",
       "target": "c_users_aaron_documents_development_ai_quickstart_install_sh__entry"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package",
-      "target": "package_bin"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L18",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package",
-      "target": "package_dependencies"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package",
-      "target": "package_description"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package",
-      "target": "package_engines"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L25",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package",
-      "target": "package_keywords"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package",
-      "target": "package_license"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package",
-      "target": "package_main"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package",
-      "target": "package_name"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L21",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package",
-      "target": "package_repository"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package",
-      "target": "package_scripts"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package",
-      "target": "package_type"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package",
-      "target": "package_version"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_bin",
-      "target": "package_bin_ai_quickstart"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_engines",
-      "target": "package_engines_node"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_scripts",
-      "target": "package_scripts_start"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L16",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_scripts",
-      "target": "package_scripts_test"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L19",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_clack_prompts"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L22",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_repository",
-      "target": "package_repository_type"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L23",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_repository",
-      "target": "package_repository_url"
     },
     {
       "relation": "contains",
@@ -13465,5 +13535,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "0a6328b9e98950f2e626748069f22b0eb200d404"
+  "built_at_commit": "4d5c0b04902097b56b39f2d907abf3227ff1dc65"
 }
