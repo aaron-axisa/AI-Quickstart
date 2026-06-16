@@ -9,6 +9,7 @@ import {
   speckitSupportsPlatform,
   isSpecifyInstallLockError,
 } from "../platform-maps/speckit.js";
+import { repoFileExists } from "../plan-helpers.js";
 import { deleteDirIfExists } from "../utils/fs.js";
 import { hasUv } from "../utils/detect.js";
 

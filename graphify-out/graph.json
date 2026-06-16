@@ -10,7 +10,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "platform_maps_speckit",
-      "community": 4,
+      "community": 69,
       "norm_label": "speckit.js"
     },
     {
@@ -20,7 +20,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "platform_maps_speckit_speckitgitsource",
-      "community": 4,
+      "community": 69,
       "norm_label": "speckitgitsource()"
     },
     {
@@ -30,77 +30,87 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "platform_maps_speckit_speckitinstallargs",
-      "community": 4,
+      "community": 69,
       "norm_label": "speckitinstallargs()"
     },
     {
       "label": "speckitInstallCommand()",
       "file_type": "code",
       "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L21",
+      "source_location": "L23",
       "_origin": "ast",
       "id": "platform_maps_speckit_speckitinstallcommand",
-      "community": 4,
+      "community": 69,
       "norm_label": "speckitinstallcommand()"
+    },
+    {
+      "label": "isSpecifyInstallLockError()",
+      "file_type": "code",
+      "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "platform_maps_speckit_isspecifyinstalllockerror",
+      "community": 69,
+      "norm_label": "isspecifyinstalllockerror()"
     },
     {
       "label": "SPECKIT_INTEGRATION",
       "file_type": "code",
       "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L27",
+      "source_location": "L37",
       "_origin": "ast",
       "id": "platform_maps_speckit_speckit_integration",
-      "community": 4,
+      "community": 69,
       "norm_label": "speckit_integration"
     },
     {
       "label": "getSpeckitIntegration()",
       "file_type": "code",
       "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L40",
+      "source_location": "L50",
       "_origin": "ast",
       "id": "platform_maps_speckit_getspeckitintegration",
-      "community": 4,
+      "community": 69,
       "norm_label": "getspeckitintegration()"
     },
     {
       "label": "speckitSupportsPlatform()",
       "file_type": "code",
       "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L46",
+      "source_location": "L56",
       "_origin": "ast",
       "id": "platform_maps_speckit_speckitsupportsplatform",
-      "community": 4,
+      "community": 69,
       "norm_label": "speckitsupportsplatform()"
     },
     {
       "label": "speckitScriptType()",
       "file_type": "code",
       "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L52",
+      "source_location": "L62",
       "_origin": "ast",
       "id": "platform_maps_speckit_speckitscripttype",
-      "community": 4,
+      "community": 69,
       "norm_label": "speckitscripttype()"
     },
     {
       "label": "speckitInitArgs()",
       "file_type": "code",
       "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L60",
+      "source_location": "L70",
       "_origin": "ast",
       "id": "platform_maps_speckit_speckitinitargs",
-      "community": 4,
+      "community": 69,
       "norm_label": "speckitinitargs()"
     },
     {
       "label": "speckitInitCommand()",
       "file_type": "code",
       "source_file": "src/platform-maps/speckit.js",
-      "source_location": "L79",
+      "source_location": "L89",
       "_origin": "ast",
       "id": "platform_maps_speckit_speckitinitcommand",
-      "community": 4,
+      "community": 69,
       "norm_label": "speckitinitcommand()"
     },
     {
@@ -110,7 +120,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "plugins_speckit",
-      "community": 4,
+      "community": 69,
       "norm_label": "speckit.js"
     },
     {
@@ -120,44 +130,54 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "plugins_speckit_planinstallspeckit",
-      "community": 4,
+      "community": 69,
       "norm_label": "planinstallspeckit()"
     },
     {
       "label": "planUninstallSpeckit()",
       "file_type": "code",
       "source_file": "src/plugins/speckit.js",
-      "source_location": "L56",
+      "source_location": "L57",
       "_origin": "ast",
       "id": "plugins_speckit_planuninstallspeckit",
-      "community": 4,
+      "community": 7,
       "norm_label": "planuninstallspeckit()"
+    },
+    {
+      "label": "ensureSpecifyCli()",
+      "file_type": "code",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L83",
+      "_origin": "ast",
+      "id": "plugins_speckit_ensurespecifycli",
+      "community": 69,
+      "norm_label": "ensurespecifycli()"
     },
     {
       "label": "installSpeckit()",
       "file_type": "code",
       "source_file": "src/plugins/speckit.js",
-      "source_location": "L81",
+      "source_location": "L116",
       "_origin": "ast",
       "id": "plugins_speckit_installspeckit",
-      "community": 4,
+      "community": 69,
       "norm_label": "installspeckit()"
     },
     {
       "label": "uninstallSpeckit()",
       "file_type": "code",
       "source_file": "src/plugins/speckit.js",
-      "source_location": "L137",
+      "source_location": "L162",
       "_origin": "ast",
       "id": "plugins_speckit_uninstallspeckit",
-      "community": 7,
+      "community": 4,
       "norm_label": "uninstallspeckit()"
     },
     {
       "label": "speckitPlugin",
       "file_type": "code",
       "source_file": "src/plugins/speckit.js",
-      "source_location": "L153",
+      "source_location": "L178",
       "_origin": "ast",
       "id": "plugins_speckit_speckitplugin",
       "community": 0,
@@ -170,7 +190,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_speckit_test",
-      "community": 4,
+      "community": 69,
       "norm_label": "speckit.test.js"
     },
     {
@@ -2377,7 +2397,7 @@
       "source_file": "src/plugins/graphify.js",
       "source_location": "L136",
       "_origin": "ast",
-      "community": 7,
+      "community": 4,
       "norm_label": "planuninstallgraphify()",
       "id": "plugins_graphify_planuninstallgraphify"
     },
@@ -2397,7 +2417,7 @@
       "source_file": "src/plugins/graphify.js",
       "source_location": "L284",
       "_origin": "ast",
-      "community": 7,
+      "community": 4,
       "norm_label": "uninstallgraphify()",
       "id": "plugins_graphify_uninstallgraphify"
     },
@@ -2407,7 +2427,7 @@
       "source_file": "src/plugins/graphify.js",
       "source_location": "L331",
       "_origin": "ast",
-      "community": 0,
+      "community": 4,
       "norm_label": "graphifyplugin",
       "id": "plugins_graphify_graphifyplugin"
     },
@@ -2417,7 +2437,7 @@
       "source_file": "tests/graphify.test.js",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 4,
+      "community": 69,
       "norm_label": "graphify.test.js",
       "id": "tests_graphify_test"
     },
@@ -2427,7 +2447,7 @@
       "source_file": "tests/graphify.test.js",
       "source_location": "L9",
       "_origin": "ast",
-      "community": 4,
+      "community": 69,
       "norm_label": "graphifypackagespec()",
       "id": "tests_graphify_test_graphifypackagespec"
     },
@@ -2437,7 +2457,7 @@
       "source_file": "tests/graphify.test.js",
       "source_location": "L16",
       "_origin": "ast",
-      "community": 4,
+      "community": 69,
       "norm_label": "graphifyuvinstallcommand()",
       "id": "tests_graphify_test_graphifyuvinstallcommand"
     },
@@ -2697,7 +2717,7 @@
       "source_file": "src/constants.js",
       "source_location": "L2",
       "_origin": "ast",
-      "community": 4,
+      "community": 69,
       "norm_label": "upstream",
       "id": "src_constants_upstream"
     },
@@ -3097,7 +3117,7 @@
       "source_file": "src/utils/fs.js",
       "source_location": "L162",
       "_origin": "ast",
-      "community": 7,
+      "community": 4,
       "norm_label": "deletedirifexists()",
       "id": "utils_fs_deletedirifexists"
     },
@@ -5705,7 +5725,7 @@
       "source_file": "src/plan-helpers.js",
       "source_location": "L26",
       "_origin": "ast",
-      "community": 7,
+      "community": 4,
       "norm_label": "skills_bundle_default",
       "id": "src_plan_helpers_skills_bundle_default"
     },
@@ -5965,7 +5985,7 @@
       "source_file": "src/platform-maps/skills.js",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 7,
+      "community": 4,
       "norm_label": "skills.js",
       "id": "platform_maps_skills"
     },
@@ -5975,7 +5995,7 @@
       "source_file": "src/platform-maps/skills.js",
       "source_location": "L3",
       "_origin": "ast",
-      "community": 7,
+      "community": 4,
       "norm_label": "skills_agent",
       "id": "platform_maps_skills_skills_agent"
     },
@@ -5985,7 +6005,7 @@
       "source_file": "src/platform-maps/skills.js",
       "source_location": "L16",
       "_origin": "ast",
-      "community": 7,
+      "community": 4,
       "norm_label": "getskillsagent()",
       "id": "platform_maps_skills_getskillsagent"
     },
@@ -5995,7 +6015,7 @@
       "source_file": "src/platform-maps/skills.js",
       "source_location": "L22",
       "_origin": "ast",
-      "community": 7,
+      "community": 4,
       "norm_label": "skillssupportsplatform()",
       "id": "platform_maps_skills_skillssupportsplatform"
     },
@@ -6005,7 +6025,7 @@
       "source_file": "src/platforms.js",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 7,
+      "community": 0,
       "norm_label": "platforms.js",
       "id": "src_platforms"
     },
@@ -6015,7 +6035,7 @@
       "source_file": "src/platforms.js",
       "source_location": "L12",
       "_origin": "ast",
-      "community": 7,
+      "community": 0,
       "norm_label": "platforms",
       "id": "src_platforms_platforms"
     },
@@ -6025,7 +6045,7 @@
       "source_file": "src/platforms.js",
       "source_location": "L67",
       "_origin": "ast",
-      "community": 7,
+      "community": 0,
       "norm_label": "getplatform()",
       "id": "src_platforms_getplatform"
     },
@@ -6035,7 +6055,7 @@
       "source_file": "src/platforms.js",
       "source_location": "L72",
       "_origin": "ast",
-      "community": 7,
+      "community": 4,
       "norm_label": "resolveplatforms()",
       "id": "src_platforms_resolveplatforms"
     },
@@ -6115,7 +6135,7 @@
       "source_file": "src/plugins/caveman.js",
       "source_location": "L199",
       "_origin": "ast",
-      "community": 0,
+      "community": 7,
       "norm_label": "cavemanplugin",
       "id": "plugins_caveman_cavemanplugin"
     },
@@ -6315,7 +6335,7 @@
       "source_file": "src/plugins/skills-bundle.js",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 7,
+      "community": 4,
       "norm_label": "skills-bundle.js",
       "id": "plugins_skills_bundle"
     },
@@ -6325,7 +6345,7 @@
       "source_file": "src/plugins/skills-bundle.js",
       "source_location": "L13",
       "_origin": "ast",
-      "community": 7,
+      "community": 4,
       "norm_label": "selectedskills()",
       "id": "plugins_skills_bundle_selectedskills"
     },
@@ -6335,7 +6355,7 @@
       "source_file": "src/plugins/skills-bundle.js",
       "source_location": "L24",
       "_origin": "ast",
-      "community": 7,
+      "community": 4,
       "norm_label": "skillsaddargs()",
       "id": "plugins_skills_bundle_skillsaddargs"
     },
@@ -6345,7 +6365,7 @@
       "source_file": "src/plugins/skills-bundle.js",
       "source_location": "L38",
       "_origin": "ast",
-      "community": 7,
+      "community": 4,
       "norm_label": "planinstallskillsbundle()",
       "id": "plugins_skills_bundle_planinstallskillsbundle"
     },
@@ -6355,7 +6375,7 @@
       "source_file": "src/plugins/skills-bundle.js",
       "source_location": "L67",
       "_origin": "ast",
-      "community": 7,
+      "community": 4,
       "norm_label": "planuninstallskillsbundle()",
       "id": "plugins_skills_bundle_planuninstallskillsbundle"
     },
@@ -6365,7 +6385,7 @@
       "source_file": "src/plugins/skills-bundle.js",
       "source_location": "L97",
       "_origin": "ast",
-      "community": 7,
+      "community": 4,
       "norm_label": "installskillsbundle()",
       "id": "plugins_skills_bundle_installskillsbundle"
     },
@@ -6375,7 +6395,7 @@
       "source_file": "src/plugins/skills-bundle.js",
       "source_location": "L132",
       "_origin": "ast",
-      "community": 7,
+      "community": 4,
       "norm_label": "uninstallskillsbundle()",
       "id": "plugins_skills_bundle_uninstallskillsbundle"
     },
@@ -6786,6 +6806,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/platform-maps/speckit.js",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "platform_maps_speckit",
+      "target": "platform_maps_speckit_isspecifyinstalllockerror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-maps/speckit.js",
       "source_location": "L2",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -6848,9 +6878,9 @@
       "source_file": "src/platform-maps/speckit.js",
       "source_location": "L52",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "platform_maps_speckit",
-      "target": "platform_maps_speckit_speckitscripttype",
-      "confidence_score": 1.0
+      "target": "platform_maps_speckit_speckitscripttype"
     },
     {
       "relation": "contains",
@@ -6954,6 +6984,17 @@
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L93",
+      "weight": 1.0,
+      "source": "plugins_speckit_ensurespecifycli",
+      "target": "platform_maps_speckit_speckitinstallargs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/plugins/speckit.js",
       "source_location": "L97",
@@ -6971,6 +7012,17 @@
       "confidence_score": 1.0,
       "source": "plugins_speckit",
       "target": "platform_maps_speckit_speckitinstallcommand"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L98",
+      "weight": 1.0,
+      "source": "plugins_speckit_ensurespecifycli",
+      "target": "platform_maps_speckit_speckitinstallcommand",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -7004,6 +7056,39 @@
       "confidence_score": 1.0,
       "source": "tests_speckit_test",
       "target": "platform_maps_speckit_speckitinstallcommand"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "plugins_speckit",
+      "target": "platform_maps_speckit_isspecifyinstalllockerror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L102",
+      "weight": 1.0,
+      "source": "plugins_speckit_ensurespecifycli",
+      "target": "platform_maps_speckit_isspecifyinstalllockerror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/speckit.test.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "tests_speckit_test",
+      "target": "platform_maps_speckit_isspecifyinstalllockerror",
+      "confidence_score": 1.0
     },
     {
       "relation": "re_exports",
@@ -7078,9 +7163,9 @@
       "source_file": "src/platform-maps/speckit.js",
       "source_location": "L71",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "platform_maps_speckit_speckitinitargs",
-      "target": "platform_maps_speckit_speckitscripttype",
-      "confidence_score": 1.0
+      "target": "platform_maps_speckit_speckitscripttype"
     },
     {
       "relation": "imports",
@@ -7089,9 +7174,9 @@
       "source_file": "tests/speckit.test.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_speckit_test",
-      "target": "platform_maps_speckit_speckitscripttype",
-      "confidence_score": 1.0
+      "target": "platform_maps_speckit_speckitscripttype"
     },
     {
       "relation": "calls",
@@ -7191,6 +7276,16 @@
       "confidence_score": 1.0,
       "source": "plugins_index",
       "target": "plugins_speckit"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L83",
+      "weight": 1.0,
+      "source": "plugins_speckit",
+      "target": "plugins_speckit_ensurespecifycli",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -7346,6 +7441,17 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/plugins/speckit.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "plugins_speckit",
+      "target": "utils_exec_commandexists",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/speckit.js",
       "source_location": "L11",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -7417,6 +7523,17 @@
       "weight": 1.0,
       "source": "plugins_speckit_planuninstallspeckit",
       "target": "src_plan_helpers_repofileexists"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L131",
+      "weight": 1.0,
+      "source": "plugins_speckit_installspeckit",
+      "target": "plugins_speckit_ensurespecifycli",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -17683,5 +17800,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "246595f49936bdb2481cb00e10cc5c11d6f8a0b1"
+  "built_at_commit": "41114d9017c373a56abec97ed6d01cd19dbc04af"
 }
