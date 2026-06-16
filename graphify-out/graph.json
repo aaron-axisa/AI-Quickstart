@@ -4,6 +4,206 @@
   "graph": {},
   "nodes": [
     {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "readme",
+      "community": 8,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "AI-Quickstart",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "readme_ai_quickstart",
+      "community": 8,
+      "norm_label": "ai-quickstart"
+    },
+    {
+      "label": "Supported tools",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "readme_supported_tools",
+      "community": 8,
+      "norm_label": "supported tools"
+    },
+    {
+      "label": "Quick start",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "readme_quick_start",
+      "community": 8,
+      "norm_label": "quick start"
+    },
+    {
+      "label": "Requirements",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L67",
+      "_origin": "ast",
+      "id": "readme_requirements",
+      "community": 8,
+      "norm_label": "requirements"
+    },
+    {
+      "label": "Uninstall",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L78",
+      "_origin": "ast",
+      "id": "readme_uninstall",
+      "community": 8,
+      "norm_label": "uninstall"
+    },
+    {
+      "label": "Review before proceeding",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L98",
+      "_origin": "ast",
+      "id": "readme_review_before_proceeding",
+      "community": 8,
+      "norm_label": "review before proceeding"
+    },
+    {
+      "label": "CLI reference",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L111",
+      "_origin": "ast",
+      "id": "readme_cli_reference",
+      "community": 8,
+      "norm_label": "cli reference"
+    },
+    {
+      "label": "Required (non-interactive)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L113",
+      "_origin": "ast",
+      "id": "readme_required_non_interactive",
+      "community": 8,
+      "norm_label": "required (non-interactive)"
+    },
+    {
+      "label": "Tool selection",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L119",
+      "_origin": "ast",
+      "id": "readme_tool_selection",
+      "community": 8,
+      "norm_label": "tool selection"
+    },
+    {
+      "label": "Modes",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L126",
+      "_origin": "ast",
+      "id": "readme_modes",
+      "community": 8,
+      "norm_label": "modes"
+    },
+    {
+      "label": "What changes in my repo?",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L139",
+      "_origin": "ast",
+      "id": "readme_what_changes_in_my_repo",
+      "community": 8,
+      "norm_label": "what changes in my repo?"
+    },
+    {
+      "label": "Platform matrix",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L158",
+      "_origin": "ast",
+      "id": "readme_platform_matrix",
+      "community": 8,
+      "norm_label": "platform matrix"
+    },
+    {
+      "label": "Troubleshooting",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L167",
+      "_origin": "ast",
+      "id": "readme_troubleshooting",
+      "community": 8,
+      "norm_label": "troubleshooting"
+    },
+    {
+      "label": "Contributing",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L198",
+      "_origin": "ast",
+      "id": "readme_contributing",
+      "community": 8,
+      "norm_label": "contributing"
+    },
+    {
+      "label": "License",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L202",
+      "_origin": "ast",
+      "id": "readme_license",
+      "community": 8,
+      "norm_label": "license"
+    },
+    {
+      "label": "install.ps1",
+      "file_type": "code",
+      "source_file": "install.ps1",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "install",
+      "community": 5,
+      "norm_label": "install.ps1"
+    },
+    {
+      "label": "Test-NodeVersion()",
+      "file_type": "code",
+      "source_file": "install.ps1",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "install_test_nodeversion",
+      "community": 5,
+      "norm_label": "test-nodeversion()"
+    },
+    {
+      "label": "Get-NpxCmdPath()",
+      "file_type": "code",
+      "source_file": "install.ps1",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "install_get_npxcmdpath",
+      "community": 5,
+      "norm_label": "get-npxcmdpath()"
+    },
+    {
+      "label": "Invoke-Npx()",
+      "file_type": "code",
+      "source_file": "install.ps1",
+      "source_location": "L37",
+      "_origin": "ast",
+      "id": "install_invoke_npx",
+      "community": 5,
+      "norm_label": "invoke-npx()"
+    },
+    {
       "label": "speckit.js",
       "file_type": "code",
       "source_file": "src/plugins/speckit.js",
@@ -30,14 +230,34 @@
       "source_location": "L58",
       "_origin": "ast",
       "id": "plugins_speckit_planuninstallspeckit",
-      "community": 7,
+      "community": 69,
       "norm_label": "planuninstallspeckit()"
+    },
+    {
+      "label": "isSpecifyCliAvailable()",
+      "file_type": "code",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L83",
+      "_origin": "ast",
+      "id": "plugins_speckit_isspecifycliavailable",
+      "community": 69,
+      "norm_label": "isspecifycliavailable()"
+    },
+    {
+      "label": "runSpecify()",
+      "file_type": "code",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L98",
+      "_origin": "ast",
+      "id": "plugins_speckit_runspecify",
+      "community": 69,
+      "norm_label": "runspecify()"
     },
     {
       "label": "ensureSpecifyCli()",
       "file_type": "code",
       "source_file": "src/plugins/speckit.js",
-      "source_location": "L84",
+      "source_location": "L123",
       "_origin": "ast",
       "id": "plugins_speckit_ensurespecifycli",
       "community": 69,
@@ -47,7 +267,7 @@
       "label": "installSpeckit()",
       "file_type": "code",
       "source_file": "src/plugins/speckit.js",
-      "source_location": "L117",
+      "source_location": "L153",
       "_origin": "ast",
       "id": "plugins_speckit_installspeckit",
       "community": 69,
@@ -57,7 +277,7 @@
       "label": "uninstallSpeckit()",
       "file_type": "code",
       "source_file": "src/plugins/speckit.js",
-      "source_location": "L163",
+      "source_location": "L195",
       "_origin": "ast",
       "id": "plugins_speckit_uninstallspeckit",
       "community": 4,
@@ -67,7 +287,7 @@
       "label": "speckitPlugin",
       "file_type": "code",
       "source_file": "src/plugins/speckit.js",
-      "source_location": "L179",
+      "source_location": "L211",
       "_origin": "ast",
       "id": "plugins_speckit_speckitplugin",
       "community": 0,
@@ -2427,7 +2647,7 @@
       "source_file": "src/plugins/graphify.js",
       "source_location": "L331",
       "_origin": "ast",
-      "community": 4,
+      "community": 0,
       "norm_label": "graphifyplugin",
       "id": "plugins_graphify_graphifyplugin"
     },
@@ -2782,166 +3002,6 @@
       "id": "src_constants_listpresetids"
     },
     {
-      "label": "README.md",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 8,
-      "norm_label": "readme.md",
-      "id": "readme"
-    },
-    {
-      "label": "AI-Quickstart",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 8,
-      "norm_label": "ai-quickstart",
-      "id": "readme_ai_quickstart"
-    },
-    {
-      "label": "Supported tools",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L5",
-      "_origin": "ast",
-      "community": 8,
-      "norm_label": "supported tools",
-      "id": "readme_supported_tools"
-    },
-    {
-      "label": "Quick start",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L16",
-      "_origin": "ast",
-      "community": 8,
-      "norm_label": "quick start",
-      "id": "readme_quick_start"
-    },
-    {
-      "label": "Requirements",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L61",
-      "_origin": "ast",
-      "community": 8,
-      "norm_label": "requirements",
-      "id": "readme_requirements"
-    },
-    {
-      "label": "Uninstall",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L72",
-      "_origin": "ast",
-      "community": 8,
-      "norm_label": "uninstall",
-      "id": "readme_uninstall"
-    },
-    {
-      "label": "Review before proceeding",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L92",
-      "_origin": "ast",
-      "community": 8,
-      "norm_label": "review before proceeding",
-      "id": "readme_review_before_proceeding"
-    },
-    {
-      "label": "CLI reference",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L105",
-      "_origin": "ast",
-      "community": 8,
-      "norm_label": "cli reference",
-      "id": "readme_cli_reference"
-    },
-    {
-      "label": "Required (non-interactive)",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L107",
-      "_origin": "ast",
-      "community": 8,
-      "norm_label": "required (non-interactive)",
-      "id": "readme_required_non_interactive"
-    },
-    {
-      "label": "Tool selection",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L113",
-      "_origin": "ast",
-      "community": 8,
-      "norm_label": "tool selection",
-      "id": "readme_tool_selection"
-    },
-    {
-      "label": "Modes",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L120",
-      "_origin": "ast",
-      "community": 8,
-      "norm_label": "modes",
-      "id": "readme_modes"
-    },
-    {
-      "label": "What changes in my repo?",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L133",
-      "_origin": "ast",
-      "community": 8,
-      "norm_label": "what changes in my repo?",
-      "id": "readme_what_changes_in_my_repo"
-    },
-    {
-      "label": "Platform matrix",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L152",
-      "_origin": "ast",
-      "community": 8,
-      "norm_label": "platform matrix",
-      "id": "readme_platform_matrix"
-    },
-    {
-      "label": "Troubleshooting",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L161",
-      "_origin": "ast",
-      "community": 8,
-      "norm_label": "troubleshooting",
-      "id": "readme_troubleshooting"
-    },
-    {
-      "label": "Contributing",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L186",
-      "_origin": "ast",
-      "community": 8,
-      "norm_label": "contributing",
-      "id": "readme_contributing"
-    },
-    {
-      "label": "License",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L190",
-      "_origin": "ast",
-      "community": 8,
-      "norm_label": "license",
-      "id": "readme_license"
-    },
-    {
       "label": "graphify.md",
       "file_type": "document",
       "source_file": "docs/plugins/graphify.md",
@@ -3130,26 +3190,6 @@
       "community": 7,
       "norm_label": "gitignore.test.js",
       "id": "tests_gitignore_test"
-    },
-    {
-      "label": "install.ps1",
-      "file_type": "code",
-      "source_file": "install.ps1",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 5,
-      "norm_label": "install.ps1",
-      "id": "install"
-    },
-    {
-      "label": "Test-NodeVersion()",
-      "file_type": "code",
-      "source_file": "install.ps1",
-      "source_location": "L9",
-      "_origin": "ast",
-      "community": 5,
-      "norm_label": "test-nodeversion()",
-      "id": "install_test_nodeversion"
     },
     {
       "label": "README.md",
@@ -5705,7 +5745,7 @@
       "source_file": "src/plan-helpers.js",
       "source_location": "L7",
       "_origin": "ast",
-      "community": 7,
+      "community": 4,
       "norm_label": "caveman_repo_rule_files",
       "id": "src_plan_helpers_caveman_repo_rule_files"
     },
@@ -5715,7 +5755,7 @@
       "source_file": "src/plan-helpers.js",
       "source_location": "L15",
       "_origin": "ast",
-      "community": 7,
+      "community": 4,
       "norm_label": "caveman_skill_dirs",
       "id": "src_plan_helpers_caveman_skill_dirs"
     },
@@ -5815,7 +5855,7 @@
       "source_file": "src/platform-maps/caveman.js",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 7,
+      "community": 4,
       "norm_label": "caveman.js",
       "id": "platform_maps_caveman"
     },
@@ -5825,7 +5865,7 @@
       "source_file": "src/platform-maps/caveman.js",
       "source_location": "L2",
       "_origin": "ast",
-      "community": 7,
+      "community": 4,
       "norm_label": "caveman_only",
       "id": "platform_maps_caveman_caveman_only"
     },
@@ -5835,7 +5875,7 @@
       "source_file": "src/platform-maps/caveman.js",
       "source_location": "L15",
       "_origin": "ast",
-      "community": 7,
+      "community": 4,
       "norm_label": "getcavemanonly()",
       "id": "platform_maps_caveman_getcavemanonly"
     },
@@ -6075,7 +6115,7 @@
       "source_file": "src/plugins/caveman.js",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 7,
+      "community": 4,
       "norm_label": "caveman.js",
       "id": "src_plugins_caveman_js_plugins_caveman"
     },
@@ -6085,7 +6125,7 @@
       "source_file": "src/plugins/caveman.js",
       "source_location": "L19",
       "_origin": "ast",
-      "community": 7,
+      "community": 4,
       "norm_label": "cavemaninstallcommand()",
       "id": "plugins_caveman_cavemaninstallcommand"
     },
@@ -6095,7 +6135,7 @@
       "source_file": "src/plugins/caveman.js",
       "source_location": "L41",
       "_origin": "ast",
-      "community": 7,
+      "community": 4,
       "norm_label": "planinstallcaveman()",
       "id": "plugins_caveman_planinstallcaveman"
     },
@@ -6105,7 +6145,7 @@
       "source_file": "src/plugins/caveman.js",
       "source_location": "L80",
       "_origin": "ast",
-      "community": 7,
+      "community": 4,
       "norm_label": "planuninstallcaveman()",
       "id": "plugins_caveman_planuninstallcaveman"
     },
@@ -6115,7 +6155,7 @@
       "source_file": "src/plugins/caveman.js",
       "source_location": "L118",
       "_origin": "ast",
-      "community": 7,
+      "community": 4,
       "norm_label": "installcaveman()",
       "id": "plugins_caveman_installcaveman"
     },
@@ -6125,7 +6165,7 @@
       "source_file": "src/plugins/caveman.js",
       "source_location": "L159",
       "_origin": "ast",
-      "community": 7,
+      "community": 4,
       "norm_label": "uninstallcaveman()",
       "id": "plugins_caveman_uninstallcaveman"
     },
@@ -6135,7 +6175,7 @@
       "source_file": "src/plugins/caveman.js",
       "source_location": "L199",
       "_origin": "ast",
-      "community": 7,
+      "community": 0,
       "norm_label": "cavemanplugin",
       "id": "plugins_caveman_cavemanplugin"
     },
@@ -6665,7 +6705,7 @@
       "source_file": "src/utils/exec.js",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 68,
+      "community": 4,
       "norm_label": "exec.js",
       "id": "utils_exec"
     },
@@ -6675,7 +6715,7 @@
       "source_file": "src/utils/exec.js",
       "source_location": "L8",
       "_origin": "ast",
-      "community": 68,
+      "community": 4,
       "norm_label": "run()",
       "id": "utils_exec_run"
     },
@@ -6685,7 +6725,7 @@
       "source_file": "src/utils/exec.js",
       "source_location": "L45",
       "_origin": "ast",
-      "community": 68,
+      "community": 4,
       "norm_label": "shellquote()",
       "id": "utils_exec_shellquote"
     },
@@ -6781,6 +6821,207 @@
     }
   ],
   "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme",
+      "target": "readme_ai_quickstart"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L84",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_ai_quickstart",
+      "target": "readme_cli_reference"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L161",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_ai_quickstart",
+      "target": "readme_contributing"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L165",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_ai_quickstart",
+      "target": "readme_license"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L131",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_ai_quickstart",
+      "target": "readme_platform_matrix"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_ai_quickstart",
+      "target": "readme_quick_start"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_ai_quickstart",
+      "target": "readme_requirements"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L71",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_ai_quickstart",
+      "target": "readme_review_before_proceeding"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_ai_quickstart",
+      "target": "readme_supported_tools"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L140",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_ai_quickstart",
+      "target": "readme_troubleshooting"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L51",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_ai_quickstart",
+      "target": "readme_uninstall"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L112",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_ai_quickstart",
+      "target": "readme_what_changes_in_my_repo"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L99",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_cli_reference",
+      "target": "readme_modes"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L86",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_cli_reference",
+      "target": "readme_required_non_interactive"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L92",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_cli_reference",
+      "target": "readme_tool_selection"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "install",
+      "target": "install_get_npxcmdpath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "install",
+      "target": "install_invoke_npx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "install",
+      "target": "install_test_nodeversion"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "install.ps1",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "install_test_nodeversion",
+      "target": "package_engines_node"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "install_invoke_npx",
+      "target": "install_get_npxcmdpath",
+      "confidence_score": 1.0
+    },
     {
       "relation": "imports_from",
       "context": "import",
@@ -6893,6 +7134,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/plugins/speckit.js",
+      "source_location": "L83",
+      "weight": 1.0,
+      "source": "plugins_speckit",
+      "target": "plugins_speckit_isspecifycliavailable",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/speckit.js",
       "source_location": "L17",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -6908,6 +7159,16 @@
       "confidence_score": 1.0,
       "source": "plugins_speckit",
       "target": "plugins_speckit_planuninstallspeckit"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L98",
+      "weight": 1.0,
+      "source": "plugins_speckit",
+      "target": "plugins_speckit_runspecify",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -7137,6 +7398,28 @@
       "weight": 1.0,
       "source": "plugins_speckit_planuninstallspeckit",
       "target": "src_plan_helpers_repofileexists"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L124",
+      "weight": 1.0,
+      "source": "plugins_speckit_ensurespecifycli",
+      "target": "plugins_speckit_isspecifycliavailable",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/plugins/speckit.js",
+      "source_location": "L177",
+      "weight": 1.0,
+      "source": "plugins_speckit_installspeckit",
+      "target": "plugins_speckit_runspecify",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -10199,17 +10482,6 @@
       "target": "package_engines_node"
     },
     {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "install.ps1",
-      "source_location": "L16",
-      "weight": 1.0,
-      "source": "install_test_nodeversion",
-      "target": "package_engines_node"
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
@@ -10622,156 +10894,6 @@
       "weight": 1.0,
       "source": "src_cli_parsecli",
       "target": "src_constants_listpresetids"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme",
-      "target": "readme_ai_quickstart"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L84",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_ai_quickstart",
-      "target": "readme_cli_reference"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L161",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_ai_quickstart",
-      "target": "readme_contributing"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L165",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_ai_quickstart",
-      "target": "readme_license"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L131",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_ai_quickstart",
-      "target": "readme_platform_matrix"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L13",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_ai_quickstart",
-      "target": "readme_quick_start"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L40",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_ai_quickstart",
-      "target": "readme_requirements"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L71",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_ai_quickstart",
-      "target": "readme_review_before_proceeding"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_ai_quickstart",
-      "target": "readme_supported_tools"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L140",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_ai_quickstart",
-      "target": "readme_troubleshooting"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L51",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_ai_quickstart",
-      "target": "readme_uninstall"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L112",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_ai_quickstart",
-      "target": "readme_what_changes_in_my_repo"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L99",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_cli_reference",
-      "target": "readme_modes"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L86",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_cli_reference",
-      "target": "readme_required_non_interactive"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L92",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_cli_reference",
-      "target": "readme_tool_selection"
     },
     {
       "relation": "contains",
@@ -11438,16 +11560,6 @@
       "confidence_score": 1.0,
       "source": "src_plugins_caveman_js_plugins_caveman",
       "target": "utils_fs_deletedirifexists"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "install.ps1",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "install",
-      "target": "install_test_nodeversion"
     },
     {
       "relation": "contains",
@@ -17800,5 +17912,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "d6c01c3067e1499ac6e9015accbf8d3827c97ad2"
+  "built_at_commit": "c2120e7407a111bdbfa76e54a7fe3154dfa34752"
 }

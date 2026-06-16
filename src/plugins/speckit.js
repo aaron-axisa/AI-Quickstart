@@ -8,6 +8,7 @@ import {
   speckitInstallCommand,
   speckitSupportsPlatform,
   isSpecifyInstallLockError,
+  specifyUvToolDirExists,
 } from "../platform-maps/speckit.js";
 import { repoFileExists } from "../plan-helpers.js";
 import { deleteDirIfExists } from "../utils/fs.js";
@@ -117,31 +118,45 @@ async function runSpecify(config, args) {
 }
 
 /**
+ * Install specify-cli only when missing. Never use global --force for uv (avoids
+ * Windows file-lock failures when caveman --force is set). Lock errors are non-fatal.
  * @param {import("../runner.js").RunConfig} config
  * @returns {Promise<string>}
  */
 async function ensureSpecifyCli(config) {
-  if ((await isSpecifyCliAvailable(config)) && !config.force) {
+  if (await isSpecifyCliAvailable(config)) {
     console.log("[speckit] specify-cli already available — skipping uv tool install");
     return "specify-cli already available";
   }
 
+  if (specifyUvToolDirExists()) {
+    console.log(
+      "[speckit] uv specify-cli tool directory exists — skipping reinstall (avoids Windows file locks)",
+    );
+    return "specify-cli (uv tool dir present)";
+  }
+
   console.log("\n[speckit] Installing specify-cli...");
-  const install = await run("uv", speckitInstallArgs({ force: config.force }), {
+  const install = await run("uv", speckitInstallArgs(), {
     dryRun: config.dryRun,
     verbose: config.verbose,
   });
   if (install.code === 0 || config.dryRun) {
-    return speckitInstallCommand({ force: config.force });
+    return speckitInstallCommand();
   }
 
   const errText = `${install.stderr}\n${install.stdout}`;
-  if (isSpecifyInstallLockError(errText) && (await isSpecifyCliAvailable(config))) {
+  if (
+    isSpecifyInstallLockError(errText) ||
+    specifyUvToolDirExists() ||
+    (await isSpecifyCliAvailable(config))
+  ) {
     console.warn(
-      "[speckit] uv could not replace specify-cli (files in use) — continuing with existing install.\n" +
-        "  Close other terminals/processes using specify, then re-run with --force to upgrade.",
+      "[speckit] uv install hit a file lock — continuing with existing specify-cli.\n" +
+        "  Close other terminals using specify, then run manually to upgrade:\n" +
+        `  ${speckitInstallCommand({ force: true })}`,
     );
-    return "specify-cli (existing; upgrade skipped — files in use)";
+    return "specify-cli (existing; uv install skipped — files in use)";
   }
 
   throw new Error(`specify-cli install failed:\n${errText}`);
@@ -176,8 +191,12 @@ export async function installSpeckit(config) {
   console.log(`[speckit] specify ${initArgs.join(" ")} (cwd: ${config.repoPath})`);
   const init = await runSpecify(config, initArgs);
   if (init.code !== 0 && !config.dryRun) {
+    const hint =
+      specifyUvToolDirExists() && isSpecifyInstallLockError(`${init.stderr}\n${init.stdout}`)
+        ? "\n  Close terminals running specify/uv, then re-run."
+        : "";
     throw new Error(
-      `specify init failed for ${primary.id}:\n${init.stderr || init.stdout}`,
+      `specify init failed for ${primary.id}:\n${init.stderr || init.stdout}${hint}`,
     );
   }
   actions.push(`specify ${initArgs.join(" ")}`);

@@ -6,6 +6,8 @@ import {
   speckitInstallCommand,
   speckitScriptType,
   isSpecifyInstallLockError,
+  specifyUvToolDir,
+  specifyUvToolDirExists,
 } from "../src/platform-maps/speckit.js";
 
 describe("speckit platform map", () => {
@@ -38,5 +40,11 @@ describe("speckit platform map", () => {
       true,
     );
     assert.equal(isSpecifyInstallLockError("network timeout"), false);
+  });
+
+  it("locates uv specify-cli tool directory", () => {
+    const dir = specifyUvToolDir();
+    assert.match(dir, /specify-cli$/);
+    assert.equal(typeof specifyUvToolDirExists(), "boolean");
   });
 });

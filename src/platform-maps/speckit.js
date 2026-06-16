@@ -1,5 +1,7 @@
 import { UPSTREAM } from "../constants.js";
-import { platform as nodePlatform } from "node:os";
+import fs from "node:fs";
+import os, { platform as nodePlatform } from "node:os";
+import path from "node:path";
 
 /** @param {string} [ref] */
 export function speckitGitSource(ref = UPSTREAM.speckit.ref) {
@@ -31,6 +33,20 @@ export function speckitInstallCommand(opts = {}) {
  */
 export function isSpecifyInstallLockError(text) {
   return /access is denied|os error 5|failed to remove directory/i.test(text);
+}
+
+/** @returns {string} */
+export function specifyUvToolDir() {
+  const home = os.homedir();
+  if (process.platform === "win32") {
+    return path.join(home, "AppData", "Roaming", "uv", "tools", "specify-cli");
+  }
+  return path.join(home, ".local", "share", "uv", "tools", "specify-cli");
+}
+
+/** True when uv has a specify-cli tool environment (even if upgrade is locked). */
+export function specifyUvToolDirExists() {
+  return fs.existsSync(specifyUvToolDir());
 }
 
 /** @type {Record<string, string|null>} AI-Quickstart platform id -> specify --integration slug */
