@@ -21,11 +21,14 @@ ai-quickstart: Node.js (>=18) required. Install:
 
 Test-NodeVersion
 
-$here = Split-Path -Parent $MyInvocation.MyCommand.Path
-$localInstaller = Join-Path $here "bin\install.js"
-if (Test-Path $localInstaller) {
-  node $localInstaller @args
-  exit $LASTEXITCODE
+# When piped via `irm ... | iex`, MyCommand.Path is empty — use npx path below.
+$scriptPath = $MyInvocation.MyCommand.Path
+if (-not [string]::IsNullOrWhiteSpace($scriptPath)) {
+  $localInstaller = Join-Path (Split-Path -Parent $scriptPath) "bin\install.js"
+  if (Test-Path -LiteralPath $localInstaller) {
+    node $localInstaller @args
+    exit $LASTEXITCODE
+  }
 }
 
 if (-not (Get-Command npx -ErrorAction SilentlyContinue)) {

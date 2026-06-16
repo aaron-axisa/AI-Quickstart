@@ -25,6 +25,12 @@ curl -fsSL https://raw.githubusercontent.com/aaron-axisa/AI-Quickstart/main/inst
 irm https://raw.githubusercontent.com/aaron-axisa/AI-Quickstart/main/install.ps1 | iex
 ```
 
+> **Windows + flags:** `irm | iex` cannot pass `--path` etc. Use `npx` for non-interactive:
+>
+> ```powershell
+> npx -y github:aaron-axisa/AI-Quickstart --path C:\path\to\repo --preset full --platforms cursor -y
+> ```
+
 **Preset bundle** (non-interactive):
 
 ```bash
@@ -160,6 +166,10 @@ Re-running is safe. Upstream installers are idempotent where possible.
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 irm .../install.ps1 | iex
 ```
+
+**`Invoke-Expression` / null Path error with `irm | iex`**
+
+Fixed in current `install.ps1` — pull latest from `main`. Older shims called `Split-Path` on an empty path when the script runs from a pipe instead of a file.
 
 **`graphify: command not found` after install**
 
