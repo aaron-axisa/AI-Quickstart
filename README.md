@@ -68,7 +68,7 @@ curl -fsSL https://raw.githubusercontent.com/aaron-axisa/AI-Quickstart/main/inst
 
 | Dependency | Required for | Minimum |
 |------------|--------------|---------|
-| Node.js | CLI + Caveman + Cavemem | 18+ (20+ for Cavemem) |
+| Node.js | CLI + Caveman + Cavemem | 18+ (20+ for Cavemem; **20 LTS recommended** if `better-sqlite3` fails to build on Node 23+) |
 | Python | Graphify + Spec Kit | 3.10+ (3.11+ for Spec Kit) |
 | uv | Graphify + Spec Kit | any (required for Spec Kit) |
 | git | recommended | any |
@@ -208,6 +208,25 @@ Back up existing hooks before install. Caveman and Graphify upstream installers 
 **Path required error**
 
 Always pass `--path`. Interactive mode prompts if omitted.
+
+**`better-sqlite3` / `GetPrototype` build error (Cavemem)**
+
+This comes from **`npm install -g cavemem`**, not from [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman). The npm package `caveman` is an unrelated 2016 templating library — do not use it.
+
+- **Caveman (token-saving skill):** `npx -y github:JuliusBrussee/caveman` — no global npm install, no SQLite.
+- **Cavemem (persistent memory):** `npm install -g cavemem` — depends on native `better-sqlite3`.
+
+On **Node 23+**, prebuild may miss your OS/arch and fall back to compiling old bindings → `no member named 'GetPrototype' in 'v8:Object'`. Fix:
+
+```bash
+# macOS — switch to Node 20 LTS
+brew install node@20
+export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
+node -v   # should show v20.x
+npm install -g cavemem
+```
+
+Or skip Cavemem in AI-Quickstart: omit it from `--tools` / deselect in the TUI (Caveman + Graphify still work without it).
 
 ## Contributing
 

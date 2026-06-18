@@ -75,8 +75,16 @@ export async function installCavemem(config) {
     { dryRun: config.dryRun, verbose: config.verbose },
   );
   if (globalInstall.code !== 0 && !config.dryRun) {
+    const nodeMajor = Number(process.versions.node.split(".")[0]);
+    const nodeHint =
+      nodeMajor >= 23
+        ? "\n\nNode 23+ often fails to build better-sqlite3 (Cavemem dependency). " +
+          "Switch to Node 20 LTS, then re-run:\n" +
+          "  npm install -g cavemem\n" +
+          "Or skip Cavemem: omit it from --tools."
+        : "";
     throw new Error(
-      `npm install -g ${UPSTREAM.cavemem.package} failed:\n${globalInstall.stderr}`,
+      `npm install -g ${UPSTREAM.cavemem.package} failed:\n${globalInstall.stderr}${nodeHint}`,
     );
   }
   actions.push(`npm install -g ${UPSTREAM.cavemem.package}`);
