@@ -15,6 +15,7 @@ export const UPSTREAM = {
   cavemem: {
     package: "cavemem",
     minNode: 20,
+    maxNodeForNative: 22,
   },
   speckit: {
     gitUrl: "git+https://github.com/github/spec-kit.git",

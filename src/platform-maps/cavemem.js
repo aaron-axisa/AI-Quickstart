@@ -21,11 +21,14 @@ export function cavememSupportsPlatform(platformId) {
 /**
  * @param {string} platformId
  * @param {"install"|"uninstall"} action
+ * @param {{ bin?: string }} [opts]
  */
-export function cavememCommand(platformId, action = "install") {
+export function cavememCommand(platformId, action = "install", opts = {}) {
   const ide = getCavememIde(platformId);
   if (ide === undefined) return null;
+  const bin = opts.bin ?? "cavemem";
+  const quoted = bin.includes(" ") ? `"${bin}"` : bin;
   const verb = action === "uninstall" ? "uninstall" : "install";
-  if (ide === null) return `cavemem ${verb}`;
-  return `cavemem ${verb} --ide ${ide}`;
+  if (ide === null) return `${quoted} ${verb}`;
+  return `${quoted} ${verb} --ide ${ide}`;
 }

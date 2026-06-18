@@ -68,12 +68,13 @@ curl -fsSL https://raw.githubusercontent.com/aaron-axisa/AI-Quickstart/main/inst
 
 | Dependency | Required for | Minimum |
 |------------|--------------|---------|
-| Node.js | CLI + Caveman + Cavemem | 18+ (20+ for Cavemem; **20 LTS recommended** if `better-sqlite3` fails to build on Node 23+) |
+| Node.js | CLI + Caveman + Graphify | 18+ |
+| Node.js | Cavemem | 20+ (host Node 23+ needs side-by-side Node 20 — installer handles this) |
 | Python | Graphify + Spec Kit | 3.10+ (3.11+ for Spec Kit) |
 | uv | Graphify + Spec Kit | any (required for Spec Kit) |
 | git | recommended | any |
 
-Use `--install-prerequisites` to attempt automatic installation of missing deps (with confirmation in interactive mode).
+Use `--install-prerequisites` to attempt automatic installation of missing deps (with confirmation in interactive mode). When Cavemem is selected on **Node 23+**, this also installs **Node 20 side-by-side** (e.g. `brew install node@20`) — your default Node stays unchanged; only Cavemem uses Node 20.
 
 ## Uninstall
 
@@ -130,7 +131,7 @@ If you pass all required flags interactively but omit both `--yes` and `--non-in
 | `--non-interactive` | Fail instead of prompting |
 | `-y, --yes` | Auto-confirm summary |
 | `--dry-run` | Print commands only |
-| `--install-prerequisites` | Install missing Node/Python/uv |
+| `--install-prerequisites` | Install missing Node/Python/uv; on Node 23+ with Cavemem, also installs side-by-side Node 20 |
 | `--verbose` | Show upstream output |
 | `--force` | Overwrite existing files where supported |
 
@@ -209,24 +210,24 @@ Back up existing hooks before install. Caveman and Graphify upstream installers 
 
 Always pass `--path`. Interactive mode prompts if omitted.
 
-**`better-sqlite3` / `GetPrototype` build error (Cavemem)**
+**Cavemem on Node 23+ (`better-sqlite3` / `GetPrototype`)**
 
-This comes from **`npm install -g cavemem`**, not from [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman). The npm package `caveman` is an unrelated 2016 templating library — do not use it.
+Cavemem depends on native `better-sqlite3`, which does not reliably build on Node 23+. The installer handles this automatically:
 
-- **Caveman (token-saving skill):** `npx -y github:JuliusBrussee/caveman` — no global npm install, no SQLite.
-- **Cavemem (persistent memory):** `npm install -g cavemem` — depends on native `better-sqlite3`.
+1. **Prerequisite check** — if Cavemem is selected and host Node is 23+, the prereq table shows `Node 20 LTS (side-by-side, for Cavemem)`.
+2. **`--install-prerequisites`** — installs Node 20 alongside your current Node (`brew install node@20` on macOS, `nvm install 20` on Windows/Linux).
+3. **Cavemem install** — runs only through Node 20 npm; hooks register the Node 20 binary. Host Node 23 unchanged.
 
-On **Node 23+**, prebuild may miss your OS/arch and fall back to compiling old bindings → `no member named 'GetPrototype' in 'v8:Object'`. Fix:
+Manual fallback:
 
 ```bash
-# macOS — switch to Node 20 LTS
-brew install node@20
-export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
-node -v   # should show v20.x
-npm install -g cavemem
+brew install node@20          # macOS
+nvm install 20                # nvm / nvm-windows
 ```
 
-Or skip Cavemem in AI-Quickstart: omit it from `--tools` / deselect in the TUI (Caveman + Graphify still work without it).
+Skip Cavemem if you don't need persistent memory: omit from `--tools`.
+
+**Note:** npm package `caveman` ≠ [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman). Use `npx -y github:JuliusBrussee/caveman` for the token-saving skill.
 
 ## Contributing
 

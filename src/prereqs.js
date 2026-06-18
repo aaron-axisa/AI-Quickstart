@@ -6,6 +6,10 @@ import {
   hasUv,
   hasGit,
 } from "./utils/detect.js";
+import {
+  getNode20InstallCommands,
+  resolveCavememRuntime,
+} from "./utils/node-runtime.js";
 import { runShell } from "./utils/exec.js";
 import { UPSTREAM } from "./constants.js";
 
@@ -33,6 +37,7 @@ export async function checkPrerequisites(tools) {
   const results = [];
 
   const node = await getNodeVersion();
+  const hostMajor = Number(process.versions.node.split(".")[0]);
   const minNode = needsCavemem ? UPSTREAM.cavemem.minNode : 18;
   results.push({
     id: "node",
@@ -42,6 +47,21 @@ export async function checkPrerequisites(tools) {
     required: true,
     installCommands: getNodeInstallCommands(),
   });
+
+  const maxNative = UPSTREAM.cavemem.maxNodeForNative ?? 22;
+  if (needsCavemem && node && hostMajor > maxNative) {
+    const runtime = await resolveCavememRuntime();
+    results.push({
+      id: "node20-cavemem",
+      label: "Node 20 LTS (side-by-side, for Cavemem)",
+      ok: runtime !== null,
+      detail: runtime
+        ? runtime.npm
+        : `not found (Node ${node.raw} active)`,
+      required: true,
+      installCommands: getNode20InstallCommands(),
+    });
+  }
 
   if (needsPython) {
     const minPy = needsSpeckit ? "3.11" : "3.10";

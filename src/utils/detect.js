@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
+import { node20BinDirs } from "./node-runtime.js";
 import { commandExists, run } from "./exec.js";
 
 /** @returns {"win32"|"darwin"|"linux"|string} */
@@ -59,9 +60,12 @@ export function augmentPrereqPath() {
       "/usr/local/bin",
       "/usr/local/opt/python@3.12/bin",
       "/usr/local/opt/python@3.11/bin",
+      ...node20BinDirs(),
     );
   } else if (process.platform === "linux") {
-    extras.push("/usr/local/bin");
+    extras.push("/usr/local/bin", ...node20BinDirs());
+  } else if (process.platform === "win32") {
+    extras.push(...node20BinDirs());
   }
 
   const current = (process.env.PATH || "").split(path.delimiter);
