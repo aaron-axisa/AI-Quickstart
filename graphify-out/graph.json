@@ -147,7 +147,7 @@
       "label": "Contributing",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L198",
+      "source_location": "L212",
       "_origin": "ast",
       "id": "readme_contributing",
       "community": 8,
@@ -157,7 +157,7 @@
       "label": "License",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L202",
+      "source_location": "L216",
       "_origin": "ast",
       "id": "readme_license",
       "community": 8,
@@ -184,14 +184,46 @@
       "norm_label": "main()"
     },
     {
-      "label": "install.ps1",
+      "label": "install.sh",
       "file_type": "code",
-      "source_file": "install.ps1",
+      "source_file": "install.sh",
       "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
       "_origin": "ast",
       "id": "install",
       "community": 5,
-      "norm_label": "install.ps1"
+      "norm_label": "install.sh"
+    },
+    {
+      "label": "install.sh script",
+      "file_type": "code",
+      "source_file": "install.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "_origin": "ast",
+      "id": "c_users_aaron_documents_development_ai_quickstart_install_sh__entry",
+      "community": 5,
+      "norm_label": "install.sh script"
+    },
+    {
+      "label": "run_with_tty()",
+      "file_type": "code",
+      "source_file": "install.sh",
+      "source_location": "L12",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_function"
+      },
+      "_origin": "ast",
+      "id": "install_run_with_tty",
+      "community": 5,
+      "norm_label": "run_with_tty()"
     },
     {
       "label": "Test-NodeVersion()",
@@ -199,9 +231,9 @@
       "source_file": "install.ps1",
       "source_location": "L15",
       "_origin": "ast",
-      "id": "install_test_nodeversion",
       "community": 5,
-      "norm_label": "test-nodeversion()"
+      "norm_label": "test-nodeversion()",
+      "id": "install_test_nodeversion"
     },
     {
       "label": "Get-NpxCmdPath()",
@@ -209,9 +241,9 @@
       "source_file": "install.ps1",
       "source_location": "L28",
       "_origin": "ast",
-      "id": "install_get_npxcmdpath",
       "community": 5,
-      "norm_label": "get-npxcmdpath()"
+      "norm_label": "get-npxcmdpath()",
+      "id": "install_get_npxcmdpath"
     },
     {
       "label": "Invoke-Npx()",
@@ -219,9 +251,9 @@
       "source_file": "install.ps1",
       "source_location": "L39",
       "_origin": "ast",
-      "id": "install_invoke_npx",
       "community": 5,
-      "norm_label": "invoke-npx()"
+      "norm_label": "invoke-npx()",
+      "id": "install_invoke_npx"
     },
     {
       "label": "speckit.js",
@@ -5652,34 +5684,6 @@
       "id": "plugins_karpathy_prerequisites"
     },
     {
-      "label": "install.sh",
-      "file_type": "code",
-      "source_file": "install.sh",
-      "source_location": "L1",
-      "metadata": {
-        "language": "bash",
-        "kind": "file"
-      },
-      "_origin": "ast",
-      "community": 34,
-      "norm_label": "install.sh",
-      "id": "install_sh_install"
-    },
-    {
-      "label": "install.sh script",
-      "file_type": "code",
-      "source_file": "install.sh",
-      "source_location": "L1",
-      "metadata": {
-        "language": "bash",
-        "kind": "bash_entrypoint"
-      },
-      "_origin": "ast",
-      "community": 34,
-      "norm_label": "install.sh script",
-      "id": "c_users_aaron_documents_development_ai_quickstart_install_sh__entry"
-    },
-    {
       "label": "cli.js",
       "file_type": "code",
       "source_file": "src/cli.js",
@@ -7213,6 +7217,16 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "install.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "install",
+      "target": "c_users_aaron_documents_development_ai_quickstart_install_sh__entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "install.ps1",
       "source_location": "L26",
       "weight": 1.0,
@@ -7231,6 +7245,16 @@
       "target": "install_invoke_npx"
     },
     {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "install.sh",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "install",
+      "target": "install_run_with_tty",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "install.ps1",
@@ -7239,6 +7263,17 @@
       "confidence_score": 1.0,
       "source": "install",
       "target": "install_test_nodeversion"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "install.sh",
+      "source_location": "L40",
+      "weight": 1.0,
+      "context": "call",
+      "source": "c_users_aaron_documents_development_ai_quickstart_install_sh__entry",
+      "target": "install_run_with_tty",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -14657,16 +14692,6 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "install.sh",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "install_sh_install",
-      "target": "c_users_aaron_documents_development_ai_quickstart_install_sh__entry"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "src/cli.js",
       "source_location": "L171",
       "weight": 1.0,
@@ -18029,5 +18054,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "fb409d27d53c2c37f312af8aa595b28df8a9b86c"
+  "built_at_commit": "ea93cb8e7653e4b23352a3b426d90cfbed73b446"
 }

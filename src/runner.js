@@ -73,8 +73,17 @@ export async function runAction(config, opts = {}) {
         });
         const recheck = await checkPrerequisites(config.tools);
         if (hasBlockingPrereqs(recheck)) {
+          const hints = recheck
+            .filter((r) => r.required && !r.ok && r.installCommands)
+            .flatMap((r) => r.installCommands ?? [])
+            .filter((c) => !c.startsWith("#"));
           throw new Error(
-            "Required prerequisites still missing after install attempt.",
+            "Required prerequisites still missing after install attempts:\n" +
+              formatPrereqTable(recheck) +
+              (hints.length
+                ? `\n\nTry manually:\n  ${hints.join("\n  ")}`
+                : "") +
+              "\n\nOpen a new terminal if PATH was updated by the installer.",
           );
         }
       } else {

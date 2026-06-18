@@ -39,15 +39,47 @@ export async function getNodeVersion() {
   }
 }
 
-/** @returns {Promise<{ major: number, minor: number, raw: string, cmd: string } | null>} */
-export async function getPythonVersion() {
-  const cmd = await firstWorkingCommand("python", [
-    "python3",
-    "python",
-    "py",
-  ]);
-  if (!cmd) return null;
+/**
+ * Prepend common install locations so freshly installed brew/python/uv
+ * binaries are visible without restarting the shell.
+ */
+export function augmentPrereqPath() {
+  const home = getHome();
+  /** @type {string[]} */
+  const extras = [
+    path.join(home, ".local", "bin"),
+    path.join(home, ".cargo", "bin"),
+  ];
 
+  if (process.platform === "darwin") {
+    extras.push(
+      "/opt/homebrew/bin",
+      "/opt/homebrew/opt/python@3.12/bin",
+      "/opt/homebrew/opt/python@3.11/bin",
+      "/usr/local/bin",
+      "/usr/local/opt/python@3.12/bin",
+      "/usr/local/opt/python@3.11/bin",
+    );
+  } else if (process.platform === "linux") {
+    extras.push("/usr/local/bin");
+  }
+
+  const current = (process.env.PATH || "").split(path.delimiter);
+  const seen = new Set();
+  const merged = [];
+  for (const dir of [...extras, ...current]) {
+    if (!dir || seen.has(dir)) continue;
+    seen.add(dir);
+    merged.push(dir);
+  }
+  process.env.PATH = merged.join(path.delimiter);
+}
+
+/**
+ * @param {string} cmd
+ * @returns {Promise<{ major: number, minor: number, raw: string, cmd: string } | null>}
+ */
+async function readPythonVersion(cmd) {
   const args = cmd === "py" ? ["-3", "--version"] : ["--version"];
   try {
     const r = await run(cmd, args, { verbose: false });
@@ -65,9 +97,49 @@ export async function getPythonVersion() {
   }
 }
 
+/** @returns {Promise<{ major: number, minor: number, raw: string, cmd: string } | null>} */
+export async function getPythonVersion() {
+  /** @type {string[]} */
+  const candidates =
+    process.platform === "win32"
+      ? ["py", "python3", "python"]
+      : [
+          "python3.12",
+          "python3.11",
+          "python3.10",
+          "python3",
+          "python",
+        ];
+
+  /** @type {{ major: number, minor: number, raw: string, cmd: string } | null} */
+  let best = null;
+  for (const cmd of candidates) {
+    const version = await readPythonVersion(cmd);
+    if (!version) continue;
+    if (
+      !best ||
+      version.major > best.major ||
+      (version.major === best.major && version.minor > best.minor)
+    ) {
+      best = version;
+    }
+  }
+  return best;
+}
+
 /** @returns {Promise<boolean>} */
 export async function hasUv() {
-  return commandExists("uv");
+  if (await commandExists("uv")) return true;
+
+  const home = getHome();
+  const candidates = [
+    path.join(home, ".local", "bin", "uv"),
+    path.join(home, ".cargo", "bin", "uv"),
+  ];
+  for (const bin of candidates) {
+    if (pathExists(bin) && (await commandExists(bin))) return true;
+  }
+  return false;
 }
 
 /** @returns {Promise<boolean>} */

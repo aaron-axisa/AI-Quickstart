@@ -1,4 +1,5 @@
 import {
+  augmentPrereqPath,
   getPlatform,
   getNodeVersion,
   getPythonVersion,
@@ -23,6 +24,8 @@ import { UPSTREAM } from "./constants.js";
  * @returns {Promise<PrereqResult[]>}
  */
 export async function checkPrerequisites(tools) {
+  augmentPrereqPath();
+
   const needsGraphify = tools.includes("graphify");
   const needsSpeckit = tools.includes("speckit");
   const needsCavemem = tools.includes("cavemem");
@@ -120,6 +123,7 @@ export async function installMissingPrerequisites(results, opts = {}) {
         `Failed to install ${r.label}. Run manually:\n  ${r.installCommands.join("\n  ")}`,
       );
     }
+    augmentPrereqPath();
   }
 
   const uv = results.find((r) => r.id === "uv");
@@ -127,6 +131,7 @@ export async function installMissingPrerequisites(results, opts = {}) {
     const cmd = uv.installCommands[0];
     console.log(`Installing ${uv.label}...`);
     await runShell(cmd, opts);
+    augmentPrereqPath();
   }
 }
 

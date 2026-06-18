@@ -55,8 +55,8 @@
     "semantic_hash": ""
   },
   "bin/install.js": {
-    "mtime": 1781645479.221391,
-    "ast_hash": "69b774a50d99181907c1cfaaeede06bb",
+    "mtime": 1781782466.8756497,
+    "ast_hash": "664b39088cdd539108c1d80a8e52b441",
     "semantic_hash": ""
   },
   "install.ps1": {
@@ -65,8 +65,8 @@
     "semantic_hash": ""
   },
   "install.sh": {
-    "mtime": 1781636717.2384362,
-    "ast_hash": "01f06b762e1e0aee6e262804d1d24d40",
+    "mtime": 1781782465.4752014,
+    "ast_hash": "878408973c5cb80a1e59d1ae8a52d79e",
     "semantic_hash": ""
   },
   "package.json": {
@@ -305,8 +305,8 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1781645482.2937007,
-    "ast_hash": "65f0a31abe1191d93ebf81ebb1f4f8ca",
+    "mtime": 1781782467.584736,
+    "ast_hash": "01f8b649508b8798137804540cc925b8",
     "semantic_hash": ""
   },
   "docs/ARCHITECTURE.md": {

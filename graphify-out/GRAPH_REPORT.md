@@ -1,16 +1,16 @@
-# Graph Report - AI-Quickstart  (2026-06-16)
+# Graph Report - AI-Quickstart  (2026-06-18)
 
 ## Corpus Check
-- 109 files · ~49,708 words
+- 109 files · ~49,848 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 682 nodes · 1070 edges · 69 communities (63 shown, 6 thin omitted)
+- 682 nodes · 1072 edges · 68 communities (63 shown, 5 thin omitted)
 - Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 45 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `fb409d27`
+- Built from commit: `ea93cb8e`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -49,7 +49,6 @@
 - [[_COMMUNITY_Community 31|Community 31]]
 - [[_COMMUNITY_Community 32|Community 32]]
 - [[_COMMUNITY_Community 33|Community 33]]
-- [[_COMMUNITY_Community 34|Community 34]]
 - [[_COMMUNITY_Community 35|Community 35]]
 - [[_COMMUNITY_Community 42|Community 42]]
 - [[_COMMUNITY_Community 43|Community 43]]
@@ -102,7 +101,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (69 total, 6 thin omitted)
+## Communities (68 total, 5 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.08
@@ -121,8 +120,8 @@ Cohesion: 0.10
 Nodes (42): CAVEMAN_ONLY, getCavemanOnly(), CAVEMEM_IDE, cavememCommand(), cavememSupportsPlatform(), getCavememIde(), getGraphifyMap(), GRAPHIFY_MAP (+34 more)
 
 ### Community 5 - "Community 5"
-Cohesion: 0.09
-Nodes (22): Get-NpxCmdPath(), Invoke-Npx(), Test-NodeVersion(), bin, ai-quickstart, dependencies, @clack/prompts, description (+14 more)
+Cohesion: 0.08
+Nodes (24): install.sh script, Get-NpxCmdPath(), Invoke-Npx(), run_with_tty(), Test-NodeVersion(), bin, ai-quickstart, dependencies (+16 more)
 
 ### Community 6 - "Community 6"
 Cohesion: 0.07
@@ -317,9 +316,9 @@ Cohesion: 0.21
 Nodes (19): getSpeckitIntegration(), isSpecifyInstallLockError(), specifyUvToolDir(), specifyUvToolDirExists(), SPECKIT_INTEGRATION, speckitGitSource(), speckitInitArgs(), speckitInitCommand() (+11 more)
 
 ## Knowledge Gaps
-- **303 isolated node(s):** `Supported tools`, `Quick start`, `Requirements`, `Uninstall`, `Review before proceeding` (+298 more)
+- **302 isolated node(s):** `Supported tools`, `Quick start`, `Requirements`, `Uninstall`, `Review before proceeding` (+297 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **6 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
@@ -337,4 +336,4 @@ _Questions this graph is uniquely positioned to answer:_
 - **Are the 5 inferred relationships involving `repoFileExists()` (e.g. with `planInstallCaveman()` and `planUninstallCaveman()`) actually correct?**
   _`repoFileExists()` has 5 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `Supported tools`, `Quick start`, `Requirements` to the rest of the system?**
-  _315 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _314 weakly-connected nodes found - possible documentation gaps or missing edges._
