@@ -4,6 +4,8 @@ import {
   cavememNode20PrereqOk,
   getNode20InstallCommands,
   node20BinDirs,
+  npmCliFromNodeBin,
+  nodeBinFromNpm,
 } from "../src/utils/node-runtime.js";
 import {
   checkPrerequisites,
@@ -36,6 +38,28 @@ describe("node20BinDirs", () => {
     if (process.platform !== "darwin") return;
     const dirs = node20BinDirs();
     assert.ok(dirs.some((d) => d.includes("node@20")));
+  });
+});
+
+describe("npmCliFromNodeBin", () => {
+  it("returns null when npm-cli.js is absent", () => {
+    assert.equal(npmCliFromNodeBin("/nonexistent/node"), null);
+  });
+});
+
+describe("nodeBinFromNpm", () => {
+  it("maps npm path to node binary", () => {
+    if (process.platform === "win32") {
+      assert.equal(
+        nodeBinFromNpm("C:\\nvm\\v20.0.0\\npm.cmd"),
+        "C:\\nvm\\v20.0.0\\node.exe",
+      );
+    } else {
+      assert.equal(
+        nodeBinFromNpm("/opt/homebrew/opt/node@20/bin/npm"),
+        "/opt/homebrew/opt/node@20/bin/node",
+      );
+    }
   });
 });
 

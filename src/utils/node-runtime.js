@@ -27,6 +27,19 @@ export function node20NpmCandidates() {
       "/opt/homebrew/opt/node@20/bin/npm",
       "/usr/local/opt/node@20/bin/npm",
     );
+    for (const cellarRoot of [
+      "/opt/homebrew/Cellar/node@20",
+      "/usr/local/Cellar/node@20",
+    ]) {
+      if (!pathExists(cellarRoot)) continue;
+      try {
+        for (const ver of fs.readdirSync(cellarRoot)) {
+          candidates.push(path.join(cellarRoot, ver, "bin", "npm"));
+        }
+      } catch {
+        // ignore
+      }
+    }
   }
 
   for (const root of nodeVersionRoots(home)) {
@@ -113,6 +126,72 @@ export function cavememBinFromNpm(npmPath) {
     : path.join(dir, "cavemem");
 }
 
+/**
+ * @param {string} npmPath
+ * @returns {string}
+ */
+export function nodeBinFromNpm(npmPath) {
+  const dir = path.dirname(npmPath);
+  return process.platform === "win32"
+    ? path.join(dir, "node.exe")
+    : path.join(dir, "node");
+}
+
+/**
+ * @param {string} nodeBin
+ * @returns {string|null}
+ */
+export function npmCliFromNodeBin(nodeBin) {
+  const dir = path.dirname(nodeBin);
+  /** @type {string[]} */
+  const candidates = [
+    path.join(dir, "..", "lib", "node_modules", "npm", "bin", "npm-cli.js"),
+    path.join(dir, "node_modules", "npm", "bin", "npm-cli.js"),
+  ];
+  for (const cli of candidates) {
+    if (pathExists(cli)) return cli;
+  }
+  return null;
+}
+
+/**
+ * Env with Node 20 bin dir first so npm/cavemem shebangs resolve correctly.
+ * @param {string} npmOrBinPath
+ * @returns {NodeJS.ProcessEnv}
+ */
+export function envWithNode20First(npmOrBinPath) {
+  const dir = path.dirname(npmOrBinPath);
+  return {
+    PATH: `${dir}${path.delimiter}${process.env.PATH || ""}`,
+  };
+}
+
+/**
+ * Run npm via the matching node binary (avoids #!/usr/bin/env node picking host Node 23).
+ * @param {string} npmPath `"npm"` or absolute path to npm
+ * @param {string[]} args
+ * @param {{ cwd?: string, env?: NodeJS.ProcessEnv, dryRun?: boolean, verbose?: boolean }} [opts]
+ */
+export async function runNpm(npmPath, args, opts = {}) {
+  if (npmPath === "npm") {
+    return run("npm", args, opts);
+  }
+
+  const nodeBin = nodeBinFromNpm(npmPath);
+  const npmCli = npmCliFromNodeBin(nodeBin);
+  const node20Env = envWithNode20First(npmPath);
+  const mergedOpts = {
+    ...opts,
+    env: { ...node20Env, ...opts.env },
+  };
+
+  if (npmCli) {
+    return run(nodeBin, [npmCli, ...args], mergedOpts);
+  }
+
+  return run(npmPath, args, mergedOpts);
+}
+
 /** @returns {string[]} */
 export function node20BinDirs() {
   /** @type {string[]} */
@@ -132,7 +211,12 @@ export function node20BinDirs() {
 /** @returns {string[]} */
 export function getNode20InstallCommands() {
   const os = process.platform;
-  if (os === "darwin") return ["brew install node@20"];
+  if (os === "darwin") {
+    return [
+      "brew install node@20",
+      "brew link --overwrite --force node@20 2>/dev/null || true",
+    ];
+  }
   if (os === "win32") {
     return [
       "nvm install 20",

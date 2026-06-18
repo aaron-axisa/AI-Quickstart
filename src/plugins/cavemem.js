@@ -1,12 +1,17 @@
 import path from "node:path";
 import { UPSTREAM } from "../constants.js";
+import { augmentPrereqPath } from "../utils/detect.js";
 import { resolvePlatforms } from "../platforms.js";
 import {
   cavememCommand,
   cavememSupportsPlatform,
 } from "../platform-maps/cavemem.js";
-import { resolveCavememRuntime } from "../utils/node-runtime.js";
-import { run, runShell } from "../utils/exec.js";
+import {
+  envWithNode20First,
+  resolveCavememRuntime,
+  runNpm,
+} from "../utils/node-runtime.js";
+import { runShell } from "../utils/exec.js";
 
 const CAVEMEM_PKG = `${UPSTREAM.cavemem.package}@latest`;
 const SQLITE_PKG = "better-sqlite3@12.11.1";
@@ -16,6 +21,7 @@ const SQLITE_PKG = "better-sqlite3@12.11.1";
  * @returns {Promise<{ ok: boolean, bin: string, stderr: string }>}
  */
 async function installCavememGlobal(opts) {
+  augmentPrereqPath();
   const runtime = await resolveCavememRuntime();
   const hostMajor = Number(process.versions.node.split(".")[0]);
   const maxNative = UPSTREAM.cavemem.maxNodeForNative ?? 22;
@@ -41,7 +47,7 @@ async function installCavememGlobal(opts) {
   }
 
   console.log(`[cavemem] ${runtime.npm} install -g ${CAVEMEM_PKG}...`);
-  const res = await run(runtime.npm, args, opts);
+  const res = await runNpm(runtime.npm, args, opts);
   if (res.code !== 0) {
     return {
       ok: false,
@@ -117,12 +123,22 @@ function cavememFailureMessage(stderr) {
   ].join("\n");
 }
 
+function cavememShellOpts(runtime, baseOpts = {}) {
+  if (!runtime?.usesNode20) return baseOpts;
+  return {
+    ...baseOpts,
+    env: { ...envWithNode20First(runtime.bin), ...baseOpts.env },
+  };
+}
+
 /**
  * @param {import("../runner.js").RunConfig} config
  */
 export async function installCavemem(config) {
   const platforms = resolvePlatforms(config.platforms);
   const actions = [];
+  augmentPrereqPath();
+  const runtime = await resolveCavememRuntime();
 
   console.log("\n[cavemem] Installing cavemem globally...");
   const globalInstall = await installCavememGlobal({
@@ -136,6 +152,10 @@ export async function installCavemem(config) {
 
   actions.push(`npm install -g ${CAVEMEM_PKG}`);
   const cavememBin = globalInstall.bin;
+  const shellOpts = cavememShellOpts(runtime, {
+    dryRun: config.dryRun,
+    verbose: config.verbose,
+  });
 
   for (const platform of platforms) {
     if (!cavememSupportsPlatform(platform.id)) {
@@ -144,10 +164,7 @@ export async function installCavemem(config) {
     }
     const cmd = cavememCommand(platform.id, "install", { bin: cavememBin });
     console.log(`[cavemem] ${cmd}`);
-    const r = await runShell(cmd, {
-      dryRun: config.dryRun,
-      verbose: config.verbose,
-    });
+    const r = await runShell(cmd, shellOpts);
     if (r.code !== 0 && !config.dryRun) {
       throw new Error(
         `cavemem install for ${platform.id} failed:\n${r.stderr || r.stdout}`,
@@ -161,7 +178,7 @@ export async function installCavemem(config) {
       cavememBin === "cavemem"
         ? "cavemem doctor"
         : `"${cavememBin}" doctor`;
-    const doctor = await runShell(doctorCmd, { verbose: config.verbose });
+    const doctor = await runShell(doctorCmd, shellOpts);
     if (doctor.code !== 0) {
       console.warn("[cavemem] cavemem doctor reported issues — check output above.");
     }
@@ -180,17 +197,19 @@ export async function installCavemem(config) {
 export async function uninstallCavemem(config) {
   const platforms = resolvePlatforms(config.platforms);
   const actions = [];
+  augmentPrereqPath();
   const runtime = await resolveCavememRuntime();
   const cavememBin = runtime?.bin ?? "cavemem";
+  const shellOpts = cavememShellOpts(runtime, {
+    dryRun: config.dryRun,
+    verbose: config.verbose,
+  });
 
   for (const platform of platforms) {
     if (!cavememSupportsPlatform(platform.id)) continue;
     const cmd = cavememCommand(platform.id, "uninstall", { bin: cavememBin });
     console.log(`[cavemem] ${cmd}`);
-    const r = await runShell(cmd, {
-      dryRun: config.dryRun,
-      verbose: config.verbose,
-    });
+    const r = await runShell(cmd, shellOpts);
     if (r.code !== 0 && !config.dryRun) {
       throw new Error(
         `cavemem uninstall for ${platform.id} failed:\n${r.stderr || r.stdout}`,

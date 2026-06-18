@@ -134,16 +134,18 @@ function getUvInstallCommands() {
 export async function installMissingPrerequisites(results, opts = {}) {
   const failed = results.filter((r) => r.required && !r.ok && r.installCommands);
   for (const r of failed) {
-    const cmd = r.installCommands[0];
-    if (cmd.startsWith("#")) continue;
+    const commands = r.installCommands.filter((c) => !c.startsWith("#"));
+    if (!commands.length) continue;
     console.log(`Installing ${r.label}...`);
-    const res = await runShell(cmd, opts);
-    if (res.code !== 0) {
-      throw new Error(
-        `Failed to install ${r.label}. Run manually:\n  ${r.installCommands.join("\n  ")}`,
-      );
+    for (const cmd of commands) {
+      const res = await runShell(cmd, opts);
+      if (res.code !== 0) {
+        throw new Error(
+          `Failed to install ${r.label}. Run manually:\n  ${r.installCommands.join("\n  ")}`,
+        );
+      }
+      augmentPrereqPath();
     }
-    augmentPrereqPath();
   }
 
   const uv = results.find((r) => r.id === "uv");

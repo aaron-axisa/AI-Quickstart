@@ -49,7 +49,7 @@ function shellQuote(s) {
 
 /**
  * @param {string} cmd
- * @param {{ cwd?: string, dryRun?: boolean, verbose?: boolean }} opts
+ * @param {{ cwd?: string, env?: NodeJS.ProcessEnv, dryRun?: boolean, verbose?: boolean }} opts
  */
 export async function runShell(cmd, opts = {}) {
   if (opts.dryRun) {
@@ -65,6 +65,7 @@ export async function runShell(cmd, opts = {}) {
   return new Promise((resolve, reject) => {
     const child = spawn(shell, shellArgs, {
       cwd: opts.cwd,
+      env: { ...process.env, ...opts.env },
       stdio: ["ignore", "pipe", "pipe"],
     });
     let stdout = "";
