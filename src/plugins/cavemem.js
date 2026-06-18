@@ -3,22 +3,23 @@ import { UPSTREAM } from "../constants.js";
 import { augmentPrereqPath } from "../utils/detect.js";
 import { resolvePlatforms } from "../platforms.js";
 import {
+  cavememCliArgs,
   cavememCommand,
   cavememSupportsPlatform,
 } from "../platform-maps/cavemem.js";
 import {
-  envWithNode20First,
+  resolveCavememBin,
   resolveCavememRuntime,
+  runCavememCli,
   runNpm,
 } from "../utils/node-runtime.js";
-import { runShell } from "../utils/exec.js";
 
 const CAVEMEM_PKG = `${UPSTREAM.cavemem.package}@latest`;
 const SQLITE_PKG = "better-sqlite3@12.11.1";
 
 /**
  * @param {{ dryRun?: boolean, verbose?: boolean }} opts
- * @returns {Promise<{ ok: boolean, bin: string, stderr: string }>}
+ * @returns {Promise<{ ok: boolean, runtime: import("../utils/node-runtime.js").CavememRuntime, stderr: string }>}
  */
 async function installCavememGlobal(opts) {
   augmentPrereqPath();
@@ -29,7 +30,7 @@ async function installCavememGlobal(opts) {
   if (!runtime) {
     return {
       ok: false,
-      bin: "cavemem",
+      runtime: { npm: "npm", bin: "cavemem", usesNode20: false },
       stderr:
         "Node 20 side-by-side install not found. Re-run with --install-prerequisites or install Node 20 manually.",
     };
@@ -37,7 +38,7 @@ async function installCavememGlobal(opts) {
 
   if (runtime.usesNode20) {
     console.log(
-      `[cavemem] Using Node 20 at ${path.dirname(runtime.bin)} (host Node ${process.versions.node} unchanged)`,
+      `[cavemem] Using Node 20 npm at ${runtime.npm} (host Node ${process.versions.node} unchanged)`,
     );
   }
 
@@ -51,12 +52,20 @@ async function installCavememGlobal(opts) {
   if (res.code !== 0) {
     return {
       ok: false,
-      bin: runtime.bin,
+      runtime,
       stderr: (res.stderr || res.stdout).trim(),
     };
   }
 
-  return { ok: true, bin: runtime.bin, stderr: "" };
+  if (!opts.dryRun && runtime.usesNode20) {
+    const bin = await resolveCavememBin(runtime.npm);
+    if (bin) {
+      runtime.bin = bin;
+      console.log(`[cavemem] Global CLI: ${bin}`);
+    }
+  }
+
+  return { ok: true, runtime, stderr: "" };
 }
 
 /**
@@ -123,14 +132,6 @@ function cavememFailureMessage(stderr) {
   ].join("\n");
 }
 
-function cavememShellOpts(runtime, baseOpts = {}) {
-  if (!runtime?.usesNode20) return baseOpts;
-  return {
-    ...baseOpts,
-    env: { ...envWithNode20First(runtime.bin), ...baseOpts.env },
-  };
-}
-
 /**
  * @param {import("../runner.js").RunConfig} config
  */
@@ -138,7 +139,6 @@ export async function installCavemem(config) {
   const platforms = resolvePlatforms(config.platforms);
   const actions = [];
   augmentPrereqPath();
-  const runtime = await resolveCavememRuntime();
 
   console.log("\n[cavemem] Installing cavemem globally...");
   const globalInstall = await installCavememGlobal({
@@ -150,35 +150,32 @@ export async function installCavemem(config) {
     throw new Error(cavememFailureMessage(globalInstall.stderr));
   }
 
+  const runtime = globalInstall.runtime;
   actions.push(`npm install -g ${CAVEMEM_PKG}`);
-  const cavememBin = globalInstall.bin;
-  const shellOpts = cavememShellOpts(runtime, {
-    dryRun: config.dryRun,
-    verbose: config.verbose,
-  });
+
+  const cliOpts = { dryRun: config.dryRun, verbose: config.verbose };
 
   for (const platform of platforms) {
     if (!cavememSupportsPlatform(platform.id)) {
       console.log(`[cavemem] Skipping unsupported platform: ${platform.id}`);
       continue;
     }
-    const cmd = cavememCommand(platform.id, "install", { bin: cavememBin });
-    console.log(`[cavemem] ${cmd}`);
-    const r = await runShell(cmd, shellOpts);
+    const args = cavememCliArgs(platform.id, "install");
+    if (!args) continue;
+    console.log(
+      `[cavemem] ${runtime.usesNode20 ? `${runtime.npm} exec -g -- cavemem` : "cavemem"} ${args.join(" ")}`,
+    );
+    const r = await runCavememCli(runtime, args, cliOpts);
     if (r.code !== 0 && !config.dryRun) {
       throw new Error(
         `cavemem install for ${platform.id} failed:\n${r.stderr || r.stdout}`,
       );
     }
-    actions.push(cmd);
+    actions.push(cavememCommand(platform.id, "install", { bin: runtime.bin }) ?? "");
   }
 
   if (!config.dryRun) {
-    const doctorCmd =
-      cavememBin === "cavemem"
-        ? "cavemem doctor"
-        : `"${cavememBin}" doctor`;
-    const doctor = await runShell(doctorCmd, shellOpts);
+    const doctor = await runCavememCli(runtime, ["doctor"], cliOpts);
     if (doctor.code !== 0) {
       console.warn("[cavemem] cavemem doctor reported issues — check output above.");
     }
@@ -187,7 +184,7 @@ export async function installCavemem(config) {
   return {
     tool: "cavemem",
     ok: true,
-    summary: actions.join("; "),
+    summary: actions.filter(Boolean).join("; "),
   };
 }
 
@@ -199,30 +196,33 @@ export async function uninstallCavemem(config) {
   const actions = [];
   augmentPrereqPath();
   const runtime = await resolveCavememRuntime();
-  const cavememBin = runtime?.bin ?? "cavemem";
-  const shellOpts = cavememShellOpts(runtime, {
-    dryRun: config.dryRun,
-    verbose: config.verbose,
-  });
+  if (!runtime) {
+    throw new Error("Cavemem runtime not found for uninstall.");
+  }
+
+  const cliOpts = { dryRun: config.dryRun, verbose: config.verbose };
 
   for (const platform of platforms) {
     if (!cavememSupportsPlatform(platform.id)) continue;
-    const cmd = cavememCommand(platform.id, "uninstall", { bin: cavememBin });
-    console.log(`[cavemem] ${cmd}`);
-    const r = await runShell(cmd, shellOpts);
+    const args = cavememCliArgs(platform.id, "uninstall");
+    if (!args) continue;
+    console.log(
+      `[cavemem] ${runtime.usesNode20 ? `${runtime.npm} exec -g -- cavemem` : "cavemem"} ${args.join(" ")}`,
+    );
+    const r = await runCavememCli(runtime, args, cliOpts);
     if (r.code !== 0 && !config.dryRun) {
       throw new Error(
         `cavemem uninstall for ${platform.id} failed:\n${r.stderr || r.stdout}`,
       );
     }
-    actions.push(cmd);
+    actions.push(cavememCommand(platform.id, "uninstall", { bin: runtime.bin }) ?? "");
   }
 
   console.log("\n[cavemem] Cavemem unregistered.");
   return {
     tool: "cavemem",
     ok: true,
-    summary: actions.join("; ") || "nothing to remove",
+    summary: actions.filter(Boolean).join("; ") || "nothing to remove",
   };
 }
 

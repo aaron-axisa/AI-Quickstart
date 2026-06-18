@@ -167,6 +167,90 @@ export function envWithNode20First(npmOrBinPath) {
 }
 
 /**
+ * Global npm bin directory for a given npm executable.
+ * @param {string} npmPath
+ * @returns {Promise<string|null>}
+ */
+export async function npmGlobalBinDir(npmPath) {
+  if (npmPath === "npm") {
+    const res = await run("npm", ["bin", "-g"], { verbose: false });
+    return res.code === 0 ? res.stdout.trim() : null;
+  }
+  const res = await runNpm(npmPath, ["bin", "-g"], { verbose: false });
+  return res.code === 0 ? res.stdout.trim() : null;
+}
+
+/**
+ * Resolve cavemem CLI path after global install (npm global bin may differ from npm dir).
+ * @param {string} npmPath
+ * @returns {Promise<string|null>}
+ */
+export async function resolveCavememBin(npmPath) {
+  const globalBin = await npmGlobalBinDir(npmPath);
+  if (globalBin) {
+    const name = process.platform === "win32" ? "cavemem.cmd" : "cavemem";
+    const bin = path.join(globalBin, name);
+    if (pathExists(bin)) return bin;
+  }
+
+  const fallback = cavememBinFromNpm(npmPath);
+  if (pathExists(fallback)) return fallback;
+
+  const entry = await cavememPackageEntry(npmPath);
+  return entry;
+}
+
+/**
+ * @param {string} npmPath
+ * @returns {Promise<string|null>}
+ */
+async function cavememPackageEntry(npmPath) {
+  const res = await runNpm(npmPath, ["root", "-g"], { verbose: false });
+  if (res.code !== 0) return null;
+
+  const pkgJsonPath = path.join(res.stdout.trim(), "cavemem", "package.json");
+  if (!pathExists(pkgJsonPath)) return null;
+
+  try {
+    const pkg = JSON.parse(fs.readFileSync(pkgJsonPath, "utf8"));
+    const binField = pkg.bin;
+    const rel =
+      typeof binField === "string"
+        ? binField
+        : binField?.cavemem ?? binField?.["cavemem"];
+    if (!rel) return null;
+    return path.join(path.dirname(pkgJsonPath), rel);
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * @param {CavememRuntime} runtime
+ * @param {string[]} args
+ * @param {{ cwd?: string, env?: NodeJS.ProcessEnv, dryRun?: boolean, verbose?: boolean }} [opts]
+ */
+export async function runCavememCli(runtime, args, opts = {}) {
+  const line = runtime.usesNode20
+    ? `${runtime.npm} exec -g -- cavemem ${args.join(" ")}`
+    : `cavemem ${args.join(" ")}`;
+
+  if (opts.dryRun) {
+    console.log(`[dry-run] ${line}`);
+    return { code: 0, stdout: "", stderr: "" };
+  }
+
+  if (opts.verbose) console.log(`> ${line}`);
+
+  if (runtime.usesNode20) {
+    return runNpm(runtime.npm, ["exec", "-g", "--", "cavemem", ...args], opts);
+  }
+
+  const { runShell } = await import("./exec.js");
+  return runShell(`cavemem ${args.join(" ")}`, opts);
+}
+
+/**
  * Run npm via the matching node binary (avoids #!/usr/bin/env node picking host Node 23).
  * @param {string} npmPath `"npm"` or absolute path to npm
  * @param {string[]} args
@@ -200,6 +284,8 @@ export function node20BinDirs() {
     dirs.push(
       "/opt/homebrew/opt/node@20/bin",
       "/usr/local/opt/node@20/bin",
+      "/opt/homebrew/bin",
+      "/usr/local/bin",
     );
   }
   for (const npm of node20NpmCandidates()) {
