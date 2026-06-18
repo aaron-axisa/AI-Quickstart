@@ -8,6 +8,17 @@ set -euo pipefail
 
 REPO="aaron-axisa/AI-Quickstart"
 
+# Re-attach controlling terminal when script is piped (curl | bash).
+run_with_tty() {
+  if [ -t 0 ]; then
+    exec "$@"
+  elif [ -e /dev/tty ]; then
+    exec "$@" < /dev/tty
+  else
+    exec "$@"
+  fi
+}
+
 if ! command -v node >/dev/null 2>&1; then
   echo "ai-quickstart: Node.js (>=18) required. Install:" >&2
   echo "  macOS:  brew install node" >&2
@@ -22,9 +33,11 @@ if [ "$NODE_MAJOR" -lt 18 ]; then
   exit 1
 fi
 
+echo "ai-quickstart: starting installer (npx may take a moment on first run)..."
+
 here="$(cd "$(dirname "${BASH_SOURCE[0]:-}")" 2>/dev/null && pwd)" || here=""
 if [ -n "$here" ] && [ -f "$here/bin/install.js" ]; then
-  exec node "$here/bin/install.js" "$@"
+  run_with_tty node "$here/bin/install.js" "$@"
 fi
 
 if ! command -v npx >/dev/null 2>&1; then
@@ -32,4 +45,4 @@ if ! command -v npx >/dev/null 2>&1; then
   exit 1
 fi
 
-exec npx -y "github:$REPO" "$@"
+run_with_tty npx -y "github:$REPO" "$@"

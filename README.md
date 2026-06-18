@@ -175,9 +175,23 @@ irm https://raw.githubusercontent.com/aaron-axisa/AI-Quickstart/main/install.ps1
 
 Preferred on Windows: `npx.cmd -y github:aaron-axisa/AI-Quickstart` (no execution-policy issues).
 
-**Installer appears hung / does nothing**
+**Installer appears hung / does nothing (Windows)**
 
 Nested `powershell -Command "irm ... | iex"` has no interactive terminal. Use `npx.cmd` or run `irm | iex` in an already-open PowerShell window.
+
+**Interactive mode needs a real terminal (TTY)**
+
+- **macOS / Linux:** `curl ... | bash` is supported — `install.sh` re-attaches `/dev/tty` automatically. If you still see this error, run `bash install.sh` from a cloned repo or use non-interactive flags (below).
+- **Windows:** use `npx.cmd -y github:aaron-axisa/AI-Quickstart` (not nested `powershell -Command`).
+- **CI / headless:** no TTY available — pass flags via `bash -s --`:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/aaron-axisa/AI-Quickstart/main/install.sh | bash -s -- \
+  --path "$PWD/my-app" \
+  --preset full \
+  --platforms cursor \
+  --non-interactive -y
+```
 
 **`Invoke-Expression` / null Path error with `irm | iex`**
 

@@ -18,7 +18,11 @@ async function main() {
       return;
     }
 
-    if (needsInteractive(cli) && !process.stdin.isTTY) {
+    if (
+      needsInteractive(cli) &&
+      !process.stdin.isTTY &&
+      process.platform === "win32"
+    ) {
       console.error(`
 AI-Quickstart interactive mode needs a real terminal (TTY).
 
