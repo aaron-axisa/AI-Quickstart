@@ -32,6 +32,13 @@ describe("aider profile mapping", () => {
   });
 });
 
+describe("copilot profile mapping", () => {
+  it("matches upstream github-copilot skills profile", () => {
+    assert.equal(getCavemanOnly("copilot"), "github-copilot");
+    assert.equal(getSkillsAgent("copilot"), "github-copilot");
+  });
+});
+
 describe("envForChildNodeTools", () => {
   it("prepends active node directory to PATH on Windows", () => {
     if (process.platform !== "win32") return;

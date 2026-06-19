@@ -6,7 +6,7 @@ export const CAVEMAN_ONLY = {
   opencode: "opencode",
   windsurf: "windsurf",
   cline: "cline",
-  copilot: "copilot",
+  copilot: "github-copilot",
   gemini: "gemini",
   aider: "aider-desk",
 };

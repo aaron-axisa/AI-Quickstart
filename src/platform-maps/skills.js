@@ -7,7 +7,7 @@ export const SKILLS_AGENT = {
   opencode: "opencode",
   windsurf: "windsurf",
   cline: "cline",
-  copilot: "copilot",
+  copilot: "github-copilot",
   gemini: "gemini",
   aider: "aider-desk",
 };
