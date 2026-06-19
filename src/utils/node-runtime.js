@@ -198,16 +198,51 @@ export function npxCliFromNodeBin(nodeBin) {
 }
 
 /**
+ * PATH env for child npm/npx processes (Windows Program Files / user npm bin).
+ * @returns {NodeJS.ProcessEnv}
+ */
+export function envForChildNodeTools() {
+  /** @type {string[]} */
+  const dirs = [path.dirname(process.execPath)];
+  if (process.platform === "win32") {
+    dirs.push(...win32NpmPathDirs());
+  }
+
+  const seen = new Set();
+  const merged = [];
+  for (const dir of [
+    ...dirs,
+    ...(process.env.PATH || "").split(path.delimiter),
+  ]) {
+    if (!dir || seen.has(dir)) continue;
+    seen.add(dir);
+    merged.push(dir);
+  }
+
+  return {
+    PATH: merged.join(path.delimiter),
+    NODE: process.execPath,
+    npm_node_execpath: process.execPath,
+  };
+}
+
+/**
  * Run npx via node + npx-cli.js when available (avoids .cmd quoting on Windows).
  * @param {string[]} args
  * @param {{ cwd?: string, env?: NodeJS.ProcessEnv, dryRun?: boolean, verbose?: boolean }} [opts]
  */
 export async function runNpx(args, opts = {}) {
+  const toolEnv = envForChildNodeTools();
+  const mergedOpts = {
+    ...opts,
+    env: { ...toolEnv, ...opts.env },
+  };
+
   const npxCli = npxCliFromNodeBin(process.execPath);
   if (npxCli) {
-    return run(process.execPath, [npxCli, ...args], opts);
+    return run(process.execPath, [npxCli, ...args], mergedOpts);
   }
-  return run(resolveSpawnCommand("npx"), args, opts);
+  return run(resolveSpawnCommand("npx"), args, mergedOpts);
 }
 
 /**

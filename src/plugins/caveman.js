@@ -7,7 +7,13 @@ import {
   CAVEMAN_SKILL_DIRS,
   repoFileExists,
 } from "../plan-helpers.js";
-import { runNpx } from "../utils/node-runtime.js";
+import {
+  installCavemanSkillsNative,
+  needsSpacedNodeWorkaround,
+  platformUsesSkillsInstall,
+  runCavemanInitNative,
+} from "../utils/caveman-windows.js";
+import { envForChildNodeTools, runNpx } from "../utils/node-runtime.js";
 import {
   deleteDirIfExists,
   deleteFileIfExists,
@@ -114,9 +120,9 @@ export function planUninstallCaveman(config) {
 
 /**
  * @param {import("../runner.js").RunConfig} config
+ * @param {import("../platforms.js").PlatformDef[]} platforms
  */
-export async function installCaveman(config) {
-  const platforms = resolvePlatforms(config.platforms);
+function buildUpstreamCavemanArgs(config, platforms) {
   const args = [
     "-y",
     `github:${UPSTREAM.caveman.repo}`,
@@ -129,20 +135,79 @@ export async function installCaveman(config) {
     if (only) args.push("--only", only);
   }
 
-  if (config.caveman.withInit) args.push("--with-init");
   if (config.caveman.minimal) args.push("--minimal");
   if (config.caveman.force) args.push("--force");
+  return args;
+}
+
+/**
+ * @param {import("../runner.js").RunConfig} config
+ */
+export async function installCaveman(config) {
+  const platforms = resolvePlatforms(config.platforms);
+  const skillsPlatforms = platforms.filter((p) =>
+    platformUsesSkillsInstall(p.id),
+  );
+  const upstreamPlatforms = platforms.filter(
+    (p) => getCavemanOnly(p.id) && !platformUsesSkillsInstall(p.id),
+  );
+  const useWorkaround =
+    needsSpacedNodeWorkaround() && skillsPlatforms.length > 0;
+
+  if (useWorkaround) {
+    console.log(
+      "\n[caveman] Windows node path has spaces — using direct npx/init (upstream spawn workaround)...",
+    );
+    await installCavemanSkillsNative(config, skillsPlatforms);
+
+    if (config.caveman.withInit) {
+      console.log("\n[caveman] Writing per-repo IDE rule files (--with-init)...");
+      const initOk = await runCavemanInitNative(config);
+      if (!initOk && !config.dryRun) {
+        throw new Error(
+          "caveman-init failed. See https://github.com/JuliusBrussee/caveman/issues",
+        );
+      }
+    }
+
+    if (upstreamPlatforms.length === 0) {
+      return {
+        tool: "caveman",
+        ok: true,
+        summary: `caveman for ${platforms.map((p) => p.id).join(", ")}`,
+      };
+    }
+
+    console.log(
+      `\n[caveman] Running upstream installer for: ${upstreamPlatforms.map((p) => p.id).join(", ")}`,
+    );
+  }
+
+  const upstreamTargets = useWorkaround ? upstreamPlatforms : platforms;
+  if (!upstreamTargets.length) {
+    return {
+      tool: "caveman",
+      ok: true,
+      summary: `caveman for ${platforms.map((p) => p.id).join(", ")}`,
+    };
+  }
+
+  const args = buildUpstreamCavemanArgs(config, upstreamTargets);
+  if (config.caveman.withInit && !useWorkaround) {
+    args.push("--with-init");
+  }
 
   console.log("\n[caveman] Installing via upstream installer...");
   const result = await runNpx(args, {
     cwd: config.repoPath,
     dryRun: config.dryRun,
     verbose: config.verbose,
+    env: envForChildNodeTools(),
   });
 
   if (result.code !== 0 && !config.dryRun) {
     throw new Error(
-      `caveman install failed (exit ${result.code}). See https://github.com/JuliusBrussee/caveman/issues\n${result.stderr}`,
+      `caveman install failed (exit ${result.code}). See https://github.com/JuliusBrussee/caveman/issues\n${result.stderr || result.stdout}`,
     );
   }
 
@@ -177,11 +242,15 @@ export async function uninstallCaveman(config) {
     console.log("\n[caveman] Running upstream global uninstall...");
     const result = await runNpx(
       ["-y", `github:${UPSTREAM.caveman.repo}`, "--", "--uninstall", "--non-interactive"],
-      { dryRun: config.dryRun, verbose: config.verbose },
+      {
+        dryRun: config.dryRun,
+        verbose: config.verbose,
+        env: envForChildNodeTools(),
+      },
     );
     if (result.code !== 0 && !config.dryRun) {
       throw new Error(
-        `caveman global uninstall failed (exit ${result.code}).\n${result.stderr}`,
+        `caveman global uninstall failed (exit ${result.code}).\n${result.stderr || result.stdout}`,
       );
     }
     removed.push("global caveman hooks/plugins");

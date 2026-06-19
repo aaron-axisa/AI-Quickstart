@@ -180,6 +180,10 @@ Preferred on Windows: `npx.cmd -y github:aaron-axisa/AI-Quickstart` (no executio
 
 Node installed under `Program Files` — older AI-Quickstart builds quoted `npx.cmd` wrong for cmd.exe. Current installer runs `node.exe` + `npx-cli.js` directly. Update to latest `main` or run from a local checkout.
 
+**Caveman fails on Windows (`C:\Program` / `npx skills add` / `caveman-init`)**
+
+Upstream caveman spawns `node.exe` and `npx` via shell strings that break when Node lives in `Program Files`. AI-Quickstart detects spaced node paths and runs `npx skills add` + `caveman-init` directly (same as upstream, argv-safe). Claude/Gemini/OpenCode still use upstream installer — prefer nvm-windows or a Node path without spaces for those platforms.
+
 **Installer appears hung / does nothing (Windows)**
 
 Nested `powershell -Command "irm ... | iex"` has no interactive terminal. Use `npx.cmd` or run `irm | iex` in an already-open PowerShell window.
