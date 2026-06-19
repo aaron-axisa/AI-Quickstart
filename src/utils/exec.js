@@ -1,5 +1,42 @@
 import { spawn } from "node:child_process";
 
+/** @param {string} s */
+function shellQuote(s) {
+  if (/^[A-Za-z0-9_./:-]+$/.test(s)) return s;
+  return `"${s.replace(/"/g, '\\"')}"`;
+}
+
+/** @param {string} s */
+function winCmdArg(s) {
+  if (!/[\s"]/u.test(s)) return s;
+  return `"${s.replace(/"/g, '""')}"`;
+}
+
+/**
+ * Spawn a process. Uses argv arrays (no shell) so paths with spaces work on Windows.
+ * .cmd/.bat files run via cmd.exe with proper quoting.
+ * @param {string} command
+ * @param {string[]} args
+ * @param {{ cwd?: string, env?: NodeJS.ProcessEnv }} opts
+ */
+function spawnChild(command, args, opts) {
+  if (process.platform === "win32" && /\.(cmd|bat)$/i.test(command)) {
+    const line = [winCmdArg(command), ...args.map(winCmdArg)].join(" ");
+    return spawn("cmd.exe", ["/d", "/s", "/c", line], {
+      cwd: opts.cwd,
+      env: opts.env,
+      stdio: ["ignore", "pipe", "pipe"],
+    });
+  }
+
+  return spawn(command, args, {
+    cwd: opts.cwd,
+    env: opts.env,
+    shell: false,
+    stdio: ["ignore", "pipe", "pipe"],
+  });
+}
+
 /**
  * @param {string} command
  * @param {string[]} args
@@ -16,13 +53,10 @@ export async function run(command, args, opts = {}) {
     console.log(`> ${line}`);
   }
 
+  const env = { ...process.env, ...opts.env };
+
   return new Promise((resolve, reject) => {
-    const child = spawn(command, args, {
-      cwd: opts.cwd,
-      env: { ...process.env, ...opts.env },
-      shell: process.platform === "win32",
-      stdio: ["ignore", "pipe", "pipe"],
-    });
+    const child = spawnChild(command, args, { cwd: opts.cwd, env });
 
     let stdout = "";
     let stderr = "";
@@ -39,12 +73,6 @@ export async function run(command, args, opts = {}) {
     child.on("error", reject);
     child.on("close", (code) => resolve({ code: code ?? 1, stdout, stderr }));
   });
-}
-
-/** @param {string} s */
-function shellQuote(s) {
-  if (/^[A-Za-z0-9_./:-]+$/.test(s)) return s;
-  return `"${s.replace(/"/g, '\\"')}"`;
 }
 
 /**
