@@ -197,23 +197,49 @@ export function npxCliFromNodeBin(nodeBin) {
   return null;
 }
 
+/** @param {string} dir */
+function dirHasGit(dir) {
+  const name = process.platform === "win32" ? "git.exe" : "git";
+  return pathExists(path.join(dir, name));
+}
+
 /**
  * PATH env for child npm/npx processes (Windows Program Files / user npm bin).
+ * @param {{ strict?: boolean, npmPath?: string }} [opts]
  * @returns {NodeJS.ProcessEnv}
  */
-export function envForChildNodeTools() {
+export function envForChildNodeTools(opts = {}) {
+  const strict =
+    opts.strict ?? (process.platform === "win32");
   /** @type {string[]} */
-  const dirs = [path.dirname(process.execPath)];
+  const dirs = [];
+
+  if (opts.npmPath && opts.npmPath !== "npm") {
+    dirs.push(path.dirname(opts.npmPath));
+  } else {
+    dirs.push(path.dirname(process.execPath));
+  }
+
   if (process.platform === "win32") {
-    dirs.push(...win32NpmPathDirs());
+    for (const dir of win32NpmPathDirs()) {
+      if (!dirs.includes(dir)) dirs.push(dir);
+    }
+    if (strict) {
+      const sysRoot = process.env.SystemRoot || process.env.WINDIR;
+      if (sysRoot) {
+        const system32 = path.join(sysRoot, "System32");
+        if (!dirs.includes(system32)) dirs.push(system32);
+      }
+      for (const dir of (process.env.PATH || "").split(path.delimiter)) {
+        if (dir && dirHasGit(dir) && !dirs.includes(dir)) dirs.push(dir);
+      }
+    }
   }
 
   const seen = new Set();
   const merged = [];
-  for (const dir of [
-    ...dirs,
-    ...(process.env.PATH || "").split(path.delimiter),
-  ]) {
+  const tail = strict ? [] : (process.env.PATH || "").split(path.delimiter);
+  for (const dir of [...dirs, ...tail]) {
     if (!dir || seen.has(dir)) continue;
     seen.add(dir);
     merged.push(dir);
@@ -221,8 +247,13 @@ export function envForChildNodeTools() {
 
   return {
     PATH: merged.join(path.delimiter),
-    NODE: process.execPath,
-    npm_node_execpath: process.execPath,
+    NODE: opts.npmPath && opts.npmPath !== "npm"
+      ? nodeBinFromNpm(opts.npmPath)
+      : process.execPath,
+    npm_node_execpath:
+      opts.npmPath && opts.npmPath !== "npm"
+        ? nodeBinFromNpm(opts.npmPath)
+        : process.execPath,
   };
 }
 
@@ -232,7 +263,7 @@ export function envForChildNodeTools() {
  * @param {{ cwd?: string, env?: NodeJS.ProcessEnv, dryRun?: boolean, verbose?: boolean }} [opts]
  */
 export async function runNpx(args, opts = {}) {
-  const toolEnv = envForChildNodeTools();
+  const toolEnv = envForChildNodeTools({ strict: true });
   const mergedOpts = {
     ...opts,
     env: { ...toolEnv, ...opts.env },
@@ -389,8 +420,16 @@ export async function runCavememCli(runtime, args, opts = {}) {
  * @param {{ cwd?: string, env?: NodeJS.ProcessEnv, dryRun?: boolean, verbose?: boolean }} [opts]
  */
 export async function runNpm(npmPath, args, opts = {}) {
+  const toolEnv = envForChildNodeTools({
+    strict: process.platform === "win32",
+    npmPath,
+  });
+
   if (npmPath === "npm") {
-    return run("npm", args, opts);
+    return run("npm", args, {
+      ...opts,
+      env: { ...toolEnv, ...opts.env },
+    });
   }
 
   const nodeBin = nodeBinFromNpm(npmPath);
@@ -398,7 +437,7 @@ export async function runNpm(npmPath, args, opts = {}) {
   const node20Env = envWithNode20First(npmPath);
   const mergedOpts = {
     ...opts,
-    env: { ...node20Env, ...opts.env },
+    env: { ...toolEnv, ...node20Env, ...opts.env },
   };
 
   if (npmCli) {

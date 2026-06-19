@@ -176,13 +176,35 @@ irm https://raw.githubusercontent.com/aaron-axisa/AI-Quickstart/main/install.ps1
 
 Preferred on Windows: `npx.cmd -y github:aaron-axisa/AI-Quickstart` (no execution-policy issues).
 
+**Stale npx cache / old installer tarball**
+
+After updates to AI-Quickstart, force a fresh fetch:
+
+```powershell
+npx.cmd --yes --force github:aaron-axisa/AI-Quickstart --path C:\path\to\repo --preset full --platforms cursor -y
+```
+
+**`npm ERR! cb.apply is not a function` / `Install for [ 'add@latest' ]`**
+
+Usually **stale npm 6** on PATH ahead of your active Node install. Check:
+
+```powershell
+where.exe node
+where.exe npm
+where.exe npx
+node -v
+npm -v
+```
+
+Current installer uses strict PATH (active Node dir + `%APPDATA%\npm` only) for `npx`/`npm` child processes. Remove or deprioritize old npm folders if versions disagree.
+
 **`\"C:\Program Files\...\npx.cmd\"` is not recognized**
 
 Node installed under `Program Files` — older AI-Quickstart builds quoted `npx.cmd` wrong for cmd.exe. Current installer runs `node.exe` + `npx-cli.js` directly. Update to latest `main` or run from a local checkout.
 
 **Caveman fails on Windows (`C:\Program` / `npx skills add` / `caveman-init`)**
 
-Upstream caveman spawns `node.exe` and `npx` via shell strings that break when Node lives in `Program Files`. AI-Quickstart detects spaced node paths and runs `npx skills add` + `caveman-init` directly (same as upstream, argv-safe). Claude/Gemini/OpenCode still use upstream installer — prefer nvm-windows or a Node path without spaces for those platforms.
+Upstream caveman spawns `node.exe` and `npx` via shell strings that break when Node lives in `Program Files`. On Windows, AI-Quickstart runs `npx skills add` + `caveman-init` directly (argv-safe, strict PATH) for Cursor/Codex/Windsurf/etc. Claude/Gemini/OpenCode still use upstream installer — prefer nvm-windows or a Node path without spaces for those platforms.
 
 **Installer appears hung / does nothing (Windows)**
 

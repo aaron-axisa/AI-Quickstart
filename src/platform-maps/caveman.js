@@ -8,7 +8,7 @@ export const CAVEMAN_ONLY = {
   cline: "cline",
   copilot: "copilot",
   gemini: "gemini",
-  aider: "aider",
+  aider: "aider-desk",
 };
 
 /** @param {string} platformId */
