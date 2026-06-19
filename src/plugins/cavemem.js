@@ -10,6 +10,7 @@ import {
 import {
   resolveCavememBin,
   resolveCavememRuntime,
+  resolveHostNpm,
   runCavememCli,
   runNpm,
 } from "../utils/node-runtime.js";
@@ -30,7 +31,7 @@ async function installCavememGlobal(opts) {
   if (!runtime) {
     return {
       ok: false,
-      runtime: { npm: "npm", bin: "cavemem", usesNode20: false },
+      runtime: { npm: resolveHostNpm(), bin: "cavemem", usesNode20: false },
       stderr:
         "Node 20 side-by-side install not found. Re-run with --install-prerequisites or install Node 20 manually.",
     };
@@ -57,7 +58,7 @@ async function installCavememGlobal(opts) {
     };
   }
 
-  if (!opts.dryRun && runtime.usesNode20) {
+  if (!opts.dryRun) {
     const bin = await resolveCavememBin(runtime.npm);
     if (bin) {
       runtime.bin = bin;
@@ -162,9 +163,7 @@ export async function installCavemem(config) {
     }
     const args = cavememCliArgs(platform.id, "install");
     if (!args) continue;
-    console.log(
-      `[cavemem] ${runtime.usesNode20 ? `${runtime.npm} exec -g -- cavemem` : "cavemem"} ${args.join(" ")}`,
-    );
+    console.log(`[cavemem] ${runtime.npm} exec -g -- cavemem ${args.join(" ")}`);
     const r = await runCavememCli(runtime, args, cliOpts);
     if (r.code !== 0 && !config.dryRun) {
       throw new Error(
@@ -206,9 +205,7 @@ export async function uninstallCavemem(config) {
     if (!cavememSupportsPlatform(platform.id)) continue;
     const args = cavememCliArgs(platform.id, "uninstall");
     if (!args) continue;
-    console.log(
-      `[cavemem] ${runtime.usesNode20 ? `${runtime.npm} exec -g -- cavemem` : "cavemem"} ${args.join(" ")}`,
-    );
+    console.log(`[cavemem] ${runtime.npm} exec -g -- cavemem ${args.join(" ")}`);
     const r = await runCavememCli(runtime, args, cliOpts);
     if (r.code !== 0 && !config.dryRun) {
       throw new Error(

@@ -13,6 +13,28 @@ function pathExists(p) {
   }
 }
 
+/** @returns {string} */
+export function resolveHostNpm() {
+  if (process.platform === "win32") {
+    const npmCmd = path.join(path.dirname(process.execPath), "npm.cmd");
+    if (pathExists(npmCmd)) return npmCmd;
+  }
+  return "npm";
+}
+
+/** @returns {string[]} */
+export function win32NpmPathDirs() {
+  /** @type {string[]} */
+  const dirs = [];
+  const appData = process.env.APPDATA;
+  if (appData) dirs.push(path.join(appData, "npm"));
+  const localAppData = process.env.LOCALAPPDATA;
+  if (localAppData) dirs.push(path.join(localAppData, "npm"));
+  dirs.push(path.dirname(process.execPath));
+  if (process.env.NVM_SYMLINK) dirs.push(process.env.NVM_SYMLINK);
+  return dirs;
+}
+
 /**
  * Collect candidate npm paths for Node 20 installs.
  * @returns {string[]}
@@ -21,6 +43,10 @@ export function node20NpmCandidates() {
   const home = os.homedir();
   /** @type {string[]} */
   const candidates = [];
+
+  if (process.platform === "win32" && process.env.NVM_SYMLINK) {
+    candidates.push(path.join(process.env.NVM_SYMLINK, "npm.cmd"));
+  }
 
   if (process.platform === "darwin") {
     candidates.push(
@@ -167,6 +193,29 @@ export function envWithNode20First(npmOrBinPath) {
 }
 
 /**
+ * PATH env with npm global bin and common Windows user npm dirs prepended.
+ * @param {string} npmPath
+ * @returns {Promise<NodeJS.ProcessEnv>}
+ */
+export async function envWithNpmGlobalBin(npmPath) {
+  /** @type {string[]} */
+  const dirs = [];
+  const globalBin = await npmGlobalBinDir(npmPath);
+  if (globalBin) dirs.push(globalBin);
+  if (npmPath !== "npm") dirs.push(path.dirname(npmPath));
+  if (process.platform === "win32") dirs.push(...win32NpmPathDirs());
+
+  const seen = new Set();
+  const merged = [];
+  for (const dir of [...dirs, ...(process.env.PATH || "").split(path.delimiter)]) {
+    if (!dir || seen.has(dir)) continue;
+    seen.add(dir);
+    merged.push(dir);
+  }
+  return { PATH: merged.join(path.delimiter) };
+}
+
+/**
  * Global npm bin directory for a given npm executable.
  * @param {string} npmPath
  * @returns {Promise<string|null>}
@@ -196,15 +245,14 @@ export async function resolveCavememBin(npmPath) {
   const fallback = cavememBinFromNpm(npmPath);
   if (pathExists(fallback)) return fallback;
 
-  const entry = await cavememPackageEntry(npmPath);
-  return entry;
+  return cavememPackageEntry(npmPath);
 }
 
 /**
  * @param {string} npmPath
  * @returns {Promise<string|null>}
  */
-async function cavememPackageEntry(npmPath) {
+export async function cavememPackageEntry(npmPath) {
   const res = await runNpm(npmPath, ["root", "-g"], { verbose: false });
   if (res.code !== 0) return null;
 
@@ -231,9 +279,10 @@ async function cavememPackageEntry(npmPath) {
  * @param {{ cwd?: string, env?: NodeJS.ProcessEnv, dryRun?: boolean, verbose?: boolean }} [opts]
  */
 export async function runCavememCli(runtime, args, opts = {}) {
-  const line = runtime.usesNode20
-    ? `${runtime.npm} exec -g -- cavemem ${args.join(" ")}`
-    : `cavemem ${args.join(" ")}`;
+  const { augmentPrereqPath } = await import("./detect.js");
+  augmentPrereqPath();
+
+  const line = `${runtime.npm} exec -g -- cavemem ${args.join(" ")}`;
 
   if (opts.dryRun) {
     console.log(`[dry-run] ${line}`);
@@ -242,12 +291,30 @@ export async function runCavememCli(runtime, args, opts = {}) {
 
   if (opts.verbose) console.log(`> ${line}`);
 
-  if (runtime.usesNode20) {
-    return runNpm(runtime.npm, ["exec", "-g", "--", "cavemem", ...args], opts);
+  const env = await envWithNpmGlobalBin(runtime.npm);
+  const mergedOpts = { ...opts, env: { ...env, ...opts.env } };
+
+  const res = await runNpm(
+    runtime.npm,
+    ["exec", "-g", "--", "cavemem", ...args],
+    mergedOpts,
+  );
+  if (res.code === 0) return res;
+
+  const bin = await resolveCavememBin(runtime.npm);
+  if (bin && pathExists(bin)) {
+    return run(bin, args, mergedOpts);
   }
 
-  const { runShell } = await import("./exec.js");
-  return runShell(`cavemem ${args.join(" ")}`, opts);
+  const entry = await cavememPackageEntry(runtime.npm);
+  if (entry) {
+    const nodeBin = runtime.usesNode20
+      ? nodeBinFromNpm(runtime.npm)
+      : process.execPath;
+    return run(nodeBin, [entry, ...args], mergedOpts);
+  }
+
+  return res;
 }
 
 /**
@@ -288,6 +355,9 @@ export function node20BinDirs() {
       "/usr/local/bin",
     );
   }
+  if (process.platform === "win32") {
+    dirs.push(...win32NpmPathDirs());
+  }
   for (const npm of node20NpmCandidates()) {
     dirs.push(path.dirname(npm));
   }
@@ -306,7 +376,7 @@ export function getNode20InstallCommands() {
   if (os === "win32") {
     return [
       "nvm install 20",
-      "# or: winget install OpenJS.NodeJS.LTS (Node 20 LTS)",
+      "# Run in a shell where nvm is available (no admin required with nvm-windows)",
     ];
   }
   return [
@@ -330,7 +400,11 @@ export async function resolveCavememRuntime() {
   const maxNative = UPSTREAM.cavemem.maxNodeForNative ?? 22;
 
   if (hostMajor <= maxNative) {
-    return { npm: "npm", bin: "cavemem", usesNode20: false };
+    return {
+      npm: resolveHostNpm(),
+      bin: "cavemem",
+      usesNode20: false,
+    };
   }
 
   const npm20 = await findNode20Npm();

@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
-import { node20BinDirs } from "./node-runtime.js";
+import { node20BinDirs, win32NpmPathDirs } from "./node-runtime.js";
 import { commandExists, run } from "./exec.js";
 
 /** @returns {"win32"|"darwin"|"linux"|string} */
@@ -47,10 +47,16 @@ export async function getNodeVersion() {
 export function augmentPrereqPath() {
   const home = getHome();
   /** @type {string[]} */
-  const extras = [
+  const extras = [];
+
+  if (process.platform === "win32") {
+    extras.push(...win32NpmPathDirs(), ...node20BinDirs());
+  }
+
+  extras.push(
     path.join(home, ".local", "bin"),
     path.join(home, ".cargo", "bin"),
-  ];
+  );
 
   if (process.platform === "darwin") {
     extras.push(
@@ -64,8 +70,6 @@ export function augmentPrereqPath() {
     );
   } else if (process.platform === "linux") {
     extras.push("/usr/local/bin", ...node20BinDirs());
-  } else if (process.platform === "win32") {
-    extras.push(...node20BinDirs());
   }
 
   const current = (process.env.PATH || "").split(path.delimiter);

@@ -227,6 +227,20 @@ nvm install 20                # nvm / nvm-windows
 
 Skip Cavemem if you don't need persistent memory: omit from `--tools`.
 
+**Cavemem "not recognised" on Windows (no admin)**
+
+Without admin, `npm install -g cavemem` puts the CLI in `%APPDATA%\npm\cavemem.cmd`. That directory may not be on PATH in a fresh `cmd.exe` session. The installer avoids this by running `npm exec -g -- cavemem ...` instead of bare `cavemem`.
+
+Manual check:
+
+```powershell
+npm exec -g -- cavemem doctor
+```
+
+If that works but the installer failed, update AI-Quickstart to the latest version. For Node 23+ without admin, use **nvm-windows** to install Node 20 side-by-side (`nvm install 20`) — no elevation required.
+
+Paths with spaces in `--path` or your working directory are supported (argv-based spawn, not unquoted shell strings).
+
 **Note:** npm package `caveman` ≠ [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman). Use `npx -y github:JuliusBrussee/caveman` for the token-saving skill.
 
 ## Contributing
