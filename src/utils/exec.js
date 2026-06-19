@@ -1,4 +1,6 @@
 import { spawn } from "node:child_process";
+import fs from "node:fs";
+import path from "node:path";
 
 /** @param {string} s */
 function shellQuote(s) {
@@ -10,6 +12,29 @@ function shellQuote(s) {
 function winCmdArg(s) {
   if (!/[\s"]/u.test(s)) return s;
   return `"${s.replace(/"/g, '""')}"`;
+}
+
+/**
+ * Resolve bare CLI names (npx, npm) to .cmd beside active Node on Windows.
+ * shell:false cannot run extensionless names — only .exe without shell.
+ * @param {string} command
+ * @returns {string}
+ */
+export function resolveSpawnCommand(command) {
+  if (process.platform !== "win32") return command;
+  if (/[\\/]/.test(command)) return command;
+  if (/\.(exe|cmd|bat|js)$/i.test(command)) return command;
+
+  const nodeDir = path.dirname(process.execPath);
+  for (const ext of [".cmd", ".exe"]) {
+    const candidate = path.join(nodeDir, `${command}${ext}`);
+    try {
+      if (fs.existsSync(candidate)) return candidate;
+    } catch {
+      // ignore
+    }
+  }
+  return command;
 }
 
 /**
@@ -43,7 +68,8 @@ function spawnChild(command, args, opts) {
  * @param {{ cwd?: string, env?: NodeJS.ProcessEnv, dryRun?: boolean, verbose?: boolean }} opts
  */
 export async function run(command, args, opts = {}) {
-  const line = `${command} ${args.map(shellQuote).join(" ")}`;
+  const resolved = resolveSpawnCommand(command);
+  const line = `${resolved} ${args.map(shellQuote).join(" ")}`;
   if (opts.dryRun) {
     console.log(`[dry-run] ${line}`);
     return { code: 0, stdout: "", stderr: "" };
@@ -56,7 +82,7 @@ export async function run(command, args, opts = {}) {
   const env = { ...process.env, ...opts.env };
 
   return new Promise((resolve, reject) => {
-    const child = spawnChild(command, args, { cwd: opts.cwd, env });
+    const child = spawnChild(resolved, args, { cwd: opts.cwd, env });
 
     let stdout = "";
     let stderr = "";

@@ -2,7 +2,7 @@ import { describe, it } from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import path from "node:path";
-import { run } from "../src/utils/exec.js";
+import { run, resolveSpawnCommand } from "../src/utils/exec.js";
 import { resolveHostNpm, runNpm } from "../src/utils/node-runtime.js";
 
 describe("run() paths with spaces on Windows", () => {
@@ -35,5 +35,22 @@ describe("run() paths with spaces on Windows", () => {
     );
     assert.doesNotMatch(src, /shell:\s*process\.platform\s*===\s*["']win32["']/);
     assert.doesNotMatch(src, /shell:\s*true/);
+  });
+
+  it("resolves bare npx to npx.cmd beside node on Windows", () => {
+    if (process.platform !== "win32") return;
+    const npxCmd = path.join(path.dirname(process.execPath), "npx.cmd");
+    if (!fs.existsSync(npxCmd)) return;
+    assert.equal(resolveSpawnCommand("npx"), npxCmd);
+  });
+
+  it("runs bare npx on Windows", async () => {
+    if (process.platform !== "win32") return;
+    const npxCmd = path.join(path.dirname(process.execPath), "npx.cmd");
+    if (!fs.existsSync(npxCmd)) return;
+
+    const r = await run("npx", ["--version"], { verbose: false });
+    assert.equal(r.code, 0);
+    assert.match(r.stdout.trim(), /^\d+\.\d+\.\d+/);
   });
 });
