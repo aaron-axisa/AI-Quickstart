@@ -135,19 +135,34 @@ export async function getPythonVersion() {
   return best;
 }
 
-/** @returns {Promise<boolean>} */
-export async function hasUv() {
-  if (await commandExists("uv")) return true;
-
+/** @returns {string[]} */
+export function uvBinCandidates() {
   const home = getHome();
-  const candidates = [
+  /** @type {string[]} */
+  const candidates = [];
+  if (process.platform === "win32") {
+    candidates.push(path.join(home, ".local", "bin", "uv.exe"));
+  }
+  candidates.push(
     path.join(home, ".local", "bin", "uv"),
     path.join(home, ".cargo", "bin", "uv"),
-  ];
-  for (const bin of candidates) {
-    if (pathExists(bin) && (await commandExists(bin))) return true;
+  );
+  return candidates;
+}
+
+/** @returns {Promise<string|null>} */
+export async function resolveUvCommand() {
+  if (await commandExists("uv")) return "uv";
+
+  for (const bin of uvBinCandidates()) {
+    if (pathExists(bin) && (await commandExists(bin))) return bin;
   }
-  return false;
+  return null;
+}
+
+/** @returns {Promise<boolean>} */
+export async function hasUv() {
+  return (await resolveUvCommand()) !== null;
 }
 
 /** @returns {Promise<boolean>} */

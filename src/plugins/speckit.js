@@ -13,6 +13,7 @@ import {
 import { repoFileExists } from "../plan-helpers.js";
 import { deleteDirIfExists } from "../utils/fs.js";
 import { hasUv } from "../utils/detect.js";
+import { getUvInstallCommands } from "../prereqs.js";
 
 /**
  * @param {import("../runner.js").RunConfig} config
@@ -177,7 +178,9 @@ export async function installSpeckit(config) {
   const actions = [];
   const uvOk = config.dryRun || (await hasUv());
   if (!uvOk && !config.dryRun) {
-    throw new Error("uv required for Spec Kit. Install: winget install astral-sh.uv");
+    throw new Error(
+      `uv required for Spec Kit. Install: ${getUvInstallCommands()[0]}`,
+    );
   }
 
   actions.push(await ensureSpecifyCli(config));

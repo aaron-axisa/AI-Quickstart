@@ -6,9 +6,10 @@ import {
   graphifyInstallCommand,
   graphifyUninstallCommand,
 } from "../platform-maps/graphify.js";
-import { run, runShell } from "../utils/exec.js";
+import { run, runShell, commandExists } from "../utils/exec.js";
 import { deleteDirIfExists, ensureGitignoreBlock } from "../utils/fs.js";
-import { hasUv } from "../utils/detect.js";
+import { augmentPrereqPath, getPythonVersion, resolveUvCommand } from "../utils/detect.js";
+import { getUvInstallCommands, installUv } from "../prereqs.js";
 
 /**
  * @param {import("../runner.js").RunConfig} config
@@ -42,6 +43,67 @@ function graphifyPackageSpec(extras) {
 /** @param {string} spec */
 function graphifyUvInstallArgs(spec) {
   return ["tool", "install", spec];
+}
+
+/**
+ * Resolve uv or pipx for global graphifyy install. Auto-installs uv when missing.
+ * @param {import("../runner.js").RunConfig} config
+ * @returns {Promise<{ cmd: string, argsFor: (spec: string) => string[], via: "uv" | "pipx" }>}
+ */
+export async function resolveGraphifyPackageInstaller(config) {
+  augmentPrereqPath();
+
+  const uvCmd = config.dryRun ? "uv" : await resolveUvCommand();
+  if (config.dryRun || uvCmd) {
+    return {
+      cmd: uvCmd ?? "uv",
+      via: "uv",
+      argsFor: (spec) => graphifyUvInstallArgs(spec),
+    };
+  }
+
+  console.log("\n[graphify] uv not found — installing uv...");
+  await installUv({ dryRun: config.dryRun, verbose: config.verbose });
+  augmentPrereqPath();
+  const uvAfterInstall = await resolveUvCommand();
+  if (uvAfterInstall) {
+    return {
+      cmd: uvAfterInstall,
+      via: "uv",
+      argsFor: (spec) => graphifyUvInstallArgs(spec),
+    };
+  }
+
+  if (await commandExists("pipx")) {
+    console.log("[graphify] uv still missing — trying pipx...");
+    return {
+      cmd: "pipx",
+      via: "pipx",
+      argsFor: (spec) => ["install", spec],
+    };
+  }
+
+  const py = await getPythonVersion();
+  if (py) {
+    const moduleArgs = py.cmd === "py" ? ["-3", "-m", "pipx"] : ["-m", "pipx"];
+    if (await commandExists(py.cmd, [...moduleArgs, "--version"])) {
+      console.log("[graphify] uv still missing — trying python -m pipx...");
+      return {
+        cmd: py.cmd,
+        via: "pipx",
+        argsFor: (spec) => [...moduleArgs, "install", spec],
+      };
+    }
+  }
+
+  const uvHints = getUvInstallCommands()
+    .filter((c) => !c.startsWith("#"))
+    .join("\n  ");
+  throw new Error(
+    `[graphify] Neither uv nor pipx available.\n` +
+      `Install uv:\n  ${uvHints}\n` +
+      `Or: python -m pip install --user pipx`,
+  );
 }
 
 /** @param {string} spec */
@@ -186,31 +248,28 @@ export async function installGraphify(config) {
   const spec = graphifyPackageSpecForConfig(config);
   const actions = [];
 
-  const uvAvailable = config.dryRun || (await hasUv());
-
-  if (uvAvailable) {
-    console.log("\n[graphify] Installing graphifyy via uv...");
-    const r = await run("uv", graphifyUvInstallArgs(spec), {
-      dryRun: config.dryRun,
-      verbose: config.verbose,
-    });
-    if (r.code !== 0 && !config.dryRun) {
-      throw new Error(`uv tool install failed: ${r.stderr || r.stdout}`);
-    }
-    actions.push(graphifyUvInstallCommand(spec));
-  } else {
-    console.log("\n[graphify] uv not found — trying pipx...");
-    const r = await run("pipx", ["install", spec], {
-      dryRun: config.dryRun,
-      verbose: config.verbose,
-    });
-    if (r.code !== 0 && !config.dryRun) {
-      throw new Error(
-        `pipx install failed. Install uv: curl -LsSf https://astral.sh/uv/install.sh | sh\n${r.stderr}`,
-      );
-    }
-    actions.push(`pipx install ${spec}`);
+  const installer = await resolveGraphifyPackageInstaller(config);
+  console.log(`\n[graphify] Installing graphifyy via ${installer.via}...`);
+  const r = await run(installer.cmd, installer.argsFor(spec), {
+    dryRun: config.dryRun,
+    verbose: config.verbose,
+  });
+  if (r.code !== 0 && !config.dryRun) {
+    const hint =
+      installer.via === "uv"
+        ? getUvInstallCommands()
+            .filter((c) => !c.startsWith("#"))
+            .join("\n  ")
+        : "python -m pip install --user pipx";
+    throw new Error(
+      `${installer.via} install failed. Try:\n  ${hint}\n${r.stderr || r.stdout}`,
+    );
   }
+  actions.push(
+    installer.via === "uv"
+      ? graphifyUvInstallCommand(spec)
+      : `${installer.cmd} ${installer.argsFor(spec).join(" ")}`,
+  );
 
   for (const platform of platforms) {
     const cmd = graphifyInstallCommand(config, platform.id);

@@ -1,5 +1,6 @@
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
+import path from "node:path";
 import {
   cavememNode20PrereqOk,
   getNode20InstallCommands,
@@ -10,8 +11,10 @@ import {
 import {
   checkPrerequisites,
   formatPrereqTable,
+  getUvInstallCommands,
   hasBlockingPrereqs,
 } from "../src/prereqs.js";
+import { uvBinCandidates } from "../src/utils/detect.js";
 
 describe("cavememNode20PrereqOk", () => {
   it("passes when host Node is 22 or below", () => {
@@ -60,6 +63,36 @@ describe("nodeBinFromNpm", () => {
         "/opt/homebrew/opt/node@20/bin/node",
       );
     }
+  });
+});
+
+describe("getUvInstallCommands", () => {
+  it("uses Astral install.ps1 on Windows", () => {
+    if (process.platform !== "win32") return;
+    const cmds = getUvInstallCommands();
+    assert.match(cmds[0], /install\.ps1/);
+    assert.doesNotMatch(cmds[0], /winget/);
+    assert.match(cmds[1], /winget/);
+  });
+
+  it("uses curl install.sh on non-Windows", () => {
+    if (process.platform === "win32") return;
+    const cmds = getUvInstallCommands();
+    assert.match(cmds[0], /install\.sh/);
+  });
+});
+
+describe("uvBinCandidates", () => {
+  it("includes uv.exe on Windows", () => {
+    if (process.platform !== "win32") return;
+    assert.ok(uvBinCandidates().some((p) => p.endsWith("uv.exe")));
+  });
+
+  it("includes .local/bin/uv on Unix", () => {
+    if (process.platform === "win32") return;
+    assert.ok(
+      uvBinCandidates().some((p) => p.endsWith(path.join(".local", "bin", "uv"))),
+    );
   });
 });
 

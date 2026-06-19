@@ -76,6 +76,8 @@ curl -fsSL https://raw.githubusercontent.com/aaron-axisa/AI-Quickstart/main/inst
 
 Use `--install-prerequisites` to attempt automatic installation of missing deps (with confirmation in interactive mode). When Cavemem is selected on **Node 23+**, this also installs **Node 20 side-by-side** (e.g. `brew install node@20`) — your default Node stays unchanged; only Cavemem uses Node 20.
 
+On **Windows**, uv installs via Astral's PowerShell script to `%USERPROFILE%\.local\bin` (no winget/admin). Python/Node auto-install still uses winget when available.
+
 ## Uninstall
 
 Remove project-scoped tool files from a repo:
@@ -230,7 +232,17 @@ Fixed in current `install.ps1` — pull latest from `main`. Older shims called `
 
 **`graphify: command not found` after install**
 
-Use `uv tool install graphifyy` instead of plain `pip`. Ensure `~/.local/bin` (Linux) or uv's bin dir is on PATH.
+Use `uv tool install graphifyy` instead of plain `pip`. Ensure `~/.local/bin` (Linux) or uv's bin dir is on PATH. Graphify auto-installs uv when missing (no `--install-prerequisites` required).
+
+**`uv` missing on Windows (no winget / no admin)**
+
+Installer uses Astral's PowerShell script (user-level, no elevation). Manual:
+
+```powershell
+powershell -ExecutionPolicy Bypass -NoProfile -Command "irm https://astral.sh/uv/install.ps1 | iex"
+```
+
+Binary: `%USERPROFILE%\.local\bin\uv.exe`. Restart terminal or re-run installer. Admins: `winget install astral-sh.uv`.
 
 **Hook conflicts in `.cursor/hooks.json`**
 

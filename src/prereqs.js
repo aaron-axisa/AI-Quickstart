@@ -10,7 +10,7 @@ import {
   getNode20InstallCommands,
   resolveCavememRuntime,
 } from "./utils/node-runtime.js";
-import { runShell } from "./utils/exec.js";
+import { run, runShell } from "./utils/exec.js";
 import { UPSTREAM } from "./constants.js";
 
 /**
@@ -121,10 +121,65 @@ function getPythonInstallCommands() {
   return ["sudo apt install python3 python3-pip", "# or use pyenv"];
 }
 
-function getUvInstallCommands() {
+/** User-level Windows uv install (no winget/admin). */
+export const UV_INSTALL_PS1_COMMAND =
+  'powershell -ExecutionPolicy Bypass -NoProfile -Command "irm https://astral.sh/uv/install.ps1 | iex"';
+
+export function getUvInstallCommands() {
   const os = getPlatform();
-  if (os === "win32") return ["winget install astral-sh.uv"];
+  if (os === "win32") {
+    return [
+      UV_INSTALL_PS1_COMMAND,
+      "# Admin alternative: winget install astral-sh.uv",
+    ];
+  }
   return ["curl -LsSf https://astral.sh/uv/install.sh | sh"];
+}
+
+/**
+ * @param {{ dryRun?: boolean, verbose?: boolean }} opts
+ */
+export async function installUv(opts = {}) {
+  if (getPlatform() === "win32") {
+    if (opts.dryRun) {
+      console.log("[dry-run] install uv via Astral install.ps1");
+      augmentPrereqPath();
+      return { code: 0, stdout: "", stderr: "" };
+    }
+    if (opts.verbose) {
+      console.log(
+        "> powershell.exe -ExecutionPolicy Bypass -NoProfile -Command irm https://astral.sh/uv/install.ps1 | iex",
+      );
+    }
+    const res = await run(
+      "powershell.exe",
+      [
+        "-ExecutionPolicy",
+        "Bypass",
+        "-NoProfile",
+        "-Command",
+        "irm https://astral.sh/uv/install.ps1 | iex",
+      ],
+      opts,
+    );
+    if (res.code !== 0) {
+      throw new Error(
+        `Failed to install uv. Run manually:\n  ${getUvInstallCommands().join("\n  ")}`,
+      );
+    }
+    augmentPrereqPath();
+    return res;
+  }
+
+  const cmd = getUvInstallCommands()[0];
+  const res = await runShell(cmd, opts);
+  if (res.code !== 0) {
+    throw new Error(
+      `Failed to install uv. Run manually:\n  ${getUvInstallCommands().join("\n  ")}`,
+    );
+  }
+  augmentPrereqPath();
+  return res;
 }
 
 /**
@@ -134,6 +189,11 @@ function getUvInstallCommands() {
 export async function installMissingPrerequisites(results, opts = {}) {
   const failed = results.filter((r) => r.required && !r.ok && r.installCommands);
   for (const r of failed) {
+    if (r.id === "uv") {
+      console.log(`Installing ${r.label}...`);
+      await installUv(opts);
+      continue;
+    }
     const commands = r.installCommands.filter((c) => !c.startsWith("#"));
     if (!commands.length) continue;
     console.log(`Installing ${r.label}...`);
@@ -150,10 +210,8 @@ export async function installMissingPrerequisites(results, opts = {}) {
 
   const uv = results.find((r) => r.id === "uv");
   if (uv && !uv.ok && uv.installCommands && !uv.required) {
-    const cmd = uv.installCommands[0];
     console.log(`Installing ${uv.label}...`);
-    await runShell(cmd, opts);
-    augmentPrereqPath();
+    await installUv(opts);
   }
 }
 

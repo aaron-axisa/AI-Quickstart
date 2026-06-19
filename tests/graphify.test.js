@@ -1,6 +1,7 @@
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
 import { UPSTREAM } from "../src/constants.js";
+import { resolveGraphifyPackageInstaller } from "../src/plugins/graphify.js";
 
 /**
  * Mirrors graphifyPackageSpec from graphify plugin for unit testing.
@@ -16,6 +17,15 @@ function graphifyPackageSpec(extras) {
 function graphifyUvInstallCommand(spec) {
   return `uv tool install ${spec}`;
 }
+
+describe("resolveGraphifyPackageInstaller", () => {
+  it("uses uv in dry-run without spawning pipx", async () => {
+    const installer = await resolveGraphifyPackageInstaller({ dryRun: true });
+    assert.equal(installer.via, "uv");
+    assert.equal(installer.cmd, "uv");
+    assert.deepEqual(installer.argsFor("graphifyy"), ["tool", "install", "graphifyy"]);
+  });
+});
 
 describe("graphify install command", () => {
   it("builds extras package spec without shell quotes", () => {
