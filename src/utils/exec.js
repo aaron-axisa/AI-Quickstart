@@ -8,12 +8,6 @@ function shellQuote(s) {
   return `"${s.replace(/"/g, '\\"')}"`;
 }
 
-/** @param {string} s */
-function winCmdArg(s) {
-  if (!/[\s"]/u.test(s)) return s;
-  return `"${s.replace(/"/g, '""')}"`;
-}
-
 /**
  * Resolve bare CLI names (npx, npm) to .cmd beside active Node on Windows.
  * shell:false cannot run extensionless names — only .exe without shell.
@@ -46,10 +40,10 @@ export function resolveSpawnCommand(command) {
  */
 function spawnChild(command, args, opts) {
   if (process.platform === "win32" && /\.(cmd|bat)$/i.test(command)) {
-    const line = [winCmdArg(command), ...args.map(winCmdArg)].join(" ");
-    return spawn("cmd.exe", ["/d", "/s", "/c", line], {
+    return spawn("cmd.exe", ["/d", "/c", command, ...args], {
       cwd: opts.cwd,
       env: opts.env,
+      shell: false,
       stdio: ["ignore", "pipe", "pipe"],
     });
   }

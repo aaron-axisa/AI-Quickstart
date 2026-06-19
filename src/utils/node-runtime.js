@@ -2,7 +2,7 @@ import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
 import { UPSTREAM } from "../constants.js";
-import { run } from "./exec.js";
+import { resolveSpawnCommand, run } from "./exec.js";
 
 /** @param {string} p */
 function pathExists(p) {
@@ -178,6 +178,36 @@ export function npmCliFromNodeBin(nodeBin) {
     if (pathExists(cli)) return cli;
   }
   return null;
+}
+
+/**
+ * @param {string} nodeBin
+ * @returns {string|null}
+ */
+export function npxCliFromNodeBin(nodeBin) {
+  const dir = path.dirname(nodeBin);
+  /** @type {string[]} */
+  const candidates = [
+    path.join(dir, "..", "lib", "node_modules", "npm", "bin", "npx-cli.js"),
+    path.join(dir, "node_modules", "npm", "bin", "npx-cli.js"),
+  ];
+  for (const cli of candidates) {
+    if (pathExists(cli)) return cli;
+  }
+  return null;
+}
+
+/**
+ * Run npx via node + npx-cli.js when available (avoids .cmd quoting on Windows).
+ * @param {string[]} args
+ * @param {{ cwd?: string, env?: NodeJS.ProcessEnv, dryRun?: boolean, verbose?: boolean }} [opts]
+ */
+export async function runNpx(args, opts = {}) {
+  const npxCli = npxCliFromNodeBin(process.execPath);
+  if (npxCli) {
+    return run(process.execPath, [npxCli, ...args], opts);
+  }
+  return run(resolveSpawnCommand("npx"), args, opts);
 }
 
 /**

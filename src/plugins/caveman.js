@@ -7,7 +7,7 @@ import {
   CAVEMAN_SKILL_DIRS,
   repoFileExists,
 } from "../plan-helpers.js";
-import { run } from "../utils/exec.js";
+import { runNpx } from "../utils/node-runtime.js";
 import {
   deleteDirIfExists,
   deleteFileIfExists,
@@ -134,7 +134,7 @@ export async function installCaveman(config) {
   if (config.caveman.force) args.push("--force");
 
   console.log("\n[caveman] Installing via upstream installer...");
-  const result = await run("npx", args, {
+  const result = await runNpx(args, {
     cwd: config.repoPath,
     dryRun: config.dryRun,
     verbose: config.verbose,
@@ -175,8 +175,7 @@ export async function uninstallCaveman(config) {
 
   if (config.caveman.globalUninstall) {
     console.log("\n[caveman] Running upstream global uninstall...");
-    const result = await run(
-      "npx",
+    const result = await runNpx(
       ["-y", `github:${UPSTREAM.caveman.repo}`, "--", "--uninstall", "--non-interactive"],
       { dryRun: config.dryRun, verbose: config.verbose },
     );

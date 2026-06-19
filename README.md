@@ -176,6 +176,10 @@ irm https://raw.githubusercontent.com/aaron-axisa/AI-Quickstart/main/install.ps1
 
 Preferred on Windows: `npx.cmd -y github:aaron-axisa/AI-Quickstart` (no execution-policy issues).
 
+**`\"C:\Program Files\...\npx.cmd\"` is not recognized**
+
+Node installed under `Program Files` — older AI-Quickstart builds quoted `npx.cmd` wrong for cmd.exe. Current installer runs `node.exe` + `npx-cli.js` directly. Update to latest `main` or run from a local checkout.
+
 **Installer appears hung / does nothing (Windows)**
 
 Nested `powershell -Command "irm ... | iex"` has no interactive terminal. Use `npx.cmd` or run `irm | iex` in an already-open PowerShell window.

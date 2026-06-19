@@ -3,7 +3,7 @@ import { UPSTREAM } from "../constants.js";
 import { resolvePlatforms } from "../platforms.js";
 import { getSkillsAgent, skillsSupportsPlatform } from "../platform-maps/skills.js";
 import { SKILLS_BUNDLE_DEFAULT, repoFileExists } from "../plan-helpers.js";
-import { run } from "../utils/exec.js";
+import { runNpx } from "../utils/node-runtime.js";
 import { deleteDirIfExists } from "../utils/fs.js";
 
 /**
@@ -106,7 +106,7 @@ export async function installSkillsBundle(config) {
     }
     const args = skillsAddArgs(platform.id, skills);
     console.log(`[skills-bundle] npx ${args.join(" ")} (cwd: ${config.repoPath})`);
-    const r = await run("npx", args, {
+    const r = await runNpx(args, {
       cwd: config.repoPath,
       dryRun: config.dryRun,
       verbose: config.verbose,
@@ -140,8 +140,7 @@ export async function uninstallSkillsBundle(config) {
     }
   }
 
-  const r = await run(
-    "npx",
+  const r = await runNpx(
     ["-y", "skills", "remove", ...skills],
     { cwd: config.repoPath, dryRun: config.dryRun, verbose: config.verbose },
   );
