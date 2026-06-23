@@ -6,6 +6,10 @@ import {
   resolveHostNpm,
   win32NpmPathDirs,
   node20BinDirs,
+  resolveCavememBin,
+  runCavememBin,
+  findNode20Npm,
+  npmGlobalBinDir,
 } from "../src/utils/node-runtime.js";
 import { augmentPrereqPath } from "../src/utils/detect.js";
 
@@ -17,6 +21,60 @@ describe("runCavememCli implementation", () => {
     );
     assert.doesNotMatch(src, /runShell\s*\(\s*[`'"]cavemem/);
     assert.doesNotMatch(src, /runShell\s*\(\s*`cavemem\s/);
+  });
+
+  it("uses npm prefix -g instead of removed npm bin -g", () => {
+    const src = fs.readFileSync(
+      path.join(process.cwd(), "src/utils/node-runtime.js"),
+      "utf8",
+    );
+    assert.match(src, /prefix", "-g"/);
+    assert.doesNotMatch(src, /bin", "-g"/);
+  });
+
+  it("runCavememBin runs .js entry via node on Windows", async () => {
+    if (process.platform !== "win32") return;
+    const npm = await findNode20Npm();
+    if (!npm) return;
+
+    const bin = await resolveCavememBin(npm);
+    if (!bin || !/\.js$/i.test(bin)) return;
+
+    const runtime = { npm, bin, usesNode20: true };
+    const r = await runCavememBin(bin, runtime, ["--version"], {
+      verbose: false,
+    });
+    assert.equal(r.code, 0);
+    assert.match(r.stdout.trim(), /^\d+\.\d+\.\d+/);
+  });
+
+  it("resolveCavememBin finds nvm-windows global shim when present", async () => {
+    if (process.platform !== "win32") return;
+    const npm = await findNode20Npm();
+    if (!npm) return;
+
+    const bin = await resolveCavememBin(npm);
+    if (!bin) return;
+
+    const nvmShim = process.env.NVM_SYMLINK
+      ? path.join(process.env.NVM_SYMLINK, "cavemem.cmd")
+      : null;
+    if (nvmShim && fs.existsSync(nvmShim)) {
+      assert.equal(bin, nvmShim);
+      return;
+    }
+
+    assert.ok(fs.existsSync(bin));
+  });
+
+  it("npmGlobalBinDir uses prefix -g on Windows", async () => {
+    if (process.platform !== "win32") return;
+    const npm = await findNode20Npm();
+    if (!npm) return;
+
+    const dir = await npmGlobalBinDir(npm);
+    assert.ok(dir);
+    assert.ok(dir.length > 0);
   });
 });
 

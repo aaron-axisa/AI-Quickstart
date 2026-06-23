@@ -312,16 +312,16 @@ export async function envWithNpmGlobalBin(npmPath) {
 }
 
 /**
- * Global npm bin directory for a given npm executable.
+ * Global npm bin/prefix directory for a given npm executable.
+ * npm 11+ removed `npm bin -g`; use `npm prefix -g` instead.
  * @param {string} npmPath
  * @returns {Promise<string|null>}
  */
 export async function npmGlobalBinDir(npmPath) {
-  if (npmPath === "npm") {
-    const res = await run("npm", ["bin", "-g"], { verbose: false });
-    return res.code === 0 ? res.stdout.trim() : null;
-  }
-  const res = await runNpm(npmPath, ["bin", "-g"], { verbose: false });
+  const res =
+    npmPath === "npm"
+      ? await run("npm", ["prefix", "-g"], { verbose: false })
+      : await runNpm(npmPath, ["prefix", "-g"], { verbose: false });
   return res.code === 0 ? res.stdout.trim() : null;
 }
 
@@ -331,28 +331,55 @@ export async function npmGlobalBinDir(npmPath) {
  * @returns {Promise<string|null>}
  */
 export async function resolveCavememBin(npmPath) {
+  const shimName = process.platform === "win32" ? "cavemem.cmd" : "cavemem";
+
   const globalBin = await npmGlobalBinDir(npmPath);
   if (globalBin) {
-    const name = process.platform === "win32" ? "cavemem.cmd" : "cavemem";
-    const bin = path.join(globalBin, name);
+    const bin = path.join(globalBin, shimName);
     if (pathExists(bin)) return bin;
   }
 
   const fallback = cavememBinFromNpm(npmPath);
   if (pathExists(fallback)) return fallback;
 
+  if (process.platform === "win32") {
+    for (const dir of win32NpmPathDirs()) {
+      const shim = path.join(dir, shimName);
+      if (pathExists(shim)) return shim;
+    }
+  }
+
   return cavememPackageEntry(npmPath);
 }
 
 /**
- * @param {string} npmPath
- * @returns {Promise<string|null>}
+ * Node binary for a Cavemem runtime (Node 20 side-by-side vs host).
+ * @param {CavememRuntime} runtime
+ * @returns {string}
  */
-export async function cavememPackageEntry(npmPath) {
-  const res = await runNpm(npmPath, ["root", "-g"], { verbose: false });
-  if (res.code !== 0) return null;
+export function cavememNodeBin(runtime) {
+  return runtime.usesNode20 ? nodeBinFromNpm(runtime.npm) : process.execPath;
+}
 
-  const pkgJsonPath = path.join(res.stdout.trim(), "cavemem", "package.json");
+/**
+ * Run a cavemem CLI script (.js) or shim (.cmd on Windows).
+ * @param {string} bin
+ * @param {CavememRuntime} runtime
+ * @param {string[]} args
+ * @param {{ cwd?: string, env?: NodeJS.ProcessEnv, dryRun?: boolean, verbose?: boolean }} opts
+ */
+export async function runCavememBin(bin, runtime, args, opts) {
+  if (/\.(js|mjs|cjs)$/i.test(bin)) {
+    return run(cavememNodeBin(runtime), [bin, ...args], opts);
+  }
+  return run(bin, args, opts);
+}
+
+/**
+ * @param {string} pkgJsonPath
+ * @returns {string|null}
+ */
+function cavememEntryFromPkgJson(pkgJsonPath) {
   if (!pathExists(pkgJsonPath)) return null;
 
   try {
@@ -367,6 +394,31 @@ export async function cavememPackageEntry(npmPath) {
   } catch {
     return null;
   }
+}
+
+/**
+ * @param {string} npmPath
+ * @returns {Promise<string|null>}
+ */
+export async function cavememPackageEntry(npmPath) {
+  const res = await runNpm(npmPath, ["root", "-g"], { verbose: false });
+  if (res.code !== 0) return null;
+
+  const entry = cavememEntryFromPkgJson(
+    path.join(res.stdout.trim(), "cavemem", "package.json"),
+  );
+  if (entry) return entry;
+
+  if (process.platform === "win32") {
+    for (const dir of win32NpmPathDirs()) {
+      const alt = cavememEntryFromPkgJson(
+        path.join(dir, "node_modules", "cavemem", "package.json"),
+      );
+      if (alt) return alt;
+    }
+  }
+
+  return null;
 }
 
 /**
@@ -399,15 +451,7 @@ export async function runCavememCli(runtime, args, opts = {}) {
 
   const bin = await resolveCavememBin(runtime.npm);
   if (bin && pathExists(bin)) {
-    return run(bin, args, mergedOpts);
-  }
-
-  const entry = await cavememPackageEntry(runtime.npm);
-  if (entry) {
-    const nodeBin = runtime.usesNode20
-      ? nodeBinFromNpm(runtime.npm)
-      : process.execPath;
-    return run(nodeBin, [entry, ...args], mergedOpts);
+    return runCavememBin(bin, runtime, args, mergedOpts);
   }
 
   return res;
