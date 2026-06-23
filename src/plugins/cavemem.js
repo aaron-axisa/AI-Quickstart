@@ -13,7 +13,7 @@ import {
   resolveHostNpm,
   runCavememCli,
   runNpmGlobalInstall,
-  npmGlobalBinDir,
+  sideBySideGlobalPrefix,
 } from "../utils/node-runtime.js";
 
 const CAVEMEM_PKG = `${UPSTREAM.cavemem.package}@latest`;
@@ -46,7 +46,7 @@ async function installCavememGlobal(opts) {
 
   const sideBySide = runtime.usesNode20;
   const overrides = hostMajor > maxNative ? [SQLITE_PKG] : undefined;
-  const prefix = sideBySide ? await npmGlobalBinDir(runtime.npm) : null;
+  const prefix = sideBySide ? await sideBySideGlobalPrefix(runtime.npm) : null;
 
   /** @type {string[]} */
   const cmdParts = ["install", "-g"];
@@ -147,6 +147,22 @@ function cavememFailureMessage(stderr) {
       "",
       "If you already have cavemem under %APPDATA%\\npm, you can skip reinstall:",
       "  npm exec -g --prefix \"%APPDATA%\\npm\" -- cavemem install --ide cursor",
+    ].join("\n");
+  }
+
+  if (/EPERM|errno -4048|Could not find any Python|gyp ERR! find Python/i.test(text)) {
+    return [
+      "Cavemem global install failed while building better-sqlite3 for Node 20.",
+      "",
+      "Common causes on Windows:",
+      "  • Cursor/cavemem still running — close Cursor and retry",
+      "  • Python not on PATH for node-gyp — install Python 3 and ensure `py --version` works",
+      "  • Install targeted the wrong npm prefix (host Node 23 global dir)",
+      "",
+      "Manual install to the Node 20 AppData prefix:",
+      "  <path-to-node20-npm.cmd> install -g --prefix \"%APPDATA%\\npm\" cavemem@latest --override better-sqlite3@12.11.1",
+      "",
+      `Details:\n${stderr}`,
     ].join("\n");
   }
 

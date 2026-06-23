@@ -6,6 +6,9 @@ import {
   resolveHostNpm,
   win32NpmPathDirs,
   win32SideBySideNpmPathDirs,
+  win32AppDataNpmPrefix,
+  isHostGlobalNpmPrefix,
+  sideBySideGlobalPrefix,
   node20BinDirs,
   resolveCavememBin,
   runCavememBin,
@@ -93,7 +96,7 @@ describe("runCavememCli implementation", () => {
     const npm = await findNode20Npm();
     if (!npm) return;
 
-    const prefix = await npmGlobalBinDir(npm);
+    const prefix = await sideBySideGlobalPrefix(npm);
     if (!prefix) return;
 
     const env = envForSideBySideGlobalInstall(npm, prefix);
@@ -102,6 +105,20 @@ describe("runCavememCli implementation", () => {
     if (process.env.NVM_SYMLINK) {
       assert.ok(!env.PATH?.includes(process.env.NVM_SYMLINK));
     }
+    assert.ok(!isHostGlobalNpmPrefix(prefix));
+  });
+
+  it("sideBySideGlobalPrefix uses AppData npm on Windows, not nvm symlink", async () => {
+    if (process.platform !== "win32") return;
+    const npm = await findNode20Npm();
+    if (!npm) return;
+    if (!process.env.NVM_SYMLINK) return;
+
+    const prefix = await sideBySideGlobalPrefix(npm);
+    const appData = win32AppDataNpmPrefix();
+    assert.ok(appData);
+    assert.equal(prefix, appData);
+    assert.notEqual(prefix, process.env.NVM_SYMLINK);
   });
 
   it("side-by-side cavemem install uses isolated prefix and runNpmGlobalInstall", () => {
@@ -110,7 +127,7 @@ describe("runCavememCli implementation", () => {
       "utf8",
     );
     assert.match(src, /runNpmGlobalInstall/);
-    assert.match(src, /sideBySide/);
+    assert.match(src, /sideBySideGlobalPrefix/);
     assert.match(src, /--override/);
   });
 });

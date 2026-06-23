@@ -325,6 +325,45 @@ export async function npmGlobalBinDir(npmPath) {
   return res.code === 0 ? res.stdout.trim() : null;
 }
 
+/** @returns {string|null} */
+export function win32AppDataNpmPrefix() {
+  const appData = process.env.APPDATA;
+  return appData ? path.join(appData, "npm") : null;
+}
+
+/**
+ * True when prefix is the active host Node global dir (nvm-windows symlink, etc.).
+ * Side-by-side Node 20 installs must not target these paths.
+ * @param {string|null|undefined} prefix
+ * @returns {boolean}
+ */
+export function isHostGlobalNpmPrefix(prefix) {
+  if (!prefix) return false;
+  const norm = path.resolve(prefix).toLowerCase();
+  for (const dir of [process.env.NVM_SYMLINK, path.dirname(process.execPath)]) {
+    if (!dir) continue;
+    if (path.resolve(dir).toLowerCase() === norm) return true;
+  }
+  return false;
+}
+
+/**
+ * Global prefix for side-by-side Node 20 cavemem installs.
+ * On nvm-windows, Node 20 npm prefix -g may still resolve to NVM_SYMLINK — force AppData.
+ * @param {string} npmPath
+ * @returns {Promise<string|null>}
+ */
+export async function sideBySideGlobalPrefix(npmPath) {
+  if (process.platform === "win32") {
+    const appData = win32AppDataNpmPrefix();
+    if (appData) return appData;
+  }
+
+  const queried = await npmGlobalBinDir(npmPath);
+  if (queried && !isHostGlobalNpmPrefix(queried)) return queried;
+  return win32AppDataNpmPrefix() ?? queried;
+}
+
 /**
  * win32NpmPathDirs minus active host Node global dirs (nvm symlink / execPath).
  * Side-by-side Node 20 installs must not reuse the host-global cavemem copy.
@@ -352,14 +391,34 @@ export function win32SideBySideNpmPathDirs(opts = {}) {
  */
 export function envForSideBySideGlobalInstall(npmPath, prefix) {
   const nodeBin = nodeBinFromNpm(npmPath);
+  const nodeDir = path.dirname(nodeBin);
+
+  /** @type {Set<string>} */
+  const skipDirs = new Set(
+    [process.env.NVM_SYMLINK, path.dirname(process.execPath)]
+      .filter(Boolean)
+      .map((d) => path.resolve(d).toLowerCase()),
+  );
+
   /** @type {string[]} */
-  const pathDirs = [path.dirname(nodeBin)];
+  const pathDirs = [nodeDir];
 
   if (process.platform === "win32") {
-    const appData = process.env.APPDATA;
-    if (appData) pathDirs.push(path.join(appData, "npm"));
-    const sysRoot = process.env.SystemRoot || process.env.WINDIR;
-    if (sysRoot) pathDirs.push(path.join(sysRoot, "System32"));
+    const appData = win32AppDataNpmPrefix();
+    if (appData) pathDirs.push(appData);
+  }
+
+  for (const dir of (process.env.PATH || "").split(path.delimiter)) {
+    if (!dir) continue;
+    let resolved;
+    try {
+      resolved = path.resolve(dir).toLowerCase();
+    } catch {
+      continue;
+    }
+    if (skipDirs.has(resolved)) continue;
+    if (pathDirs.some((d) => path.resolve(d).toLowerCase() === resolved)) continue;
+    pathDirs.push(dir);
   }
 
   /** @type {NodeJS.ProcessEnv} */
@@ -384,7 +443,7 @@ export function envForSideBySideGlobalInstall(npmPath, prefix) {
  */
 export async function runNpmGlobalInstall(npmPath, packages, opts = {}) {
   const sideBySide = opts.sideBySide ?? false;
-  const prefix = sideBySide ? await npmGlobalBinDir(npmPath) : null;
+  const prefix = sideBySide ? await sideBySideGlobalPrefix(npmPath) : null;
 
   /** @type {string[]} */
   const args = ["install", "-g"];
@@ -415,7 +474,9 @@ export async function runNpmGlobalInstall(npmPath, packages, opts = {}) {
 export async function resolveCavememBin(npmPath, opts = {}) {
   const shimName = process.platform === "win32" ? "cavemem.cmd" : "cavemem";
 
-  const globalBin = await npmGlobalBinDir(npmPath);
+  const globalBin = opts.sideBySide
+    ? await sideBySideGlobalPrefix(npmPath)
+    : await npmGlobalBinDir(npmPath);
   if (globalBin) {
     const bin = path.join(globalBin, shimName);
     if (pathExists(bin)) return bin;
@@ -518,7 +579,7 @@ export async function runCavememCli(runtime, args, opts = {}) {
   augmentPrereqPath();
 
   const sideBySide = runtime.usesNode20;
-  const prefix = sideBySide ? await npmGlobalBinDir(runtime.npm) : null;
+  const prefix = sideBySide ? await sideBySideGlobalPrefix(runtime.npm) : null;
   const prefixFlag = prefix ? ` --prefix ${prefix}` : "";
   const line = `${runtime.npm} exec -g${prefixFlag} -- cavemem ${args.join(" ")}`;
 
