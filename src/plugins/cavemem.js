@@ -12,7 +12,8 @@ import {
   resolveCavememRuntime,
   resolveHostNpm,
   runCavememCli,
-  runNpm,
+  runNpmGlobalInstall,
+  npmGlobalBinDir,
 } from "../utils/node-runtime.js";
 
 const CAVEMEM_PKG = `${UPSTREAM.cavemem.package}@latest`;
@@ -43,13 +44,24 @@ async function installCavememGlobal(opts) {
     );
   }
 
-  const args = ["install", "-g", CAVEMEM_PKG];
-  if (hostMajor > maxNative) {
-    args.push(SQLITE_PKG);
+  const sideBySide = runtime.usesNode20;
+  const overrides = hostMajor > maxNative ? [SQLITE_PKG] : undefined;
+  const prefix = sideBySide ? await npmGlobalBinDir(runtime.npm) : null;
+
+  /** @type {string[]} */
+  const cmdParts = ["install", "-g"];
+  if (prefix) cmdParts.push("--prefix", prefix);
+  cmdParts.push(CAVEMEM_PKG);
+  if (overrides) {
+    for (const ovr of overrides) cmdParts.push("--override", ovr);
   }
 
-  console.log(`[cavemem] ${runtime.npm} install -g ${CAVEMEM_PKG}...`);
-  const res = await runNpm(runtime.npm, args, opts);
+  console.log(`[cavemem] ${runtime.npm} ${cmdParts.join(" ")}...`);
+  const res = await runNpmGlobalInstall(runtime.npm, [CAVEMEM_PKG], {
+    ...opts,
+    sideBySide,
+    overrides,
+  });
   if (res.code !== 0) {
     return {
       ok: false,
@@ -59,7 +71,7 @@ async function installCavememGlobal(opts) {
   }
 
   if (!opts.dryRun) {
-    const bin = await resolveCavememBin(runtime.npm);
+    const bin = await resolveCavememBin(runtime.npm, { sideBySide });
     if (bin) {
       runtime.bin = bin;
       console.log(`[cavemem] Global CLI: ${bin}`);
@@ -125,6 +137,19 @@ export function planUninstallCavemem(config) {
 }
 
 function cavememFailureMessage(stderr) {
+  const text = stderr;
+  if (/EBUSY|errno -4082|resource busy or locked/i.test(text)) {
+    return [
+      "Cavemem global install failed: better-sqlite3 is locked (EBUSY).",
+      "",
+      "Usually cavemem MCP/hooks in Cursor hold the native module open.",
+      "Close Cursor completely, re-run the installer, then reopen Cursor.",
+      "",
+      "If you already have cavemem under %APPDATA%\\npm, you can skip reinstall:",
+      "  npm exec -g --prefix \"%APPDATA%\\npm\" -- cavemem install --ide cursor",
+    ].join("\n");
+  }
+
   return [
     `Cavemem global install failed:\n${stderr}`,
     "",

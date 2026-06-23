@@ -5,11 +5,13 @@ import path from "node:path";
 import {
   resolveHostNpm,
   win32NpmPathDirs,
+  win32SideBySideNpmPathDirs,
   node20BinDirs,
   resolveCavememBin,
   runCavememBin,
   findNode20Npm,
   npmGlobalBinDir,
+  envForSideBySideGlobalInstall,
 } from "../src/utils/node-runtime.js";
 import { augmentPrereqPath } from "../src/utils/detect.js";
 
@@ -48,23 +50,22 @@ describe("runCavememCli implementation", () => {
     assert.match(r.stdout.trim(), /^\d+\.\d+\.\d+/);
   });
 
-  it("resolveCavememBin finds nvm-windows global shim when present", async () => {
+  it("resolveCavememBin finds nvm-windows global shim when host-global only", async () => {
     if (process.platform !== "win32") return;
     const npm = await findNode20Npm();
     if (!npm) return;
+    if (!process.env.NVM_SYMLINK) return;
+
+    const appDataBin = process.env.APPDATA
+      ? path.join(process.env.APPDATA, "npm", "cavemem.cmd")
+      : null;
+    if (appDataBin && fs.existsSync(appDataBin)) return;
+
+    const nvmShim = path.join(process.env.NVM_SYMLINK, "cavemem.cmd");
+    if (!fs.existsSync(nvmShim)) return;
 
     const bin = await resolveCavememBin(npm);
-    if (!bin) return;
-
-    const nvmShim = process.env.NVM_SYMLINK
-      ? path.join(process.env.NVM_SYMLINK, "cavemem.cmd")
-      : null;
-    if (nvmShim && fs.existsSync(nvmShim)) {
-      assert.equal(bin, nvmShim);
-      return;
-    }
-
-    assert.ok(fs.existsSync(bin));
+    assert.equal(bin, nvmShim);
   });
 
   it("npmGlobalBinDir uses prefix -g on Windows", async () => {
@@ -75,6 +76,42 @@ describe("runCavememCli implementation", () => {
     const dir = await npmGlobalBinDir(npm);
     assert.ok(dir);
     assert.ok(dir.length > 0);
+  });
+
+  it("win32SideBySideNpmPathDirs omits NVM_SYMLINK when side-by-side", () => {
+    if (process.platform !== "win32") return;
+    if (!process.env.NVM_SYMLINK) return;
+
+    const all = win32NpmPathDirs();
+    const side = win32SideBySideNpmPathDirs({ sideBySide: true });
+    assert.ok(all.includes(process.env.NVM_SYMLINK));
+    assert.ok(!side.includes(process.env.NVM_SYMLINK));
+  });
+
+  it("envForSideBySideGlobalInstall pins prefix and omits nvm symlink from PATH", async () => {
+    if (process.platform !== "win32") return;
+    const npm = await findNode20Npm();
+    if (!npm) return;
+
+    const prefix = await npmGlobalBinDir(npm);
+    if (!prefix) return;
+
+    const env = envForSideBySideGlobalInstall(npm, prefix);
+    assert.equal(env.npm_config_prefix, prefix);
+    assert.equal(env.npm_config_global_prefix, prefix);
+    if (process.env.NVM_SYMLINK) {
+      assert.ok(!env.PATH?.includes(process.env.NVM_SYMLINK));
+    }
+  });
+
+  it("side-by-side cavemem install uses isolated prefix and runNpmGlobalInstall", () => {
+    const src = fs.readFileSync(
+      path.join(process.cwd(), "src/plugins/cavemem.js"),
+      "utf8",
+    );
+    assert.match(src, /runNpmGlobalInstall/);
+    assert.match(src, /sideBySide/);
+    assert.match(src, /--override/);
   });
 });
 

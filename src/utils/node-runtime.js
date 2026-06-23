@@ -312,7 +312,7 @@ export async function envWithNpmGlobalBin(npmPath) {
 }
 
 /**
- * Global npm bin/prefix directory for a given npm executable.
+ * Global npm prefix directory for a given npm executable.
  * npm 11+ removed `npm bin -g`; use `npm prefix -g` instead.
  * @param {string} npmPath
  * @returns {Promise<string|null>}
@@ -326,11 +326,93 @@ export async function npmGlobalBinDir(npmPath) {
 }
 
 /**
- * Resolve cavemem CLI path after global install (npm global bin may differ from npm dir).
+ * win32NpmPathDirs minus active host Node global dirs (nvm symlink / execPath).
+ * Side-by-side Node 20 installs must not reuse the host-global cavemem copy.
+ * @param {{ sideBySide?: boolean }} [opts]
+ * @returns {string[]}
+ */
+export function win32SideBySideNpmPathDirs(opts = {}) {
+  if (!opts.sideBySide || process.platform !== "win32") {
+    return win32NpmPathDirs();
+  }
+
+  const skip = new Set(
+    [process.env.NVM_SYMLINK, path.dirname(process.execPath)].filter(Boolean),
+  );
+  return win32NpmPathDirs().filter((dir) => !skip.has(dir));
+}
+
+/**
+ * Isolated env for global npm installs via side-by-side Node 20 on Windows.
+ * Omits NVM_SYMLINK from PATH and pins npm prefix so npm does not upgrade
+ * the active host-global copy (EBUSY when cavemem MCP holds better_sqlite3.node).
  * @param {string} npmPath
+ * @param {string|null} prefix
+ * @returns {NodeJS.ProcessEnv}
+ */
+export function envForSideBySideGlobalInstall(npmPath, prefix) {
+  const nodeBin = nodeBinFromNpm(npmPath);
+  /** @type {string[]} */
+  const pathDirs = [path.dirname(nodeBin)];
+
+  if (process.platform === "win32") {
+    const appData = process.env.APPDATA;
+    if (appData) pathDirs.push(path.join(appData, "npm"));
+    const sysRoot = process.env.SystemRoot || process.env.WINDIR;
+    if (sysRoot) pathDirs.push(path.join(sysRoot, "System32"));
+  }
+
+  /** @type {NodeJS.ProcessEnv} */
+  const env = {
+    PATH: pathDirs.join(path.delimiter),
+    NODE: nodeBin,
+    npm_node_execpath: nodeBin,
+  };
+
+  if (prefix) {
+    env.npm_config_prefix = prefix;
+    env.npm_config_global_prefix = prefix;
+  }
+
+  return env;
+}
+
+/**
+ * @param {string} npmPath
+ * @param {string[]} packages
+ * @param {{ overrides?: string[], sideBySide?: boolean, dryRun?: boolean, verbose?: boolean, env?: NodeJS.ProcessEnv }} [opts]
+ */
+export async function runNpmGlobalInstall(npmPath, packages, opts = {}) {
+  const sideBySide = opts.sideBySide ?? false;
+  const prefix = sideBySide ? await npmGlobalBinDir(npmPath) : null;
+
+  /** @type {string[]} */
+  const args = ["install", "-g"];
+  if (prefix) args.push("--prefix", prefix);
+  args.push(...packages);
+  for (const ovr of opts.overrides ?? []) {
+    args.push("--override", ovr);
+  }
+
+  /** @type {NodeJS.ProcessEnv | undefined} */
+  let installEnv;
+  if (sideBySide && prefix) {
+    installEnv = envForSideBySideGlobalInstall(npmPath, prefix);
+  }
+
+  return runNpm(npmPath, args, {
+    dryRun: opts.dryRun,
+    verbose: opts.verbose,
+    env: installEnv ? { ...installEnv, ...opts.env } : opts.env,
+  });
+}
+
+/**
+ * @param {string} npmPath
+ * @param {{ sideBySide?: boolean }} [opts]
  * @returns {Promise<string|null>}
  */
-export async function resolveCavememBin(npmPath) {
+export async function resolveCavememBin(npmPath, opts = {}) {
   const shimName = process.platform === "win32" ? "cavemem.cmd" : "cavemem";
 
   const globalBin = await npmGlobalBinDir(npmPath);
@@ -343,13 +425,13 @@ export async function resolveCavememBin(npmPath) {
   if (pathExists(fallback)) return fallback;
 
   if (process.platform === "win32") {
-    for (const dir of win32NpmPathDirs()) {
+    for (const dir of win32SideBySideNpmPathDirs(opts)) {
       const shim = path.join(dir, shimName);
       if (pathExists(shim)) return shim;
     }
   }
 
-  return cavememPackageEntry(npmPath);
+  return cavememPackageEntry(npmPath, opts);
 }
 
 /**
@@ -400,7 +482,12 @@ function cavememEntryFromPkgJson(pkgJsonPath) {
  * @param {string} npmPath
  * @returns {Promise<string|null>}
  */
-export async function cavememPackageEntry(npmPath) {
+/**
+ * @param {string} npmPath
+ * @param {{ sideBySide?: boolean }} [opts]
+ * @returns {Promise<string|null>}
+ */
+export async function cavememPackageEntry(npmPath, opts = {}) {
   const res = await runNpm(npmPath, ["root", "-g"], { verbose: false });
   if (res.code !== 0) return null;
 
@@ -410,7 +497,7 @@ export async function cavememPackageEntry(npmPath) {
   if (entry) return entry;
 
   if (process.platform === "win32") {
-    for (const dir of win32NpmPathDirs()) {
+    for (const dir of win32SideBySideNpmPathDirs(opts)) {
       const alt = cavememEntryFromPkgJson(
         path.join(dir, "node_modules", "cavemem", "package.json"),
       );
@@ -430,7 +517,10 @@ export async function runCavememCli(runtime, args, opts = {}) {
   const { augmentPrereqPath } = await import("./detect.js");
   augmentPrereqPath();
 
-  const line = `${runtime.npm} exec -g -- cavemem ${args.join(" ")}`;
+  const sideBySide = runtime.usesNode20;
+  const prefix = sideBySide ? await npmGlobalBinDir(runtime.npm) : null;
+  const prefixFlag = prefix ? ` --prefix ${prefix}` : "";
+  const line = `${runtime.npm} exec -g${prefixFlag} -- cavemem ${args.join(" ")}`;
 
   if (opts.dryRun) {
     console.log(`[dry-run] ${line}`);
@@ -439,17 +529,20 @@ export async function runCavememCli(runtime, args, opts = {}) {
 
   if (opts.verbose) console.log(`> ${line}`);
 
-  const env = await envWithNpmGlobalBin(runtime.npm);
+  const env = sideBySide && prefix
+    ? envForSideBySideGlobalInstall(runtime.npm, prefix)
+    : await envWithNpmGlobalBin(runtime.npm);
   const mergedOpts = { ...opts, env: { ...env, ...opts.env } };
 
-  const res = await runNpm(
-    runtime.npm,
-    ["exec", "-g", "--", "cavemem", ...args],
-    mergedOpts,
-  );
+  /** @type {string[]} */
+  const execArgs = ["exec", "-g"];
+  if (prefix) execArgs.push("--prefix", prefix);
+  execArgs.push("--", "cavemem", ...args);
+
+  const res = await runNpm(runtime.npm, execArgs, mergedOpts);
   if (res.code === 0) return res;
 
-  const bin = await resolveCavememBin(runtime.npm);
+  const bin = await resolveCavememBin(runtime.npm, { sideBySide });
   if (bin && pathExists(bin)) {
     return runCavememBin(bin, runtime, args, mergedOpts);
   }
